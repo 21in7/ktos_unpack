@@ -577,4 +577,73 @@
             </EtcList>
         </MainSkl>
     </Skill>
+    <Skill Name="Common_Linker_Physicallink">
+        <MainSkl ScrLock="None" JumpFlee="NO" MSPDToUsePos="0">
+            <HitList>
+                <Frame Type="FAN" Time="9999" HitCount="1" TermMin="0" TermMax="0" PosType="0" Dist="0" RandDist="0" RandomPerHit="0" Angle="0" Width="60" Length="200" SklAngle="0.17453299" AniTime="300" RotAngle="0" ForceATK="0"/>
+            </HitList>
+            <EtcList>
+                <Scp Scp="SKL_RESET_COOLTIME" Client="NO" UseSleep="NO" Time="0">
+                    <Str Str="Common_Linker_Physicallink"/>
+                </Scp>
+                <Scp Scp="C_VOICE_SOUND" Client="YES" UseSleep="NO" Time="0">
+                    <Str Str="voice_wiz_m_physicallink_shot"/>
+                    <Str Str="voice_wiz_physicallink_shot"/>
+                </Scp>
+                <Scp Scp="SKL_MAKE_LINK" Client="NO" UseSleep="NO" Time="350">
+                    <PosDist Angle="0" Dist="-150"/>
+                    <Num Num="150"/>
+                    <Num Num="150"/>
+                    <Str Str="FRIEND"/>
+                    <Str Str="Link_Physical"/>
+                    <Num Num="0"/>
+                    <Num Num="80"/>
+                    <Num Num="1"/>
+                    <Num Num="5"/>
+                    <Str Str="Linker_cable_buff2"/>
+                    <Num Num="0"/>
+                    <Num Num="0.25"/>
+                    <Str_Arg Str="None" Arg="0.5"/>
+                    <Str Str="swd_blow_cloth2"/>
+                </Scp>
+                <Scp Scp="C_EFFECT" Client="YES" UseSleep="NO" Time="350">
+                    <Str_Arg Str="F_scout_PhysicalLink" Arg="7"/>
+                    <Str Str="None" UseFunc="1" FuncTxt="if SKL_CHECK_RIDING_COMPANION_C(self, obj) == 0 then return 'None' else return 'Dummy_emitter_pet' end"/>
+                    <Num Num="0"/>
+                </Scp>
+            </EtcList>
+        </MainSkl>
+    </Skill>
+    <Skill Name="Common_Linker_UmbilicalCord">
+        <MainSkl JumpFlee="NO" MSPDToUsePos="0" ScrLock="None">
+            <HitList>
+                <Frame Angle="0" AniTime="300" Dist="0" ForceATK="0" HitCount="1" Length="150" PosType="0" RandDist="0" RandomPerHit="0" RotAngle="0" SklAngle="0.17453299" TermMax="0" TermMin="0" Time="9999" Type="FAN" Width="30"/>
+            </HitList>
+            <EtcList>
+                <Scp Scp="SKL_RESET_COOLTIME" Client="NO" UseSleep="NO" Time="0">
+                    <Str Str="Common_Linker_UmbilicalCord"/>
+                </Scp>
+                <Scp Client="NO" Scp="SKL_MAKE_PARTY_LINK" Time="0" UseSleep="NO">
+                    <Num Num="200"/>
+                    <Str Str="Linker_Sacrifice"/>
+                    <Num Num="0"/>
+                    <Str Str="Linker_cable_buff1"/>
+                    <Num Num="0"/>
+                    <Num Num="0.30000001"/>
+                    <Str_Arg Arg="1" Str="None"/>
+                    <Str Str="swd_blow_cloth2"/>
+                    <Str Str="true"/>
+                </Scp>
+                <Scp Client="YES" Scp="C_VOICE_SOUND" Time="0" UseSleep="NO">
+                    <Str Str="voice_wiz_m_umbilicalcord_shot"/>
+                    <Str Str="voice_wiz_umbilicalcord_shot"/>
+                </Scp>
+                <Scp Client="YES" Scp="C_EFFECT" Time="100" UseSleep="NO">
+                    <Str_Arg Arg="1.7" Str="F_buff_scout_UmbilicalCord"/>
+                    <Str FuncTxt="if SKL_CHECK_RIDING_COMPANION_C(self, obj) == 0 then return 'None' else return 'Dummy_emitter_pet' end" Str="None" UseFunc="1"/>
+                    <Num Num="0"/>
+                </Scp>                
+            </EtcList>
+        </MainSkl>
+    </Skill>
 </ToolSkill>

@@ -3108,6 +3108,7 @@ ClassID,Count,Group,ItemName,Ratio
 147003,1,"Relic_Cyan_G_Gem_Cube","Gem_Relic_Cyan_L_003","30%"
 147004,1,"Relic_Cyan_G_Gem_Cube","Gem_Relic_Cyan_G_001","5%"
 147005,1,"Relic_Cyan_G_Gem_Cube","Gem_Relic_Cyan_G_002","5%"
+147006,1,"Relic_Cyan_G_Gem_Cube","Gem_Relic_Cyan_G_003","5%"
 148001,100,"Relic_Cyan_L_Gem_Cube","misc_Relic_Gem","75.01%"
 148002,1,"Relic_Cyan_L_Gem_Cube","Gem_Relic_Cyan_L_001","8.33%"
 148003,1,"Relic_Cyan_L_Gem_Cube","Gem_Relic_Cyan_L_002","8.33%"

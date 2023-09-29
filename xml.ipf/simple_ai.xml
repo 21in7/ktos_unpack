@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by imc (imc) -->
 <AIList>
+	<AI Name="EVENT_W_MOON_RABBIT_MAGIC_CIRCLE" UpdateMS="1000" ActiveMessageMapInBattle="1">
+		<List>
+			<ToolScp Scp="SAI_FUNC2_DIRECT" Client="NO" UseSleep="NO">
+				<Str Str="SCR_EVENT_MOON_RABBIT_MAGIC_CIRCLE_SIMPLE_AI"/>
+			</ToolScp>
+		</List>
+		<LeaveList>
+			<ToolScp Scp="SAI_DEAD_FUNC2_DIRECT" Client="NO" UseSleep="NO">
+				<Str Str="SCR_EVENT_MOON_RABBIT_MAGIC_CIRCLE_LEAVE_SIMPLE_AI"/>
+			</ToolScp>
+		</LeaveList>
+	</AI>
+	<AI Name="UPINIS_SAP_AI" UpdateMS="100" ActiveMessageMapInBattle="1">
+		<List>
+			<ToolScp Scp="SAI_FUNC2_DIRECT" Client="NO" UseSleep="NO">
+				<Str Str="SCR_UPINIS_SAP_SIMPLE_AI_UDPATE"/>
+			</ToolScp>
+		</List>
+	</AI>
+	<AI Name="BW_MINEHELL_AI" UpdateMS="500" ActiveMessageMapInBattle="1">
+		<List>
+			<ToolScp Scp="SAI_FUNC2_DIRECT" Client="NO" UseSleep="NO">
+				<Str Str="SCR_BRIDGE_WAILING_MINEHELL_SIMPLE_AI"/>
+			</ToolScp>
+		</List>
+	</AI>
     <AI Name="3CMLAKE262_SQ11_CHECK" ActiveMessageMapInBattle="1">
         <List>
             <ToolScp Scp="S_AI_ATTACK_NEAR_MAXHATECOUNT_CHECK" Client="NO" UseSleep="NO">
@@ -6111,6 +6137,24 @@
             </ToolScp>
         </StartList>
     </AI>
+    <AI Name="EP15_2_D_NICOPOLIS_1_MQ_5_MINI_MON_AI" ActiveMessageMapInBattle="1">
+        <List>
+            <ToolScp Scp="S_AI_ATTACK_NEAR" Client="NO" UseSleep="NO">
+                <Num Num="500"/>
+            </ToolScp>
+        </List>
+        <DeadList>
+            <ToolScp Scp="SAI_DEAD_ADD_MGAME_V" Client="NO" UseSleep="NO">
+                <Str Str="EP15_2_D_NICOPOLIS_1_MQ_5_VALUE_01"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </DeadList>
+        <StartList>
+            <ToolScp Scp="S_AI_SET_TENDENCY" Client="NO" UseSleep="NO">
+                <Str Str="Attack"/>
+            </ToolScp>
+        </StartList>
+    </AI>
     <AI Name="EVENT1912_4TH_BUFF2_RUN_MON_AI_RUN" UpdateMS="10000" ActiveMessageMapInBattle="1">
         <List>
             <ToolScp Scp="SAI_FUNC2_DIRECT" Client="NO" UseSleep="NO">
@@ -9789,6 +9833,16 @@
             <ToolScp Scp="EnableAIOutOfPC" Client="NO" UseSleep="NO"/>
         </StartList>
     </AI>
+	<AI Name="FOLLOWNPC_ROZE2_AI_RUN_1" UpdateMS="0" ActiveMessageMapInBattle="1">
+		<List>
+			<ToolScp Scp="SAI_FUNC_DIRECT" Client="NO" UseSleep="NO">
+				<Str Str="ROZE2_FOLLOWNPC_AI_RUN_1_ACT"/>
+			</ToolScp>
+		</List>
+		<StartList>
+			<ToolScp Scp="EnableAIOutOfPC" Client="NO" UseSleep="NO"/>
+		</StartList>
+	</AI>
 	<AI Name="FOLLOWNPC_SQ3_NPC_AI_RUN_1" UpdateMS="0" ActiveMessageMapInBattle="1">
 		<List>
 			<ToolScp Scp="SAI_FUNC_DIRECT" Client="NO" UseSleep="NO">
@@ -9799,10 +9853,10 @@
 			<ToolScp Scp="EnableAIOutOfPC" Client="NO" UseSleep="NO"/>
 		</StartList>
 	</AI>
-    <AI Name="FOLLOWNPC_ROZE2_AI_RUN_1" UpdateMS="0" ActiveMessageMapInBattle="1">
+	<AI Name="FOLLOWNPC_AUSIRINE_AI_RUN_1" UpdateMS="0" ActiveMessageMapInBattle="1">
         <List>
             <ToolScp Scp="SAI_FUNC_DIRECT" Client="NO" UseSleep="NO">
-                <Str Str="ROZE2_FOLLOWNPC_AI_RUN_1_ACT"/>
+				<Str Str="FOLLOWNPC_AUSIRINE_AI_RUN_1_ACT"/>
             </ToolScp>
         </List>
         <StartList>
@@ -13078,6 +13132,20 @@
             </ToolScp>
         </List>
     </AI>
+	<AI Name="Jellyzele_underseaworm_AI" UpdateMS="1000" ActiveMessageMapInBattle="1">
+		<List>
+			<ToolScp Scp="SAI_FUNC2_DIRECT" Client="NO" UseSleep="NO">
+				<Str Str="SCR_JELLYZELE_SUMMON_UNDERSEAWORM_SIMPLE_AI"/>
+			</ToolScp>
+		</List>
+	</AI>
+	<AI Name="Jellyzele_underseaworm_extreme_AI" UpdateMS="1000" ActiveMessageMapInBattle="1">
+		<List>
+			<ToolScp Scp="SAI_FUNC2_DIRECT" Client="NO" UseSleep="NO">
+				<Str Str="TB_JELLYZELE_CONVERSION_MARBLES_TOUGH_UNDERSEAWROM_SIMPLE_AI"/>
+			</ToolScp>
+		</List>
+	</AI>
     <AI Name="KATYN10_SLEEPER_01" ActiveMessageMapInBattle="1">
         <List>
             <ToolScp Scp="S_AI_MOVE_RALLY" Client="NO" UseSleep="YES" ExtraArg="1">
@@ -27936,13 +28004,6 @@ return &quot;A &quot; .. IMCRandom(0, 100);"/>
         <List>
             <ToolScp Scp="SAI_FUNC_DIRECT" Client="NO" UseSleep="NO">
                 <Str Str="SCR_WEEKLY_DUMMY_MONSTER"/>
-            </ToolScp>
-        </List>
-    </AI>
-    <AI Name="Jellyzele_underseaworm_AI" UpdateMS="1000" ActiveMessageMapInBattle="1">
-        <List>
-            <ToolScp Scp="SAI_FUNC2_DIRECT" Client="NO" UseSleep="NO">
-                <Str Str="SCR_JELLYZELE_SUMMON_UNDERSEAWORM_SIMPLE_AI"/>
             </ToolScp>
         </List>
     </AI>

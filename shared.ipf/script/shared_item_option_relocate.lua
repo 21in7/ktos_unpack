@@ -139,3 +139,41 @@ function IS_ENABLE_ENCHANT_OPTION_RELOCATE_ITEM(itemObj)
 
 	return true;
 end
+
+
+function IS_ABLE_TO_USE_RADA_OPTION_RESCALE_SCROLL(item, scroll)
+	if TryGetProp(scroll, 'StringArg', 'None') ~= 'rada_option_rescale_scroll' then
+        return false, 'DontUseItem'
+    end 
+
+	if IS_RADA_OPTION_EQUIPMENT(item) == false then
+		return false, 'DontUseItem'
+	end
+
+    if TryGetProp(item, 'UseLv', 0) == TryGetProp(scroll, 'NumberArg1', 0) then
+        return true
+    end
+
+	return false, 'DontUseItem'
+end
+
+
+function IS_RADA_OPTION_EQUIPMENT(item)
+	local item_list = {
+        'EP15_RAID_CLOTH_TOP', 'EP15_RAID_CLOTH_LEG', 'EP15_RAID_CLOTH_FOOT', 'EP15_RAID_CLOTH_HAND',
+        'EP15_RAID_LEATHER_TOP', 'EP15_RAID_LEATHER_LEG', 'EP15_RAID_LEATHER_FOOT', 'EP15_RAID_LEATHER_HAND',
+        'EP15_RAID_PLATE_TOP', 'EP15_RAID_PLATE_LEG', 'EP15_RAID_PLATE_FOOT', 'EP15_RAID_PLATE_HAND',
+	}
+	
+	local exist = false
+
+	for i = 1, #item_list do
+		if item_list[i] == TryGetProp(item, 'ClassName', 'None') then
+			if TryGetProp(item, 'RadaOption', 'None') ~= 'None' then
+				return true
+			end
+		end
+	end
+
+	return exist
+end

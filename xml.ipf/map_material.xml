@@ -705,4 +705,94 @@
 			<Sound From="pc_war_jump" To="skl_eff_scooter_jump"/>
 		</Anim>
 	</Material>
+	<Material ID="42" Name="Effect_Stamp_Nightrabbit" KorName="쿨쿨 나이트래빗" MaterialItem="misc_soil">
+		<Anim Name="LAND">
+			<Particle From="F_pc_jump_smoke" To="F_pc_jump_smoke" Scale="1.3" ForceConvert="NO"/>
+			<Sound From="pc_war_jump_2" To="step_dry_land"/>
+		</Anim>
+		<Anim Name="JUMP">
+			<Particle From="F_pc_jump_smoke" To="F_pc_effectitem_darkrabbit" Scale="0.58" ForceConvert="NO"/>
+			<Sound From="pc_war_jump" To="pc_war_jump_1"/>
+		</Anim>
+		<Anim Name="RUN">
+			<Particle From="F_pc_run_smoke" To="F_pc_run_smoke" Scale="1.7" ForceConvert="NO"/>
+			<Sound From="walk_left" To="step_soil"/>
+		</Anim>
+		<Anim Name="DASH">
+			<Particle From="F_pc_jump_smoke" To="F_pc_run_smoke" Scale="1.8" ForceConvert="NO"/>
+			<Sound From="walk_left" To="step_soil"/>
+		</Anim>
+	</Material>
+	<Material ID="43" Name="good_stamp_jp" KorName="참 잘했어요 도장" MaterialItem="misc_soil">
+		<Anim Name="LAND">
+			<Particle From="F_pc_jump_smoke" To="F_pc_jump_smoke" Scale="1.3" ForceConvert="NO"/>
+			<Sound From="pc_war_jump_2" To="step_dry_land"/>
+		</Anim>
+		<Anim Name="JUMP">
+			<Particle From="F_pc_jump_smoke" To="F_pc_welldone_ground_A" Scale="0.58" ForceConvert="NO"/>
+			<Sound From="pc_war_jump" To="pc_war_jump_1"/>
+		</Anim>
+		<Anim Name="RUN">
+			<Particle From="F_pc_run_smoke" To="F_pc_run_smoke" Scale="1.7" ForceConvert="NO"/>
+			<Sound From="walk_left" To="step_soil"/>
+		</Anim>
+		<Anim Name="DASH">
+			<Particle From="F_pc_jump_smoke" To="F_pc_run_smoke" Scale="1.8" ForceConvert="NO"/>
+			<Sound From="walk_left" To="step_soil"/>
+		</Anim>
+	</Material>
+	<Material ID="44" Name="ridepet_dragonboat" KorName="용주" MaterialItem="None">
+		<Anim Name="LAND">
+			<Particle From="F_pc_jump_smoke" To="F_pc_jump_smoke" Scale="1" ForceConvert="NO"/>
+			<Sound From="pc_war_jump_2" To="skl_eff_pet_ep14egypt_landing"/>
+		</Anim>
+		<Anim Name="JUMP">
+			<Particle From="F_pc_jump_smoke" To="F_pc_jump_smoke" Scale="0.6" ForceConvert="NO"/>
+			<Sound From="pc_war_jump" To="skl_eff_pet_ep14egypt_jump"/>
+		</Anim>
+	</Material>
+	<Material ID="45" Name="effect_ep15elf" KorName="요정 발자국 이펙트" MaterialItem="None">
+		<Anim Name="LAND">
+			<Particle From="F_pc_jump_smoke" To="Shockwave_GrowingGrass_Green_01" Scale="0.1" ForceConvert="NO" UnityEffect="YES" UnityEffectRotateAngle="0;90;0"/>
+			<Sound From="pc_war_jump_2" To="step_dry_land"/>
+		</Anim>
+		<Anim Name="JUMP">
+			<Particle From="F_pc_jump_smoke" To="F_pc_jump_smoke" Scale="0.7" ForceConvert="NO"/>
+			<Sound From="pc_war_jump" To="pc_war_jump_1"/>
+		</Anim>
+		<Anim Name="RUN">
+			<Particle From="F_pc_run_smoke" To="Shockwave_GrowingGrass_Green_01" Scale="0.7" ForceConvert="NO" UnityEffect="YES" UnityEffectRotateAngle="0;90;0"/>
+			<Sound From="walk_left" To="step_soil"/>
+		</Anim>
+		<Anim Name="RUN_COSAIR03">
+			<Particle From="F_pc_run_smoke" To="Shockwave_GrowingGrass_Green_01" Scale="0.7" ForceConvert="NO" UnityEffect="YES" UnityEffectRotateAngle="0;90;0"/>
+			<Sound From="walk_left" To="step_soil"/>
+		</Anim>
+		<Anim Name="DASH">
+			<Particle From="I_warrior_dash_run" To="Shockwave_GrowingGrass_Green_01" Scale="0.7" ForceConvert="NO" UnityEffect="YES" UnityEffectRotateAngle="0;90;0"/>
+			<Sound From="walk_left" To="step_soil"/>
+		</Anim>
+		<Anim Name="WALK_RIDE">
+			<Particle From="F_pc_run_blank_dummy" To="Shockwave_GrowingGrass_Green_01" Scale="0.7" ForceConvert="NO" UnityEffect="YES" UnityEffectRotateAngle="0;90;0"/>
+			<Sound From="walk_left" To="step_soil"/>
+		</Anim>
+		<Anim Name="ARUN_RIDE">
+			<Particle From="F_pc_run_blank_dummy" To="Shockwave_GrowingGrass_Green_01" Scale="0.7" ForceConvert="NO" UnityEffect="YES" UnityEffectRotateAngle="0;90;0"/>
+			<Sound From="walk_left" To="step_soil"/>
+		</Anim>
+		<Anim Name="RUN_RIDE">
+			<Particle From="F_pc_run_blank_dummy" To="Shockwave_GrowingGrass_Green_01" Scale="0.7" ForceConvert="NO" UnityEffect="YES" UnityEffectRotateAngle="0;90;0"/>
+			<Sound From="walk_left" To="step_soil"/>
+		</Anim>
+		<Anim Name="RUN_DASH_RIDE">
+			<Particle From="F_pc_run_blank_dummy" To="Shockwave_GrowingGrass_Green_01" Scale="0.7" ForceConvert="NO" UnityEffect="YES" UnityEffectRotateAngle="0;90;0"/>
+			<Sound From="walk_left" To="step_soil"/>
+		</Anim>
+		<Anim Name="RUN_NOBLEPOPO">
+			<Particle From="F_pc_run_blank_dummy" To="Shockwave_GrowingGrass_Green_01" Scale="0.7" ForceConvert="NO" UnityEffect="YES" UnityEffectRotateAngle="0;90;0"/>
+		</Anim>
+		<Anim Name="RUN_EP13ANIMAL">
+			<Particle From="F_pc_run_blank_dummy" To="Shockwave_GrowingGrass_Green_01" Scale="0.7" ForceConvert="NO" UnityEffect="YES" UnityEffectRotateAngle="0;90;0"/>
+		</Anim>
+	</Material>
 </Map_materials>

@@ -198,18 +198,12 @@ function GET_RECIPE_MATERIAL_INFO(recipeCls, index,pc)
         return recipeItemCnt, propCount,dragRecipeItem,nil,recipeItemLv,nil
     end
     
-    if itemName == 'dummy_GabijaCertificate' then -- 여신의 증표(가비야)
+    -- 여신의 증표
+    -- dummy_RadaCertificate
+    if itemName ~= nil and string.find(itemName, 'dummy') ~= nil and string.find(itemName, 'Certificate') ~= nil then
         local aObj = GetMyAccountObj()
-        local propCount = TryGetProp(aObj, 'GabijaCertificate', '0')
-        if propCount == 'None' then
-            propCount = '0'
-        end
-        return recipeItemCnt, propCount, dragRecipeItem, nil,recipeItemLv,nil
-    end
-
-    if itemName == 'dummy_VakarineCertificate' then -- 여신의 증표(바카리네)
-        local aObj = GetMyAccountObj()
-        local propCount = TryGetProp(aObj, 'VakarineCertificate', '0')
+        local name = StringSplit(itemName, '_')        
+        local propCount = TryGetProp(aObj, name[2], '0')
         if propCount == 'None' then
             propCount = '0'
         end
@@ -245,14 +239,14 @@ function GET_RECIPE_MATERIAL_INFO(recipeCls, index,pc)
     end
     local GetMaterialItemListFunc = _G[getMaterialScript];
 
-	if dragRecipeItem.MaxStack > 1 then
+	if TryGetProp(dragRecipeItem, 'MaxStack', 0) > 1 then
 		invItem = session.GetInvItemByType(dragRecipeItem.ClassID);
 	else
 		invItemlist = GetMaterialItemListFunc(dragRecipeItem); -- 기간제는 스택형 ㄴㄴ라서 비스택형만 대체
         ignoreType = true; -- 개수 셀 때 type만 검사하지 않도록 함
 	end
 
-	local invItemCnt = GET_PC_ITEM_COUNT_BY_LEVEL(dragRecipeItem.ClassID, recipeItemLv);
+    local invItemCnt = GET_PC_ITEM_COUNT_BY_LEVEL(dragRecipeItem.ClassID, recipeItemLv);
     if ignoreType then
         invItemCnt = #invItemlist;
     end

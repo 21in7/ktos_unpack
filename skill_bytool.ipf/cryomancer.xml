@@ -142,6 +142,10 @@
         </MainSkl>
     </Skill>
     <Skill Name="Cryomancer_SubzeroShield">
+        <EnableScripts>
+			<ToolScp Client="NO" Scp="SKL_CHECK_EQUIP_SHIELD" UseSleep="NO">					
+			</ToolScp>						
+		</EnableScripts>
         <EndScripts>
             <ToolScp Client="NO" Scp="SKL_CANCEL_CANCEL" UseSleep="NO"/>
             <ToolScp Client="NO" Scp="DEL_MON_SKILL" UseSleep="NO"/>
@@ -787,6 +791,65 @@
             <ResultList>
                 <ToolScp Client="NO" Scp="SCR_SKILL_GUST_VIBORA" UseSleep="NO"/>
             </ResultList>
+        </MainSkl>
+    </Skill>
+    <Skill Name="Common_Cryomancer_SubzeroShield">
+        <EnableScripts>
+			<ToolScp Client="NO" Scp="SKL_CHECK_EQUIP_SHIELD" UseSleep="NO">					
+			</ToolScp>						
+		</EnableScripts>
+        <EndScripts>
+            <ToolScp Client="NO" Scp="SKL_CANCEL_CANCEL" UseSleep="NO"/>
+            <ToolScp Client="NO" Scp="DEL_MON_SKILL" UseSleep="NO"/>
+        </EndScripts>
+        <KeyInputStart>
+            <ToolScp Client="YES" Scp="MONSKL_C_PLAY_ANIM" UseSleep="NO">
+                <Str Str="BUFF"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Client="YES" Scp="MONSKL_C_RESERVE_ANIM" UseSleep="NO">
+                <Str Str="SKL_SUBZEROSHIELD_LOOP"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </KeyInputStart>
+        <KeyInputEnd>
+            <ToolScp Client="NO" Scp="SKL_CANCEL_CANCEL" UseSleep="NO"/>
+            <ToolScp Client="YES" Scp="MONSKL_C_CLEAR_RESERVE_ANIM" UseSleep="NO"/>
+            <ToolScp Client="NO" Scp="DEL_MON_SKILL" UseSleep="NO"/>
+        </KeyInputEnd>
+        <MainSkl JumpFlee="NO" MSPDToUsePos="0" ScrLock="None">
+            <EtcList>
+                <Scp Client="YES" Scp="C_VOICE_SOUND" Time="0" UseSleep="NO">
+                    <Str Str="voice_wiz_m_subzeroshield_shot"/>
+                    <Str Str="voice_wiz_subzeroshield_shot"/>
+                </Scp>
+                <Scp Client="YES" Scp="C_EFFECT" Time="300" UseSleep="NO">
+                    <Str_Arg Arg="1" Str="E_wizard_subzeroshield_burst"/>
+                    <Str Str="None"/>
+                    <Num Num="0"/>
+                </Scp>
+                <Scp Client="NO" Scp="SKL_BUFF" Time="400" UseSleep="NO">
+                    <Str Str="Subzero_Buff"/>
+                    <Num FuncTxt=" return obj.Level" Num="1" UseFunc="1"/>
+                    <Num Num="0"/>
+                    <Num Num="25000" UseFunc="1" FuncTxt="local value = 1800000
+                    if IsPVPField(self) == 1 then
+                    value = 30000 
+                    end
+                    return value"/>
+                    <Num Num="1"/>
+                    <Num Num="100"/>
+                    <Num Num="0"/>
+                </Scp>
+                <Scp Client="NO" Scp="SKL_TGT_REMOVE_DEBUFF" Time="110" UseSleep="NO">
+                    <Str FuncTxt="local func_name = 'get_remove_debuff_tooltip_Cryomancer_SubzeroShield'
+               local func = _G[func_name]
+               if func == nil then return end
+               return func(obj.Level)" Str="0" UseFunc="1"/>
+                </Scp>
+            </EtcList>
         </MainSkl>
     </Skill>
     <Skill Name="Cryomancer_IceBolt_2">

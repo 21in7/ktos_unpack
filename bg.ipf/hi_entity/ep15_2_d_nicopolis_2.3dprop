@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="yes"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by k (IMCGames Co., Ltd) -->
+<Prop>
+	<Model Path="ep15_2_d_nicopolis_2_b_model.xac" RenderType="RT_MODEL" IsBloom="0" Type="" NoCol="0"/>
+	<Model Path="ep15_2_d_nicopolis_2_book.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="ep15_2_d_nicopolis_2_gr_a_01.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="ep15_2_d_nicopolis_2_gr_a_02.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="ep15_2_d_nicopolis_2_grass.xac" RenderType="RT_MODEL" IsBloom="0" Type="" NoCol="1"/>
+	<Model Path="ep15_2_d_nicopolis_2_ground.xac" RenderType="RT_MUD" IsBloom="0" Type="GROUND" NoCol="0"/>
+	<Model Path="ep15_2_d_nicopolis_2_model_01.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="ep15_2_d_nicopolis_2_model_02.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="ep15_2_d_nicopolis_2_model_03.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="ep15_2_d_nicopolis_2_model_04.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="ep15_2_d_nicopolis_2_model_05.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="ep15_2_d_nicopolis_2_model_06.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="ep15_2_d_nicopolis_2_model_07.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="ep15_2_d_nicopolis_2_model_08.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="ep15_2_d_nicopolis_2_model_09.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="ep15_2_d_nicopolis_2_model_10.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="ep15_2_d_nicopolis_2_model_11.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="ep15_2_d_nicopolis_2_tile.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="ep15_2_d_nicopolis_2_tp.xac" RenderType="BLENDING" IsBloom="0" Type="BLENDING" NoCol="1"/>
+	<Model Path="ep15_2_d_nicopolis_2_tree.xac" RenderType="RT_MODEL" IsBloom="0" Type="" NoCol="1"/>
+</Prop>

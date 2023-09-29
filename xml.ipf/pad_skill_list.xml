@@ -15726,6 +15726,33 @@ return value"/>
 			</ToolScp>
 		</updateEvent>
 	</PadSkill>
+    <PadSkill Name="Jellyzele_Reduce_BubbleBubble" CheckerType="0" Range="20" ApplyFlyMon="1" AllowOverlap="1" IgnoreDistanceInterval="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="5000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_USEABLE_PC" Client="NO" UseSleep="NO"/>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_light204_bubble_loop" Arg="1"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_TGT_SCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="TB_JELLYZELE_REDUCE_BUBBLEBUBBLE_PAD_ENTER"/>
+            </ToolScp>
+        </enterEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
 	<PadSkill Name="Jellyzele_ConversionMarble" CheckerType="0" Range="20" UpdateTerm="1000" ApplyFlyMon="1" AllowOverlap="1" IgnoreDistanceInterval="1" EnableSearch="0">
 		<createEvent>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
@@ -15816,6 +15843,31 @@ return value"/>
 			</ToolScp>
 		</updateEvent>
 	</PadSkill>
+    <PadSkill Name="Jellyzele_ground_change_extreme_pad" CheckerType="0" Range="50" UpdateTerm="1000" AllowOverlap="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_USEABLE_PC" Client="NO" UseSleep="NO"/>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="8000"/>
+                <Num Num="9999"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_ground231_crack_red" Arg="0.80000001"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="TB_JELLYZELE_HEATED_GROUND_PAD_UPDATE"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
 	<PadSkill Name="Jellyzele_missile_pad" CheckerType="0" Dist="287.59137" Angle="-1.1699531" Range="40" UpdateTerm="1000" AllowOverlap="1" EnableSearch="0">
 		<createEvent>
 			<ToolScp Scp="PAD_USEABLE_PC" Client="NO" UseSleep="NO"/>
@@ -15921,6 +15973,41 @@ return value"/>
 			</ToolScp>
 		</updateEvent>
 	</PadSkill>
+    <PadSkill Name="Jellyzele_puddle_poison_pad" CheckerType="0" Range="60" UpdateTerm="1000" AllowOverlap="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_USEABLE_PC" Client="NO" UseSleep="NO"/>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="40000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_water010_blue" Arg="1"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_JELLYZELE_PUDDLE_PAD_DESTROY"/>
+            </ToolScp>
+        </destroyEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_TGT_SCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_JELLYZELE_PUDDLE_PAD_ENTER"/>
+            </ToolScp>
+        </enterEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="99999"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_RUNSCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_JELLYZELE_PUDDLE_PAD_UPDATE"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
 	<PadSkill Name="Jellyzele_sticky_pad" CheckerType="0" Range="65" UpdateTerm="1000" AllowOverlap="1" EnableSearch="0">
 		<createEvent>
 			<ToolScp Scp="PAD_USEABLE_PC" Client="NO" UseSleep="NO"/>
@@ -15996,100 +16083,6 @@ return value"/>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
 				<Num Num="-500"/>
 				<Num Num="99999"/>
-			</ToolScp>
-		</updateEvent>
-	</PadSkill>
-	<PadSkill Name="Spreader_TransitionCrystaFragment_Ring" CheckerType="0" Range="70" UpdateTerm="1000" AutoPos="1" AutoDir="1" ApplyFlyMon="1" AllowOverlap="1" IgnoreDistanceInterval="1" EnableSearch="0">
-		<createEvent>
-			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
-				<Num Num="20000"/>
-				<Num Num="1"/>
-			</ToolScp>
-		</createEvent>
-		<destroyEvent>
-			<ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
-				<Str Str="SCR_SPREADER_TRANSITION_CRYSTAL_FRAGMENT_RING_PAD_DESTROY"/>
-			</ToolScp>
-		</destroyEvent>
-		<enterEvent>
-			<ToolScp Scp="PAD_TGT_SCRIPT" Client="NO" UseSleep="NO">
-				<Str Str="SCR_SPREADER_TRANSITION_CRYSTAL_FRAGMENT_RING_PAD_ENTER"/>
-			</ToolScp>
-		</enterEvent>
-		<leaveEvent>
-			<ToolScp Scp="PAD_TGT_SCRIPT" Client="NO" UseSleep="NO">
-				<Str Str="SCR_SPREADER_TRANSITION_CRYSTAL_FRAGMENT_RING_PAD_LEAVE"/>
-			</ToolScp>
-		</leaveEvent>
-		<updateEvent>
-			<ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
-				<Str Str="SCR_SPREADER_TRANSITION_CRYSTAL_FRAGMENT_RING_PAD_UPDATE"/>
-			</ToolScp>
-			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
-				<Num Num="-1000"/>
-				<Num Num="99999"/>
-			</ToolScp>
-		</updateEvent>
-	</PadSkill>
-	<PadSkill Name="Spreader_Accompany" CheckerType="0" Range="80" AutoPos="1" AutoDir="1" UpdateTerm="1000" ApplyFlyMon="1" AllowOverlap="1" IgnoreDistanceInterval="1" EnableSearch="0">
-		<createEvent>
-			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
-				<Num Num="20000"/>
-				<Num Num="99999"/>
-			</ToolScp>
-		</createEvent>
-		<destroyEvent>
-			<ToolScp Scp="PAD_FUNC_UPDATE_RUNSCRIPT" Client="NO" UseSleep="NO">
-				<Str Str="SCR_SPREADER_ACCOMPANY_PAD_DESTROY"/>
-			</ToolScp>
-		</destroyEvent>
-		<enterEvent>
-			<ToolScp Scp="PAD_TGT_SCRIPT" Client="NO" UseSleep="NO">
-				<Str Str="SCR_SPREADER_ACCOMPANY_PAD_ENTER"/>
-			</ToolScp>
-		</enterEvent>
-		<leaveEvent>
-			<ToolScp Scp="PAD_TGT_SCRIPT" Client="NO" UseSleep="NO">
-				<Str Str="SCR_SPREADER_ACCOMPANY_PAD_LEAVE"/>
-			</ToolScp>
-		</leaveEvent>
-		<updateEvent>
-			<ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
-				<Str Str="SCR_SPREADER_ACCOMPANY_PAD_UPDATE"/>
-			</ToolScp>
-			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
-				<Num Num="-1000"/>
-				<Num Num="0"/>
-			</ToolScp>
-		</updateEvent>
-	</PadSkill>
-	<PadSkill Name="TurbulentCoreCommon_RockMslFallFire" CheckerType="0" Dist="64.792297" Angle="3.098685" Range="60" ApplyFlyMon="1" AllowOverlap="1" IsMagicType="0" IsMineType="0" EnableSearch="0">
-		<createEvent>
-			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
-				<Num Num="20000"/>
-				<Num Num="1"/>
-			</ToolScp>
-			<ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
-				<Str_Arg Str="F_smoke014_firesteam" Arg="2"/>
-				<Pos Angle="0" Dist="0"/>
-				<Num Num="0"/>
-				<Str_Arg Str="None" Arg="1"/>
-				<Num Num="1"/>
-			</ToolScp>
-		</createEvent>
-		<updateEvent>
-			<ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
-				<Num Num="0.5"/>
-				<Num Num="0"/>
-				<Num Num="0"/>
-				<Str_Arg Str="None" Arg="1"/>
-				<Num Num="0"/>
-				<Num Num="0"/>
-				<Str Str="None"/>
-			</ToolScp>
-			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
-				<Num Num="-500"/>
-				<Num Num="0"/>
 			</ToolScp>
 		</updateEvent>
 	</PadSkill>
@@ -17745,10 +17738,7 @@ return value"/>
 	<PadSkill Name="Mergen_ArrowRain3" CheckerType="0" Range="100" UpdateTerm="1000">
 		<createEvent>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
-				<Num Num="0" UseFunc="1" FuncTxt="local cast, charge = GetDynamicCastingFlowTime(self)
-local value = charge * 5000
-
-return value"/>
+                <Num Num="0" UseFunc="1" FuncTxt="local cast, charge = GetDynamicCastingFlowTime(self) if charge > 0 then local quick_cast_skill = GetSkill(self, &quot;Common_Chronomancer_QuickCast&quot;) if quick_cast_skill ~= nil then local quick_cast_ratio = SCR_Get_Quickcast_Ratio(quick_cast_skill); if quick_cast_ratio > 0 then quick_cast_ratio = quick_cast_ratio * 0.01 charge = charge + quick_cast_ratio end if charge > 1 then charge = 1 end end end return charge * 5000"/>
 				<Num Num="9999"/>
 			</ToolScp>
 		</createEvent>
@@ -18157,20 +18147,20 @@ return 5000 + obj.Level *  1000"/>
 				<Str_Arg Str="None" Arg="1"/>
 			</ToolScp>
 		</createEvent>
-		<enterEvent>
-			<ToolScp Scp="PAD_TGT_BUFF" Client="NO" UseSleep="NO">
-				<Str Str="FRIEND"/>
-				<Num Num="0"/>
-				<Num Num="0"/>
-				<Str Str="HoukiBroomSkllvup_Buff"/>
-				<Num Num="1"/>
-				<Num Num="0"/>
-				<Num Num="0"/>
-				<Num Num="1"/>
-				<Num Num="100"/>
-				<Num Num="0"/>
-			</ToolScp>
-		</enterEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_TGT_BUFF" Client="NO" UseSleep="NO">
+                <Str Str="FRIEND"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="HoukiBroomSkllvup_Buff"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Num Num="1"/>
+                <Num Num="100"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </enterEvent>
 		<leaveEvent>
 			<ToolScp Scp="PAD_TGT_BUFF_REMOVE" Client="NO" UseSleep="NO">
 				<Str Str="ALL"/>
@@ -21088,7 +21078,7 @@ end"/>
 				<Num Num="0"/>
 				<Num Num="0"/>
 				<Str Str="Foretell_Buff" UseFunc="1" FuncTxt="local buffName = &quot;Foretell_Buff&quot;
-                if GetExProp(self, &quot;ITEM_VIBORA_Aura&quot;) &gt; 0 then
+                if GetExProp(self, &quot;ITEM_VIBORA_Aura&quot;) &gt; 0 and GetSkill(self, 'Oracle_Foretell') ~= nil then
                     buffName = &quot;Foretell_Vibora_Buff&quot;
                 end
                 return buffName"/>
@@ -26145,6 +26135,55 @@ return value;"/>
 			</ToolScp>
 		</destroyEvent>
 	</PadSkill>
+    <PadSkill Name="Spreader_TransitionCrystaFragment_Ring" CheckerType="0" Range="70" UpdateTerm="1000" AutoPos="1" AutoDir="1" ApplyFlyMon="1" AllowOverlap="1" IgnoreDistanceInterval="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="20000"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_SPREADER_TRANSITION_CRYSTAL_FRAGMENT_RING_PAD_DESTROY"/>
+            </ToolScp>
+        </destroyEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_TGT_SCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_SPREADER_TRANSITION_CRYSTAL_FRAGMENT_RING_PAD_ENTER"/>
+            </ToolScp>
+        </enterEvent>
+        <leaveEvent>
+            <ToolScp Scp="PAD_TGT_SCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_SPREADER_TRANSITION_CRYSTAL_FRAGMENT_RING_PAD_LEAVE"/>
+            </ToolScp>
+        </leaveEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_SPREADER_TRANSITION_CRYSTAL_FRAGMENT_RING_PAD_UPDATE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="99999"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="Spreader_kruvina_lightning" CheckerType="0" Range="50" UpdateTerm="500" AutoPos="0" AutoDir="0" ApplyFlyMon="0" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="500"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="TB_SPREADER_KRUVINA_LIGHTNING_PAD_UPDATE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
 	<PadSkill Name="Square_Unknocker" CheckerType="1" Dist="35.893921" Angle="3.039305" Range="10" InnerRange="50">
 		<createEvent>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
@@ -27427,6 +27466,341 @@ return padTime
 			</ToolScp>
 		</updateEvent>
 	</PadSkill>
+    <PadSkill Name="telharsha_candle_light_pad" CheckerType="0" PadHeight="1" Dist="155.74883" Angle="1.5950881" Range="20" AutoPos="1" ApplyFlyMon="1" AllowOverlap="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="20000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_fire050_ball" Arg="3"/>
+                <Pos Angle="0" Dist="1.8911644e-40"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_USEABLE_PC_ASSISTER" Client="NO" UseSleep="NO"/>
+        </createEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_TELHARSHA_CANDLE_LIGHT_PAD_EXPLOSION"/>
+            </ToolScp>
+        </destroyEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_FUNC_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_TELHARSHA_CANDLE_LIGHT_PAD_ENTER"/>
+            </ToolScp>
+        </enterEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="telharsha_drop_fire_pad" CheckerType="0" Dist="132.4183" Angle="-2.047246" Range="30" UpdateTerm="1000" ApplyFlyMon="1" AllowOverlap="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="40000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_fire052" Arg="3.5"/>
+                <Pos Angle="0" Dist="-6.3487837e-36"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_USEABLE_PC_ASSISTER" Client="NO" UseSleep="NO"/>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="telharsha_firepillar_pad" CheckerType="0" Dist="0" Angle="0" Range="55" UpdateTerm="1000" ApplyFlyMon="1" EnableSearch="0" IsMagicType="0" IsMineType="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="35000"/>
+                <Num Num="999990"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_burstup040_fire2" Arg="1.3"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_RUNSCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_FREEDUNGEON_TELHARSHA_FIRE_PILLAR_PAD_UPDATE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+            </ToolScp>  
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="telharsha_blackpuple_flame_pad" CheckerType="0" Dist="0" Angle="0" Range="70" UpdateTerm="1000" ApplyFlyMon="1" AllowOverlap="1" IgnoreDistanceInterval="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_spread_in032_dark_loop2_violet" Arg="1.7"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="50000"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_FUNC_UPDATE_RUNSCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_FREEDUNGEON_TELHARSHA_BLACKPUPLE_FLAME_PAD_DESTORY"/>
+            </ToolScp>
+        </destroyEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="999999"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_RUNSCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_FREEDUNGEON_TELHARSHA_BLACKPUPLE_FLAME_PAD_UPDATE"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="telharsha_burning_irredian_pad" CheckerType="0" Dist="0" Angle="0" Range="160" UpdateTerm="1000" ApplyFlyMon="1" AllowOverlap="1" IgnoreDistanceInterval="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_circle033_spread_ou_blue" Arg="1.7"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="75000"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="999999"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_RUNSCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_FREEDUNGEON_TELHARSHA_BURNING_IRREDIAN_PAD_UPDATE"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="RE_lecifer_bat_pad" CheckerType="1" PadHeight="1" Range="135" InnerRange="40" UpdateTerm="500" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="2500"/>
+                <Num Num="99999"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="RE_solcomm_rizepillar_pad" CheckerType="0" Dist="0" Angle="0" Range="55" UpdateTerm="1000" ApplyFlyMon="1" EnableSearch="0" IsMagicType="0" IsMineType="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="30000"/>
+                <Num Num="999990"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_rize001_green" Arg="1.0"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_FUNC_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_RE_BOSS_SOLCOMM_RIZE_PILLAR_PAD_ENTER"/>
+            </ToolScp>
+        </enterEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_RUNSCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_RE_BOSS_SOLCOMM_RIZE_PILLAR_PAD_UPDATE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+            </ToolScp>  
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="RE_helgasercle_skl5" CheckerType="0" Range="50" UpdateTerm="1000" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="30000"/>
+                <Num Num="99990"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_ground134_red_loop" Arg="2.2"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="RE_helgasercle_bloodstain_pad" CheckerType="0" Range="60" UpdateTerm="1000" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="30000"/>
+                <Num Num="99990"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_ground134_red_loop" Arg="2.9"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="RE_gresmetruth_laser_trace_pad" CheckerType="1" PadHeight="1" Range="160" InnerRange="20" UpdateTerm="1000" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="10000"/>
+                <Num Num="1000"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_DelmoreCastleGate_skl1_ground001" Arg="1.2"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_FUNC_UPDATE_RUNSCRIPT" Client="NO" UseSleep="NO">
+                <Str_Arg Str="SCR_RE_BOSS_GRESMETRUTH_PAD_UPDATE" Arg="7.4968616e-38"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="RE_gresmetruth_laser_pad" CheckerType="0" PadHeight="10" Range="30" UpdateTerm="20" ApplyFlyMon="1" EnableSearch="0" IsMagicType="0" IsMineType="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="2000"/>
+                <Num Num="1000"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_DelmoreCastleGate_skl1_explosion002" Arg="1"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_RUNSCRIPT" Client="NO" UseSleep="NO">
+                <Str_Arg Str="SCR_RE_BOSS_GRESMETRUTH_LASER_PAD_LINK_CREATE" Arg="7.4968616e-38"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_FUNC_UPDATE_RUNSCRIPT" Client="NO" UseSleep="NO">
+                <Str_Arg Str="SCR_RE_BOSS_GRESMETRUTH_LASER_PAD_EFFECT" Arg="7.4968616e-38"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="F_hit_dark2" Arg="0.60000002"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="ENEMY"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-20"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
 	<PadSkill Name="Templer_AdvancedOrders" CheckerType="0" Range="150" UpdateTerm="100" AutoPos="1" ApplyFlyMon="1" IgnoreDistanceInterval="1" EnableSearch="0" IsMineType="0">
 		<createEvent>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
@@ -29297,6 +29671,36 @@ return 3 + obj.Level * 0.5"/>
 			</ToolScp>
 		</updateEvent>
 	</PadSkill>
+	<PadSkill Name="TurbulentCoreCommon_RockMslFallFire" CheckerType="0" Dist="86.318756" Angle="-0.47473025" Range="50" ApplyFlyMon="1" AllowOverlap="1" EnableSearch="0" IsMagicType="0" IsMineType="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="20000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_smoke014_firesteam" Arg="2"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="0.5"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
 	<PadSkill Name="Unique_Glacier_Area" CheckerType="4" Dist="538.07513" Angle="1.5276005" Range="500" InnerRange="200" AutoPos="1" ApplyFlyMon="1" AllowOverlap="1">
 		<createEvent>
 			<ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
@@ -29839,6 +30243,327 @@ return 3 + obj.Level * 0.5"/>
 			</ToolScp>
 		</updateEvent>
 	</PadSkill>
+    <PadSkill Name="Upinis_WaterBlade_Pad" CheckerType="0" Range="50" ApplyFlyMon="1" AllowOverlap="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="5000"/>
+                <Num Num="99999"/>
+            </ToolScp>
+        </createEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_TGT_DAMAGE" Client="NO" UseSleep="NO">
+                <Str Str="ENEMY"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_TGT_SCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_UPINIS_WATER_BLADE_PAD_ENTER"/>
+            </ToolScp>
+        </enterEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="Upinis_WaterPillar_Pad" CheckerType="0" PadHeight="1" Range="50" UpdateTerm="1000" ApplyFlyMon="1" AllowOverlap="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="1000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_water020_burstup" Arg="1"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_UPINIS_WATER_PILLAR_PAD_UPDATE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="Upinis_Spin_Pad" CheckerType="0" PadHeight="1" Range="150" UpdateTerm="500" AutoPos="1" AutoDir="1" ApplyFlyMon="1" AllowOverlap="1" IgnoreDistanceInterval="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="1500"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="Upinis_Propeller_Pad" CheckerType="0" PadHeight="1" Range="75" UpdateTerm="500" ApplyFlyMon="1" AllowOverlap="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="5000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_spin052_water_loop" Arg="2.0"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="Upinis_Propeller_Multiple_Pad" CheckerType="0" PadHeight="1" Range="75" UpdateTerm="500" ApplyFlyMon="1" AllowOverlap="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="8000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_spin052_water_loop" Arg="2.0"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_UPINIS_WATER_PROPELLER_MULTIPLE_UPDATE"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="Slogutis_Projectile_Pad" CheckerType="0" PadHeight="1" Range="40" UpdateTerm="300" ApplyFlyMon="1" AllowOverlap="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="999"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="Slogutis_Fire_Pad" CheckerType="0" PadHeight="1" Range="60" UpdateTerm="1000" ApplyFlyMon="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="5000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_ground239_smoke_violet" Arg="1.8"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_SLOGUTIS_FIRE_PAD_UPDATE"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="Slogutisk_Crack_Pad" CheckerType="0" PadHeight="1" Range="40" UpdateTerm="1000" ApplyFlyMon="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="30000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_ground210_smoke_violet" Arg="1.0"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="Slogutisk_FireSpin_Pad" CheckerType="0" PadHeight="5" Range="50" UpdateTerm="500" ApplyFlyMon="1" AllowOverlap="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="20000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_spread_in032_darkrize_loop" Arg="1.3"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_SLOGUTIS_FIRE_SPIN_PAD_UPDATE"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="Slogutisk_BlackOrbFire_Pad" CheckerType="0" PadHeight="1" Range="50" UpdateTerm="1000" ApplyFlyMon="1" AllowOverlap="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="20000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_ground176_violet" Arg="1.8"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_SLOGUTIS_BLACK_ORB_FIRE_PAD_UPDATE"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="Slogutis_FireExplosion_Pad" CheckerType="0" PadHeight="1" Range="80" UpdateTerm="1000" ApplyFlyMon="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="5000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_ground239_smoke_violet" Arg="2.4"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </createEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_FUNC_UPDATE_RUNSCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_SLOGUTIS_FIRE_EXPLOSION_PAD_DESTROY"/>
+            </ToolScp>
+        </destroyEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_SLOGUTIS_FIRE_EXPLOSION_PAD_UPDATE"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
 	<PadSkill Name="VIBORA_ArousalCharm_Fire_Pad" CheckerType="0" deadProcess="1" Dist="5.1272907" Angle="1.6337266" Range="25" UpdateTerm="550" AutoDir="1" ApplyFlyMon="1" AllowOverlap="1">
 		<createEvent>
 			<ToolScp Scp="PAD_CONCURRENT_USE_COUNT" Client="NO" UseSleep="NO">
@@ -33760,6 +34485,293 @@ return 1"/>
 			</ToolScp>
 		</updateEvent>
 	</PadSkill>
+    <PadSkill Name="BW_boss_pnatorex_missile" CheckerType="1" Dist="197.44809" Angle="0.74521101" Range="40" InnerRange="60" UpdateTerm="250" EnableSearch="0" AutoPos="1" AutoDir="1">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="10000"/>
+                <Num Num="99999"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="I_force071_dark5" Arg="3.0"/>
+                <Pos Angle="0" Dist="0" Height="5"/>
+                <Num Num="10"/>
+                <Str_Arg Str="None" Arg="1"/>
+            </ToolScp>
+        </createEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_TGT_DAMAGE" Client="NO" UseSleep="NO">
+                <Str Str="ENEMY"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </enterEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="BW_boss_torelodeer_msl" CheckerType="0" Dist="95.283997" Angle="1.4082489" Range="30" UpdateTerm="300" ApplyFlyMon="1" AllowOverlap="1" EnableSearch="0" IsMagicType="0" IsMineType="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="50000"/>
+                <Num Num="9999"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_FORCE" Client="YES" UseSleep="NO">
+                <Str_Arg Str="I_force018_trail_psychokinesis3_3" Arg="2.5"/>
+                <Num Num="15"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_USEABLE_RELATION_ENEMY" Client="NO" UseSleep="NO"/>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="4800"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="I_smoke039" UseFunc="1" FuncTxt="if self == nil then
+	    return &quot;I_smoke039_fire&quot;, 1;
+    end" Arg="1"/>
+                <Pos Angle="0" Dist="3.8759516e-36"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+            </ToolScp>
+            <ToolScp Scp="C_SHOCKWAVE_PAD" Client="YES" UseSleep="NO">
+                <Num Num="5"/>
+                <Num Num="3"/>
+                <Num Num="45"/>
+                <Num Num="999"/>
+            </ToolScp>
+        </createEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_TGT_DAMAGE" Client="NO" UseSleep="NO">
+                <Str Str="ENEMY"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </enterEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-300"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="BW_gesti_slow" CheckerType="0" Range="60" UpdateTerm="800">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="15000"/>
+                <Num Num="99999"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_ground134_red_loop" Arg="2.2"/>
+                <Pos Angle="0" Dist="0" PosType="1"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+            </ToolScp>
+        </createEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_TGT_BUFF_MON" Client="NO" UseSleep="NO">
+                <Str Str="ENEMY"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="UC_slowdown"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Num Num="1"/>
+                <Num Num="100"/>
+            </ToolScp>
+        </enterEvent>
+        <leaveEvent>
+            <ToolScp Scp="PAD_TGT_BUFF_REMOVE" Client="NO" UseSleep="NO">
+                <Str Str="ENEMY"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="UC_slowdown"/>
+            </ToolScp>
+        </leaveEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-800"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="0.30000001"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="F_hit_good" Arg="0.30000001"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="BW_aklasprincess_BurstUp" CheckerType="0" deadProcess="1" Dist="2.2400956" Angle="2.8928199" Range="40" UpdateTerm="1000" ApplyFlyMon="1" EnableSearch="0" IsMineType="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="20000"/>
+                <Num Num="99990"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_burstup004_dark_loop" Arg="1.0"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="0.5"/>
+            </ToolScp>
+        </createEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_TGT_DAMAGE" Client="NO" UseSleep="NO">
+                <Str Str="ENEMY"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </enterEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY_SAMETIME_COUNT" Client="NO" UseSleep="NO">
+                <Num Num="4"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="BW_Pattern_FireBarrier" CheckerType="1" Dist="0" Angle="0" Range="15" InnerRange="15" UpdateTerm="1000" ApplyFlyMon="1" EnableSearch="0" IsMineType="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="10000"/>
+                <Num Num="99990"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_fire017_loop" Arg="0.5"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="0.5"/>
+            </ToolScp>
+        </createEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_FUNC_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_BRIDGE_WAILING_FIRE_BARRIER_PAD_ENTER"/>
+            </ToolScp>
+        </enterEvent>
+        <leaveEvent>
+            <ToolScp Scp="PAD_FUNC_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_BRIDGE_WAILING_FIRE_BARRIER_PAD_LEAVE"/>
+            </ToolScp>
+        </leaveEvent>
+    </PadSkill>
+    <PadSkill Name="BW_Pattern_FirePad" CheckerType="1" Dist="0" Angle="0" Range="30" InnerRange="30" UpdateTerm="1000" ApplyFlyMon="1" EnableSearch="0" IsMineType="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="10000"/>
+                <Num Num="99990"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_DelmoreCastleGate_skl7_fire001" Arg="0.5"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="0.5"/>
+            </ToolScp>
+        </createEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_FUNC_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_BRIDGE_WAILING_FIRE_PAD_ENTER"/>
+            </ToolScp>
+        </enterEvent>
+        <leaveEvent>
+            <ToolScp Scp="PAD_FUNC_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_BRIDGE_WAILING_FIRE_PAD_LEAVE"/>
+            </ToolScp>
+        </leaveEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="BW_Pattern_CrystalTower_Pad" CheckerType="0" PadHeight="10" Range="30" UpdateTerm="20" ApplyFlyMon="1" EnableSearch="0" IsMagicType="0" IsMineType="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="50000"/>
+                <Num Num="1000"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_DelmoreCastleGate_skl1_explosion002" Arg="1"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_RUNSCRIPT" Client="NO" UseSleep="NO">
+                <Str_Arg Str="SCR_BRIDGE_WAILING_CRYSTAL_TOWER_SKL1_LASER_PAD_CREATE" Arg="7.4968616e-38"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_FUNC_UPDATE_RUNSCRIPT" Client="NO" UseSleep="NO">
+                <Str_Arg Str="SCR_BRIDGE_WAILING_CRYSTAL_TOWER_SKL1_LASER_PAD_EFFECT" Arg="7.4968616e-38"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="F_hit_dark2" Arg="0.60000002"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="ENEMY"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="BW_Pattern_ElectricJumpRope" CheckerType="1" PadHeight="1" Range="20" InnerRange="220" UpdateTerm="1000" EnableSearch="0" AllowOverlap="1" IsMagicType="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="10000"/>
+                <Num Num="99999"/>
+            </ToolScp>
+        </createEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_FUNC_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_BRIDGE_WAILING_ELECTRIC_JUMP_ROPE_PAD_ENTER"/>
+            </ToolScp>
+        </enterEvent>
+        <leaveEvent>
+            <ToolScp Scp="PAD_FUNC_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_BRIDGE_WAILING_ELECTRIC_JUMP_ROPE_PAD_LEAVE"/>
+            </ToolScp>
+        </leaveEvent>
+    </PadSkill>
+    <PadSkill Name="BW_Pattern_SandStorm" CheckerType="0" PadHeight="0" Dist="105.4328" Angle="-2.0391603" Range="30" UpdateTerm="500" AutoPos="0" ApplyFlyMon="1" AllowOverlap="1" EnableSearch="0" IsMagicType="0" IsMineType="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="10000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_spin047_smoke_loop" Arg="1.0"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="0.5"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_BRIDGE_WAILING_SAND_STORM_PAD_UPDATE"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
 	<PadSkill Name="boss_square" CheckerType="1" PadHeight="12" Range="20" InnerRange="220" AutoPos="1">
 		<createEvent>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
@@ -34007,7 +35019,7 @@ return 1"/>
 			</ToolScp>
 		</updateEvent>
 	</PadSkill>
-	<PadSkill Name="counterspell_pad" CheckerType="0" Range="50" UpdateTerm="1000" EnableSearch="1">
+	<PadSkill Name="counterspell_pad" CheckerType="0" Range="50" UpdateTerm="1000" EnableSearch="1" AllowOverlap="1">
 		<createEvent>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
 				<Num Num="0" UseFunc="1" FuncTxt="local value = SCR_GET_CounterSpell_Bufftime(obj) * 1000
@@ -34022,6 +35034,11 @@ return 1"/>
 			</ToolScp>
 			<ToolScp Scp="PAD_USEABLE_RELATION_FRIEND" Client="NO" UseSleep="NO"/>
 		</createEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_ORACLE_COUNTERSPELL_PAD_DETROY"/>
+            </ToolScp>
+        </destroyEvent>
 		<enterEvent>
 			<ToolScp Scp="PAD_TGT_BUFF" Client="NO" UseSleep="NO">
 				<Str Str="FRIEND"/>
@@ -34037,11 +35054,8 @@ return 1"/>
 			</ToolScp>
 		</enterEvent>
 		<leaveEvent>
-			<ToolScp Scp="PAD_TGT_BUFF_REMOVE" Client="NO" UseSleep="NO">
-				<Str Str="ALL"/>
-				<Num Num="0"/>
-				<Num Num="0"/>
-				<Str Str="CounterSpell_Buff"/>
+            <ToolScp Scp="PAD_FUNC_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_ORACLE_COUNTERSPELL_BUFF_REMOVE"/>
 			</ToolScp>
 		</leaveEvent>
 		<updateEvent>
@@ -34086,7 +35100,7 @@ return 1"/>
 			</ToolScp>
 		</updateEvent>
 	</PadSkill>
-	<PadSkill Name="counterspell_aura_pad" CheckerType="0" Range="100" UpdateTerm="1000" AutoDir="1" AutoPos="1">
+	<PadSkill Name="counterspell_aura_pad" CheckerType="0" Range="100" UpdateTerm="1000" AutoDir="1" AutoPos="1" AllowOverlap="1">
 		<createEvent>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
 				<Num Num="999999"/>
@@ -34094,6 +35108,11 @@ return 1"/>
 			</ToolScp>
 			<ToolScp Scp="PAD_USEABLE_RELATION_FRIEND" Client="NO" UseSleep="NO"/>
 		</createEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_ORACLE_COUNTERSPELL_PAD_DETROY"/>
+            </ToolScp>
+        </destroyEvent>
 		<enterEvent>
 			<ToolScp Scp="PAD_TGT_BUFF" Client="NO" UseSleep="NO">
 				<Str Str="FRIEND"/>
@@ -34109,12 +35128,9 @@ return 1"/>
 			</ToolScp>
 		</enterEvent>
 		<leaveEvent>
-			<ToolScp Scp="PAD_TGT_BUFF_REMOVE" Client="NO" UseSleep="NO">
-				<Str Str="ALL"/>
-				<Num Num="0"/>
-				<Num Num="0"/>
-				<Str Str="CounterSpell_Buff"/>
-			</ToolScp>
+            <ToolScp Scp="PAD_FUNC_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_ORACLE_COUNTERSPELL_BUFF_REMOVE"/>
+            </ToolScp>
 		</leaveEvent>
 	</PadSkill>
 	<PadSkill Name="cover_pad" CheckerType="0" Dist="42.271538" Angle="3.0275183" Range="20" IsMagicType="0" IsMineType="0">
@@ -35102,6 +36118,31 @@ end"/>
 			</ToolScp>
 		</updateEvent>
 	</PadSkill>
+    <PadSkill Name="helgasercle_skl2" CheckerType="0" Range="30" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="99999"/>
+                <Num Num="99990"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_ground12_red" Arg="1"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
 	<PadSkill Name="indunTheEnd" CheckerType="0" Range="30" AllowOverlap="1" EnableSearch="0" IsMagicType="0" IsMineType="0">
 		<createEvent>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
@@ -37460,6 +38501,794 @@ end"/>
             <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
                 <Num Num="-100"/>
                 <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+
+    <!-- Engineer Skill  -->
+    <PadSkill Name="Engineer_FlameTurret_Default" CheckerType="0" Range="100" UpdateTerm="1000" ApplyFlyMon="1" IgnoreDistanceInterval="1" IsMagicType="0" IsMineType="0" >
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="15000" UseFunc="1" FuncTxt="local value = SCR_GET_FlameTurret_Ratio(obj)*1000 return value;"/>
+                <Num Num="99990"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_CRE_MON" Client="NO" UseSleep="NO">
+                <Str Str="pcskill_FlameTurret_Default"/>
+                <Pos Angle="0" Dist="0"/>
+                <Angle Angle="0"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <MonProp List="HitProof#YES"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+                <Str Str="None"/>
+                <Str Str="None"/>
+                <Num Num="0"/>
+                <Str Str="SET_PVE_NODAMAGE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_EXTRA_GROUND_EFFECT_FROM_PAD" Client="NO" UseSleep="NO">
+                <Str_Arg Str="F_SteamPunk_prop_fire" Arg="0.400002"/>
+                <Num Num="35"/>
+                <Num Num="0.5"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_archer_Fire_Turret_ground_loop" Arg="1.45000002"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_DESTROY_EFFECT_BLENDTIME" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_REMOVE_EXTRA_GROUND_EFFECT" Client="NO" UseSleep="NO">
+                <Str Str="F_SteamPunk_prop_fire"/>
+                <Num Num="0.3"/>   
+            </ToolScp>
+        </destroyEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_PCSKILL_MON_SET_ENEMY_TARGET" Client="NO" UseSleep="NO">
+                <Num Num="1" UseFunc="1" FuncTxt="local cnt = SCR_GET_FlameTurret_Ratio2(obj) return cnt;"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY_TARGETED" Client="NO" UseSleep="NO" />
+            <ToolScp Scp="SCR_ENGINEER_TURRET_PLAY_ANI_ATK" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_RUNSCRIPT" Client="NO" UseSleep="NO">
+                 <Str Str="SCR_ENGINEER_SKILL_CC_ACTIVATE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill> 
+    <PadSkill Name="Engineer_FlameTurret_Radial" CheckerType="2" Range="100" UpdateTerm="1000" ApplyFlyMon="1" IgnoreDistanceInterval="1" IsMagicType="0" IsMineType="0" >
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="15000" UseFunc="1" FuncTxt="local value = SCR_GET_FlameTurret_Ratio(obj)*1000 return value;"/>
+                <Num Num="99990"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_CRE_MON" Client="NO" UseSleep="NO">
+                <Str Str="pcskill_FlameTurret_Radial"/>
+                <Pos Angle="0" Dist="0"/>
+                <Angle Angle="0"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <MonProp List="HitProof#YES"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+                <Str Str="None"/>
+                <Str Str="None"/>
+                <Num Num="0"/>
+                <Str Str="SET_PVE_NODAMAGE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_EXTRA_GROUND_EFFECT_FROM_PAD" Client="NO" UseSleep="NO">
+                <Str_Arg Str="F_SteamPunk_prop_fire" Arg="0.400002"/>
+                <Num Num="35"/>
+                <Num Num="0.5"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_USEABLE_RELATION_ENEMY" Client="NO" UseSleep="NO"/>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_SHOOT_EFFECT_NEAREST_ENEMY" Client="NO" UseSleep="NO">
+                <Str_Arg Str="F_archer_Fire_Turret_breath" Arg="1.250002"/>
+                <Str Str="Dummy_effect_fire" />
+            </ToolScp>
+            <ToolScp Scp="PAD_PCSKILL_MON_SET_ENEMY_TARGET_RADIAL" Client="NO" UseSleep="NO">
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="30"/>
+                <Num Num="1" UseFunc="1" FuncTxt="local cnt = SCR_GET_FlameTurret_Ratio2(obj)
+                    return cnt "/>
+                <Num Num="-1"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY_TARGETED" Client="NO" UseSleep="NO" />
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_DESTROY_EFFECT_BLENDTIME" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_REMOVE_EXTRA_GROUND_EFFECT" Client="NO" UseSleep="NO">
+                <Str Str="F_SteamPunk_prop_fire"/>
+                <Num Num="0.3"/>   
+            </ToolScp>
+            <ToolScp Scp="SCR_ENGINEER_EFFECT_CLEAR" Client="NO" UseSleep="NO" />
+        </destroyEvent>
+    </PadSkill>
+    <PadSkill Name="Engineer_FrozenTurret_Default" CheckerType="0" Range="120" UpdateTerm="500" ApplyFlyMon="1" IgnoreDistanceInterval="1" IsMagicType="0" IsMineType="0" >
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="15000" UseFunc="1" FuncTxt="local value = SCR_GET_FrozenTurret_Ratio(obj)*1000 return value;"/>
+                <Num Num="99990"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_CRE_MON" Client="NO" UseSleep="NO">
+                <Str Str="pcskill_FrozenTurret_Default"/>
+                <Pos Angle="0" Dist="0"/>
+                <Angle Angle="0"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <MonProp List="HitProof#YES"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+                <Str Str="None"/>
+                <Str Str="None"/>
+                <Num Num="0"/>
+                <Str Str="SET_PVE_NODAMAGE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_EXTRA_GROUND_EFFECT_FROM_PAD" Client="NO" UseSleep="NO">
+                <Str_Arg Str="F_SteamPunk_prop_ice" Arg="0.40002"/>
+                <Num Num="35"/> <!--height_offset-->
+                <Num Num="0.5"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_archer_Frozen_Turret_ground2_loop" Arg="1.20000002"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_PCSKILL_MON_SET_ENEMY_TARGET" Client="NO" UseSleep="NO">
+                <Num Num="1" UseFunc="1" FuncTxt="local cnt = SCR_GET_FrozenTurret_Ratio2(obj) return cnt;"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="SCR_ENGINEER_TURRET_PLAY_ANI_ATK" Client="NO" UseSleep="NO">
+                <Num Num="2"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_RUNSCRIPT" Client="NO" UseSleep="NO">
+                 <Str Str="SCR_ENGINEER_SKILL_CC_ACTIVATE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_DESTROY_EFFECT_BLENDTIME" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_REMOVE_EXTRA_GROUND_EFFECT" Client="NO" UseSleep="NO">
+                <Str Str="F_SteamPunk_prop_ice"/>
+                <Num Num="0.3"/>   
+            </ToolScp>
+        </destroyEvent>
+    </PadSkill>
+    <PadSkill Name="Engineer_ArrowTurret_Default" CheckerType="2" Range="130" UpdateTerm="500" ApplyFlyMon="1" IgnoreDistanceInterval="1" IsMagicType="0" IsMineType="0" >
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="15000" UseFunc="1" FuncTxt="local value = SCR_GET_ArrowTurret_Ratio(obj)*1000 return value;"/>
+                <Num Num="99990"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_CRE_MON" Client="NO" UseSleep="NO">
+                <Str Str="pcskill_ArrowTurret_Default"/>
+                <Pos Angle="0" Dist="0"/>
+                <Angle Angle="0"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <MonProp List="HitProof#YES"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+                <Str Str="None"/>
+                <Str Str="None"/>
+                <Num Num="0"/>
+                <Str Str="SET_PVE_NODAMAGE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_EXTRA_GROUND_EFFECT_FROM_PAD" Client="NO" UseSleep="NO">
+                <Str_Arg Str="F_SteamPunk_prop_arrow" Arg="0.450002"/>
+                <Num Num="35"/>
+                <Num Num="0.5"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_USEABLE_RELATION_ENEMY" Client="NO" UseSleep="NO"/>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_PCSKILL_MON_SET_ENEMY_TARGET" Client="NO" UseSleep="NO">
+                <Num Num="1" UseFunc="1" FuncTxt="local cnt = SCR_GET_ArrowTurret_Ratio2(obj) return cnt;"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FIND_NEAREST_TGT_LOCK_ON_AND_SHOOT_FORCE_EFFECT" Client="NO" UseSleep="NO">
+                <Num Num="130"/>
+                <Str Str="ENEMY"/>
+                <Str_Arg Str="E_archer_arrowturret_01" Arg="1.40001"/>
+                <Str_Arg Str="F_archer_Arrow_Turret_glow" Arg="0.80001"/> 
+                <Str Str="SLOW"/>
+                <Num Num="200"/>
+                <Str Str="Point004"/> 
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY_TARGETED" Client="NO" UseSleep="NO">
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_DESTROY_EFFECT_BLENDTIME" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_REMOVE_EXTRA_GROUND_EFFECT" Client="NO" UseSleep="NO">
+                <Str Str="F_SteamPunk_prop_arrow"/>
+                <Num Num="0.3"/>   
+            </ToolScp>
+        </destroyEvent>
+    </PadSkill>
+    <PadSkill Name="Engineer_ArrowTurret_Circle" CheckerType="0" Range="130" UpdateTerm="1000" ApplyFlyMon="1" IgnoreDistanceInterval="1" IsMagicType="0" IsMineType="0" >
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="15000" UseFunc="1" FuncTxt="local value = SCR_GET_ArrowTurret_Ratio(obj)*1000 return value;"/>
+                <Num Num="99990"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_CRE_MON" Client="NO" UseSleep="NO">
+                <Str Str="pcskill_ArrowTurret_Circle"/>
+                <Pos Angle="0" Dist="0"/>
+                <Angle Angle="0"/>
+                <Num Num="1"/>
+                <Num Num="0" />
+                <MonProp List="HitProof#YES"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+                <Str Str="None"/>
+                <Str Str="None"/>
+                <Num Num="0"/>
+                <Str Str="SET_PVE_NODAMAGE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_EXTRA_GROUND_EFFECT_FROM_PAD" Client="NO" UseSleep="NO">
+                <Str_Arg Str="F_SteamPunk_prop_arrow" Arg="0.450002"/>
+                <Num Num="35"/>
+                <Num Num="0.5"/> 
+            </ToolScp>
+            <ToolScp Scp="PAD_USEABLE_RELATION_ENEMY" Client="NO" UseSleep="NO"/>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_PCSKILL_MON_SET_ENEMY_TARGET" Client="NO" UseSleep="NO">
+                <Num Num="1" UseFunc="1" FuncTxt="local cnt = SCR_GET_ArrowTurret_Ratio2(obj) return cnt;"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY_TARGETED" Client="NO" UseSleep="NO" />
+            <ToolScp Scp="SCR_ENGINEER_TURRET_PLAY_ANI_ATK" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_SPIN_PAD_MON_SHOOT_CIRCLE_FORCE_EFFECT" Client="NO" UseSleep="NO">
+                <Str_Arg Str="E_archer_arrowturret_02" Arg="0.69001"/>
+                <Num Num="0.0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_DESTROY_EFFECT_BLENDTIME" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_REMOVE_EXTRA_GROUND_EFFECT" Client="NO" UseSleep="NO">
+                <Str Str="F_SteamPunk_prop_arrow"/>
+                <Num Num="0.3"/>   
+            </ToolScp>
+        </destroyEvent>
+    </PadSkill>  
+    <PadSkill Name="Engineer_LightningTurret_Default" CheckerType="0" Range="120" UpdateTerm="1500" ApplyFlyMon="1" IgnoreDistanceInterval="1" IsMagicType="0" IsMineType="0" >
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="15000" UseFunc="1" FuncTxt="local value=15000 
+                if GetExProp(self, &quot;ITEM_VIBORA_MaxPower&quot;) &gt; 0 then
+                    value = value * 1.2;
+                end
+                return value;"/>
+                <Num Num="99990"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_CRE_MON" Client="NO" UseSleep="NO">
+                <Str Str="pcskill_LightningTurret_Default"/>
+                <Pos Angle="0" Dist="0"/>
+                <Angle Angle="0"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <MonProp List="HitProof#YES"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+                <Str Str="None"/>
+                <Str Str="None"/>
+                <Num Num="0"/>
+                <Str Str="SET_PVE_NODAMAGE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_EXTRA_GROUND_EFFECT_FROM_PAD" Client="NO" UseSleep="NO">
+                <Str_Arg Str="F_SteamPunk_prop_lightning" Arg="0.60002"/>
+                <Num Num="40"/>
+                <Num Num="0.5"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_archer_lightning_Turret_ground" Arg="1.8000002"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_USEABLE_RELATION_ENEMY" Client="NO" UseSleep="NO"/>
+            <ToolScp Scp="PAD_CONCURRENT_USE_COUNT" Client="NO" UseSleep="NO">
+                <Num Num="10" UseFunc="1" FuncTxt="return SCR_GET_LightningTurret_Ratio2(obj)"/>
+            </ToolScp>
+        </createEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_DESTROY_EFFECT_BLENDTIME" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_REMOVE_EXTRA_GROUND_EFFECT" Client="NO" UseSleep="NO">
+                <Str Str="F_SteamPunk_prop_lightning"/>
+                <Num Num="0.3"/>   
+            </ToolScp>
+        </destroyEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_PCSKILL_MON_SET_ENEMY_TARGET" Client="NO" UseSleep="NO">
+                <Num Num="1" UseFunc="1" FuncTxt="local cnt = SCR_GET_LightningTurret_Ratio2(obj) return cnt;"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_LOCK_ON_AND_SHOOT_CHAIN_EFFECT" Client="NO" UseSleep="NO" />
+            <ToolScp Scp="PAD_DAMAGE_ENEMY_TARGETED" Client="NO" UseSleep="NO" />
+            <ToolScp Scp="SCR_ENGINEER_TURRET_PLAY_ANI_ATK" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_RUNSCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_ENGINEER_SKILL_CC_ACTIVATE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1500"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="Engineer_LightningTurret_Punishment" CheckerType="0" Range="120" UpdateTerm="5000" ApplyFlyMon="1" IgnoreDistanceInterval="1" IsMagicType="0" IsMineType="0" >
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="15000" UseFunc="1" FuncTxt="local value=15000 
+                if GetExProp(self, &quot;ITEM_VIBORA_MaxPower&quot;) &gt; 0 then
+                    value = value * 1.2;
+                end
+                return value;"/>
+                <Num Num="99990"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_CRE_MON" Client="NO" UseSleep="NO">
+                <Str Str="pcskill_LightningTurret_Punishment"/>
+                <Pos Angle="0" Dist="0"/>
+                <Angle Angle="0"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <MonProp List="HitProof#YES"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+                <Str Str="None"/>
+                <Str Str="None"/>
+                <Num Num="0"/>
+                <Str Str="SET_PVE_NODAMAGE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_EXTRA_GROUND_EFFECT_FROM_PAD" Client="NO" UseSleep="NO">
+                <Str_Arg Str="F_SteamPunk_prop_lightning" Arg="0.60002"/>
+                <Num Num="40"/> 
+                <Num Num="0.5"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_archer_lightning_Turret_ground" Arg="1.8000002"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_DESTROY_EFFECT_BLENDTIME" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_REMOVE_EXTRA_GROUND_EFFECT" Client="NO" UseSleep="NO">
+                <Str Str="F_SteamPunk_prop_lightning"/>
+                <Num Num="0.3"/>   
+            </ToolScp>
+            <ToolScp Scp="PAD_REMOVE_EXTRA_GROUND_EFFECT" Client="NO" UseSleep="NO">
+                <Str Str="F_archer_lightning_Turret_1"/>
+                <Num Num="0.1"/>   
+            </ToolScp>
+        </destroyEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_PCSKILL_MON_SET_ENEMY_TARGET" Client="NO" UseSleep="NO">
+                <Num Num="1" UseFunc="1" FuncTxt="local cnt = SCR_GET_LightningTurret_Ratio2(obj) return cnt;"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_TARGET_STRIKE_EFFECT" Client="NO" UseSleep="NO">
+                <Str_Arg Str="F_archer_lightning_Turret_1" Arg="0.6000002"/>
+                <Num Num="5"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY_TARGETED" Client="NO" UseSleep="NO" />
+            <ToolScp Scp="SCR_ENGINEER_TURRET_PLAY_ANI_ATK" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_RUNSCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_ENGINEER_SKILL_CC_ACTIVATE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-5000"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="Engineer_BuffTurret_Default" CheckerType="0" Range="150" UpdateTerm="200" ApplyFlyMon="1" IgnoreDistanceInterval="1" IsMagicType="0" AllowOverlap="1" IsMineType="0" >
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="15000" UseFunc="1" FuncTxt="local value=15000 
+                    if GetExProp(self, &quot;ITEM_VIBORA_MaxPower&quot;) &gt; 0 then
+                        value = value * 1.2;
+                    end
+                    return value;"/>
+                <Num Num="99990"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_SET_ARG_NUMBER" Client="NO" UseSleep="NO">
+                <Num Num="0" UseFunc="1" FuncTxt="return obj.Level"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_CRE_MON" Client="NO" UseSleep="NO">
+                <Str Str="pcskill_BuffTurret_Default"/>
+                <Pos Angle="0" Dist="0"/>
+                <Angle Angle="0"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <MonProp List="HitProof#YES"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+                <Str Str="None"/>
+                <Str Str="None"/>
+                <Num Num="0"/>
+                <Str Str="SET_PVE_NODAMAGE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_EXTRA_GROUND_EFFECT_FROM_PAD" Client="NO" UseSleep="NO">
+                <Str_Arg Str="F_SteamPunk_prop_buff" Arg="0.600002"/>
+                <Num Num="40"/> 
+                <Num Num="0.5"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_archer_buff_Turret_ground" Arg="2.25000002"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_CHECK_AND_UPDATE_ENGINEER_BUFFTURRET_ADDBUFF" Client="NO" UseSleep="NO"/>
+            <ToolScp Scp="SCR_ENGINEER_TURRET_BUFFTURRET_ACTIVATE" Client="NO" UseSleep="NO">
+                <Num Num="25"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-200"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_DESTROY_EFFECT_BLENDTIME" Client="NO" UseSleep="NO">
+                <Num Num="0.3"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_REMOVE_EXTRA_GROUND_EFFECT" Client="NO" UseSleep="NO">
+                <Str Str="F_SteamPunk_prop_buff"/>
+                <Num Num="0.3"/>   
+            </ToolScp>
+            <ToolScp Scp="PAD_ENGINEER_BUFFTURRET_REMOVE_ALL_BUFF" Client="NO" UseSleep="NO">
+            </ToolScp>           
+        </destroyEvent>
+        <leaveEvent>
+            <ToolScp Scp="PAD_TGT_BUFF_REMOVE" Client="NO" UseSleep="NO">
+                <Str Str="PARTY"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="EngineerTurret_Buff"/>
+            </ToolScp>           
+            <ToolScp Scp="PAD_TGT_BUFF_REMOVE_AFTER_CHECK_ABIL" Client="NO" UseSleep="NO">
+                <Str Str="PARTY"/>
+                <Str Str="Engineer26"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="EngineerTurret_Buff_Critical"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_TGT_BUFF_REMOVE" Client="NO" UseSleep="NO">
+                <Str Str="ENEMY"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="EngineerTurret_Debuff"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_TGT_BUFF_REMOVE_AFTER_CHECK_ABIL" Client="NO" UseSleep="NO">
+                <Str Str="PARTY"/>
+                <Str Str="Engineer28"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="EngineerTurret_Buff_Protection"/>
+            </ToolScp>        
+        </leaveEvent>
+    </PadSkill>
+    <PadSkill Name="Engineer_KingMechaV_Default" CheckerType="0" Range="120"  UpdateTerm="1000" ApplyFlyMon="1" IgnoreDistanceInterval="1" IsMagicType="0" IsMineType="0" EnableSearch="1">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleqep="NO">
+                <Num Num="7000" UseFunc="1" FuncTxt="local value = 7000; return value"/>
+                <Num Num="99990"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_CRE_MON" Client="NO" UseSleep="NO">
+                <Str Str="pcskill_KingMechaV_Default"/>
+                <Pos Angle="0" Dist="-40"/>
+                <Angle Angle="0"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <MonProp List="HitProof#YES"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+                <Str Str="None"/>
+                <Str Str="None"/>
+                <Num Num="0"/>
+                <Str Str="SET_PVE_NODAMAGE"/>
+            </ToolScp>
+            <ToolScp Scp="SCR_ENGINEER_MECHA_ATTRIBUTE_SET" Client="NO" UseSleep="NO" />
+            <ToolScp Scp="SCR_ENGINEER_MECHA_PLAY_ANIM" Client="NO" UseSleep="NO" />
+            <ToolScp Scp="PAD_USEABLE_RELATION_ENEMY" Client="NO" UseSleep="NO"/>
+            <ToolScp Scp="PAD_CONCURRENT_USE_COUNT" Client="NO" UseSleep="NO">
+                <Num Num="15" UseFunc="1" FuncTxt="local cnt = 15 return cnt;"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_PCSKILL_MON_SET_ENEMY_TARGET" Client="NO" UseSleep="NO">
+                <Num Num="1" UseFunc="1" FuncTxt="local cnt = SCR_GET_KingMechaV_Ratio(obj) return cnt;"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY_TARGETED_MECHA_DROP" Client="NO" UseSleep="NO"/>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY_TARGETED_MECHA" Client="NO" UseSleep="NO">
+                <Num Num="3"/>
+            </ToolScp>
+            <ToolScp Scp="SCR_CHECK_AND_DO_MECHA_FINAL_ATTACK" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_DESTROY_EFFECT_BLENDTIME" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+            </ToolScp>
+        </destroyEvent>
+    </PadSkill>
+    <PadSkill Name="Engineer_KingMechaV_Circle" CheckerType="0" Range="120" UpdateTerm="1000" ApplyFlyMon="1" IgnoreDistanceInterval="1" IsMagicType="0" IsMineType="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleqep="NO">
+                <Num Num="7000" UseFunc="1" FuncTxt="local value = 7000; return value"/>
+                <Num Num="99990"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_CRE_MON" Client="NO" UseSleep="NO">
+                <Str Str="pcskill_KingMechaV_Circle"/>
+                <Pos Angle="0" Dist="0"/>
+                <Angle Angle="0"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <MonProp List="HitProof#YES"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+                <Str Str="None"/>
+                <Str Str="None"/>
+                <Num Num="0"/>
+                <Str Str="SET_PVE_NODAMAGE"/>
+            </ToolScp>
+            <ToolScp Scp="SCR_ENGINEER_MECHA_ATTRIBUTE_SET" Client="NO" UseSleep="NO" />
+            <ToolScp Scp="SCR_ENGINEER_MECHA_PLAY_ANIM" Client="NO" UseSleep="NO" />
+            <ToolScp Scp="PAD_USEABLE_RELATION_ENEMY" Client="NO" UseSleep="NO"/>
+            <ToolScp Scp="PAD_CONCURRENT_USE_COUNT" Client="NO" UseSleep="NO">
+                <Num Num="15" UseFunc="1" FuncTxt="local cnt = 15 return cnt;"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_PCSKILL_MON_SET_ENEMY_TARGET" Client="NO" UseSleep="NO">
+                <Num Num="1" UseFunc="1" FuncTxt="local cnt = 1; cnt= SCR_GET_KingMechaV_Ratio(obj) return cnt;"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY_TARGETED_MECHA_DROP" Client="NO" UseSleep="NO"/>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY_TARGETED_MECHA" Client="NO" UseSleep="NO">
+                <Num Num="3"/>
+            </ToolScp>
+            <ToolScp Scp="SCR_CHECK_AND_DO_MECHA_FINAL_ATTACK" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_DESTROY_EFFECT_BLENDTIME" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+            </ToolScp>
+        </destroyEvent>
+    </PadSkill>
+    <PadSkill Name="Engineer_KingMechaV_Frozen" CheckerType="0" Range="120" UpdateTerm="500" ApplyFlyMon="1" IgnoreDistanceInterval="1" IsMagicType="0" IsMineType="0" >
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="7000" UseFunc="1" FuncTxt="local value = 7000; return value"/>
+                <Num Num="99990"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_CRE_MON" Client="NO" UseSleep="NO">
+                <Str Str="pcskill_KingMechaV_Frozen"/>
+                <Pos Angle="0" Dist="0"/>
+                <Angle Angle="0"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <MonProp List="HitProof#YES"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="1"/>
+                <Str Str="None"/>
+                <Str Str="None"/>
+                <Num Num="0"/>
+                <Str Str="SET_PVE_NODAMAGE"/>
+            </ToolScp>
+            <ToolScp Scp="SCR_ENGINEER_MECHA_ATTRIBUTE_SET" Client="NO" UseSleep="NO" />
+            <ToolScp Scp="SCR_ENGINEER_MECHA_PLAY_ANIM" Client="NO" UseSleep="NO" />
+            <ToolScp Scp="PAD_USEABLE_RELATION_ENEMY" Client="NO" UseSleep="NO"/>
+            <ToolScp Scp="PAD_CONCURRENT_USE_COUNT" Client="NO" UseSleep="NO">
+                <Num Num="15" UseFunc="1" FuncTxt="local cnt = 15 return cnt;"/>
+            </ToolScp>
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_PCSKILL_MON_SET_ENEMY_TARGET" Client="NO" UseSleep="NO">
+                <Num Num="1" UseFunc="1" FuncTxt="local cnt = SCR_GET_KingMechaV_Ratio(obj) return cnt;"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY_TARGETED_MECHA_DROP_FROZEN" Client="NO" UseSleep="NO"/>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY_TARGETED_MECHA_FROZEN" Client="NO" UseSleep="NO">
+            </ToolScp>
+            <ToolScp Scp="SCR_CHECK_AND_DO_MECHA_FINAL_ATTACK" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_RUNSCRIPT" Client="NO" UseSleep="NO">
+                 <Str Str="SCR_ENGINEER_SKILL_CC_ACTIVATE"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_DESTROY_EFFECT_BLENDTIME" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+            </ToolScp>
+        </destroyEvent>
+    </PadSkill> 
+        <PadSkill Name="fire_master_bless_pad" CheckerType="0" Range="20" UpdateTerm="500" ApplyFlyMon="1">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="7000"/>
+                <Num Num="99999"/>
+            </ToolScp>            
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="I_sys_target002_circle" Arg="2.5"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+            </ToolScp>            
+        </createEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_ENTER_fire_master_bless_pad" Client="NO" UseSleep="NO" />
+        </enterEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>    
+    <PadSkill Name="dragoon_master_ex_pad" CheckerType="0" Range="20" UpdateTerm="500" ApplyFlyMon="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="3500"/>
+                <Num Num="99999"/>
+            </ToolScp>            
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_spread_in012_circle" Arg="4"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+            </ToolScp>            
+        </createEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_LEAVE_dragoon_master_ex_pad" Client="NO" UseSleep="NO" >
+                <Str Str="ENEMY"/>                
+            </ToolScp>
+        </destroyEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="boss_dragoon_ex_skill_9_pad" CheckerType="0" Range="50" ApplyFlyMon="1" AllowOverlap="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="2500"/>
+                <Num Num="99999"/>
+            </ToolScp>
+        </createEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_TGT_DAMAGE" Client="NO" UseSleep="NO">
+                <Str Str="ENEMY"/>
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_TGT_SCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_RUN_DAMAGE_MON_DRAGOON_EX_SKILL_9"/>
+            </ToolScp>
+        </enterEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="boss_dragoon_ex_skill_7_pad" CheckerType="0" Range="20" UpdateTerm="500" ApplyFlyMon="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="3500"/>
+                <Num Num="99999"/>
+            </ToolScp>            
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_spread_in012_circle" Arg="4"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+            </ToolScp>            
+        </createEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_LEAVE_boss_dragoon_ex_skill_7_pad" Client="NO" UseSleep="NO" >
+                <Str Str="ENEMY"/>                
+            </ToolScp>
+        </destroyEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="1"/>
             </ToolScp>
         </updateEvent>
     </PadSkill>

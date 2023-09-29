@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="yes"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by k (IMCGames Co., Ltd) -->
+<!-- edited with XMLSpy v2006 U (http://www.altova.com) by Administrator (EMBRACE) -->
+<World>
+	<ModelDir IpfName="bg_hi2" Path="\raid\Raid_AbyssalObserver\"/>
+	<LightMap File="Raid_AbyssalObserver_lightmap.jpg" Length="700 700" Offset="-21.646 -11.461" Size="512 512"/>
+	<TexDir IpfName="bg_texture" Path="\nicopolis\"/>
+	<AnimationDir IpfName="bg_hi2" Path="\raid\Raid_AbyssalObserver\"/>
+	<ShaTexDir IpfName="bg_hi2" Path="\raid\Raid_AbyssalObserver\"/>
+	<Model File="Raid_AbyssalObserver_ground.xac" Model="Raid_AbyssalObserver_ground" ShadowMap="Raid_AbyssalObserver" pos="-43.1936 -12.7162 -31.7012" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_AbyssalObserver_model_01.xac" Model="Raid_AbyssalObserver_model_01" ShadowMap="Raid_AbyssalObserver" pos="-97.4203 -13.0253 24.9099" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_AbyssalObserver_book.xac" Model="Raid_AbyssalObserver_book" ShadowMap="Raid_AbyssalObserver" pos="-154.8720 -56.4001 102.3036" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_AbyssalObserver_gr_a_01.xac" Model="Raid_AbyssalObserver_gr_a_01" ShadowMap="Raid_AbyssalObserver" pos="-20.8035 -18.1498 -100.5337" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_AbyssalObserver_tile.xac" Model="Raid_AbyssalObserver_tile" ShadowMap="Raid_AbyssalObserver" pos="-45.8979 -46.9993 -18.6534" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_AbyssalObserver_tree.xac" Model="Raid_AbyssalObserver_tree" ShadowMap="Raid_AbyssalObserver" pos="-61.1486 -8.2032 2.1511" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_AbyssalObserver_gr_a_02.xac" Model="Raid_AbyssalObserver_gr_a_02" ShadowMap="Raid_AbyssalObserver" pos="-28.2546 0.4000 -9.3876" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_AbyssalObserver_grass.xac" Model="Raid_AbyssalObserver_grass" ShadowMap="Raid_AbyssalObserver" pos="-53.7003 -6.7771 -72.7819" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_AbyssalObserver_b_model.xac" Model="Raid_AbyssalObserver_b_model" ShadowMap="Raid_AbyssalObserver" pos="-702.5506 -306.5960 378.9843" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_AbyssalObserver_tp.xac" Model="Raid_AbyssalObserver_tp" ShadowMap="Raid_AbyssalObserver" pos="-3.1754 41.0072 -333.0147" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+</World>

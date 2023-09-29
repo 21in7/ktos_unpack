@@ -19,6 +19,21 @@ function get_remove_debuff_tooltip_Peltasta_Guardian(level)
     return str
 end
 
+-- 펠타스타 - 가디언
+function get_remove_debuff_tooltip_Common_Peltasta_Guardian(level)
+    local percent = 20 * tonumber(level)
+    
+    if percent > 100 then
+        percent = 100
+    end
+
+    local remove_count = 1
+
+    -- buff_type, lv, count, percent, relation, self/around 
+    local str = string.format('Debuff/3/%d/%.2f/FRIEND/self', remove_count, percent)
+    return str
+end
+
 -- 템플러 - 불가침 영역
 function get_remove_debuff_tooltip_Templer_NonInvasiveArea(level)
     local percent = 20 * tonumber(level)
@@ -37,6 +52,19 @@ end
 
 -- 매화검수 - 기수식
 function get_remove_debuff_tooltip_BlossomBlader_StartUp(level)
+    local percent = 6.7 * tonumber(level)
+    
+    if percent > 100 then
+        percent = 100
+    end
+
+    local remove_count = 1
+
+    -- buff_type, lv, count, percent, relation, self/around
+    local str = string.format('Debuff/3/%d/%.2f/FRIEND/self', remove_count, percent)
+    return str
+end
+function get_remove_debuff_tooltip_Common_BlossomBlader_StartUp(level)
     local percent = 6.7 * tonumber(level)
     
     if percent > 100 then
@@ -71,6 +99,19 @@ end
 
 -- 파아드파이어 - 마쉬렌데스리트
 function get_remove_debuff_tooltip_PiedPiper_Marschierendeslied(level)
+    local percent = 10 * tonumber(level)
+    
+    if percent > 100 then
+        percent = 100
+    end
+
+    local remove_count = 1
+
+    -- buff_type, lv, count, percent, relation, self/around
+    local str = string.format('Debuff/3/%d/%.2f/FRIEND/around', remove_count, percent)
+    return str
+end
+function get_remove_debuff_tooltip_Common_PiedPiper_Marschierendeslied(level)
     local percent = 10 * tonumber(level)
     
     if percent > 100 then
@@ -207,6 +248,19 @@ function get_remove_debuff_tooltip_Shadowmancer_ShadowPool(level)
     local str = string.format('Debuff/3/%d/%.2f/FRIEND/self', remove_count, percent)
     return str
 end
+function get_remove_debuff_tooltip_Common_Shadowmancer_ShadowPool(level)
+    local percent = 20 * tonumber(level)
+    
+    if percent > 100 then
+        percent = 100
+    end
+
+    local remove_count = 1
+
+    -- buff_type, lv, count, percent, relation, self/around
+    local str = string.format('Debuff/3/%d/%.2f/FRIEND/self', remove_count, percent)
+    return str
+end
 
 
 --------------------------------------------------------------------
@@ -214,6 +268,19 @@ end
 -------------------------------------------------------------------- 
 -- 드루이드 - 라이칸쓰로피
 function get_remove_debuff_tooltip_Druid_Lycanthropy(level)
+    local percent = 20 * tonumber(level)
+    
+    if percent > 100 then
+        percent = 100
+    end
+
+    local remove_count = 2
+
+    -- buff_type, lv, count, percent, relation, self/around
+    local str = string.format('Debuff/3/%d/%.2f/FRIEND/self', remove_count, percent)
+    return str
+end
+function get_remove_debuff_tooltip_Common_Druid_Lycanthropy(level)
     local percent = 20 * tonumber(level)
     
     if percent > 100 then
@@ -274,6 +341,19 @@ end
 
 -- 질럿 - 인버너러블
 function get_remove_debuff_tooltip_Zealot_Invulnerable(level)
+    local percent = 10 * tonumber(level)
+    
+    if percent > 100 then
+        percent = 100
+    end
+
+    local remove_count = 1
+
+    -- buff_type, lv, count, percent, relation, self/around
+    local str = string.format('Debuff/3/%d/%.2f/FRIEND/self', remove_count, percent)
+    return str
+end
+function get_remove_debuff_tooltip_Common_Zealot_Invulnerable(level)
     local percent = 10 * tonumber(level)
     
     if percent > 100 then
@@ -365,6 +445,19 @@ function get_remove_debuff_tooltip_Linker_UmbilicalCord(level)
     local str = string.format('Debuff/3/%d/%.2f/FRIEND/self', remove_count, percent)
     return str
 end
+function get_remove_debuff_tooltip_Common_Linker_UmbilicalCord(level)
+    local percent = 20 * tonumber(level)
+    
+    if percent > 100 then
+        percent = 100
+    end
+
+    local remove_count = 1
+
+    -- buff_type, lv, count, percent, relation, self/around
+    local str = string.format('Debuff/3/%d/%.2f/FRIEND/self', remove_count, percent)
+    return str
+end
 
 -- 로그 - 버로우
 function get_remove_debuff_tooltip_Rogue_Burrow(level)
@@ -383,6 +476,19 @@ end
 
 -- 슈바르츠라이더 - 회피기동
 function get_remove_debuff_tooltip_Schwarzereiter_EvasiveAction(level)
+    local percent = 10 * tonumber(level)
+    
+    if percent > 100 then
+        percent = 100
+    end
+
+    local remove_count = 1
+
+    -- buff_type, lv, count, percent, relation, self/around
+    local str = string.format('Debuff/3/%d/%.2f/FRIEND/self', remove_count, percent)
+    return str
+end
+function get_remove_debuff_tooltip_Common_Schwarzereiter_EvasiveAction(level)
     local percent = 10 * tonumber(level)
     
     if percent > 100 then
@@ -440,4 +546,18 @@ function get_remove_debuff_tooltip_Sheriff_Redemption(level)
     local str = string.format('Debuff/3/%d/%.2f/FRIEND/self', remove_count, percent)
     return str
 end
+function get_remove_debuff_tooltip_Common_Sheriff_Redemption(level)
+    local percent = 10 * tonumber(level)
+    
+    if percent > 100 then
+        percent = 100
+    end
+
+    local remove_count = 1
+
+    -- buff_type, lv, count, percent, relation, self/around
+    local str = string.format('Debuff/3/%d/%.2f/FRIEND/self', remove_count, percent)
+    return str
+end
+
 

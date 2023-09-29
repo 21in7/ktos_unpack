@@ -499,6 +499,108 @@
             </SubSkl>
         </ByCondSkills>
     </Skill>    
+    <Skill Name="Common_Chronomancer_Pass">
+        <EnableScripts>
+			<ToolScp Scp="SKL_CHECK_Chronomancer_Pass" Client="BOTH" UseSleep="NO">
+			</ToolScp>
+		</EnableScripts>
+        <MainSkl JumpFlee="NO" MSPDToUsePos="0" ScrLock="None">
+            <HitList>
+                <Frame Angle="0" AniTime="9999" Dist="0" ForceATK="0" HitCount="1" PosType="0" RandDist="0" RandomPerHit="0" RotAngle="0" TermMax="0" TermMin="0" Time="9799" Type="FAN" />
+            </HitList>
+            <EtcList>
+                <Scp Client="YES" Scp="C_VOICE_SOUND" Time="100" UseSleep="NO">
+                    <Str Str="voice_war_atk_medium" />
+                    <Str Str="voice_atk_medium_war_f" />
+                </Scp>
+                <Scp Client="NO" Scp="SKL_BUFF_SAME_TARGET_DEBUFF" Time="0" UseSleep="NO">
+                    <Str Str="Pass_Buff" />
+                    <Num FuncTxt="return obj.Level;" Num="0" UseFunc="1" />
+                    <Num Num="0" />
+                    <Num Num="1000" />
+                    <Num Num="1" />
+                    <Num Num="100" />
+                    <Num Num="1" />
+                    <Str Str="Pass_Debuff" />
+                    <Num FuncTxt="return obj.Level;" Num="0" UseFunc="1" />
+                    <Num Num="0" />
+                    <Num Num="40000" />
+                    <Num Num="1" />
+                    <Num Num="100" />
+                </Scp>
+                <Scp Client="YES" Scp="C_EFFECT" Time="0" UseSleep="NO">
+                    <Str_Arg Arg="2" Str="F_wizard_Pass_ground" />
+                    <Str Str="None" />
+                    <Num Num="0" />
+                </Scp>
+            </EtcList>
+        </MainSkl>
+        <ByCondSkills>
+            <SubSkl>
+                <Cond>
+                    <ToolScp Client="NO" Scp="SKL_SELECT_ABIL" UseSleep="NO">
+                        <Str Str="Chronomancer13" />
+                    </ToolScp>
+                </Cond>
+                <Skill JumpFlee="NO" MSPDToUsePos="0" ScrLock="None">
+                    <HitList>
+                        <Frame Angle="0" AniTime="9999" Dist="0" ForceATK="0" HitCount="1" PosType="0" RandDist="0" RandomPerHit="0" RotAngle="0" TermMax="0" TermMin="0" Time="9799" Type="FAN" />
+                    </HitList>
+                    <EtcList>
+                        <Scp Client="NO" Scp="SKL_BUFF" Time="0" UseSleep="NO">
+                            <Str Str="Pass_Buff" />
+                            <Num FuncTxt="return obj.Level;" Num="0" UseFunc="1" />
+                            <Num Num="0" />
+                            <Num Num="1000" />
+                            <Num Num="1" />
+                            <Num Num="100" />
+                            <Num Num="0" />
+                        </Scp>
+                        <Scp Client="NO" Scp="SKL_BUFF" Time="0" UseSleep="NO">
+                            <Str Str="Pass_Debuff" />
+                            <Num FuncTxt="return obj.Level;" Num="0" UseFunc="1" />
+                            <Num Num="0" />
+                            <Num Num="40000" />
+                            <Num Num="1" />
+                            <Num Num="100" />
+                            <Num Num="0" />
+                        </Scp>
+                        <Scp Client="YES" Scp="C_EFFECT" Time="0" UseSleep="NO">
+                            <Str_Arg Arg="2" Str="F_wizard_Pass_ground" />
+                            <Str Str="None" />
+                            <Num Num="0" />
+                        </Scp>
+                        <Scp Client="YES" Scp="C_VOICE_SOUND" Time="100" UseSleep="NO">
+                            <Str Str="voice_war_atk_medium" />
+                            <Str Str="voice_atk_medium_war_f" />
+                        </Scp>
+                    </EtcList>
+                </Skill>
+            </SubSkl>
+        </ByCondSkills>
+    </Skill>
+    <Skill Name="Common_Chronomancer_QuickCast">
+        <MainSkl JumpFlee="NO" MSPDToUsePos="0" ScrLock="None">
+            <HitList>
+                <Frame Angle="0" AniTime="9999" Dist="0" ForceATK="0" HitCount="1" Length="30" PosType="0" RandDist="0" RandomPerHit="0" RotAngle="0" SklAngle="0.17453292" TermMax="0" TermMin="0" Time="9799" Type="FAN" Width="30" />
+            </HitList>
+            <EtcList>
+                <Scp Client="NO" Scp="SKL_BUFF" Time="0" UseSleep="NO">
+                    <Str Str="QuickCast_Buff" />
+                    <Num FuncTxt="return obj.Level" Num="1" UseFunc="1" />
+                    <Num Num="0" />
+                    <Num Num="1800000" />
+                    <Num Num="1" />
+                    <Num Num="100" />
+                    <Num Num="0" />
+                </Scp>
+                <Scp Client="YES" Scp="C_VOICE_SOUND" Time="100" UseSleep="NO">
+                    <Str Str="voice_wiz_m_quickcast_shot" />
+                    <Str Str="voice_wiz_quickcast_shot" />
+                </Scp>
+            </EtcList>
+        </MainSkl>
+    </Skill>
     <Skill Name="Chronomancer_TimeForward_2">        
         <MainSkl JumpFlee="NO" MSPDToUsePos="0" ScrLock="None">
             <EtcList>

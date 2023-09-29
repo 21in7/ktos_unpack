@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="yes"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by k (IMCGames Co., Ltd) -->
+<!-- edited with XMLSpy v2006 U (http://www.altova.com) by MyHome (EMBRACE) -->
+<World>
+	<ModelDir IpfName="bg_hi2" Path="\raid\Raid_DreamyForest\"/>
+	<AutoHeightMap Length="4300.0 4300.0" Offset="-502.68 -165.992" Height="4000 -4000"/>
+	<Water File="normal.png" Length="500 500" Size="1024 1024"/>
+	<TexDir IpfName="bg_texture\" Path="\whitetrees\"/>
+	<LightMap File="Raid_DreamyForest_lightmap.jpg" Length="850.0 850.0" Offset="58.807 0.0" Size="512 512"/>
+	<ShaTexDir IpfName="bg_hi2" Path="\raid\Raid_DreamyForest\"/>
+	<SubTexDir IpfName="bg_texture\" Path="\bracken\"/>
+	<Model File="Raid_DreamyForest_model.xac" Model="Raid_DreamyForest_model" ShadowMap="Raid_DreamyForest" pos="-58.0605 -61.3671 203.3033" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_DreamyForest_ground.xac" Model="Raid_DreamyForest_ground" ShadowMap="Raid_DreamyForest" pos="-142.7899 -38.9287 257.9465" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_DreamyForest_gr_a.xac" Model="Raid_DreamyForest_gr_a" ShadowMap="Raid_DreamyForest" pos="-98.3976 -10.2572 294.9915" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_DreamyForest_water.xac" Model="Raid_DreamyForest_water" ShadowMap="Raid_DreamyForest" pos="-246.5752 -29.3149 248.7296" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_DreamyForest_stone.xac" Model="Raid_DreamyForest_stone" ShadowMap="Raid_DreamyForest" pos="-224.8525 -40.7238 184.0021" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_DreamyForest_grass.xac" Model="Raid_DreamyForest_grass" ShadowMap="Raid_DreamyForest" pos="-25.2343 -25.7312 350.7371" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_DreamyForest_b_model.xac" Model="Raid_DreamyForest_b_model" ShadowMap="Raid_DreamyForest" pos="53.7186 -40.4219 304.0059" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_DreamyForest_tree.xac" Model="Raid_DreamyForest_tree" ShadowMap="Raid_DreamyForest" pos="-66.1694 -13.8984 323.5432" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_DreamyForest_blend_01.xac" Model="Raid_DreamyForest_blend_01" ShadowMap="Raid_DreamyForest" pos="61.2505 -27.3929 345.5483" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_DreamyForest_blend_02.xac" Model="Raid_DreamyForest_blend_02" ShadowMap="Raid_DreamyForest" pos="-137.4146 -100.5005 171.1309" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+</World>

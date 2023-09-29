@@ -784,4 +784,35 @@
             </ResultList>
         </MainSkl>
     </Skill>
+    <Skill Name="Common_Schwarzereiter_EvasiveAction">
+        <MainSkl ScrLock="None" JumpFlee="NO" MSPDToUsePos="0">
+            <EtcList>
+                <Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="0">
+                    <Str Str="skl_eff_sinobi_kunai_cast_2"/>
+                </Scp>
+                <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="0">
+                    <Str Str="EvasiveAction_Buff"/>
+                    <Num Num="1"/>
+                    <Num Num="0"/>
+                    <Num Num="0" UseFunc="1" FuncTxt="local value = 8000 return value"/>
+                    <Num Num="1"/>
+                    <Num Num="100"/>
+                    <Num Num="0"/>
+                </Scp>
+                <Scp Scp="C_VOICE_SOUND" Client="YES" UseSleep="NO" Time="100">
+                    <Str Str="voice_war_atk_medium"/>
+                    <Str Str="voice_atk_medium_war_f"/>
+                </Scp>
+                <Scp Scp="SKL_TGT_REMOVE_DEBUFF" Client="NO" UseSleep="NO" Time="110">
+                    <Str Str="0" UseFunc="1" FuncTxt="local func_name = 'get_remove_debuff_tooltip_' .. TryGetProp(obj, 'ClassName', 'None')
+               local func = _G[func_name]
+               if func == nil then return end
+               return func(obj.Level)"/>
+                </Scp>
+                <Scp Scp="C_SOUND" Client="YES" UseSleep="NO" Time="200">
+                    <Str Str="skl_eff_archer_skl_shot4"/>
+                </Scp>
+            </EtcList>
+        </MainSkl>
+    </Skill>
 </ToolSkill>

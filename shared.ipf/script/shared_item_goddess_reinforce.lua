@@ -1,7 +1,7 @@
 -- shared_item_goddess_reinforce.lua, 가디스 장비 강화 관련 
 -- item_goddess_reinforce.xml
 
-local equip_end_lv = 490
+local equip_end_lv = 500
 
 local function replace(text, to_be_replaced, replace_with)
 	local retText = text
@@ -235,6 +235,18 @@ item_goddess_reinforce.get_final_reinforce_prop = function(target_item, add_perc
 	local goal_lv = TryGetProp(target_item, 'Reinforce_2', 0) + 1 -- 목표 강화 수치
 	local use_lv = TryGetProp(target_item, 'UseLv', 1)
 
+	if item_goddess_growth.is_goddess_growth_item(target_item) == true then
+		if goal_lv <= 10 then
+			return 100000, 0, 0
+		elseif goal_lv <= 15 then
+			return 90000, 0, 0
+		elseif goal_lv <= 30 then
+			return 80000, 0, 0
+		else
+			return 100000, 0, 0
+		end
+	end	
+
 	if add_percentUp_count > GET_MAX_SUB_REVISION_COUNT(use_lv) then
 		add_percentUp_count = GET_MAX_SUB_REVISION_COUNT(use_lv)
 	end
@@ -422,6 +434,93 @@ function setting_lv_material_armor(mat_list_by_lv, lv)
 		misc_reinforce_1 = "misc_leatherFalouros_NoTrade" 
 		misc_BlessedStone = 'misc_BlessedStone'
 		misc_reinforce_2 = 'misc_hornFalouros_NoTrade'
+
+		mat_list_by_lv[lv]['armor'][22][seasonCoin] = 2948
+		mat_list_by_lv[lv]['armor'][22][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['armor'][22][misc_reinforce_1] = 15
+		mat_list_by_lv[lv]['armor'][22][misc_reinforce_2] = 10
+	
+		mat_list_by_lv[lv]['armor'][23][seasonCoin] = 3311
+		mat_list_by_lv[lv]['armor'][23][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['armor'][23][misc_reinforce_1] = 17
+		mat_list_by_lv[lv]['armor'][23][misc_reinforce_2] = 11
+	
+		mat_list_by_lv[lv]['armor'][24][seasonCoin] = 3673
+		mat_list_by_lv[lv]['armor'][24][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['armor'][24][misc_reinforce_1] = 19
+		mat_list_by_lv[lv]['armor'][24][misc_reinforce_2] = 11
+	
+		mat_list_by_lv[lv]['armor'][25][seasonCoin] = 4036
+		mat_list_by_lv[lv]['armor'][25][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['armor'][25][misc_reinforce_1] = 20
+		mat_list_by_lv[lv]['armor'][25][misc_reinforce_2] = 12
+	
+		mat_list_by_lv[lv]['armor'][26][seasonCoin] = 4398
+		mat_list_by_lv[lv]['armor'][26][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['armor'][26][misc_reinforce_1] = 20
+		mat_list_by_lv[lv]['armor'][26][misc_reinforce_2] = 12
+	
+		mat_list_by_lv[lv]['armor'][27][seasonCoin] = 4760
+		mat_list_by_lv[lv]['armor'][27][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['armor'][27][misc_reinforce_1] = 20
+		mat_list_by_lv[lv]['armor'][27][misc_reinforce_2] = 13
+	
+		mat_list_by_lv[lv]['armor'][28][seasonCoin] = 5123
+		mat_list_by_lv[lv]['armor'][28][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['armor'][28][misc_reinforce_1] = 20
+		mat_list_by_lv[lv]['armor'][28][misc_reinforce_2] = 13
+	
+		mat_list_by_lv[lv]['armor'][29][seasonCoin] = 5485
+		mat_list_by_lv[lv]['armor'][29][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['armor'][29][misc_reinforce_1] = 20
+		mat_list_by_lv[lv]['armor'][29][misc_reinforce_2] = 14
+	
+		mat_list_by_lv[lv]['armor'][30][seasonCoin] = 5848
+		mat_list_by_lv[lv]['armor'][30][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['armor'][30][misc_reinforce_1] = 20
+		mat_list_by_lv[lv]['armor'][30][misc_reinforce_2] = 14
+	elseif lv >= 500 then
+		if lv == 500 then
+			seasonCoin = "RadaCertificate" 
+			misc_reinforce_1 = "misc_upinis_wing_NoTrade" 
+			misc_BlessedStone = 'misc_BlessedStone_1'
+		end
+
+		mat_list_by_lv[lv]['armor'][22][seasonCoin] = 2948
+		mat_list_by_lv[lv]['armor'][22][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['armor'][22][misc_reinforce_1] = 15 + 5
+	
+		mat_list_by_lv[lv]['armor'][23][seasonCoin] = 3311
+		mat_list_by_lv[lv]['armor'][23][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['armor'][23][misc_reinforce_1] = 17 + 5
+	
+		mat_list_by_lv[lv]['armor'][24][seasonCoin] = 3673
+		mat_list_by_lv[lv]['armor'][24][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['armor'][24][misc_reinforce_1] = 19 + 5
+	
+		mat_list_by_lv[lv]['armor'][25][seasonCoin] = 4036
+		mat_list_by_lv[lv]['armor'][25][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['armor'][25][misc_reinforce_1] = 20 + 5
+	
+		mat_list_by_lv[lv]['armor'][26][seasonCoin] = 4398
+		mat_list_by_lv[lv]['armor'][26][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['armor'][26][misc_reinforce_1] = 20 + 5
+	
+		mat_list_by_lv[lv]['armor'][27][seasonCoin] = 4760
+		mat_list_by_lv[lv]['armor'][27][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['armor'][27][misc_reinforce_1] = 20 + 5
+	
+		mat_list_by_lv[lv]['armor'][28][seasonCoin] = 5123
+		mat_list_by_lv[lv]['armor'][28][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['armor'][28][misc_reinforce_1] = 20 + 5
+	
+		mat_list_by_lv[lv]['armor'][29][seasonCoin] = 5485
+		mat_list_by_lv[lv]['armor'][29][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['armor'][29][misc_reinforce_1] = 20 + 5
+	
+		mat_list_by_lv[lv]['armor'][30][seasonCoin] = 5848
+		mat_list_by_lv[lv]['armor'][30][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['armor'][30][misc_reinforce_1] = 20 + 5
 	end
 
 	mat_list_by_lv[lv]['armor'][1][seasonCoin] = 263
@@ -503,51 +602,6 @@ function setting_lv_material_armor(mat_list_by_lv, lv)
 	mat_list_by_lv[lv]['armor'][21][misc_BlessedStone] = 4
 	mat_list_by_lv[lv]['armor'][21][misc_reinforce_1] = 10	
 
-	mat_list_by_lv[lv]['armor'][22][seasonCoin] = 2948
-	mat_list_by_lv[lv]['armor'][22][misc_BlessedStone] = 4
-	mat_list_by_lv[lv]['armor'][22][misc_reinforce_1] = 15
-	mat_list_by_lv[lv]['armor'][22][misc_reinforce_2] = 10
-
-	mat_list_by_lv[lv]['armor'][23][seasonCoin] = 3311
-	mat_list_by_lv[lv]['armor'][23][misc_BlessedStone] = 4
-	mat_list_by_lv[lv]['armor'][23][misc_reinforce_1] = 17
-	mat_list_by_lv[lv]['armor'][23][misc_reinforce_2] = 11
-
-	mat_list_by_lv[lv]['armor'][24][seasonCoin] = 3673
-	mat_list_by_lv[lv]['armor'][24][misc_BlessedStone] = 4
-	mat_list_by_lv[lv]['armor'][24][misc_reinforce_1] = 19
-	mat_list_by_lv[lv]['armor'][24][misc_reinforce_2] = 11
-
-	mat_list_by_lv[lv]['armor'][25][seasonCoin] = 4036
-	mat_list_by_lv[lv]['armor'][25][misc_BlessedStone] = 4
-	mat_list_by_lv[lv]['armor'][25][misc_reinforce_1] = 20
-	mat_list_by_lv[lv]['armor'][25][misc_reinforce_2] = 12
-
-	mat_list_by_lv[lv]['armor'][26][seasonCoin] = 4398
-	mat_list_by_lv[lv]['armor'][26][misc_BlessedStone] = 4
-	mat_list_by_lv[lv]['armor'][26][misc_reinforce_1] = 20
-	mat_list_by_lv[lv]['armor'][26][misc_reinforce_2] = 12
-
-	mat_list_by_lv[lv]['armor'][27][seasonCoin] = 4760
-	mat_list_by_lv[lv]['armor'][27][misc_BlessedStone] = 4
-	mat_list_by_lv[lv]['armor'][27][misc_reinforce_1] = 20
-	mat_list_by_lv[lv]['armor'][27][misc_reinforce_2] = 13
-
-	mat_list_by_lv[lv]['armor'][28][seasonCoin] = 5123
-	mat_list_by_lv[lv]['armor'][28][misc_BlessedStone] = 4
-	mat_list_by_lv[lv]['armor'][28][misc_reinforce_1] = 20
-	mat_list_by_lv[lv]['armor'][28][misc_reinforce_2] = 13
-
-	mat_list_by_lv[lv]['armor'][29][seasonCoin] = 5485
-	mat_list_by_lv[lv]['armor'][29][misc_BlessedStone] = 4
-	mat_list_by_lv[lv]['armor'][29][misc_reinforce_1] = 20
-	mat_list_by_lv[lv]['armor'][29][misc_reinforce_2] = 14
-
-	mat_list_by_lv[lv]['armor'][30][seasonCoin] = 5848
-	mat_list_by_lv[lv]['armor'][30][misc_BlessedStone] = 4
-	mat_list_by_lv[lv]['armor'][30][misc_reinforce_1] = 20
-	mat_list_by_lv[lv]['armor'][30][misc_reinforce_2] = 14
-
 	setting_lv_misc_material(mat_list_by_lv, lv, 'armor')
 end
 
@@ -564,10 +618,96 @@ function setting_lv_material_weapon(mat_list_by_lv, lv)
 		misc_reinforce_1 = "misc_transmutationSpreader_NoTrade" -- 다음 세대 
 		misc_BlessedStone = 'misc_BlessedStone'
 		misc_reinforce_2 = 'misc_high_transmutationSpreader_NoTrade'
+
+		mat_list_by_lv[lv]['weapon'][22][seasonCoin] = 2948
+		mat_list_by_lv[lv]['weapon'][22][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['weapon'][22][misc_reinforce_1] = 15
+		mat_list_by_lv[lv]['weapon'][22][misc_reinforce_2] = 10
+
+		mat_list_by_lv[lv]['weapon'][23][seasonCoin] = 3311
+		mat_list_by_lv[lv]['weapon'][23][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['weapon'][23][misc_reinforce_1] = 17
+		mat_list_by_lv[lv]['weapon'][23][misc_reinforce_2] = 11
+
+		mat_list_by_lv[lv]['weapon'][24][seasonCoin] = 3673
+		mat_list_by_lv[lv]['weapon'][24][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['weapon'][24][misc_reinforce_1] = 19
+		mat_list_by_lv[lv]['weapon'][24][misc_reinforce_2] = 11
+
+		mat_list_by_lv[lv]['weapon'][25][seasonCoin] = 4036
+		mat_list_by_lv[lv]['weapon'][25][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['weapon'][25][misc_reinforce_1] = 20
+		mat_list_by_lv[lv]['weapon'][25][misc_reinforce_2] = 12
+
+		mat_list_by_lv[lv]['weapon'][26][seasonCoin] = 4398
+		mat_list_by_lv[lv]['weapon'][26][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['weapon'][26][misc_reinforce_1] = 20
+		mat_list_by_lv[lv]['weapon'][26][misc_reinforce_2] = 12
+
+		mat_list_by_lv[lv]['weapon'][27][seasonCoin] = 4760
+		mat_list_by_lv[lv]['weapon'][27][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['weapon'][27][misc_reinforce_1] = 20
+		mat_list_by_lv[lv]['weapon'][27][misc_reinforce_2] = 13
+
+		mat_list_by_lv[lv]['weapon'][28][seasonCoin] = 5123
+		mat_list_by_lv[lv]['weapon'][28][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['weapon'][28][misc_reinforce_1] = 20
+		mat_list_by_lv[lv]['weapon'][28][misc_reinforce_2] = 13
+
+		mat_list_by_lv[lv]['weapon'][29][seasonCoin] = 5485
+		mat_list_by_lv[lv]['weapon'][29][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['weapon'][29][misc_reinforce_1] = 20
+		mat_list_by_lv[lv]['weapon'][29][misc_reinforce_2] = 14
+
+		mat_list_by_lv[lv]['weapon'][30][seasonCoin] = 5848
+		mat_list_by_lv[lv]['weapon'][30][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['weapon'][30][misc_reinforce_1] = 20
+		mat_list_by_lv[lv]['weapon'][30][misc_reinforce_2] = 14
+	elseif lv >= 500 then
+		if lv == 500 then
+			seasonCoin = "RadaCertificate" -- 다음 세대
+			misc_reinforce_1 = "misc_slogutis_fragments_NoTrade" -- 다음 세대 
+			misc_BlessedStone = 'misc_BlessedStone_1'
+		end
+
+		mat_list_by_lv[lv]['weapon'][22][seasonCoin] = 2948
+		mat_list_by_lv[lv]['weapon'][22][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['weapon'][22][misc_reinforce_1] = 15 + 5
+
+		mat_list_by_lv[lv]['weapon'][23][seasonCoin] = 3311
+		mat_list_by_lv[lv]['weapon'][23][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['weapon'][23][misc_reinforce_1] = 17 + 5
+
+		mat_list_by_lv[lv]['weapon'][24][seasonCoin] = 3673
+		mat_list_by_lv[lv]['weapon'][24][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['weapon'][24][misc_reinforce_1] = 19 + 5
+
+		mat_list_by_lv[lv]['weapon'][25][seasonCoin] = 4036
+		mat_list_by_lv[lv]['weapon'][25][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['weapon'][25][misc_reinforce_1] = 20 + 5
+
+		mat_list_by_lv[lv]['weapon'][26][seasonCoin] = 4398
+		mat_list_by_lv[lv]['weapon'][26][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['weapon'][26][misc_reinforce_1] = 20 + 5
+
+		mat_list_by_lv[lv]['weapon'][27][seasonCoin] = 4760
+		mat_list_by_lv[lv]['weapon'][27][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['weapon'][27][misc_reinforce_1] = 20 + 5
+
+		mat_list_by_lv[lv]['weapon'][28][seasonCoin] = 5123
+		mat_list_by_lv[lv]['weapon'][28][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['weapon'][28][misc_reinforce_1] = 20 + 5
+
+		mat_list_by_lv[lv]['weapon'][29][seasonCoin] = 5485
+		mat_list_by_lv[lv]['weapon'][29][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['weapon'][29][misc_reinforce_1] = 20 + 5
+
+		mat_list_by_lv[lv]['weapon'][30][seasonCoin] = 5848
+		mat_list_by_lv[lv]['weapon'][30][misc_BlessedStone] = 4
+		mat_list_by_lv[lv]['weapon'][30][misc_reinforce_1] = 20 + 5
 	end
 
 	-- 강화 확률 item_goddess_reinforce_480.xml
-
 	mat_list_by_lv[lv]['weapon'][1][seasonCoin] = 263
 	mat_list_by_lv[lv]['weapon'][1][misc_reinforce_1] = 3
 
@@ -646,51 +786,6 @@ function setting_lv_material_weapon(mat_list_by_lv, lv)
 	mat_list_by_lv[lv]['weapon'][21][seasonCoin] = 2586
 	mat_list_by_lv[lv]['weapon'][21][misc_BlessedStone] = 4
 	mat_list_by_lv[lv]['weapon'][21][misc_reinforce_1] = 10	
-
-	mat_list_by_lv[lv]['weapon'][22][seasonCoin] = 2948
-	mat_list_by_lv[lv]['weapon'][22][misc_BlessedStone] = 4
-	mat_list_by_lv[lv]['weapon'][22][misc_reinforce_1] = 15
-	mat_list_by_lv[lv]['weapon'][22][misc_reinforce_2] = 10
-
-	mat_list_by_lv[lv]['weapon'][23][seasonCoin] = 3311
-	mat_list_by_lv[lv]['weapon'][23][misc_BlessedStone] = 4
-	mat_list_by_lv[lv]['weapon'][23][misc_reinforce_1] = 17
-	mat_list_by_lv[lv]['weapon'][23][misc_reinforce_2] = 11
-
-	mat_list_by_lv[lv]['weapon'][24][seasonCoin] = 3673
-	mat_list_by_lv[lv]['weapon'][24][misc_BlessedStone] = 4
-	mat_list_by_lv[lv]['weapon'][24][misc_reinforce_1] = 19
-	mat_list_by_lv[lv]['weapon'][24][misc_reinforce_2] = 11
-
-	mat_list_by_lv[lv]['weapon'][25][seasonCoin] = 4036
-	mat_list_by_lv[lv]['weapon'][25][misc_BlessedStone] = 4
-	mat_list_by_lv[lv]['weapon'][25][misc_reinforce_1] = 20
-	mat_list_by_lv[lv]['weapon'][25][misc_reinforce_2] = 12
-
-	mat_list_by_lv[lv]['weapon'][26][seasonCoin] = 4398
-	mat_list_by_lv[lv]['weapon'][26][misc_BlessedStone] = 4
-	mat_list_by_lv[lv]['weapon'][26][misc_reinforce_1] = 20
-	mat_list_by_lv[lv]['weapon'][26][misc_reinforce_2] = 12
-
-	mat_list_by_lv[lv]['weapon'][27][seasonCoin] = 4760
-	mat_list_by_lv[lv]['weapon'][27][misc_BlessedStone] = 4
-	mat_list_by_lv[lv]['weapon'][27][misc_reinforce_1] = 20
-	mat_list_by_lv[lv]['weapon'][27][misc_reinforce_2] = 13
-
-	mat_list_by_lv[lv]['weapon'][28][seasonCoin] = 5123
-	mat_list_by_lv[lv]['weapon'][28][misc_BlessedStone] = 4
-	mat_list_by_lv[lv]['weapon'][28][misc_reinforce_1] = 20
-	mat_list_by_lv[lv]['weapon'][28][misc_reinforce_2] = 13
-
-	mat_list_by_lv[lv]['weapon'][29][seasonCoin] = 5485
-	mat_list_by_lv[lv]['weapon'][29][misc_BlessedStone] = 4
-	mat_list_by_lv[lv]['weapon'][29][misc_reinforce_1] = 20
-	mat_list_by_lv[lv]['weapon'][29][misc_reinforce_2] = 14
-
-	mat_list_by_lv[lv]['weapon'][30][seasonCoin] = 5848
-	mat_list_by_lv[lv]['weapon'][30][misc_BlessedStone] = 4
-	mat_list_by_lv[lv]['weapon'][30][misc_reinforce_1] = 20
-	mat_list_by_lv[lv]['weapon'][30][misc_reinforce_2] = 14
 
 	setting_lv_misc_material(mat_list_by_lv, lv, 'weapon')
 end
@@ -843,100 +938,132 @@ function setting_lv_misc_material(mat_list_by_lv, lv, group)
 	if lv == 480 then
 		misc1 = "misc_ore22" 
 		misc2 = "misc_ore23" 
-	elseif lv == 490 then
-		misc1 = "misc_ore22" 
-		misc2 = "misc_ore23" 
+
+		mat_list_by_lv[lv][group][1][misc1] = 26
+		mat_list_by_lv[lv][group][1][misc2] = 6
+
+		mat_list_by_lv[lv][group][2][misc1] = 26
+		mat_list_by_lv[lv][group][2][misc2] = 6
+
+		mat_list_by_lv[lv][group][3][misc1] = 26
+		mat_list_by_lv[lv][group][3][misc2] = 6
+		
+		mat_list_by_lv[lv][group][4][misc1] = 26
+		mat_list_by_lv[lv][group][4][misc2] = 6
+
+		mat_list_by_lv[lv][group][5][misc1] = 45
+		mat_list_by_lv[lv][group][5][misc2] = 11
+
+		mat_list_by_lv[lv][group][6][misc1] = 45
+		mat_list_by_lv[lv][group][6][misc2] = 11
+
+		mat_list_by_lv[lv][group][7][misc1] = 45
+		mat_list_by_lv[lv][group][7][misc2] = 11
+
+		mat_list_by_lv[lv][group][8][misc1] = 45
+		mat_list_by_lv[lv][group][8][misc2] = 11
+
+		mat_list_by_lv[lv][group][9][misc1] = 45
+		mat_list_by_lv[lv][group][9][misc2] = 11
+
+		mat_list_by_lv[lv][group][10][misc1] = 67
+		mat_list_by_lv[lv][group][10][misc2] = 16
+
+		mat_list_by_lv[lv][group][11][misc1] = 67
+		mat_list_by_lv[lv][group][11][misc2] = 16
+
+		mat_list_by_lv[lv][group][12][misc1] = 67
+		mat_list_by_lv[lv][group][12][misc2] = 16
+
+		mat_list_by_lv[lv][group][13][misc1] = 67
+		mat_list_by_lv[lv][group][13][misc2] = 16
+
+		mat_list_by_lv[lv][group][14][misc1] = 67
+		mat_list_by_lv[lv][group][14][misc2] = 16
+
+		mat_list_by_lv[lv][group][15][misc1] = 92
+		mat_list_by_lv[lv][group][15][misc2] = 23
+
+		mat_list_by_lv[lv][group][16][misc1] = 92
+		mat_list_by_lv[lv][group][16][misc2] = 23
+
+		mat_list_by_lv[lv][group][17][misc1] = 121
+		mat_list_by_lv[lv][group][17][misc2] = 30
+
+		mat_list_by_lv[lv][group][18][misc1] = 152
+		mat_list_by_lv[lv][group][18][misc2] = 38
+
+		mat_list_by_lv[lv][group][19][misc1] = 186
+		mat_list_by_lv[lv][group][19][misc2] = 46
+
+		mat_list_by_lv[lv][group][20][misc1] = 222
+		mat_list_by_lv[lv][group][20][misc2] = 55
+
+		mat_list_by_lv[lv][group][21][misc1] = 258
+		mat_list_by_lv[lv][group][21][misc2] = 64
+
+		mat_list_by_lv[lv][group][22][misc1] = 387
+		mat_list_by_lv[lv][group][22][misc2] = 129
+
+		mat_list_by_lv[lv][group][23][misc1] = 464
+		mat_list_by_lv[lv][group][23][misc2] = 154
+
+		mat_list_by_lv[lv][group][24][misc1] = 464
+		mat_list_by_lv[lv][group][24][misc2] = 154
+
+		mat_list_by_lv[lv][group][25][misc1] = 510
+		mat_list_by_lv[lv][group][25][misc2] = 170
+
+		mat_list_by_lv[lv][group][26][misc1] = 510
+		mat_list_by_lv[lv][group][26][misc2] = 170
+
+		mat_list_by_lv[lv][group][27][misc1] = 561
+		mat_list_by_lv[lv][group][27][misc2] = 187
+
+		mat_list_by_lv[lv][group][28][misc1] = 561
+		mat_list_by_lv[lv][group][28][misc2] = 187
+
+		mat_list_by_lv[lv][group][29][misc1] = 617
+		mat_list_by_lv[lv][group][29][misc2] = 205
+
+		mat_list_by_lv[lv][group][30][misc1] = 617
+		mat_list_by_lv[lv][group][30][misc2] = 205
+	elseif lv >= 500 then
+		if lv == 500 then
+			misc1 = "misc_ore28" 
+		end
+
+		mat_list_by_lv[lv][group][1][misc1] = 26
+		mat_list_by_lv[lv][group][2][misc1] = 26
+		mat_list_by_lv[lv][group][3][misc1] = 26
+		mat_list_by_lv[lv][group][4][misc1] = 26
+		mat_list_by_lv[lv][group][5][misc1] = 45
+		mat_list_by_lv[lv][group][6][misc1] = 45
+		mat_list_by_lv[lv][group][7][misc1] = 45
+		mat_list_by_lv[lv][group][8][misc1] = 45
+		mat_list_by_lv[lv][group][9][misc1] = 45
+		mat_list_by_lv[lv][group][10][misc1] = 67
+		mat_list_by_lv[lv][group][11][misc1] = 67
+		mat_list_by_lv[lv][group][12][misc1] = 67
+		mat_list_by_lv[lv][group][13][misc1] = 67
+		mat_list_by_lv[lv][group][14][misc1] = 67
+		mat_list_by_lv[lv][group][15][misc1] = 92
+		mat_list_by_lv[lv][group][16][misc1] = 92
+		mat_list_by_lv[lv][group][17][misc1] = 121
+		mat_list_by_lv[lv][group][18][misc1] = 152
+		mat_list_by_lv[lv][group][19][misc1] = 186
+		mat_list_by_lv[lv][group][20][misc1] = 222
+		mat_list_by_lv[lv][group][21][misc1] = 258
+		mat_list_by_lv[lv][group][22][misc1] = 387
+		mat_list_by_lv[lv][group][23][misc1] = 464
+		mat_list_by_lv[lv][group][24][misc1] = 464
+		mat_list_by_lv[lv][group][25][misc1] = 510
+		mat_list_by_lv[lv][group][26][misc1] = 510
+		mat_list_by_lv[lv][group][27][misc1] = 561
+		mat_list_by_lv[lv][group][28][misc1] = 561
+		mat_list_by_lv[lv][group][29][misc1] = 617
+		mat_list_by_lv[lv][group][30][misc1] = 617
 	end
-
-	mat_list_by_lv[lv][group][1][misc1] = 26
-	mat_list_by_lv[lv][group][1][misc2] = 6
-
-	mat_list_by_lv[lv][group][2][misc1] = 26
-	mat_list_by_lv[lv][group][2][misc2] = 6
-
-	mat_list_by_lv[lv][group][3][misc1] = 26
-	mat_list_by_lv[lv][group][3][misc2] = 6
-	
-	mat_list_by_lv[lv][group][4][misc1] = 26
-	mat_list_by_lv[lv][group][4][misc2] = 6
-
-	mat_list_by_lv[lv][group][5][misc1] = 45
-	mat_list_by_lv[lv][group][5][misc2] = 11
-
-	mat_list_by_lv[lv][group][6][misc1] = 45
-	mat_list_by_lv[lv][group][6][misc2] = 11
-
-	mat_list_by_lv[lv][group][7][misc1] = 45
-	mat_list_by_lv[lv][group][7][misc2] = 11
-
-	mat_list_by_lv[lv][group][8][misc1] = 45
-	mat_list_by_lv[lv][group][8][misc2] = 11
-
-	mat_list_by_lv[lv][group][9][misc1] = 45
-	mat_list_by_lv[lv][group][9][misc2] = 11
-
-	mat_list_by_lv[lv][group][10][misc1] = 67
-	mat_list_by_lv[lv][group][10][misc2] = 16
-
-	mat_list_by_lv[lv][group][11][misc1] = 67
-	mat_list_by_lv[lv][group][11][misc2] = 16
-
-	mat_list_by_lv[lv][group][12][misc1] = 67
-	mat_list_by_lv[lv][group][12][misc2] = 16
-
-	mat_list_by_lv[lv][group][13][misc1] = 67
-	mat_list_by_lv[lv][group][13][misc2] = 16
-
-	mat_list_by_lv[lv][group][14][misc1] = 67
-	mat_list_by_lv[lv][group][14][misc2] = 16
-
-	mat_list_by_lv[lv][group][15][misc1] = 92
-	mat_list_by_lv[lv][group][15][misc2] = 23
-
-	mat_list_by_lv[lv][group][16][misc1] = 92
-	mat_list_by_lv[lv][group][16][misc2] = 23
-
-	mat_list_by_lv[lv][group][17][misc1] = 121
-	mat_list_by_lv[lv][group][17][misc2] = 30
-
-	mat_list_by_lv[lv][group][18][misc1] = 152
-	mat_list_by_lv[lv][group][18][misc2] = 38
-
-	mat_list_by_lv[lv][group][19][misc1] = 186
-	mat_list_by_lv[lv][group][19][misc2] = 46
-
-	mat_list_by_lv[lv][group][20][misc1] = 222
-	mat_list_by_lv[lv][group][20][misc2] = 55
-
-	mat_list_by_lv[lv][group][21][misc1] = 258
-	mat_list_by_lv[lv][group][21][misc2] = 64
-
-	mat_list_by_lv[lv][group][22][misc1] = 387
-	mat_list_by_lv[lv][group][22][misc2] = 129
-
-	mat_list_by_lv[lv][group][23][misc1] = 464
-	mat_list_by_lv[lv][group][23][misc2] = 154
-
-	mat_list_by_lv[lv][group][24][misc1] = 464
-	mat_list_by_lv[lv][group][24][misc2] = 154
-
-	mat_list_by_lv[lv][group][25][misc1] = 510
-	mat_list_by_lv[lv][group][25][misc2] = 170
-
-	mat_list_by_lv[lv][group][26][misc1] = 510
-	mat_list_by_lv[lv][group][26][misc2] = 170
-
-	mat_list_by_lv[lv][group][27][misc1] = 561
-	mat_list_by_lv[lv][group][27][misc2] = 187
-
-	mat_list_by_lv[lv][group][28][misc1] = 561
-	mat_list_by_lv[lv][group][28][misc2] = 187
-
-	mat_list_by_lv[lv][group][29][misc1] = 617
-	mat_list_by_lv[lv][group][29][misc2] = 205
-
-	mat_list_by_lv[lv][group][30][misc1] = 617
-	mat_list_by_lv[lv][group][30][misc2] = 205
 end
 
 function make_item_goddess_reinforce_material_list()
@@ -949,6 +1076,7 @@ function make_item_goddess_reinforce_material_list()
 	item_goddess_reinforce_material_list[470] = {}
 	item_goddess_reinforce_material_list[480] = {}
 	item_goddess_reinforce_material_list[490] = {}
+	item_goddess_reinforce_material_list[500] = {}
 	
 	local classtype_list = {}
 	local group_list = {}
@@ -1083,8 +1211,12 @@ end
 
 -- 460레벨 이상, 가디스 등급만 가능
 item_goddess_reinforce.is_able_to_reinforce = function(target_item)
-	if target_item ~= nil and TryGetProp(target_item, 'Reinforce_Type', 'None') == 'goddess' and TryGetProp(target_item, 'UseLv', 0) >= 460 and TryGetProp(target_item, 'ItemGrade', 0) == 6 then
-		return 'YES'
+	if target_item ~= nil and TryGetProp(target_item, 'Reinforce_Type', 'None') == 'goddess' and TryGetProp(target_item, 'ItemGrade', 0) == 6 then
+		if TryGetProp(target_item, 'UseLv', 0) >= 460  then
+			return 'YES'
+		elseif item_goddess_growth.is_goddess_growth_item(target_item) == true then
+			return 'YES'
+		end
 	end
 
 	return 'WebService_38'
@@ -1113,6 +1245,10 @@ end
 
 function IS_ENABLE_APPLY_GODDESS_ENCHANT(material, target)	
 	if IS_GODDESS_ENCHANT_MATERIAL(material) == false then
+		return false
+	end
+	
+	if item_goddess_growth.is_goddess_growth_item(target) == true then
 		return false
 	end
 
@@ -1288,6 +1424,10 @@ item_goddess_transcend.is_able_to_socket = function (target_item)
 	if target_item == nil then
 		return false;
 	end
+
+	if item_goddess_growth.is_goddess_growth_item(target_item) == true then
+		return false
+	end
 	
 	local classType = TryGetProp(target_item, 'ClassType');
 	local enableClassType = {'Sword', 'THSword', 'Staff', 'THBow', 'Bow', 'Mace', 'THMace', 'Spear', 'THSpear', 'Dagger', 'THStaff', 'Pistol', 'Rapier', 'Cannon', 'Musket', 'Shirt', 'Pants', 'Boots', 'Gloves', 'Shield', 'Trinket'};
@@ -1341,3 +1481,24 @@ function IS_EVOLVED_ITEM(item)
 end
 
 -- 진화 끝
+
+-- 강화 스크롤
+function IS_ABLE_TO_USE_REINFORCE_SCROLL(item, scroll)
+	if TryGetProp(item, 'Reinforce_2', 0) >= TryGetProp(scroll, 'NumberArg2', 0) then
+		return false, 'cant_use_more_than_reinforce_point'
+	end
+
+	local scroll_lv = TryGetProp(scroll, 'NumberArg1', 0)
+
+	if scroll_lv == TryGetProp(item, 'UseLv', 0) then
+		if TryGetProp(item, 'StringArg', 'None') == 'Goddess_Armor_Lv' .. scroll_lv and TryGetProp(scroll, 'StringArg', 'None') == 'armor_reinforce_scroll' then
+			return true
+		end
+	
+		if TryGetProp(item, 'StringArg', 'None') == 'Goddess_Weapon_Lv' .. scroll_lv and TryGetProp(scroll, 'StringArg', 'None') == 'weapon_reinforce_scroll' then
+			return true
+		end
+	end
+
+	return false, 'DontUseItem'
+end

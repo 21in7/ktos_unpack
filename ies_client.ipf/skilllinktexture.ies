@@ -25,3 +25,4 @@ ClassID,LifeTime,LinkDist,PartitionDist,Radius,MaxRadius,MinAngleSpd,MaxAngleSpd
 104,1,10,2,3,3,0,0,1,1,1,100,0.300000,0.100000,4,1,0,0.100000,0.100000,0.100000,30,0,1,50,210,260,"Linker_cable_buff2","","linkskilltexture\\chain_matal001.dds","","","","#FFFFFFFF","#FF000000"
 105,1,10,3,3,3,0,0,1,1,1,100,0.200000,0.100000,4,1,0,0.100000,0.100000,0.100000,0,0,1,50,210,260,"Itemoption_darklash","I_force111_trail_loop_dark","linkskilltexture\\chain_matal001_dark.dds","","","","#FFFFFFFF","#FF000000"
 106,1,10,3,3,3,0,0,1,1,1,100,0.200000,0.100000,4,1,0,0.100000,0.100000,0.100000,0,0,1,50,210,260,"Itemoption_scythe","I_scout_linker_red2","linkskilltexture\\aaarrr_002.tga","","","","#FFFFFFFF","#FF000000"
+107,1,2000,2,10,10,3,7,1,1,1,100,0.500000,0.500000,8,1,0,0.100000,0.100000,0.100000,0,0,0,0,0,0,"BWCrystalTower","I_scout_linker_red2","linkskilltexture\\firesmoke001.tga","","","","",""

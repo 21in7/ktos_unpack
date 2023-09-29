@@ -2,8 +2,8 @@
 
 local json = require('json')
 
-SEASON_COIN_NAME = 'VakarineCertificate'
-SEASON_COIN_PREFIX_NAME = 'VakarineCertificateCoin'
+SEASON_COIN_NAME = 'RadaCertificate'
+SEASON_COIN_PREFIX_NAME = 'RadaCertificateCoin'
 
 function shuffle(tbl)
     local ret = {}
@@ -36,6 +36,19 @@ function shuffle2(tbl)
     end
     
     return ret
+end
+
+function starts_with(str, prefix)
+    local f = string.find(str, prefix)
+    if f == nil then
+        return false
+    end
+
+    if f == 1 then
+        return true
+    end
+
+    return false
 end
 
 ------------ 랜덤 옵션 관련 ----------------------------------------------------------------
@@ -486,9 +499,9 @@ date_time.add_time = function(pivot, sec)
 end
 
 -- a_str가 b_str보다 같거나 크다면 true
-date_time.is_later_than = function(a_str, b_str)
+date_time.is_later_than = function(a_str, b_str)    
     local a = date_time.get_lua_datetime_from_str(a_str)
-    local b = date_time.get_lua_datetime_from_str(b_str)
+    local b = date_time.get_lua_datetime_from_str(b_str)    
     if a >= b then
         return true
     else
@@ -505,9 +518,21 @@ date_time.get_diff_sec = function(str_end, str_start)
 end
 
 -- 레티샤 시작 시간과 종료 시간을 가져온다 yyyy-mm-dd hh:mm:ss 
-function get_leticia_start_and_end_time_num()
+function get_leticia_start_and_end_time_num()    
 	local startTime = TryGetProp(GetClassByType('reward_tp', 1), "StartTime", "None")
     local endTime = TryGetProp(GetClassByType('reward_tp', 1), "EndTime", "None")
+
+    if IsServerSection() == 1 then
+        if GetServiceNation() == 'PAPAYA' then
+            startTime = TryGetProp(GetClassByType('reward_tp', 10), "StartTime", "None")
+            endTime = TryGetProp(GetClassByType('reward_tp', 10), "EndTime", "None")
+        end
+    else
+        if config.GetServiceNation() == 'PAPAYA' then
+            startTime = TryGetProp(GetClassByType('reward_tp', 10), "StartTime", "None")
+            endTime = TryGetProp(GetClassByType('reward_tp', 10), "EndTime", "None")
+        end
+    end
 
 	return startTime, endTime
 end
@@ -2250,16 +2275,18 @@ function CHANGE_BOSSDROPLIST(self, equipDropList)
 end
 
 function GET_RECIPE_REQITEM_CNT(cls, propname,pc)
-
-	local recipeType = cls.RecipeType;
-
+    local recipeType = TryGetProp(cls, 'RecipeType', 'None')
+    if recipeType == 'None' then
+        recipeType = 'Drag'
+    end
+    
     if recipeType == "Anvil" or recipeType == "Grill" then
         return cls[propname .. "_Cnt"], TryGet(cls, propname .. "_Level");
     elseif recipeType == "Drag" or recipeType == "Upgrade" then        
         return TryGetProp(cls, propname .. "_Cnt", 0), TryGetProp(cls, propname .. "_Level", 0);
     end
 
-    return 0;
+    return 0, 0;
 
 end
 
@@ -3312,8 +3339,38 @@ function JOB_SPEARMASTER_PRE_CHECK(pc, jobCount)
         end
     end
 
-    return 'YES'
+    return 'NO'
 end
+
+function JOB_ENGINEER_PRE_CHECK(pc, jobCount)
+    local aObj
+    local nation = 'None'
+    if IsServerSection() == 0 then
+        aObj = GetMyAccountObj();
+        nation = config.GetServiceNation()
+    else
+        aObj = GetAccountObj(pc);
+        nation = GetServerNation()
+    end
+    
+    if aObj ~= nil then
+        if nation == 'PAPAYA' then
+            local start = '2023-07-18 18:00:00'
+            local finish = '2023-08-01 18:00:00'
+            if date_time.is_between_time(start, finish) == true then
+                return 'YES'
+            end
+        end
+
+        local value = TryGetProp(aObj, 'UnlockQuest_Char3_23', 0)
+        if value == 1 or IS_KOR_TEST_SERVER() == true then
+            return 'YES'
+        end
+    end
+
+    return 'NO'
+end
+
 
 function JOB_RUNECASTER_PRE_CHECK(pc, jobCount)
     if jobCount == nil then
@@ -4060,6 +4117,10 @@ function get_collection_name_by_item(item_name)
 end
 
 function TUTORIAL_CLEAR_CHECK(pc)
+    if true then
+        return true
+    end
+
     local etc = nil
     if IsServerSection() == 1 then
         etc = GetETCObject(pc)
@@ -4234,6 +4295,16 @@ end
 function IS_DESTROYABLE_COSTUME_ITEM(item)
     local name = TryGetProp(item, 'ClassName', 'None')
     local cls = GetClass('recycle_shop', name)
+    if IsServerSection() == 1 then
+        if GetServerNation() == "PAPAYA" then
+            cls = GetClass('recycle_shop_papaya', name)
+        end
+    else
+        if config.GetServiceNation() == 'PAPAYA' then
+            cls = GetClass('recycle_shop_papaya', name)
+        end
+    end
+
     if cls ~= nil then
         if TryGetProp(item, 'TeamBelonging', 0) ~= 0 or TryGetProp(item, 'CharacterBelonging', 0) ~= 0 then
             return true
@@ -4344,4 +4415,150 @@ function CHECK_INDUN_WEEKLY_BLOCKADE_RESTRICT_TIME()
         end
     end
     return false;
+end
+
+-- 트오세 W 통합 제한 - 봉쇄전
+function CHECK_TOSW_BLOCKADE_RESTRICT_TIME(event_id)
+    --[[ if event_id == 503 or event_id == 504 or event_id == 505 then
+        return CHECK_TOSW_WEEKLY_CONTENTS_RESTRICT_TIME();        
+    end ]]
+    return false;
+end
+
+-- 트오세 W - 낚시, 콜로니전
+function CHECK_TOSW_FISHING_AND_COLONY_RESTRICT_TIME()
+    --[[ local time = nil;
+    if IsServerSection() == 1 then time = GetDBTime();
+    else time = geTime.GetServerSystemTime(); end
+    if time ~= nil then
+        return CHECK_TOSW_RESTRICT_TIME();
+    end ]]
+    return false;
+end
+
+function CHECK_TOSW_WEEKLY_CONTENTS_RESTRICT_TIME()
+    --[[ local time;
+    if IsServerSection() == 1 then
+        time = GetDBTime();
+    elseif IsServerSection() ~= 1 then
+        time = geTime.GetServerSystemTime(); 
+    end
+
+    if time ~= nil then
+        local month = time.wMonth;
+        if month == 9 then
+            local day = time.wDay;
+            local hour = time.wHour;
+            local nation = GetServerNation();
+            if day >= 4 and day <= 5 then
+                if day == 5 and hour > 10 then
+                    return false;
+                end
+                return true;
+            end
+        end
+    end ]]
+    return false;
+end
+
+
+-- 트오세 W 통합 제한
+function CHECK_TOSW_RESTRICT_TIME()
+    --[[ local time;
+    if IsServerSection() == 1 then
+        time = GetDBTime();
+    elseif IsServerSection() ~= 1 then
+        time = geTime.GetServerSystemTime(); 
+    end
+
+    if time ~= nil then
+        local month = time.wMonth;
+        if month == 9 then
+            local day = time.wDay;
+            local hour = time.wHour;
+            local nation = GetServerNation();
+            if nation == "GLOBAL" then
+                if day >= 4 and day <= 5 then
+                    if day == 5 and hour > 11 then
+                        return false;
+                    end
+                    return true;
+                end
+            elseif nation == "GLOBAL_JP" then
+                if day >= 4 and day <= 5 then
+                    if day == 5 and hour > 11 then
+                        return false;
+                    end
+                    return true;
+                end
+            elseif nation == "GLOBAL_KOR" then
+                if day >= 4 and day <= 5 then
+                    if day == 5 and hour > 11 then
+                        return false;
+                    end
+                    return true;
+                end
+            end
+        end
+    end ]]
+    return false;
+end
+
+-- 트오세 W - 팀 배틀리그
+function CHECK_TOSW_TEAM_BATTLE_LEAGUE_RESTRICT_TIME()
+    --[[ local time;
+    if IsServerSection() == 1 then
+        time = GetDBTime();
+    elseif IsServerSection() ~= 1 then
+        time = geTime.GetServerSystemTime(); 
+    end
+
+    if time ~= nil then
+        local month = time.wMonth;
+        if month == 9 then
+            local day = time.wDay;
+            local hour = time.wHour;
+            if day >= 4 and day <= 5 then
+                if day == 5 and hour > 11 then
+                    return false;
+                end
+                return true;
+            end
+        end
+    end ]]
+    return false;
+end
+
+
+-- 사용한 tp 값에 따른 아이템 구입 가능 조건 체크
+-- ex) 플레이어의 사용 tp가 0일 때만 살 수 있는 아이템을 구입할 때 현재 플레이어의 사용 tp가 0이 맞으면 true 반환
+function IS_USED_MEDAL_CHECK(item, usedTP)
+	if item.SubCategory == 'TP_FirstBuy' and usedTP == 0 then
+		return true;
+	end
+	return false;
+end
+
+function M_NUMBER_FORMAT(num)    
+    num = tonumber(num)
+    if num >= 1000000 then
+        local n = num / 1000000
+        local mod = num % 1000000
+        if mod > 0 then
+            n = string.format('%.2f', n)
+        end
+        
+        return n .. 'M'
+    end
+
+    return num
+end
+
+function IS_ABLE_TO_JOIN_GUILD_EVENT(pc, cls)
+    local limit = TryGetProp(cls, 'PlayerLv', 0)
+    if pc.Lv < limit then
+        return false
+    else
+        return true
+    end
 end

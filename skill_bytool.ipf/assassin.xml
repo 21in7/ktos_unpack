@@ -458,6 +458,28 @@
             </SubSkl>
         </ByCondSkills>
     </Skill>
+    <Skill Name="Common_Assassin_Hasisas">
+        <MainSkl JumpFlee="NO" MSPDToUsePos="0" ScrLock="None">
+            <HitList>
+                <Frame Angle="0" AniTime="9999" Dist="0" ForceATK="0" HitCount="1" PosType="0" RandDist="0" RandomPerHit="0" RotAngle="0" TermMax="0" TermMin="0" Time="9799" Type="FAN"/>
+            </HitList>
+            <EtcList>
+                <Scp Client="YES" Scp="C_VOICE_SOUND" Time="0" UseSleep="NO">
+                    <Str Str="voice_scout_m_hasisas_cast"/>
+                    <Str Str="voice_scout_f_hasisas_cast"/>
+                </Scp>
+                <Scp Client="NO" Scp="SKL_BUFF" Time="300" UseSleep="NO">
+                    <Str Str="Hasisas_Buff"/>
+                    <Num FuncTxt="return obj.Level;" Num="1" UseFunc="1"/>
+                    <Num Num="0"/>
+                    <Num Num="1800000"/>
+                    <Num Num="1"/>
+                    <Num Num="100"/>
+                    <Num Num="0"/>
+                </Scp>
+            </EtcList>
+        </MainSkl>
+    </Skill>
     <Skill Name="Assassin_InstantaneousAcceleration_2">
         <MainSkl JumpFlee="NO" MSPDToUsePos="0" ScrLock="None">
             <HitList>

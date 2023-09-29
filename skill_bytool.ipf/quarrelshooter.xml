@@ -806,4 +806,68 @@
 			</EtcList>
 		</MainSkl>
 	</Skill>
+	<Skill Name="Common_QuarrelShooter_DeployPavise">
+		<EnableScripts>
+			<ToolScp Client="NO" Scp="SKL_CHECK_EQUIP_SHIELD" UseSleep="NO">					
+			</ToolScp>			
+			<ToolScp Client="NO" Scp="SKL_CHECK_SKL_OBJ_CNT" UseSleep="NO">
+				<Num Num="1"/>
+				<Str Str="pavise"/>
+				<Num Num="4"/>
+			</ToolScp>
+			<ToolScp Client="NO" Scp="SKL_CHECK_SKL_OBJ_CNT" UseSleep="NO">
+				<Num Num="1"/>
+				<Str Str="pcskill_Ballista"/>
+				<Num Num="4"/>
+			</ToolScp>
+		</EnableScripts>
+		<MainSkl JumpFlee="NO" MSPDToUsePos="0" ScrLock="None">
+			<EtcList>
+				<Scp Client="NO" Scp="SKL_CHECK_OBB_BY_RANGE" Time="0" UseSleep="NO">
+					<Pos Angle="0" Dist="22"/>
+					<Num Num="10"/>
+				</Scp>
+				<Scp Client="YES" Scp="C_VOICE_SOUND" Time="0" UseSleep="NO">
+					<Str Str="voice_archer_m_pavise_shot"/>
+					<Str Str="voice_archer_pavise_shot"/>
+				</Scp>
+				<Anim Anim="BUFF" Speed="1" Time="0"/>
+				<Scp Client="NO" Scp="MONSKL_CRE_MON_SCR" Time="800" UseSleep="NO">
+					<Str Str="pavise"/>
+					<Pos Angle="0" Dist="22"/>
+					<Angle Angle="0"/>
+					<Str Str=""/>
+					<Str Str=""/>
+					<Num FuncTxt="return 1 + obj.Level;" Num="0" UseFunc="1"/>
+					<Num FuncTxt="local time = 30; return time" Num="0" UseFunc="1"/>
+					<Str Str="None"/>
+					<MonProp/>
+					<Str Str="SCR_SUMMON_PAVISE"/>
+				</Scp>
+				<Scp Client="YES" Scp="C_EFFECT_POS" Time="480" UseSleep="NO">
+					<Str_Arg Arg="1" Str="F_ground174"/>
+					<Pos Angle="0" Dist="20"/>
+					<Num Num="0"/>
+					<Str Str="None"/>
+				</Scp>
+				<Scp Client="YES" Scp="C_SHOCKWAVE" Time="500" UseSleep="NO">
+					<Num Num="5"/>
+					<Num Num="0.30000001"/>
+					<Num Num="45"/>
+					<Num Num="999"/>
+				</Scp>
+			</EtcList>
+			<ResultList>
+				<ToolScp Client="NO" Scp="S_R_TGTBUFF" UseSleep="NO">
+					<Str Str="UC_bleed"/>
+					<Num FuncTxt="return skill.Level" Num="1" UseFunc="1"/>
+					<Num Num="0"/>
+					<Num Num="5000"/>
+					<Num Num="1"/>
+					<Num Num="100"/>
+					<Num Num="-1"/>
+				</ToolScp>
+			</ResultList>
+		</MainSkl>
+	</Skill>
 </ToolSkill>

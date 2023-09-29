@@ -1,3 +1,17 @@
+function replace(text, to_be_replaced, replace_with)
+	local retText = text
+	local strFindStart, strFindEnd = string.find(text, to_be_replaced)	
+    if strFindStart ~= nil then
+		local nStringCnt = string.len(text)		
+		retText = string.sub(text, 1, strFindStart-1) .. replace_with ..  string.sub(text, strFindEnd+1, nStringCnt)		
+    else
+        retText = text
+	end
+	
+    return retText
+end
+
+
 function SCR_BURNING_EVENT_LIST_LOAD(inputType, isServer)
     if IS_SEASON_SERVER() == 'YES' then
         return 'None'
@@ -38,7 +52,8 @@ function SCR_BURNING_EVENT_LIST_LOAD(inputType, isServer)
         local datePiece = StringSplit(dateList[j]["Date"], "-")
         local eventDate = tostring(datePiece[1]..datePiece[2]..datePiece[3])
         if tonumber(eventDate) == tonumber(today) then
-            return dateList[j]["EventList"]
+            local ret = dateList[j]["EventList"]
+            return ret
         end
     end
     return "None"
@@ -75,7 +90,7 @@ function SCR_BURNING_EVENT_BUFF_CHECK(self, isServer)
             local eventCheck = SCR_BURNING_EVENT_LIST_LOAD(inputType, isServer)
             -- if today is active burning event day then
             if eventCheck ~= "None" then
-                local buffTable = StringSplit(eventCheck, "/")
+                local buffTable = StringSplit(eventCheck, "/") 
                 if #buffTable ~= 0 and #buffTable ~= nil then
                     -- remove previous day buff
                     for j = 1, #buffTable do

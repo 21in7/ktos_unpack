@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Zone>
+    <Effector Effect="F_bg_light005_blue2" pos="-339.49 36.89 93.82" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_light005_blue2" pos="-240.01 35.25 282.89" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_light005_blue2" pos="-47.48 10.71 -368.35" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_light005_blue2" pos="390.27 5.91 -238.19" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_light005_blue2" pos="1.15 27.51 339.57" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_water016" pos="341.87 121.16 389.74" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_water016" pos="135.93 4.21 -354.84" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_water006" pos="279.98 5.67 142.02" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_light005_blue" pos="487.05 17.12 77.86" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_light005_blue" pos="545.86 16.68 5.43" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_light005_blue" pos="434.35 5.91 -136.19" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_light005_blue" pos="274.86 0.65 -289.80" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_light005_blue" pos="88.06 6.11 -302.57" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_light005_blue" pos="-4.20 6.11 -203.24" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_light005_blue" pos="-149.16 25.58 -352.55" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_light005_blue" pos="-298.07 5.67 -167.70" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_light005_blue" pos="-330.87 9.34 234.91" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_light005_blue" pos="-129.18 11.94 321.19" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_light005_blue" pos="204.97 4.38 280.53" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_light005_blue" pos="-23.04 5.67 27.74" scale="1.00" ViewDist="500"/>
+    <Effector Effect="F_bg_light005_blue" pos="432.29 36.28 192.91" scale="1.00" ViewDist="500"/>
+</Zone>

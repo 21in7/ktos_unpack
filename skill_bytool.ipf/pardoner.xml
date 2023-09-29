@@ -218,6 +218,43 @@
             </EtcList>
         </MainSkl>
     </Skill>
+    <Skill Name="Common_Pardoner_IncreaseMagicDEF">
+        <MainSkl ScrLock="None" JumpFlee="NO" MSPDToUsePos="0">
+            <EtcList>
+                <Scp Scp="MONSKL_C_PLAY_ANIM" Client="YES" UseSleep="NO" Time="0">
+                    <Str Str="BUFF"/>
+                    <Num Num="2"/>
+                    <Num Num="1"/>
+                    <Num Num="0"/>
+                </Scp>
+                <Scp Scp="C_VOICE_SOUND" Client="YES" UseSleep="NO" Time="300">
+                    <Str Str="voice_cleric_m_increasemagicdef_shot"/>
+                    <Str Str="voice_cleric_increasemagicdef_shot"/>
+                </Scp>
+                <Scp Scp="SKL_SET_TARGET_CIRCLE" Client="NO" UseSleep="NO" Time="600">
+                    <Pos Angle="0" Dist="0"/>
+                    <Num Num="150"/>
+                    <Num Num="50"/>
+                    <Num Num="1"/>
+                    <Num Num="0"/>
+                    <Num Num="1"/>
+                    <Num Num="0"/>
+                    <Num Num="0"/>
+                    <Num Num="0"/>
+                    <Num Num="1"/>
+                    <Num Num="1"/>
+                </Scp>
+                <Scp Scp="SKL_TGT_BUFF" Client="NO" UseSleep="NO" Time="690">
+                    <Str Str="IncreaseMagicDEF_Buff"/>
+                    <Num Num="1" UseFunc="1" FuncTxt="return obj.Level"/>
+                    <Num Num="0"/>
+                    <Num Num="1800000"/>
+                    <Num Num="1"/>
+                    <Num Num="100"/>
+                </Scp>
+            </EtcList>
+        </MainSkl>
+    </Skill>
     <Skill Name="Pardoner_DiscernEvil_2">
         <MainSkl JumpFlee="NO" MSPDToUsePos="0" ScrLock="None">
             <HitList>

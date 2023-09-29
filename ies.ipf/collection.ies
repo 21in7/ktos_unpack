@@ -221,3 +221,5 @@ ClassID,ClassName,Name,ItemName_1,ItemName_2,ItemName_3,ItemName_4,ItemName_5,It
 321,"COLLECT_321","컬렉션: 그레스미가 남긴 것","misc_collect_ep14_2_5","misc_collect_ep14_2_6","","","","","","","","MHP_BM/4000","","","TRUE"
 322,"COLLECT_322","컬렉션: 크리스마스 이벤트","Event_2212_Gold_Key","Event_2212_Gold_Key","Event_2212_Gold_Key","","","","","","","STR_BM/20/DEX_BM/20/INT_BM/20/MNA_BM/20/CON_BM/20","","","TRUE"
 323,"COLLECT_323","컬렉션: 약탈자들의 물건","misc_collect_ep15_1_1","misc_collect_ep15_1_2","misc_collect_ep15_1_3","","","","","","","MHP_BM/3000","","","TRUE"
+324,"COLLECT_324","컬렉션: 라다의 권능","Goddess_fragments_radaA","Goddess_fragments_radaB","Goddess_fragments_radaC","","","","","","","PATK_BM/3300/MATK_BM/3300","","","TRUE"
+325,"COLLECT_325","컬렉션: 이방인들의 물건","misc_collect_ep15_2_1","misc_collect_ep15_2_2","misc_collect_ep15_2_3","","","","","","","MHP_BM/5000","","","TRUE"

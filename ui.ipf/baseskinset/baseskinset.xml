@@ -2306,6 +2306,17 @@
 			<img name="bottomcore" imgrect="101 405 100 70"/>
 			<img name="bottomright" imgrect="202 405 100 70"/>
 		</skin>
+		<skin name="test_win_popo" texture="\skin\last_popup_skin.tga">
+			<img name="topleft" imgrect="0 238 100 110"/>
+			<img name="topcore" imgrect="101 238 100 110"/>
+			<img name="topright" imgrect="202 238 100 110"/>
+			<img name="bodyleft" imgrect="0 349 100 55"/>
+			<img name="bodycore" imgrect="101 349 100 55"/>
+			<img name="bodyright" imgrect="202 349 100 55"/>
+			<img name="bottomleft" imgrect="0 405 100 70"/>
+			<img name="bottomcore" imgrect="101 405 100 70"/>
+			<img name="bottomright" imgrect="202 405 100 70"/>
+		</skin>
 		<skin name="test_win_pvp" texture="\skin\pip_test.tga">
 			<img name="topleft" imgrect="958 306 50 65"/>
 			<img name="topcore" imgrect="1009 306 100 65"/>
@@ -2769,13 +2780,13 @@
 		</skin>
 		<skin name="partylist_tooltip_skin" texture="\skin\pip_test.tga">
 			<img name="topleft" imgrect="1163 309 200 130"/>
-			<img name="topcore" imgrect="1364 309 142 130"/>
+			<img name="topcore" imgrect="1364 309 140 130"/>
 			<img name="topright" imgrect="1505 309 72 130"/>
 			<img name="bodyleft" imgrect="1163 440 200 80"/>
-			<img name="bodycore" imgrect="1364 440 142 80"/>
+			<img name="bodycore" imgrect="1364 440 140 80"/>
 			<img name="bodyright" imgrect="1505 440 72 80"/>
 			<img name="bottomleft" imgrect="1163 521 200 90"/>
-			<img name="bottomcore" imgrect="1364 521 142 90"/>
+			<img name="bottomcore" imgrect="1364 521 140 90"/>
 			<img name="bottomright" imgrect="1505 521 72 90"/>
 		</skin>
 		<skin name="rank_one_skin" texture="\skin\pip_test.tga">
@@ -5906,6 +5917,50 @@
 			<img name="bottomcore" imgrect="549 93 55 31"/>
 			<img name="bottomright" imgrect="605 93 39 31"/>
 		</skin>
+		<skin name="fruit_lemon_balloon" texture="\skin\say_balloon.tga">
+			<img name="topleft" imgrect="509 125 55 29"/>
+			<img name="topcore" imgrect="565 125 62 29"/>
+			<img name="topright" imgrect="628 125 55 29"/>
+			<img name="bodyleft" imgrect="509 155 55 28"/>
+			<img name="bodycore" imgrect="565 155 62 28"/>
+			<img name="bodyright" imgrect="628 155 55 28"/>
+			<img name="bottomleft" imgrect="509 184 55 29"/>
+			<img name="bottomcore" imgrect="565 184 62 29"/>
+			<img name="bottomright" imgrect="628 184 55 29"/>
+		</skin>
+		<skin name="fruit_melon_balloon" texture="\skin\say_balloon.tga">
+			<img name="topleft" imgrect="509 214 55 29"/>
+			<img name="topcore" imgrect="565 214 62 29"/>
+			<img name="topright" imgrect="628 214 55 29"/>
+			<img name="bodyleft" imgrect="509 244 55 28"/>
+			<img name="bodycore" imgrect="565 244 62 28"/>
+			<img name="bodyright" imgrect="628 244 55 28"/>
+			<img name="bottomleft" imgrect="509 273 55 29"/>
+			<img name="bottomcore" imgrect="565 273 62 29"/>
+			<img name="bottomright" imgrect="628 273 55 29"/>
+		</skin>
+		<skin name="fruit_kiwi_balloon" texture="\skin\say_balloon.tga">
+			<img name="topleft" imgrect="509 303 55 29"/>
+			<img name="topcore" imgrect="565 303 62 29"/>
+			<img name="topright" imgrect="628 303 55 29"/>
+			<img name="bodyleft" imgrect="509 333 55 28"/>
+			<img name="bodycore" imgrect="565 333 62 28"/>
+			<img name="bodyright" imgrect="628 333 55 28"/>
+			<img name="bottomleft" imgrect="509 362 55 29"/>
+			<img name="bottomcore" imgrect="565 362 62 29"/>
+			<img name="bottomright" imgrect="628 362 55 29"/>
+		</skin>
+		<skin name="fruit_orange_balloon" texture="\skin\say_balloon.tga">
+			<img name="topleft" imgrect="509 392 55 29"/>
+			<img name="topcore" imgrect="565 392 62 29"/>
+			<img name="topright" imgrect="628 392 55 29"/>
+			<img name="bodyleft" imgrect="509 422 55 28"/>
+			<img name="bodycore" imgrect="565 422 62 28"/>
+			<img name="bodyright" imgrect="628 422 55 28"/>
+			<img name="bottomleft" imgrect="509 451 55 29"/>
+			<img name="bottomcore" imgrect="565 451 62 29"/>
+			<img name="bottomright" imgrect="628 451 55 29"/>
+		</skin>
 		<skin name="js_frame_preview" texture="\skin\jobselect.tga">
 			<img name="topleft" imgrect="0 462 36 36"/>
 			<img name="topcore" imgrect="37 462 38 36"/>
@@ -6205,6 +6260,39 @@
 			<img name="bottomleft" imgrect="623 480 33 20"/>
 			<img name="bottomcore" imgrect="657 480 89 20"/>
 			<img name="bottomright" imgrect="747 480 33 20"/>
+		</skin>	
+		<skin name="translate_btn" texture="\skin\hero_skin.tga">
+			<img name="topleft" imgrect="797 0 7 7"/>
+			<img name="topcore" imgrect="805 0 34 7"/>
+			<img name="topright" imgrect="840 0 7 7"/>
+			<img name="bodyleft" imgrect="797 8 7 4"/>
+			<img name="bodycore" imgrect="805 8 34 4"/>
+			<img name="bodyright" imgrect="840 8 7 4"/>
+			<img name="bottomleft" imgrect="797 13 7 7"/>
+			<img name="bottomcore" imgrect="805 13 34 7"/>
+			<img name="bottomright" imgrect="840 13 7 7"/>
+		</skin>
+		<skin name="translate_btn_cursoron" texture="\skin\hero_skin.tga">
+			<img name="topleft" imgrect="797 21 7 7"/>
+			<img name="topcore" imgrect="805 21 34 7"/>
+			<img name="topright" imgrect="840 21 7 7"/>
+			<img name="bodyleft" imgrect="797 29 7 4"/>
+			<img name="bodycore" imgrect="805 29 34 4"/>
+			<img name="bodyright" imgrect="840 29 7 4"/>
+			<img name="bottomleft" imgrect="797 34 7 7"/>
+			<img name="bottomcore" imgrect="805 34 34 7"/>
+			<img name="bottomright" imgrect="840 34 7 7"/>
+		</skin>
+		<skin name="translate_btn_clicked" texture="\skin\hero_skin.tga">
+			<img name="topleft" imgrect="797 42 7 7"/>
+			<img name="topcore" imgrect="805 42 34 7"/>
+			<img name="topright" imgrect="840 42 7 7"/>
+			<img name="bodyleft" imgrect="797 50 7 4"/>
+			<img name="bodycore" imgrect="805 50 34 4"/>
+			<img name="bodyright" imgrect="840 50 7 4"/>
+			<img name="bottomleft" imgrect="797 55 7 7"/>
+			<img name="bottomcore" imgrect="805 55 34 7"/>
+			<img name="bottomright" imgrect="840 55 7 7"/>
 		</skin>
 		<skin name="ps_listBtn" texture="\skin\party_search.tga">
 			<img name="topleft" imgrect="234 67 6 50"/>
@@ -7532,7 +7620,7 @@
 			<img name="bgright" imgrect="794 523 1 9"/>
 			<img name="barleft" imgrect="926 523 1 9"/>
 			<img name="barmiddle" imgrect="927 523 102 9"/>
-			<img name="barright" imgrect="1029 523 1 9"/>
+			<img name="barright" imgrect="1030 523 1 9"/>
 		</skin>
 		<skin name="pcinfo_gauge_hp3" texture="\skin\HUD.tga">
 			<img name="bgleft" imgrect="1344 993 1 15"/>
@@ -8269,6 +8357,582 @@
 			<img name="barmiddle" imgrect="939 334 476 33"/>
 			<img name="barright" imgrect="1415 334 2 33"/>
 		</skin>
+		<skin name="weekboss_default_hud_HP" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="111 725 1 67"/>
+			<img name="bgmiddle" imgrect="112 725 300 67"/>
+			<img name="bgright" imgrect="411 725 1 67"/>
+			<img name="barleft" imgrect="468 0 1 67"/>
+			<img name="barmiddle" imgrect="468 0 300 67"/>
+			<img name="barright" imgrect="768 0 1 67"/>
+		</skin>
+		<skin name="weekboss_default_hud_SP" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="111 792 1 28"/>
+			<img name="bgmiddle" imgrect="112 792 300 28"/>
+			<img name="bgright" imgrect="411 792 1 28"/>
+			<img name="barleft" imgrect="468 67 1 28"/>
+			<img name="barmiddle" imgrect="468 67 300 28"/>
+			<img name="barright" imgrect="768 67 1 28"/>
+		</skin>
+		<skin name="weekboss_default_hud_STA" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="111 816 1 48"/>
+			<img name="bgmiddle" imgrect="112 816 300 48"/>
+			<img name="bgright" imgrect="411 816 1 48"/>
+			<img name="barleft" imgrect="468 91 1 48"/>
+			<img name="barmiddle" imgrect="468 91 300 48"/>
+			<img name="barright" imgrect="768 91 1 48"/>
+		</skin>
+		<skin name="weekboss_normal_hud_HP" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="111 0 1 67"/>
+			<img name="bgmiddle" imgrect="112 0 300 67"/>
+			<img name="bgright" imgrect="411 0 1 67"/>
+			<img name="barleft" imgrect="468 0 1 67"/>
+			<img name="barmiddle" imgrect="469 0 300 67"/>
+			<img name="barright" imgrect="768 0 1 67"/>
+		</skin>
+		<skin name="weekboss_normal_hud_SP" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="111 67 1 28"/>
+			<img name="bgmiddle" imgrect="112 67 300 28"/>
+			<img name="bgright" imgrect="411 67 1 28"/>
+			<img name="barleft" imgrect="468 67 1 28"/>
+			<img name="barmiddle" imgrect="468 67 300 28"/>
+			<img name="barright" imgrect="768 67 1 28"/>
+		</skin>
+		<skin name="weekboss_normal_hud_STA" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="111 90 1 48"/>
+			<img name="bgmiddle" imgrect="112 90 300 48"/>
+			<img name="bgright" imgrect="411 90 1 48"/>
+			<img name="barleft" imgrect="468 90 1 48"/>
+			<img name="barmiddle" imgrect="468 90 300 48"/>
+			<img name="barright" imgrect="768 90 1 48"/>
+		</skin>
+		<skin name="weekboss_magic_hud_HP" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="111 145 1 67"/>
+			<img name="bgmiddle" imgrect="112 145 300 67"/>
+			<img name="bgright" imgrect="411 145 1 67"/>
+			<img name="barleft" imgrect="468 0 1 67"/>
+			<img name="barmiddle" imgrect="469 0 300 67"/>
+			<img name="barright" imgrect="768 0 1 67"/>
+		</skin>
+		<skin name="weekboss_magic_hud_SP" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="111 212 1 28"/>
+			<img name="bgmiddle" imgrect="112 212 300 28"/>
+			<img name="bgright" imgrect="411 212 1 28"/>
+			<img name="barleft" imgrect="468 67 1 28"/>
+			<img name="barmiddle" imgrect="468 67 300 28"/>
+			<img name="barright" imgrect="768 67 1 28"/>
+		</skin>
+		<skin name="weekboss_magic_hud_STA" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="111 236 1 48"/>
+			<img name="bgmiddle" imgrect="112 236 300 48"/>
+			<img name="bgright" imgrect="411 236 1 48"/>
+			<img name="barleft" imgrect="468 91 1 48"/>
+			<img name="barmiddle" imgrect="468 91 300 48"/>
+			<img name="barright" imgrect="768 91 1 48"/>
+		</skin>
+		<skin name="weekboss_unique_hud_HP" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="111 290 1 67"/>
+			<img name="bgmiddle" imgrect="112 290 300 67"/>
+			<img name="bgright" imgrect="411 290 1 67"/>
+			<img name="barleft" imgrect="468 0 1 67"/>
+			<img name="barmiddle" imgrect="469 0 300 67"/>
+			<img name="barright" imgrect="768 0 1 67"/>
+		</skin>
+		<skin name="weekboss_unique_hud_SP" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="111 357 1 28"/>
+			<img name="bgmiddle" imgrect="112 357 300 28"/>
+			<img name="bgright" imgrect="411 357 1 28"/>
+			<img name="barleft" imgrect="468 67 1 28"/>
+			<img name="barmiddle" imgrect="468 67 300 28"/>
+			<img name="barright" imgrect="768 67 1 28"/>
+		</skin>
+		<skin name="weekboss_unique_hud_STA" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="111 381 1 48"/>
+			<img name="bgmiddle" imgrect="112 381 300 48"/>
+			<img name="bgright" imgrect="411 381 1 48"/>
+			<img name="barleft" imgrect="468 91 1 48"/>
+			<img name="barmiddle" imgrect="468 91 300 48"/>
+			<img name="barright" imgrect="768 91 1 48"/>
+		</skin>
+		<skin name="weekboss_legend_hud_HP" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="111 435 1 67"/>
+			<img name="bgmiddle" imgrect="112 435 300 67"/>
+			<img name="bgright" imgrect="411 435 1 67"/>
+			<img name="barleft" imgrect="468 0 1 67"/>
+			<img name="barmiddle" imgrect="469 0 300 67"/>
+			<img name="barright" imgrect="768 0 1 67"/>
+		</skin>
+		<skin name="weekboss_legend_hud_SP" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="111 502 1 28"/>
+			<img name="bgmiddle" imgrect="112 502 300 28"/>
+			<img name="bgright" imgrect="411 502 1 28"/>
+			<img name="barleft" imgrect="468 67 1 28"/>
+			<img name="barmiddle" imgrect="468 67 300 28"/>
+			<img name="barright" imgrect="768 67 1 28"/>
+		</skin>
+		<skin name="weekboss_legend_hud_STA" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="111 526 1 48"/>
+			<img name="bgmiddle" imgrect="112 526 300 48"/>
+			<img name="bgright" imgrect="411 526 1 48"/>
+			<img name="barleft" imgrect="468 91 1 48"/>
+			<img name="barmiddle" imgrect="468 91 300 48"/>
+			<img name="barright" imgrect="768 91 1 48"/>
+		</skin>
+		<skin name="weekboss_goddess_hud_HP" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="111 580 1 67"/>
+			<img name="bgmiddle" imgrect="112 580 300 67"/>
+			<img name="bgright" imgrect="411 580 1 67"/>
+			<img name="barleft" imgrect="468 0 1 67"/>
+			<img name="barmiddle" imgrect="469 0 300 67"/>
+			<img name="barright" imgrect="768 0 1 67"/>
+		</skin>
+		<skin name="weekboss_goddess_hud_SP" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="111 647 1 28"/>
+			<img name="bgmiddle" imgrect="112 647 300 28"/>
+			<img name="bgright" imgrect="411 647 1 28"/>
+			<img name="barleft" imgrect="468 67 1 28"/>
+			<img name="barmiddle" imgrect="468 67 300 28"/>
+			<img name="barright" imgrect="768 67 1 28"/>
+		</skin>
+		<skin name="weekboss_goddess_hud_STA" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="111 671 1 48"/>
+			<img name="bgmiddle" imgrect="112 671 300 48"/>
+			<img name="bgright" imgrect="411 671 1 48"/>
+			<img name="barleft" imgrect="468 91 1 48"/>
+			<img name="barmiddle" imgrect="468 91 300 48"/>
+			<img name="barright" imgrect="768 91 1 48"/>
+		</skin>
+		<skin name="weekboss_default_hud_HP2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 725 1 61"/>
+			<img name="bgmiddle" imgrect="879 725 300 61"/>
+			<img name="bgright" imgrect="1179 725 1 61"/>
+			<img name="barleft" imgrect="1237 0 1 61"/>
+			<img name="barmiddle" imgrect="1237 0 300 61"/>
+			<img name="barright" imgrect="1537 0 1 61"/>
+		</skin>
+		<skin name="weekboss_default_hud_SP2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 785 1 16"/>
+			<img name="bgmiddle" imgrect="879 785 300 16"/>
+			<img name="bgright" imgrect="1179 785 1 16"/>
+			<img name="barleft" imgrect="1237 61 1 16"/>
+			<img name="barmiddle" imgrect="1237 61 300 16"/>
+			<img name="barright" imgrect="1537 61 1 16"/>
+		</skin>
+		<skin name="weekboss_default_hud_STA2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 801 1 16"/>
+			<img name="bgmiddle" imgrect="879 801 300 16"/>
+			<img name="bgright" imgrect="1179 801 1 16"/>
+			<img name="barleft" imgrect="1237 77 1 16"/>
+			<img name="barmiddle" imgrect="1237 77 300 16"/>
+			<img name="barright" imgrect="1537 77 1 16"/>
+		</skin>
+		<skin name="weekboss_default_hud_RP2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 818 1 52"/>
+			<img name="bgmiddle" imgrect="879 818 300 52"/>
+			<img name="bgright" imgrect="1179 818 1 52"/>
+			<img name="barleft" imgrect="1237 94 1 52"/>
+			<img name="barmiddle" imgrect="1237 94 300 52"/>
+			<img name="barright" imgrect="1537 94 1 52"/>
+		</skin>
+		<skin name="weekboss_normal_hud_HP2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 0 1 61"/>
+			<img name="bgmiddle" imgrect="879 0 300 61"/>
+			<img name="bgright" imgrect="1179 0 1 61"/>
+			<img name="barleft" imgrect="1237 0 1 61"/>
+			<img name="barmiddle" imgrect="1237 0 300 61"/>
+			<img name="barright" imgrect="1537 0 1 61"/>
+		</skin>
+		<skin name="weekboss_normal_hud_SP2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 61 1 16"/>
+			<img name="bgmiddle" imgrect="879 61 300 16"/>
+			<img name="bgright" imgrect="1179 61 1 16"/>
+			<img name="barleft" imgrect="1237 61 1 16"/>
+			<img name="barmiddle" imgrect="1237 61 230098 16"/>
+			<img name="barright" imgrect="1537 61 1 16"/>
+		</skin>
+		<skin name="weekboss_normal_hud_STA2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 77 1 16"/>
+			<img name="bgmiddle" imgrect="879 77 300 16"/>
+			<img name="bgright" imgrect="1179 77 1 16"/>
+			<img name="barleft" imgrect="1237 77 1 16"/>
+			<img name="barmiddle" imgrect="1237 77 300 16"/>
+			<img name="barright" imgrect="1537 77 1 16"/>
+		</skin>
+		<skin name="weekboss_normal_hud_RP2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 93 1 52"/>
+			<img name="bgmiddle" imgrect="879 93 300 52"/>
+			<img name="bgright" imgrect="1179 93 1 52"/>
+			<img name="barleft" imgrect="1237 93 1 52"/>
+			<img name="barmiddle" imgrect="1237 93 300 52"/>
+			<img name="barright" imgrect="1537 93 1 52"/>
+		</skin>
+		<skin name="weekboss_magic_hud_HP2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 145 1 61"/>
+			<img name="bgmiddle" imgrect="879 145 300 61"/>
+			<img name="bgright" imgrect="1179 145 1 61"/>
+			<img name="barleft" imgrect="1237 0 1 61"/>
+			<img name="barmiddle" imgrect="1237 0 300 61"/>
+			<img name="barright" imgrect="1537 0 1 61"/>
+		</skin>
+		<skin name="weekboss_magic_hud_SP2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 206 1 16"/>
+			<img name="bgmiddle" imgrect="879 206 300 16"/>
+			<img name="bgright" imgrect="1179 206 1 16"/>
+			<img name="barleft" imgrect="1237 61 1 16"/>
+			<img name="barmiddle" imgrect="1237 61 300 16"/>
+			<img name="barright" imgrect="1537 61 1 16"/>
+		</skin>
+		<skin name="weekboss_magic_hud_STA2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 222 1 16"/>
+			<img name="bgmiddle" imgrect="879 222 300 16"/>
+			<img name="bgright" imgrect="1179 222 1 16"/>
+			<img name="barleft" imgrect="1237 77 1 16"/>
+			<img name="barmiddle" imgrect="1237 77 300 16"/>
+			<img name="barright" imgrect="1537 77 1 16"/>
+		</skin>
+		<skin name="weekboss_magic_hud_RP2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 238 1 52"/>
+			<img name="bgmiddle" imgrect="879 238 300 52"/>
+			<img name="bgright" imgrect="1179 238 1 52"/>
+			<img name="barleft" imgrect="1237 93 1 52"/>
+			<img name="barmiddle" imgrect="1237 93 300 52"/>
+			<img name="barright" imgrect="1537 93 1 52"/>
+		</skin>
+		<skin name="weekboss_unique_hud_HP2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 290 1 61"/>
+			<img name="bgmiddle" imgrect="879 290 300 61"/>
+			<img name="bgright" imgrect="1179 290 1 61"/>
+			<img name="barleft" imgrect="1237 0 1 61"/>
+			<img name="barmiddle" imgrect="1237 0 300 61"/>
+			<img name="barright" imgrect="1537 0 1 61"/>
+		</skin>
+		<skin name="weekboss_unique_hud_SP2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 351 1 16"/>
+			<img name="bgmiddle" imgrect="879 351 300 16"/>
+			<img name="bgright" imgrect="1179 351 1 16"/>
+			<img name="barleft" imgrect="1237 61 1 16"/>
+			<img name="barmiddle" imgrect="1237 61 300 16"/>
+			<img name="barright" imgrect="1537 61 1 16"/>
+		</skin>
+		<skin name="weekboss_unique_hud_STA2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 367 1 16"/>
+			<img name="bgmiddle" imgrect="879 367 300 16"/>
+			<img name="bgright" imgrect="1179 367 1 16"/>
+			<img name="barleft" imgrect="1237 77 1 16"/>
+			<img name="barmiddle" imgrect="1237 77 300 16"/>
+			<img name="barright" imgrect="1537 77 1 16"/>
+		</skin>
+		<skin name="weekboss_unique_hud_RP2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 383 1 52"/>
+			<img name="bgmiddle" imgrect="879 383 300 52"/>
+			<img name="bgright" imgrect="1179 383 1 52"/>
+			<img name="barleft" imgrect="1237 93 1 52"/>
+			<img name="barmiddle" imgrect="1237 93 300 52"/>
+			<img name="barright" imgrect="1537 93 1 52"/>
+		</skin>
+		<skin name="weekboss_legend_hud_HP2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 435 1 61"/>
+			<img name="bgmiddle" imgrect="879 435 300 61"/>
+			<img name="bgright" imgrect="1179 435 1 61"/>
+			<img name="barleft" imgrect="1237 0 1 61"/>
+			<img name="barmiddle" imgrect="1237 0 300 61"/>
+			<img name="barright" imgrect="1537 0 1 61"/>
+		</skin>
+		<skin name="weekboss_legend_hud_SP2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 496 1 16"/>
+			<img name="bgmiddle" imgrect="879 496 300 16"/>
+			<img name="bgright" imgrect="1179 496 1 16"/>
+			<img name="barleft" imgrect="1237 61 1 16"/>
+			<img name="barmiddle" imgrect="1237 61 300 16"/>
+			<img name="barright" imgrect="1537 61 1 16"/>
+		</skin>
+		<skin name="weekboss_legend_hud_STA2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 512 1 16"/>
+			<img name="bgmiddle" imgrect="879 512 300 16"/>
+			<img name="bgright" imgrect="1179 512 1 16"/>
+			<img name="barleft" imgrect="1237 77 1 16"/>
+			<img name="barmiddle" imgrect="1237 77 300 16"/>
+			<img name="barright" imgrect="1537 77 1 16"/>
+		</skin>
+		<skin name="weekboss_legend_hud_RP2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 528 1 52"/>
+			<img name="bgmiddle" imgrect="879 528 300 52"/>
+			<img name="bgright" imgrect="1179 528 1 52"/>
+			<img name="barleft" imgrect="1237 93 1 52"/>
+			<img name="barmiddle" imgrect="1237 93 300 52"/>
+			<img name="barright" imgrect="1537 93 1 52"/>
+		</skin>
+		<skin name="weekboss_goddess_hud_HP2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 580 1 61"/>
+			<img name="bgmiddle" imgrect="879 580 300 61"/>
+			<img name="bgright" imgrect="1179 580 1 61"/>
+			<img name="barleft" imgrect="1237 0 1 61"/>
+			<img name="barmiddle" imgrect="1237 0 300 61"/>
+			<img name="barright" imgrect="1537 0 1 61"/>
+		</skin>
+		<skin name="weekboss_goddess_hud_SP2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 651 1 16"/>
+			<img name="bgmiddle" imgrect="879 641 300 16"/>
+			<img name="bgright" imgrect="1179 641 1 16"/>
+			<img name="barleft" imgrect="1237 61 1 16"/>
+			<img name="barmiddle" imgrect="1237 61 300 16"/>
+			<img name="barright" imgrect="1537 61 1 16"/>
+		</skin>
+		<skin name="weekboss_goddess_hud_STA2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 657 1 16"/>
+			<img name="bgmiddle" imgrect="879 657 300 16"/>
+			<img name="bgright" imgrect="1179 657 1 16"/>
+			<img name="barleft" imgrect="1237 77 1 16"/>
+			<img name="barmiddle" imgrect="1237 77 300 16"/>
+			<img name="barright" imgrect="1537 77 1 16"/>
+		</skin>
+		<skin name="weekboss_goddess_hud_RP2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="878 673 1 52"/>
+			<img name="bgmiddle" imgrect="879 673 300 52"/>
+			<img name="bgright" imgrect="1179 673 1 52"/>
+			<img name="barleft" imgrect="1237 93 1 52"/>
+			<img name="barmiddle" imgrect="1237 93 300 52"/>
+			<img name="barright" imgrect="1537 93 1 52"/>
+		</skin>
+		<skin name="weekboss_default_hud_pcinfo_hp" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1559 135 1 12"/>
+			<img name="bgmiddle" imgrect="1560 135 102 12"/>
+			<img name="bgright" imgrect="1562 135 1 12"/>
+			<img name="barleft" imgrect="1684 0 1 12"/>
+			<img name="barmiddle" imgrect="1685 0 102 12"/>
+			<img name="barright" imgrect="1787 0 1 12"/>
+		</skin>
+		<skin name="weekboss_default_hud_pcinfo_sp" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1559 149 1 12"/>
+			<img name="bgmiddle" imgrect="1560 149 102 12"/>
+			<img name="bgright" imgrect="1662 149 1 12"/>
+			<img name="barleft" imgrect="1684 12 1 12"/>
+			<img name="barmiddle" imgrect="1685 12 102 12"/>
+			<img name="barright" imgrect="1787 12 1 12"/>
+		</skin>
+		<skin name="weekboss_normal_hud_pcinfo_hp" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1559 0 1 12"/>
+			<img name="bgmiddle" imgrect="1560 0 102 12"/>
+			<img name="bgright" imgrect="1562 0 1 12"/>
+			<img name="barleft" imgrect="1684 0 1 12"/>
+			<img name="barmiddle" imgrect="1685 0 102 12"/>
+			<img name="barright" imgrect="1787 0 1 12"/>
+		</skin>
+		<skin name="weekboss_normal_hud_pcinfo_sp" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1559 12 1 13"/>
+			<img name="bgmiddle" imgrect="1560 12 102 13"/>
+			<img name="bgright" imgrect="1662 12 1 13"/>
+			<img name="barleft" imgrect="1684 12 1 13"/>
+			<img name="barmiddle" imgrect="1685 12 102 13"/>
+			<img name="barright" imgrect="1787 12 1 13"/>
+		</skin>
+		<skin name="weekboss_magic_hud_pcinfo_hp" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1559 27 1 12"/>
+			<img name="bgmiddle" imgrect="1560 27 102 12"/>
+			<img name="bgright" imgrect="1562 27 1 12"/>
+			<img name="barleft" imgrect="1684 0 1 12"/>
+			<img name="barmiddle" imgrect="1685 0 102 12"/>
+			<img name="barright" imgrect="1787 0 1 12"/>
+		</skin>
+		<skin name="weekboss_magic_hud_pcinfo_sp" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1559 39 1 13"/>
+			<img name="bgmiddle" imgrect="1560 39 102 13"/>
+			<img name="bgright" imgrect="1662 39 1 13"/>
+			<img name="barleft" imgrect="1684 12 1 13"/>
+			<img name="barmiddle" imgrect="1685 12 102 13"/>
+			<img name="barright" imgrect="1787 12 1 13"/>
+		</skin>
+		<skin name="weekboss_unique_hud_pcinfo_hp" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1559 54 1 12"/>
+			<img name="bgmiddle" imgrect="1560 54 102 12"/>
+			<img name="bgright" imgrect="1562 54 1 12"/>
+			<img name="barleft" imgrect="1684 0 1 12"/>
+			<img name="barmiddle" imgrect="1685 0 102 12"/>
+			<img name="barright" imgrect="1787 0 1 12"/>
+		</skin>
+		<skin name="weekboss_unique_hud_pcinfo_sp" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1559 66 1 13"/>
+			<img name="bgmiddle" imgrect="1560 66 102 13"/>
+			<img name="bgright" imgrect="1662 66 1 13"/>
+			<img name="barleft" imgrect="1684 12 1 13"/>
+			<img name="barmiddle" imgrect="1685 12 102 13"/>
+			<img name="barright" imgrect="1787 12 1 13"/>
+		</skin>
+		<skin name="weekboss_legend_hud_pcinfo_hp" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1559 81 1 12"/>
+			<img name="bgmiddle" imgrect="1560 81 102 12"/>
+			<img name="bgright" imgrect="1562 81 1 12"/>
+			<img name="barleft" imgrect="1684 0 1 12"/>
+			<img name="barmiddle" imgrect="1685 0 102 12"/>
+			<img name="barright" imgrect="1787 0 1 12"/>
+		</skin>
+		<skin name="weekboss_legend_hud_pcinfo_sp" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1559 93 1 13"/>
+			<img name="bgmiddle" imgrect="1560 93 102 13"/>
+			<img name="bgright" imgrect="1662 93 1 13"/>
+			<img name="barleft" imgrect="1684 12 1 13"/>
+			<img name="barmiddle" imgrect="1685 12 102 13"/>
+			<img name="barright" imgrect="1787 12 1 13"/>
+		</skin>
+		<skin name="weekboss_goddess_hud_pcinfo_hp" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1559 108 1 12"/>
+			<img name="bgmiddle" imgrect="1560 108 102 12"/>
+			<img name="bgright" imgrect="1562 108 1 12"/>
+			<img name="barleft" imgrect="1684 0 1 12"/>
+			<img name="barmiddle" imgrect="1685 0 102 12"/>
+			<img name="barright" imgrect="1787 0 1 12"/>
+		</skin>
+		<skin name="weekboss_goddess_hud_pcinfo_sp" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1559 121 1 13"/>
+			<img name="bgmiddle" imgrect="1560 121 102 13"/>
+			<img name="bgright" imgrect="1662 121 1 13"/>
+			<img name="barleft" imgrect="1684 12 1 13"/>
+			<img name="barmiddle" imgrect="1685 12 102 13"/>
+			<img name="barright" imgrect="1787 12 1 13"/>
+		</skin>
+		<skin name="weekboss_default_hud_pcinfo_hp2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1809 145 1 11"/>
+			<img name="bgmiddle" imgrect="1810 145 102 11"/>
+			<img name="bgright" imgrect="1912 145 1 11"/>
+			<img name="barleft" imgrect="1934 0 1 11"/>
+			<img name="barmiddle" imgrect="1935 0 102 11"/>
+			<img name="barright" imgrect="2037 0 1 11"/>
+		</skin>
+		<skin name="weekboss_default_hud_pcinfo_sp2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1809 155 1 7"/>
+			<img name="bgmiddle" imgrect="1810 155 102 7"/>
+			<img name="bgright" imgrect="1912 155 1 7"/>
+			<img name="barleft" imgrect="1934 10 1 7"/>
+			<img name="barmiddle" imgrect="1935 10 102 7"/>
+			<img name="barright" imgrect="2037 10 1 7"/>
+		</skin>
+		<skin name="weekboss_default_hud_pcinfo_sta2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1809 162 1 11"/>
+			<img name="bgmiddle" imgrect="1810 162 102 11"/>
+			<img name="bgright" imgrect="1912 162 1 11"/>
+			<img name="barleft" imgrect="1934 17 1 11"/>
+			<img name="barmiddle" imgrect="1935 17 102 11"/>
+			<img name="barright" imgrect="2037 17 1 11"/>
+		</skin>
+		<skin name="weekboss_normal_hud_pcinfo_hp2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1809 0 1 11"/>
+			<img name="bgmiddle" imgrect="1810 0 102 11"/>
+			<img name="bgright" imgrect="1912 0 1 11"/>
+			<img name="barleft" imgrect="1934 0 1 11"/>
+			<img name="barmiddle" imgrect="1935 0 102 11"/>
+			<img name="barright" imgrect="2037 0 1 11"/>
+		</skin>
+		<skin name="weekboss_normal_hud_pcinfo_sp2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1809 10 1 7"/>
+			<img name="bgmiddle" imgrect="1810 10 102 7"/>
+			<img name="bgright" imgrect="1912 10 1 7"/>
+			<img name="barleft" imgrect="1934 10 1 7"/>
+			<img name="barmiddle" imgrect="1935 10 102 7"/>
+			<img name="barright" imgrect="2037 10 1 7"/>
+		</skin>
+		<skin name="weekboss_normal_hud_pcinfo_sta2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1809 17 1 11"/>
+			<img name="bgmiddle" imgrect="1810 17 102 11"/>
+			<img name="bgright" imgrect="1912 17 1 11"/>
+			<img name="barleft" imgrect="1934 17 1 11"/>
+			<img name="barmiddle" imgrect="1935 17 102 11"/>
+			<img name="barright" imgrect="2037 17 1 11"/>
+		</skin>
+		<skin name="weekboss_magic_hud_pcinfo_hp2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1809 29 1 11"/>
+			<img name="bgmiddle" imgrect="1810 29 102 11"/>
+			<img name="bgright" imgrect="1912 29 1 11"/>
+			<img name="barleft" imgrect="1934 0 1 11"/>
+			<img name="barmiddle" imgrect="1935 0 102 11"/>
+			<img name="barright" imgrect="2037 0 1 11"/>
+		</skin>
+		<skin name="weekboss_magic_hud_pcinfo_sp2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1809 39 1 7"/>
+			<img name="bgmiddle" imgrect="1810 39 102 7"/>
+			<img name="bgright" imgrect="1912 39 1 7"/>
+			<img name="barleft" imgrect="1934 39 1 7"/>
+			<img name="barmiddle" imgrect="1935 10 102 7"/>
+			<img name="barright" imgrect="2037 10 1 7"/>
+		</skin>
+		<skin name="weekboss_magic_hud_pcinfo_sta2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1809 46 1 11"/>
+			<img name="bgmiddle" imgrect="1810 46 102 11"/>
+			<img name="bgright" imgrect="1912 46 1 11"/>
+			<img name="barleft" imgrect="1934 17 1 11"/>
+			<img name="barmiddle" imgrect="1935 17 102 11"/>
+			<img name="barright" imgrect="2037 17 1 11"/>
+		</skin>
+		<skin name="weekboss_unique_hud_pcinfo_hp2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1809 58 1 11"/>
+			<img name="bgmiddle" imgrect="1810 58 102 11"/>
+			<img name="bgright" imgrect="1912 58 1 11"/>
+			<img name="barleft" imgrect="1934 0 1 11"/>
+			<img name="barmiddle" imgrect="1935 0 102 11"/>
+			<img name="barright" imgrect="2037 0 1 11"/>
+		</skin>
+		<skin name="weekboss_unique_hud_pcinfo_sp2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1809 68 1 7"/>
+			<img name="bgmiddle" imgrect="1810 68 102 7"/>
+			<img name="bgright" imgrect="1912 68 1 7"/>
+			<img name="barleft" imgrect="1934 10 1 7"/>
+			<img name="barmiddle" imgrect="1935 10 102 7"/>
+			<img name="barright" imgrect="2037 10 1 7"/>
+		</skin>
+		<skin name="weekboss_unique_hud_pcinfo_sta2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1809 75 1 11"/>
+			<img name="bgmiddle" imgrect="1810 75 102 11"/>
+			<img name="bgright" imgrect="1912 75 1 11"/>
+			<img name="barleft" imgrect="1934 17 1 11"/>
+			<img name="barmiddle" imgrect="1935 17 102 11"/>
+			<img name="barright" imgrect="2037 17 1 11"/>
+		</skin>
+		<skin name="weekboss_legend_hud_pcinfo_hp2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1809 87 1 11"/>
+			<img name="bgmiddle" imgrect="1810 87 102 11"/>
+			<img name="bgright" imgrect="1912 87 1 11"/>
+			<img name="barleft" imgrect="1934 0 1 11"/>
+			<img name="barmiddle" imgrect="1935 0 102 11"/>
+			<img name="barright" imgrect="2037 0 1 11"/>
+		</skin>
+		<skin name="weekboss_legend_hud_pcinfo_sp2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1809 97 1 7"/>
+			<img name="bgmiddle" imgrect="1810 97 102 7"/>
+			<img name="bgright" imgrect="1912 97 1 7"/>
+			<img name="barleft" imgrect="1934 10 1 7"/>
+			<img name="barmiddle" imgrect="1935 10 102 7"/>
+			<img name="barright" imgrect="2037 10 1 7"/>
+		</skin>
+		<skin name="weekboss_legend_hud_pcinfo_sta2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1809 104 1 11"/>
+			<img name="bgmiddle" imgrect="1810 104 102 11"/>
+			<img name="bgright" imgrect="1912 104 1 11"/>
+			<img name="barleft" imgrect="1934 17 1 11"/>
+			<img name="barmiddle" imgrect="1935 17 102 11"/>
+			<img name="barright" imgrect="2037 17 1 11"/>
+		</skin>
+		<skin name="weekboss_goddess_hud_pcinfo_hp2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1809 116 1 11"/>
+			<img name="bgmiddle" imgrect="1810 116 102 11"/>
+			<img name="bgright" imgrect="1912 116 1 11"/>
+			<img name="barleft" imgrect="1934 0 1 11"/>
+			<img name="barmiddle" imgrect="1935 0 102 11"/>
+			<img name="barright" imgrect="2037 0 1 11"/>
+		</skin>
+		<skin name="weekboss_goddess_hud_pcinfo_sp2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1809 126 1 7"/>
+			<img name="bgmiddle" imgrect="1810 126 102 7"/>
+			<img name="bgright" imgrect="1912 126 1 7"/>
+			<img name="barleft" imgrect="1934 10 1 7"/>
+			<img name="barmiddle" imgrect="1935 10 102 7"/>
+			<img name="barright" imgrect="2037 10 1 7"/>
+		</skin>
+		<skin name="weekboss_goddess_hud_pcinfo_sta2" texture="\skin\weekbossraid_skin.tga">
+			<img name="bgleft" imgrect="1809 133 1 11"/>
+			<img name="bgmiddle" imgrect="1810 133 102 11"/>
+			<img name="bgright" imgrect="1912 133 1 11"/>
+			<img name="barleft" imgrect="1934 17 1 11"/>
+			<img name="barmiddle" imgrect="1935 17 102 11"/>
+			<img name="barright" imgrect="2037 17 1 11"/>
+		</skin>
 		<skin name="reinforce_gauge_green" texture="\skin\mainframe_A.tga">
 			<img name="bgleft" imgrect="0 984 37 40"/>
 			<img name="bgmiddle" imgrect="37 984 606 40"/>
@@ -8364,6 +9028,14 @@
 			<img name="barleft" imgrect="281 8 2 6"/>
 			<img name="barmiddle" imgrect="284 8 10 6"/>
 			<img name="barright" imgrect="295 8 2 6"/>
+		</skin>
+		<skin name="popoboost_gearscore_gauge" texture="\skin\popoboost_event_skin.tga">
+			<img name="bgleft" imgrect="0 525 1 20"/>
+			<img name="bgmiddle" imgrect="1 525 1199 20"/>
+			<img name="bgright" imgrect="1200 525 1 20"/>
+			<img name="barleft" imgrect="0 545 1 20"/>
+			<img name="barmiddle" imgrect="1 545 1199 20"/>
+			<img name="barright" imgrect="1200 545 1 20"/>
 		</skin>
 	</skinlist>
 	<skinlist category="labellines">
@@ -8848,6 +9520,9 @@
 		<image name="Map_Raid_Jellyzele" file="\skin\indunmap\Map_JellyzeleRaid.png" imgrect="0 0 295 450" CMM_Caption="가라앉는 나포선"/>
 		<image name="Map_Ep14_2_Raid" file="\skin\indunmap\Map_Ep14_2_Raid.png" imgrect="0 0 295 450" CMM_Caption="격동의 핵"/>
 		<image name="Map_Ep15_1_Raid" file="\skin\indunmap\Map_Raid_Rosethemisterable.png" imgrect="0 0 295 450" CMM_Caption="구원의 향로"/>
+		<image name="Map_Bridge_Wailing" file="\skin\indunmap\Map_Bridge_Wailing.png" imgrect="0 0 295 450" CMM_Caption="통곡의 다리"/>
+		<image name="Map_Ep15_2_Raid_1" file="\skin\indunmap\Map_Raid_Upinis.png" imgrect="0 0 295 450" CMM_Caption="몽환의 숲"/>
+		<image name="Map_Ep15_2_Raid_2" file="\skin\indunmap\Map_Raid_Slogutis.png" imgrect="0 0 295 450" CMM_Caption="심연의 관찰자"/>
 	</imagelist>
 	<imagelist category="jootest_image">
 		<image name="market_hairacc" file="\skin\market_skin.tga" imgrect="1927 447 60 60" CMM_Caption="마켓_헤어악세사리"/>
@@ -9258,6 +9933,7 @@
 		<image name="best_mark2" file="\skin\market_skin.tga" imgrect="1204 316 72 34" CMM_Caption="베스트_마크"/>
 		<image name="special_mark2" file="\skin\market_skin.tga" imgrect="1204 351 72 34" CMM_Caption="스페셜_마크"/>
 		<image name="sale_mark2" file="\skin\market_skin.tga" imgrect="1720 453 72 34" CMM_Caption="세일_마크"/>
+		<image name="sale_mark3" file="\skin\market_skin.tga" imgrect="1720 488 72 34" CMM_Caption="-30%세일 마크"/>
 		<image name="new_mark_K" file="\skin\market_skin.tga" imgrect="1793 383 72 34" CMM_Caption="뉴_마크_한글"/>
 		<image name="hot_mark_K" file="\skin\market_skin.tga" imgrect="1793 418 72 34" CMM_Caption="핫_마크_한글"/>
 		<image name="recommend_mark_K" file="\skin\market_skin.tga" imgrect="1793 453 72 34" CMM_Caption="추천_마크_한글"/>
@@ -9935,6 +10611,10 @@
 		<image name="relabeling_lock" file="\skin\tooltip_skin_3.tga" imgrect="1700 14 38 48" CMM_Caption="잠금 좌물쇠"/>
 		<image name="rolling_pink_balloon_direction" file="\skin\say_balloon.tga" imgrect="1 76 82 75" CMM_Caption="핑크하트 말풍선 말꼬리"/>
 		<image name="rolling_blue_balloon_direction" file="\skin\say_balloon.tga" imgrect="1 152 82 75" CMM_Caption="블루다이아 말풍선 말꼬리"/>
+		<image name="fruit_lemon_balloon_direction" file="\skin\say_balloon.tga" imgrect="1 1065 82 75" CMM_Caption="과일 레몬 말꼬리"/>
+		<image name="fruit_kiwi_balloon_direction" file="\skin\say_balloon.tga" imgrect="1 1141 82 75" CMM_Caption="과일 키위 말꼬리"/>
+		<image name="fruit_melon_balloon_direction" file="\skin\say_balloon.tga" imgrect="745 1 82 75" CMM_Caption="과일 멜론 말꼬리"/>
+		<image name="fruit_orange_balloon_direction" file="\skin\say_balloon.tga" imgrect="745 77 82 75" CMM_Caption="과일 오렌지 말꼬리"/>
 		<image name="personal_housing_guide_plusmark" file="\skin\pip_test2.tga" imgrect="846 286 25 25" CMM_Caption="개인하우징 가이드 플러스마크"/>
 		<image name="raid_week_rank_01" file="\skin\indun_skin.tga" imgrect="510 817 77 64" CMM_Caption="주간보스레이드_순위_01"/>
 		<image name="raid_week_rank_02" file="\skin\indun_skin.tga" imgrect="588 817 74 57" CMM_Caption="주간보스레이드_순위_02"/>
@@ -10111,6 +10791,60 @@
 		<image name="highcolorgem_CON" file="\skin\pip_test_item.tga" imgrect="964 1372 240 240"/>
 		<image name="600percent_image2" file="\skin\paid_skin.tga" imgrect="837 664 100 45" CMM_Caption="경험의 서 600"/>
 		<image name="1200percent_image2" file="\skin\paid_skin.tga" imgrect="938 664 100 45" CMM_Caption="경험의 서 1200"/>
+		<image name="weekboss_default_hud_L" file="\skin\weekbossraid_skin.tga" imgrect="0 725 113 145" CMM_Caption="기본 허드.VER1"/>
+		<image name="weekboss_default_hud_R" file="\skin\weekbossraid_skin.tga" imgrect="414 725 54 145"/>
+		<image name="weekboss_normal_hud_L" file="\skin\weekbossraid_skin.tga" imgrect="0 0 113 145" CMM_Caption="노말 허드.VER1"/>
+		<image name="weekboss_normal_hud_R" file="\skin\weekbossraid_skin.tga" imgrect="414 0 54 145"/>
+		<image name="weekboss_magic_hud_L" file="\skin\weekbossraid_skin.tga" imgrect="0 145 113 145" CMM_Caption="매직 허드.VER1"/>
+		<image name="weekboss_magic_hud_R" file="\skin\weekbossraid_skin.tga" imgrect="414 145 54 145"/>
+		<image name="weekboss_unique_hud_L" file="\skin\weekbossraid_skin.tga" imgrect="0 290 113 145" CMM_Caption="유니크 허드.VER1"/>
+		<image name="weekboss_unique_hud_R" file="\skin\weekbossraid_skin.tga" imgrect="414 290 54 145"/>
+		<image name="weekboss_legend_hud_L" file="\skin\weekbossraid_skin.tga" imgrect="0 435 113 145" CMM_Caption="레전드 허드.VER1"/>
+		<image name="weekboss_legend_hud_R" file="\skin\weekbossraid_skin.tga" imgrect="414 435 54 145"/>
+		<image name="weekboss_goddess_hud_L" file="\skin\weekbossraid_skin.tga" imgrect="0 580 113 145" CMM_Caption="가디스 허드.VER1"/>
+		<image name="weekboss_goddess_hud_R" file="\skin\weekbossraid_skin.tga" imgrect="414 580 54 145"/>
+		<image name="weekboss_default_hud_L2" file="\skin\weekbossraid_skin.tga" imgrect="769 725 114 145" CMM_Caption="기본 허드.VER2"/>
+		<image name="weekboss_default_hud_R2" file="\skin\weekbossraid_skin.tga" imgrect="1180 725 54 145"/>
+		<image name="weekboss_normal_hud_L2" file="\skin\weekbossraid_skin.tga" imgrect="769 0 114 145" CMM_Caption="노말 허드.VER2"/>
+		<image name="weekboss_normal_hud_R2" file="\skin\weekbossraid_skin.tga" imgrect="1180 0 54 145"/>
+		<image name="weekboss_magic_hud_L2" file="\skin\weekbossraid_skin.tga" imgrect="769 145 114 145" CMM_Caption="매직 허드.VER2"/>
+		<image name="weekboss_magic_hud_R2" file="\skin\weekbossraid_skin.tga" imgrect="1180 145 54 145"/>
+		<image name="weekboss_unique_hud_L2" file="\skin\weekbossraid_skin.tga" imgrect="769 290 114 145" CMM_Caption="유니크 허드.VER2"/>
+		<image name="weekboss_unique_hud_R2" file="\skin\weekbossraid_skin.tga" imgrect="1180 290 54 145"/>
+		<image name="weekboss_legend_hud_L2" file="\skin\weekbossraid_skin.tga" imgrect="769 435 114 145" CMM_Caption="레전드 허드.VER2"/>
+		<image name="weekboss_legend_hud_R2" file="\skin\weekbossraid_skin.tga" imgrect="1180 435 54 145"/>
+		<image name="weekboss_goddess_hud_L2" file="\skin\weekbossraid_skin.tga" imgrect="769 580 114 145" CMM_Caption="가디스 허드.VER2"/>
+		<image name="weekboss_goddess_hud_R2" file="\skin\weekbossraid_skin.tga" imgrect="1180 580 54 145"/>
+		<image name="weekboss_default_hud_pcinfo_L" file="\skin\weekbossraid_skin.tga" imgrect="1537 135 21 26" CMM_Caption="기본 체력바.VER1"/>
+		<image name="weekboss_default_hud_pcinfo_R" file="\skin\weekbossraid_skin.tga" imgrect="1662 135 21 26"/>
+		<image name="weekboss_normal_hud_pcinfo_L" file="\skin\weekbossraid_skin.tga" imgrect="1537 0 21 26" CMM_Caption="일반 체력바.VER1"/>
+		<image name="weekboss_normal_hud_pcinfo_R" file="\skin\weekbossraid_skin.tga" imgrect="1662 0 21 26"/>
+		<image name="weekboss_magic_hud_pcinfo_L" file="\skin\weekbossraid_skin.tga" imgrect="1537 27 21 26" CMM_Caption="매직 체력바.VER1"/>
+		<image name="weekboss_magic_hud_pcinfo_R" file="\skin\weekbossraid_skin.tga" imgrect="1662 27 21 26"/>
+		<image name="weekboss_unique_hud_pcinfo_L" file="\skin\weekbossraid_skin.tga" imgrect="1537 54 21 26" CMM_Caption="유니크 체력바.VER1"/>
+		<image name="weekboss_unique_hud_pcinfo_R" file="\skin\weekbossraid_skin.tga" imgrect="1662 54 21 26"/>
+		<image name="weekboss_legend_hud_pcinfo_L" file="\skin\weekbossraid_skin.tga" imgrect="1537 81 21 26" CMM_Caption="레전드 체력바.VER1"/>
+		<image name="weekboss_legend_hud_pcinfo_R" file="\skin\weekbossraid_skin.tga" imgrect="1662 81 21 26"/>
+		<image name="weekboss_goddess_hud_pcinfo_L" file="\skin\weekbossraid_skin.tga" imgrect="1537 108 21 26" CMM_Caption="가디스 체력바.VER1"/>
+		<image name="weekboss_goddess_hud_pcinfo_R" file="\skin\weekbossraid_skin.tga" imgrect="1662 108 21 26"/>
+		<image name="weekboss_default_hud_pcinfo_L2" file="\skin\weekbossraid_skin.tga" imgrect="1787 145 21 28" CMM_Caption="기본 체력바.VER2"/>
+		<image name="weekboss_default_hud_pcinfo_R2" file="\skin\weekbossraid_skin.tga" imgrect="1912 145 21 28"/>
+		<image name="weekboss_normal_hud_pcinfo_L2" file="\skin\weekbossraid_skin.tga" imgrect="1787 0 21 28" CMM_Caption="일반 체력바.VER2"/>
+		<image name="weekboss_normal_hud_pcinfo_R2" file="\skin\weekbossraid_skin.tga" imgrect="1912 0 21 28"/>
+		<image name="weekboss_magic_hud_pcinfo_L2" file="\skin\weekbossraid_skin.tga" imgrect="1787 29 21 28" CMM_Caption="매직 체력바.VER2"/>
+		<image name="weekboss_magic_hud_pcinfo_R2" file="\skin\weekbossraid_skin.tga" imgrect="1912 29 21 28"/>
+		<image name="weekboss_unique_hud_pcinfo_L2" file="\skin\weekbossraid_skin.tga" imgrect="1787 59 21 28" CMM_Caption="유니크 체력바.VER2"/>
+		<image name="weekboss_unique_hud_pcinfo_R2" file="\skin\weekbossraid_skin.tga" imgrect="1912 59 21 28"/>
+		<image name="weekboss_legend_hud_pcinfo_L2" file="\skin\weekbossraid_skin.tga" imgrect="1787 89 21 28" CMM_Caption="레전드 체력바.VER2"/>
+		<image name="weekboss_legend_hud_pcinfo_R2" file="\skin\weekbossraid_skin.tga" imgrect="1912 89 21 28"/>
+		<image name="weekboss_goddess_hud_pcinfo_L2" file="\skin\weekbossraid_skin.tga" imgrect="1787 116 21 28" CMM_Caption="가디스 체력바.VER2"/>
+		<image name="weekboss_goddess_hud_pcinfo_R2" file="\skin\weekbossraid_skin.tga" imgrect="1912 116 21 28"/>
+		<image name="weekboss_default_hud_party" file="\skin\weekbossraid_skin.tga" imgrect="0 0 1 1" CMM_Caption="파티_기본"/>
+		<image name="weekboss_normal_hud_party" file="\skin\weekbossraid_skin.tga" imgrect="2037 0 80 75" CMM_Caption="파티_일반"/>
+		<image name="weekboss_magic_hud_party" file="\skin\weekbossraid_skin.tga" imgrect="2118 0 80 75" CMM_Caption="파티_매직"/>
+		<image name="weekboss_unique_hud_party" file="\skin\weekbossraid_skin.tga" imgrect="2199 0 80 75" CMM_Caption="파티_유니크"/>
+		<image name="weekboss_legend_hud_party" file="\skin\weekbossraid_skin.tga" imgrect="2037 75 80 75" CMM_Caption="파티_레전드"/>
+		<image name="weekboss_goddess_hud_party" file="\skin\weekbossraid_skin.tga" imgrect="2118 75 80 75" CMM_Caption="파티_가디스"/>
 		<image name="class_tree_mark" file="\skin\class_tree.tga" imgrect="1 824 159 158" CMM_Caption="클래식 전직 마크"/>
 		<image name="plus_button_plusimag" file="\skin\pip_test.tga" imgrect="2049 328 31 31" CMM_Caption="플러스 버튼의 플러스 이미지만 뗌"/>
 		<image name="Chat_Balloon_Cat_direction" file="\skin\say_balloon.tga" imgrect="1 685 82 75" CMM_Caption="고양이 말꼬리"/>
@@ -10122,6 +10856,10 @@
 		<image name="Chat_Balloon_chuseok_direction" file="\skin\say_balloon.tga" imgrect="1 837 82 75" CMM_Caption="추석 옥토끼 말풍선 꼬리"/>
 		<image name="Chat_Balloon_chuseok_deco1" file="\skin\say_balloon.tga" imgrect="179 1073 93 75" CMM_Caption="추석 옥토끼 데코01"/>
 		<image name="Chat_Balloon_chuseok_deco2" file="\skin\say_balloon.tga" imgrect="273 1073 20 19" CMM_Caption="추석 옥토끼 데코02"/>
+		<image name="Chat_Balloon_fruit_lemon_deco" file="\skin\say_balloon.tga" imgrect="339 391 75 57" CMM_Caption="과일 레몬"/>
+		<image name="Chat_Balloon_fruit_melon_deco" file="\skin\say_balloon.tga" imgrect="339 449 75 57" CMM_Caption="과일 멜론"/>
+		<image name="Chat_Balloon_fruit_kiwi_deco" file="\skin\say_balloon.tga" imgrect="339 507 75 57" CMM_Caption="과일 키위"/>
+		<image name="Chat_Balloon_fruit_orange_deco" file="\skin\say_balloon.tga" imgrect="339 565 75 57" CMM_Caption="과일 오렌지"/>
 		<image name="achievement_whole_L" file="\skin\achievement_ui.tga" imgrect="0 0 4 12" CMM_Caption="업적 게이지01_좌"/>
 		<image name="achievement_whole_R" file="\skin\achievement_ui.tga" imgrect="360 0 4 12" CMM_Caption="업적 게이지01_우"/>
 		<image name="achievement_part_of_L" file="\skin\achievement_ui.tga" imgrect="0 26 1 15" CMM_Caption="업적 게이지02_좌"/>
@@ -10219,6 +10957,7 @@
 		<image name="stamp_AB_mark" file="\skin\stamp_tour.tga" imgrect="1379 650 97 74" CMM_Caption="스탬프 A_B"/>
 		<image name="stamp_A_mark" file="\skin\stamp_tour.tga" imgrect="1477 650 97 74" CMM_Caption="스탬프 A"/>
 		<image name="stamp_B_mark" file="\skin\stamp_tour.tga" imgrect="1575 650 97 74" CMM_Caption="스탬프 B"/>
+		<image name="popolion_roulette_title" file="\skin\popolion_roulette.tga" imgrect="0 0 637 466" CMM_Caption="포포리온 룰렛 타이틀"/>
 	</imagelist>
 	<imagelist category="yiseul_image">
 		<image name="AbillityReset_skin" file="\skin\paid_skin_title.tga" imgrect="0 330 316 165" CMM_Caption="특성 초기화"/>
@@ -10393,6 +11132,8 @@
 		<image name="bosspselect_bosspreview05" file="\skin\indun_skin3.tga" imgrect="591 1 294 225" CMM_Caption="보스이미지5"/>
 		<image name="bosspselect_bosspreview06" file="\skin\indun_skin3.tga" imgrect="886 1 294 225" CMM_Caption="보스이미지6"/>
 		<image name="bosspselect_lock02" file="\skin\indun_skin3.tga" imgrect="1 1 294 225" CMM_Caption="보스 선택 잠금2"/>
+		<image name="toc_mark" file="\icon\toc_mark.png" imgrect="0 0 27 27"/>
+		<image name="inventory_coin_rada_pic" file="\skin\pip_test2.tga" imgrect="899 325 27 27" CMM_Caption="여신의 증표(라다)"/>
 	</imagelist>
 	<imagelist category="je_button">
 		<image name="menu_guild_info" file="\skin\guild_skin.tga" imgrect="165 298 45 45" CMM_Caption="길드 정보"/>
@@ -10945,6 +11686,9 @@
 		<image name="tutorial_content_button_small" file="\skin\button_small.tga" imgrect="198 0 58 61" CMM_Caption="튜토리얼 스몰버튼"/>
 		<image name="tutorial_content_button_small_cursoron" file="\skin\button_small.tga" imgrect="257 0 58 61"/>
 		<image name="tutorial_content_button_small_clicked" file="\skin\button_small.tga" imgrect="316 0 58 61"/>
+		<image name="translate_btn2" file="\skin\button_small.tga" imgrect="0 456 50 20" CMM_Caption="번역 실행 버튼"/>
+		<image name="translate_btn2_cursoron" file="\skin\button_small.tga" imgrect="51 456 50 20"/>
+		<image name="translate_btn2_clicked" file="\skin\button_small.tga" imgrect="102 456 50 20"/>
 		<image name="btn_housing_editmode_small" file="\skin\button_small.tga" imgrect="375 0 61 54" CMM_Caption="길드하우징 스몰버튼"/>
 		<image name="btn_housing_editmode_small_cursoron" file="\skin\button_small.tga" imgrect="437 0 61 54"/>
 		<image name="btn_housing_editmode_small_clicked" file="\skin\button_small.tga" imgrect="437 0 61 54"/>
@@ -11341,6 +12085,9 @@
 		<image name="goddess2_shop_btn" file="\skin\button_small.tga" imgrect="0 296 44 44" CMM_Caption="여신의 증표 상점"/>
 		<image name="goddess2_shop_btn_cursoron" file="\skin\button_small.tga" imgrect="45 296 44 44"/>
 		<image name="goddess2_shop_btn_clicked" file="\skin\button_small.tga" imgrect="90 296 44 44"/>
+		<image name="goddess3_shop_btn" file="\skin\button_small.tga" imgrect="178 358 44 44" CMM_Caption="여신의 증표 상점"/>
+		<image name="goddess3_shop_btn_cursoron" file="\skin\button_small.tga" imgrect="224 358 44 44"/>
+		<image name="goddess3_shop_btn_clicked" file="\skin\button_small.tga" imgrect="268 358 44 44"/>
 		<image name="pvpmine_shop_btn_total" file="\skin\button_small.tga" imgrect="135 291 44 44" CMM_Caption="용병단 증표 상점 리사이즈"/>
 		<image name="pvpmine_shop_btn_total_cursoron" file="\skin\button_small.tga" imgrect="180 291 44 44"/>
 		<image name="pvpmine_shop_btn_total_clicked" file="\skin\button_small.tga" imgrect="225 291 44 44"/>
@@ -11741,6 +12488,7 @@
 		<image name="indun_material" file="\skin\indun_skin.tga" imgrect="469 651 65 65"/>
 		<image name="indun_material_clicked" file="\skin\indun_skin.tga" imgrect="469 717 65 65"/>
 		<image name="card_reinforce_legend_bg" file="\skin\card_reinforce_legend_bg.tga" imgrect="0 0 571 620" CMM_Caption="레전드 카드 합성 배경"/>
+		<image name="card_reinforce_legend_Slogutis_bg" file="\skin\card_reinforce_legend_Slogutis_bg.tga" imgrect="0 0 571 620" CMM_Caption="슬로거티스 제작 배경"/>
 	</imagelist>
 	<imagelist category="colony_image">
 		<image name="colony_vic_frame" file="\skin\colony.tga" imgrect="0 0 581 532" CMM_Caption="콜로니 승리 프레임"/>
@@ -11884,6 +12632,7 @@
 		<image name="companion_pet_sled_skyblue" file="\icon\companion_Velhider.tga" imgrect="560 400 80 80"/>
 		<image name="companion_pet_sled_green" file="\icon\companion_Velhider.tga" imgrect="0 480 80 80"/>
 		<image name="companion_pet_jpn3th_fox" file="\icon\companion_Velhider02.tga" imgrect="0 0 80 80"/>
+		<image name="companion_pet_nightrabbit" file="\icon\companion_Velhider.tga" imgrect="80 480 80 80"/>
 		<image name="bg_w" file="\skin\button.tga" imgrect="252 974 50 50"/>
 		<image name="barrack_signboard" file="\skin\barrack.tga" imgrect="356 0 257 192"/>
 		<image name="barrack_attack_icon" file="\skin\barrack.tga" imgrect="59 720 55 61"/>
@@ -11931,13 +12680,17 @@
 		<image name="pcinfo_bg_L" file="\skin\HUD.tga" imgrect="1318 993 25 30"/>
 		<image name="pcinfo_bg" file="\skin\HUD.tga" imgrect="682 523 8 19"/>
 		<image name="pcinfo_bg2" file="\skin\HUD.tga" imgrect="796 523 8 19"/>
+		<image name="pcinfo3_bg_L" file="\skin\HUD.tga" imgrect="434 1030 8 30"/>
+		<image name="pcinfo3_bg_R" file="\skin\HUD.tga" imgrect="548 1030 8 30"/>
+		<image name="pcinfo4_bg_L" file="\skin\HUD.tga" imgrect="435 1083 8 31"/>
+		<image name="pcinfo4_bg_R" file="\skin\HUD.tga" imgrect="547 1083 8 31"/>
 		<image name="mygauge" file="\skin\pip_test.tga" imgrect="915 794 15 70"/>
 		<image name="gauge_sta3" file="\skin\pip_test.tga" imgrect="519 888 40 55"/>
 		<image name="playing_deco1" file="\skin\HUD.tga" imgrect="1864 580 90 120"/>
 		<image name="playing_deco2" file="\skin\HUD.tga" imgrect="1958 580 90 120"/>
 		<image name="gauge_light" file="\skin\HUD.tga" imgrect="557 578 123 30"/>
 		<image name="gauge_light2" file="\skin\loading_gauge.tga" imgrect="729 264 1178 30"/>
-		<image name="gauge_light3" file="\skin\loading_gauge.tga" imgrect="729 295 356 15"/>
+		<image name="gauge_light3" file="\skin\loading_gauge.tga" imgrect="729 295 356 15"/>S
 		<image name="mask_myinfo" file="\skin\mainframe_07.tga" imgrect="944 0 80 80"/>
 		<image name="mask_youinfo" file="\skin\mainframe_07.tga" imgrect="954 81 70 70"/>
 		<image name="house_change00" file="\skin\barrack.tga" imgrect="1957 883 70 70"/>
@@ -12395,6 +13148,7 @@
 		<image name="chat_icon_skill" file="\skin\chat_skin.tga" imgrect="424 0 22 22"/>
 		<image name="chat_icon_resurrection" file="\skin\chat_skin.tga" imgrect="401 0 22 22"/>
 		<image name="chat_icon_death" file="\skin\chat_skin.tga" imgrect="447 0 22 22"/>
+
 	</imagelist>
 	<imagelist category="journal_icon">
 		<image name="jour_rank_image" file="\skin\HUD.tga" imgrect="1801 61 86 78"/>
@@ -12569,6 +13323,13 @@
 		<image name="Pajauta_emoticon152" file="\icon\emoticon\Pajauta_Osechi.png" imgrect="0 0 128 128"/>
 		<image name="Pajauta_emoticon153" file="\icon\emoticon\Pajauta_Hanetsuki.png" imgrect="0 0 128 128"/>
 		<image name="Pajauta_emoticon154" file="\icon\emoticon\Pajauta_Hamaya.png" imgrect="0 0 128 128"/>
+		<image name="miserable_bunnyroze" file="\icon\emoticon\miserable_bunnyroze.png" imgrect="0 0 128 128"/>
+		<image name="snowleopard_beholder" file="\icon\emoticon\snowleopard_beholder.png" imgrect="0 0 128 128"/>
+		<image name="happybunny_roze" file="\icon\emoticon\happybunny_roze.png" imgrect="0 0 128 128"/>
+		<image name="shewmouse_piedpiper" file="\icon\emoticon\shewmouse_piedpiper.png" imgrect="0 0 128 128"/>
+		<image name="Beholder_Aprilfool" file="\icon\emoticon\Beholder_Aprilfool.png" imgrect="0 0 128 128"/>
+		<image name="emoticonItem_summer_popo_160" file="\icon\emoticon\popolion_yami.png" imgrect="0 0 128 128"/>
+		<image name="emoticonItem_summer_popo_161" file="\icon\emoticon\popolion_tube.png" imgrect="0 0 128 128"/>
 	</imagelist>
 	<imagelist category="itemtooltip_image">
 		<image name="circle_gem" file="\skin\tooltip_skin_3.tga" imgrect="805 228 30 30"/>
@@ -13192,6 +13953,7 @@
 		<image name="icon_gesture_ClockworkDance" file="\icon\social.tga" imgrect="163 730 80 80"/>
 		<image name="icon_gesture_RustleDance" file="\icon\social.tga" imgrect="244 730 80 80"/>
 		<image name="icon_gesture_Luchador" file="\icon\social.tga" imgrect="325 730 80 80"/>
+		<image name="icon_gesture_flower_scent" file="\icon\social.tga" imgrect="405 730 80 80"/>
 	</imagelist>
 	<imagelist>
 		<image name="chat_page_arrow_left" file="\skin\mainframe_A.tga" imgrect="766 943 40 40"/>
@@ -13910,6 +14672,8 @@
 		<image name="Dlg_port_Jaguar" file="\npcimg\Jaguar.png" imgrect="0 0 700 800" CMM_Caption="재규어"/>
 		<image name="Dlg_port_BossRoze" file="\npcimg\BossRoze.png" imgrect="0 0 800 1000" CMM_Caption="로제 더 미저러블"/>
 		<image name="Dlg_port_SpearMaster" file="\npcimg\SpearMaster.png" imgrect="0 0 1000 800" CMM_Caption="신극"/>
+		<image name="Dlg_port_EnginnerMaster" file="\npcimg\Enginner_Master.png" imgrect="0 0 950 800" CMM_Caption="엔지니어"/>
+		<image name="Dlg_port_Slogutis" file="\npcimg\Slogutis.png" imgrect="0 0 1120 900" CMM_Caption="마신 슬로거티스"/>
 	</imagelist>
 	<imagelist category="Dlg_boss">
 		<image name="balloon_Skiaclipse" file="\skin\monster_Dlg.tga" imgrect="0 0 220 260" CMM_Caption="스키아클립스"/>
@@ -13924,6 +14688,8 @@
 		<image name="balloon_Vasilissa" file="\skin\monster_Dlg.tga" imgrect="0 783 220 260" CMM_Caption="바실리사"/>
 		<image name="balloon_TransmutationSpreader" file="\skin\monster_Dlg.tga" imgrect="221 783 220 260" CMM_Caption="변질의 전파자"/>
 		<image name="balloon_BossRoze" file="\skin\monster_Dlg_02.tga" imgrect="3 3 220 260" CMM_Caption="로제 더 미저러블"/>
+		<image name="balloon_boss_Upinis" file="\skin\monster_Dlg_02.tga" imgrect="221 0 220 260" CMM_Caption="우피니스"/>
+		<image name="balloon_boss_Slogutis" file="\skin\monster_Dlg_02.tga" imgrect="442 0 220 260" CMM_Caption="마신 슬로거티스"/>
 	</imagelist>
 	<imagelist category="bufficon">
 		<image name="icon_Str_up" file="\icon\buff_icon.tga" imgrect="256 384 128 128" CMM_Caption="힘+"/>
@@ -14687,6 +15453,41 @@
 		<image name="icon_buff_ridepet_scooter" file="\icon\buff_icon6.tga" imgrect="511 1536 128 128" CMM_Caption="포포 스쿠터 버프"/>
 		<image name="icon_raid_mythic_normal_soloclear" file="\icon\buff_icon6.tga" imgrect="639 1536 128 128" CMM_Caption="1인 노말 성물 자동 소탕"/>
 		<image name="icon_raid_mythic_hard_soloclear" file="\icon\buff_icon6.tga" imgrect="767 1536 128 128" CMM_Caption="1인 하드 성물 자동 소탕"/>
+		<image name="icon_jellyzele_reduced_bubble" file="\icon\buff_icon6.tga" imgrect="0 1664 128 128" CMM_Caption="젤리젤 순례자 - 줄어든 공기방울"/>
+		<image name="icon_Jellyzele_marine_plants" file="\icon\buff_icon6.tga" imgrect="128 1664 128 128" CMM_Caption="젤리젤 순례자 - 튼튼한 해양식물"/>
+		<image name="icon_Spreader_falloutism" file="\icon\buff_icon6.tga" imgrect="256 1664 128 128" CMM_Caption="변질의 전파자 순례자 - 낙석주의"/>
+		<image name="icon_Spreader_transition_Crystal" file="\icon\buff_icon6.tga" imgrect="384 1664 128 128" CMM_Caption="변질의 전파자 순례자 - 변이의 수정"/>
+		<image name="icon_Spreader_Intrusion" file="\icon\buff_icon6.tga" imgrect="512 1664 128 128" CMM_Caption="변질의 전파자 순례자 - 난입"/>
+		<image name="icon_Spreader_Broken_Crystal" file="\icon\buff_icon6.tga" imgrect="512 1664 128 128" CMM_Caption="변질의 전파자 순례자 - 부서진 수정"/>
+		<image name="icon_Jellyzele_Poison_Puddle" file="\icon\buff_icon6.tga" imgrect="768 1664 128 128" CMM_Caption="변질의 전파자 순례자 - 맹독 물웅덩이"/>
+		<image name="icon_Jellyzele_Petulance" file="\icon\buff_icon6.tga" imgrect="896 1664 128 128" CMM_Caption="젤리젤 순례자 - 짜증을 잘내는 젤리젤"/>
+		<image name="icon_Jellyzele_Pollution_Sea" file="\icon\buff_icon6.tga" imgrect="0 1792 128 128" CMM_Caption="젤리젤 순례자 - 부식된 바다"/>
+		<image name="icon_Jellyzele_Reef" file="\icon\buff_icon6.tga" imgrect="128 1792 128 128" CMM_Caption="젤리젤 순례자 - 솟아오르는 암초더미"/>
+		<image name="icon_Jellyzele_Mutant_Plant" file="\icon\buff_icon6.tga" imgrect="256 1792 128 128" CMM_Caption="젤리젤 순례자 - 변이식물"/>
+		<image name="icon_Jellyzele_Magma" file="\icon\buff_icon6.tga" imgrect="256 1792 128 128" CMM_Caption="젤리젤 순례자 - 뜨거워진 지면"/>
+		<image name="icon_Spreader_Disappeared_Crystal" file="\icon\buff_icon6.tga" imgrect="512 1792 128 128" CMM_Caption="변질의 전파자 순례자 - 사라진 수정"/>
+		<image name="icon_Spreader_Pain_Crystal" file="\icon\buff_icon6.tga" imgrect="512 1792 128 128" CMM_Caption="변질의 전파자 순례자 - 고통의 수정"/>
+		<image name="icon_Spreader_Enforced_Solider" file="\icon\buff_icon6.tga" imgrect="768 1792 128 128" CMM_Caption="변질의 전파자 순례자 - 강화된 크루비나 병사"/>
+		<image name="icon_Spreader_Crystal_Thunder" file="\icon\buff_icon6.tga" imgrect="896 1792 128 128" CMM_Caption="변질의 전파자 순례자 - 크루비나 번개"/>
+		<image name="icon_Extreme_Stats_Down" file="\icon\buff_icon6.tga" imgrect="0 1920 128 128" CMM_Caption="최대 HP/SP 감소"/>
+		<image name="icon_Extreme_Slow_Skill" file="\icon\buff_icon6.tga" imgrect="128 1920 128 128" CMM_Caption="스킬 쿨다운 증가"/>
+		<image name="icon_Jellyzele_Polluted_Oxygen" file="\icon\buff_icon6.tga" imgrect="256 1920 128 128" CMM_Caption="젤리젤 순례자 - 오염된 산소"/>
+		<image name="icon_tribulation_RelicPointWeak" file="\icon\buff_icon6.tga" imgrect="386 1920 128 128" CMM_Caption="통곡의 다리 - 성물 약화 디버프"/>
+		<image name="icon_buff_ridepet_ep15picnic" file="\icon\buff_icon6.tga" imgrect="513 1920 128 128" CMM_Caption="피크닉 돗자리 버프"/>
+		<image name="icon_buff_ridepet_cloudkepa" file="\icon\buff_icon6.tga" imgrect="641 1920 128 128" CMM_Caption="구름 속의 케파 버프"/>
+		<image name="icon_buff_ridepet_dragonboat" file="\icon\buff_icon6.tga" imgrect="768 1920 128 128" CMM_Caption="단오절 버프"/>
+		<image name="icon_buff_ridepet_unicorn" file="\icon\buff_icon6.tga" imgrect="896 1920 128 128" CMM_Caption="유니콘 버프"/>
+		<image name="icon_raid_upinis_autoclear" file="\icon\buff_icon7.tga" imgrect="0 0 128 128" CMM_Caption="우피니스 자동 소탕 버프"/>
+		<image name="icon_raid_Slogutis_autoclear" file="\icon\buff_icon7.tga" imgrect="128 0 128 128" CMM_Caption="슬로거티스 자동 소탕 버프"/>
+		<image name="icon_hallucination_powder" file="\icon\buff_icon7.tga" imgrect="256 0 128 128" CMM_Caption="환각 가루"/>
+		<image name="icon_numbing_powder" file="\icon\buff_icon7.tga" imgrect="384 0 128 128" CMM_Caption="수면 가루"/>
+		<image name="icon_slogutis_mark" file="\icon\buff_icon7.tga" imgrect="512 0 128 128" CMM_Caption="마신의 표식"/>
+		<image name="icon_slogutis_anger" file="\icon\buff_icon7.tga" imgrect="640 0 128 128" CMM_Caption="마신의 분노"/>
+		<image name="icon_ashes_dark_flame" file="\icon\buff_icon7.tga" imgrect="768 0 128 128" CMM_Caption="검보란 불꽃의 기운"/>
+		<image name="icon_dark_flame_force" file="\icon\buff_icon7.tga" imgrect="896 0 128 128" CMM_Caption="검보란 불꽃의 흔적"/>
+		<image name="icon_buff_ridepet_ep15explorer" file="\icon\buff_icon7.tga" imgrect="0 128 128 128" CMM_Caption="아기공룡 버프"/>
+		<image name="icon_debuff_disable_movingforward" file="\icon\buff_icon7.tga" imgrect="128 128 128 128" CMM_Caption="전방이동사용불가"/>
+		<image name="icon_buff_ridepet_ep15elf" file="\icon\buff_icon7.tga" imgrect="256 128 128 128" CMM_Caption="요정 여왕의 선물 버프"/>
 	</imagelist>
 	<imagelist category="housing_bufficon">
 		<image name="icon_Weapon_Klaida" file="\icon\icon_hosing_buff.tga" imgrect="0 0 128 128"/>
@@ -15126,6 +15927,8 @@
 		<image name="167_boss_TransmutationSpreader" file="\skin\bosscard\167_boss_TransmutationSpreader.tga" imgrect="0 0 330 440"/>
 		<image name="168_boss_Falouros" file="\skin\bosscard\168_boss_Falouros.tga" imgrect="0 0 330 440"/>
 		<image name="169_boss_Roze" file="\skin\bosscard\169_boss_Roze.tga" imgrect="0 0 330 440"/>
+		<image name="170_boss_Upinis" file="\skin\bosscard\170_boss_Upinis.tga" imgrect="0 0 330 440"/>
+		<image name="171_boss_Slogutis" file="\skin\bosscard\171_boss_Slogutis.tga" imgrect="0 0 330 440"/>
 	</imagelist>
 	<imagelist category="sub_card3">
 		<image name="legend_card_fragment_lv1" file="\skin\bosscard\legend_card_fragment_lv1.tga" imgrect="0 0 330 440"/>
@@ -15465,6 +16268,22 @@
 		<image name="plate_achieve_Boss_Roze_achivement" file="\skin\user_title_skin2.tga" imgrect="0 0 214 36"/>
 		<image name="plate_achieve_SpearMaster_weekraid" file="\skin\user_title_skin2.tga" imgrect="428 0 214 34" CMM_Caption="신극 주보레 칭호"/>
 		<image name="plate_achieve_SpearMaster" file="\skin\user_title_skin2.tga" imgrect="214 0 214 34" CMM_Caption="신극 업적 칭호"/>
+		<image name="plate_achieve_Spreader_pilgrim" file="\skin\user_title_skin2.tga" imgrect="642 0 214 34" CMM_Caption="변질의 전파자 순례자"/>
+		<image name="plate_achieve_Engineer_weekraid" file="\skin\user_title_skin2.tga" imgrect="1070 0 214 34" CMM_Caption="엔지니어 주보레 칭호"/>
+		<image name="plate_achieve_Engineer" file="\skin\user_title_skin2.tga" imgrect="856 0 214 34" CMM_Caption="엔지니어 칭호"/>
+		<image name="plate_achieve_Boss_Upinis_gold" file="\skin\user_title_skin2.tga" imgrect="0 34 214 34" CMM_Caption="몽환의 숲 업적 칭호"/>
+		<image name="plate_achieve_Boss_Upinis_silver" file="\skin\user_title_skin2.tga" imgrect="214 34 214 34"/>
+		<image name="plate_achieve_Boss_Upinis_bronze" file="\skin\user_title_skin2.tga" imgrect="428 34 214 34"/>
+		<image name="plate_achieve_Boss_Upinis_achivement" file="\skin\user_title_skin2.tga" imgrect="642 34 214 34"/>
+		<image name="plate_achieve_Boss_Slogutis_gold" file="\skin\user_title_skin2.tga" imgrect="856 34 214 34" CMM_Caption="심연의 관찰자 업적 칭호"/>
+		<image name="plate_achieve_Boss_Slogutis_silver" file="\skin\user_title_skin2.tga" imgrect="1070 34 214 34"/>
+		<image name="plate_achieve_Boss_Slogutis_bronze" file="\skin\user_title_skin2.tga" imgrect="0 68 214 34"/>
+		<image name="plate_achieve_Boss_Slogutis_achivement" file="\skin\user_title_skin2.tga" imgrect="214 68 214 34"/>
+		<image name="plate_achieve_EVENT_2308_TITLE_achivement" file="\skin\user_title_skin2.tga" imgrect="428 68 214 34"/>
+		<image name="plate_achieve_POPO_FESTA" file="\skin\user_title_skin2.tga" imgrect="642 68 214 34" CMM_Caption="POPO FESTA2 칭호"/>
+		<image name="plate_achieve_PAPAYA_Walking_tos_guide" file="\skin\user_title_skin2.tga" imgrect="1070 68 214 34" CMM_Caption=" "/>
+		<image name="plate_achieve_PAPAYA_tree_of_creator" file="\skin\user_title_skin2.tga" imgrect="856 68 214 34" CMM_Caption=" "/>
+		<image name="plate_achieve_PAPAYA_territorial_conquerors" file="\skin\user_title_skin2.tga" imgrect="0 102 214 34" CMM_Caption=" "/>
 	</imagelist>
 	<imagelist category="skin_hair">
 		<image name="icon_skintone_01_m01" file="\skin\skinhair\icon_skintone_01_m01.png" imgrect="0 0 80 80" CMM_Caption="남성 01"/>
@@ -15615,6 +16434,12 @@
 		<image name="ridepet_ep14rider" file="\icon\ridepet.tga" imgrect="240 80 80 80" CMM_Caption="토스 데이비슨"/>
 		<image name="ridepet_ep14egypt" file="\icon\ridepet.tga" imgrect="320 80 80 80" CMM_Caption="태양의 배"/>
 		<image name="ridepet_scooter" file="\icon\ridepet.tga" imgrect="400 80 80 80" CMM_Caption="포포 스쿠터"/>
+		<image name="ridepet_ep15picnic" file="\icon\ridepet.tga" imgrect="560 80 80 80" CMM_Caption="피크닉 돗자리"/>
+		<image name="ridepet_cloudkepa" file="\icon\ridepet.tga" imgrect="480 80 80 80" CMM_Caption="구름 위의 케파"/>
+		<image name="ridepet_dragonboat" file="\icon\ridepet.tga" imgrect="0 160 80 80" CMM_Caption="용주"/>
+		<image name="ridepet_unicorn" file="\icon\ridepet.tga" imgrect="80 160 80 80" CMM_Caption="유니콘"/>
+		<image name="ridepet_ep15explorer" file="\icon\ridepet.tga" imgrect="160 160 80 80" CMM_Caption="아기 공룡"/>
+		<image name="ridepet_ep15elf" file="\icon\ridepet.tga" imgrect="240 160 80 80" CMM_Caption="요정 여왕의 선물"/>
 	</imagelist>
 	<effectimagelist category="effectlist">
 		<image name="blue_orb" file="\icon\blue_orb.tga" imgrect="0 0 256 256"/>
@@ -15742,5 +16567,70 @@
 		<image name="fullscreen_menu_button2" file="\skin\ui_hud_icon.tga" imgrect="350 768 350 50" CMM_Caption="전체메뉴배경버튼2"/>
 		<image name="fullscreen_menu_button2_cursoron" file="\skin\ui_hud_icon.tga" imgrect="350 818 350 50"/>
 		<image name="fullscreen_menu_button2_clicked" file="\skin\ui_hud_icon.tga" imgrect="350 868 350 50"/>
+	</imagelist>
+	<imagelist category="popoboost_event">
+		<image name="popoboost_banner_frame_image" file="\skin\popoboost_event_skin.tga" imgrect="0 0 1200 125"/>
+		<image name="popoboost_reward_frame_image" file="\skin\popoboost_event_skin.tga" imgrect="0 125 350 155"/>
+		<image name="popoboost_content_frame_image" file="\skin\popoboost_event_skin.tga" imgrect="350 125 300 400"/>
+		<image name="popoboost_guide_frame_image" file="\skin\popoboost_event_skin.tga" imgrect="650 125 500 400"/>
+		<image name="popoboost_reward_frame_image2" file="\skin\popoboost_event_skin.tga" imgrect="350 650 350 155"/>
+		<image name="popoboost_reward_frame_image3" file="\skin\popoboost_event_skin.tga" imgrect="350 805 350 155"/>
+		<!-- <image name="popoboost_gearscore_button" file="\skin\popoboost_event_skin.tga" imgrect="0 280 138 54"/>
+		<image name="popoboost_gearscore_button_cursoron" file="\skin\popoboost_event_skin.tga" imgrect="0 334 138 54"/>
+		<image name="popoboost_gearscore_button_clicked" file="\skin\popoboost_event_skin.tga" imgrect="0 334 138 54"/> -->
+		<image name="popoboost_minimized_button" file="\skin\popoboost_event_skin.tga" imgrect="0 388 72 72"/>
+		<image name="popoboost_minimized_button_cursoron" file="\skin\popoboost_event_skin.tga" imgrect="72 388 72 72"/>
+		<image name="popoboost_minimized_button_clicked" file="\skin\popoboost_event_skin.tga" imgrect="72 388 72 72"/>
+		<image name="popoboost_gearsocre_button" file="\skin\popoboost_event_skin.tga" imgrect="0 280 138 54"/>
+		<image name="popoboost_gearsocre_button_cursoron" file="\skin\popoboost_event_skin.tga" imgrect="0 334 138 54"/>
+		<image name="popoboost_gearsocre_button_clicked" file="\skin\popoboost_event_skin.tga" imgrect="0 334 138 54"/>
+		<image name="popoboost_gearscore_0" file="\skin\popoboost_event_skin.tga" imgrect="0 585 93 28"/>
+		<image name="popoboost_gearscore_1" file="\skin\popoboost_event_skin.tga" imgrect="93 585 80 28"/>
+		<image name="popoboost_gearscore_2" file="\skin\popoboost_event_skin.tga" imgrect="253 585 80 28"/>
+		<image name="popoboost_gearscore_3" file="\skin\popoboost_event_skin.tga" imgrect="413 585 80 28"/>
+		<image name="popoboost_gearscore_4" file="\skin\popoboost_event_skin.tga" imgrect="573 585 80 28"/>
+		<image name="popoboost_gearscore_5" file="\skin\popoboost_event_skin.tga" imgrect="733 585 80 28"/>
+		<image name="popoboost_gearscore_6" file="\skin\popoboost_event_skin.tga" imgrect="893 585 80 28"/>
+		<image name="popoboost_gearscore_reach_0" file="\skin\popoboost_event_skin.tga" imgrect="0 585 93 28"/>
+		<image name="popoboost_gearscore_reach_1" file="\skin\popoboost_event_skin.tga" imgrect="173 585 80 28"/>
+		<image name="popoboost_gearscore_reach_2" file="\skin\popoboost_event_skin.tga" imgrect="333 585 80 28"/>
+		<image name="popoboost_gearscore_reach_3" file="\skin\popoboost_event_skin.tga" imgrect="493 585 80 28"/>
+		<image name="popoboost_gearscore_reach_4" file="\skin\popoboost_event_skin.tga" imgrect="653 585 80 28"/>
+		<image name="popoboost_gearscore_reach_5" file="\skin\popoboost_event_skin.tga" imgrect="813 585 80 28"/>
+		<image name="popoboost_gearscore_reach_6" file="\skin\popoboost_event_skin.tga" imgrect="973 585 80 28"/>
+		<image name="popoboost_banner" file="\skin\popoboost\popoboost_banner.png" imgrect="0 0 512 64"/>
+		<image name="popoboost_poporion" file="\skin\popoboost\popoboost_poporion.png" imgrect="0 0 250 150"/>
+		<image name="popoboost_guideImage0" file="\skin\popoboost\popoboost_guideImage0.png" imgrect="0 0 300 400"/>
+		<image name="popoboost_guideImage1" file="\skin\popoboost\popoboost_guideImage1.png" imgrect="0 0 300 400"/>
+		<image name="popoboost_guideImage2" file="\skin\popoboost\popoboost_guideImage2.png" imgrect="0 0 300 400"/>
+		<image name="popoboost_guideImage3" file="\skin\popoboost\popoboost_guideImage3.png" imgrect="0 0 300 400"/>
+		<image name="popoboost_guideImage4" file="\skin\popoboost\popoboost_guideImage4.png" imgrect="0 0 300 400"/>
+		<image name="popoboost_guideImage5" file="\skin\popoboost\popoboost_guideImage5.png" imgrect="0 0 300 400"/>
+		<image name="popoboost_premium_item_icon" file="\skin\popoboost_event_skin.tga" imgrect="1150 125 128 128"/>
+		<image name="popoboost_premium_lock" file="\skin\popoboost_event_skin.tga" imgrect="167 281 61 61"/>
+		<image name="popoboost_premium_lock_cursoron" file="\skin\popoboost_event_skin.tga" imgrect="228 281 61 61"/>
+		<image name="popoboost_premium_lock_clicked" file="\skin\popoboost_event_skin.tga" imgrect="289 281 61 61"/>
+		<image name="popoboost_gearscore_button" file="\skin\popoboost_event_skin.tga" imgrect="287 342 30 30"/>
+		<image name="popoboost_gearscore_button_cursoron" file="\skin\popoboost_event_skin.tga" imgrect="318 342 30 30"/>
+		<image name="popoboost_gearscore_button_clicked" file="\skin\popoboost_event_skin.tga" imgrect="318 342 30 30"/>
+		<image name="popoboost_gearscore_button_cursoron_cursoron" file="\skin\popoboost_event_skin.tga" imgrect="318 342 30 30"/>
+		<image name="popoboost_gearscore_button_cursoron_clicked" file="\skin\popoboost_event_skin.tga" imgrect="318 342 30 30"/>
+		<image name="popoboost_gearscore_arrow" file="\skin\popoboost_event_skin.tga" imgrect="167 342 40 40"/>
+		<image name="popoboost_gearscore_arrow_cursoron" file="\skin\popoboost_event_skin.tga" imgrect="208 342 40 40"/>
+		<image name="popoboost_gearscore_arrow_clicked" file="\skin\popoboost_event_skin.tga" imgrect="208 342 40 40"/>
+		<image name="popoboost_gearscore_arrow_cursoron_cursoron" file="\skin\popoboost_event_skin.tga" imgrect="208 342 40 40"/>
+		<image name="popoboost_gearscore_arrow_cursoron_clicked" file="\skin\popoboost_event_skin.tga" imgrect="208 342 40 40"/>
+		<image name="popolion_roulette_icon" file="\skin\popolion_roulette.tga" imgrect="640 2 72 72" CMM_Caption="포포리온 룰렛 타이틀"/>
+		<image name="popolion_roulette_icon_cursoron" file="\skin\popolion_roulette.tga" imgrect="713 2 72 72" CMM_Caption="포포리온 룰렛 타이틀"/>
+		<image name="popolion_roulette_icon_clicked" file="\skin\popolion_roulette.tga" imgrect="786 2 72 72" CMM_Caption="포포리온 룰렛 타이틀"/>
+	</imagelist>
+		<imagelist category="hudskin">
+		<image name="weekboss_default_hud_soulCrystal_bg" file="\skin\indun_skin.tga" imgrect="614 552 84 86" CMM_Caption="소울크리스탈 횟수제한 UI"/>
+		<image name="weekboss_normal_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="0 0 84 86" CMM_Caption="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
+		<image name="weekboss_magic_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="84 0 84 86" CMM_CaptionFw="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
+		<image name="weekboss_unique_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="168 0 84 86" CMM_Caption="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
+		<image name="weekboss_legend_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="252 0 84 86" CMM_Caption="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
+		<image name="weekboss_goddess_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="336 0 84 86" CMM_Caption="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
+
 	</imagelist>
 </skinset>

@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by k (IMCGames Co., Ltd) -->
+<Prop>
+	<Model Path="Raid_AbyssalObserver_b_model.xac" RenderType="RT_MODEL" IsBloom="0" Type="" NoCol="0"/>
+	<Model Path="Raid_AbyssalObserver_book.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="Raid_AbyssalObserver_gr_a_01.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="Raid_AbyssalObserver_gr_a_02.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="Raid_AbyssalObserver_grass.xac" RenderType="RT_MODEL" IsBloom="0" Type="" NoCol="1"/>
+	<Model Path="Raid_AbyssalObserver_ground.xac" RenderType="RT_MUD" IsBloom="0" Type="GROUND" NoCol="0"/>
+	<Model Path="Raid_AbyssalObserver_model_01.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="Raid_AbyssalObserver_tile.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="Raid_AbyssalObserver_tp.xac" RenderType="BLENDING" IsBloom="0" Type="BLENDING" NoCol="1"/>
+	<Model Path="Raid_AbyssalObserver_tree.xac" RenderType="RT_MODEL" IsBloom="0" Type="" NoCol="1"/>
+</Prop>

@@ -14,7 +14,7 @@ local function replace(text, to_be_replaced, replace_with)
 end
 
 local parameter_list = nil
-local end_lv = 480
+local end_lv = 500
 function make_parameter_list()
 	if parameter_list ~= nil then
 		return
@@ -33,6 +33,10 @@ function make_parameter_list()
 	parameter_list[480] = {} 
 	parameter_list[480]['MAX_NORMAL_SOCKET_COUNT'] = 2 -- 색상 젬 소켓 최대 개수
 	parameter_list[480]['MAX_AETHER_SOCKET_COUNT'] = 1 -- 에테르 젬 소켓 최대 개수	
+
+	parameter_list[500] = {} 
+	parameter_list[500]['MAX_NORMAL_SOCKET_COUNT'] = 2 -- 색상 젬 소켓 최대 개수
+	parameter_list[500]['MAX_AETHER_SOCKET_COUNT'] = 1 -- 에테르 젬 소켓 최대 개수	
 end
 make_parameter_list()
 
@@ -101,6 +105,10 @@ function setting_lv_normal_socket_material(mat_list_by_lv, lv)
 		mat_list_by_lv[lv][2][season_coin] = 1050
 	elseif lv == 480 then
 		season_coin = 'VakarineCertificate'		
+		mat_list_by_lv[lv][1][season_coin] = 675
+		mat_list_by_lv[lv][2][season_coin] = 1575
+	elseif lv == 500 then
+		season_coin = 'RadaCertificate'		
 		mat_list_by_lv[lv][1][season_coin] = 675
 		mat_list_by_lv[lv][2][season_coin] = 1575
 	end
@@ -198,6 +206,10 @@ item_goddess_socket.is_aether_socket_material = function(item, target_item)
 		return false
 	end
 
+	if item_goddess_growth.is_goddess_growth_item(target_item) == true then		
+		return false
+	end
+
 	local lv = TryGetProp(target_item, 'UseLv', 1)
 
 	local str_arg = TryGetProp(item, 'StringArg', 'None')
@@ -248,6 +260,10 @@ end
 -- 에테르 젬 소켓 개방 가능한 상태인가
 item_goddess_socket.enable_aether_socket_add = function(item)
 	if item == nil then
+		return false
+	end
+
+	if item_goddess_growth.is_goddess_growth_item(item) == true then
 		return false
 	end
 
@@ -308,10 +324,16 @@ item_goddess_socket.check_equipable_normal_gem = function(item, gem, index)
         return false
 	end
 
+	if item_goddess_growth.is_goddess_growth_item(item) == true then
+		return false, 'None'
+	end	
+
 	local gem_type = GET_EQUIP_GEM_TYPE(gem)
 	if gem_type == nil or gem_type == 'aether' then
-		return false
+		return false, 'None'
 	end
+
+	local msg = 'None'
 
 	-- 무기 - 컬러 젬, 방어구 - 스킬 젬
 	local group_name = TryGetProp(item, 'GroupName', 'None')
@@ -319,12 +341,21 @@ item_goddess_socket.check_equipable_normal_gem = function(item, gem, index)
 	if (equip_group == 'Weapon' or equip_group == 'SubWeapon' or equip_group == 'THWeapon') and gem_type == 'normal' then
 		return true
 	end
+	
+	if (equip_group == 'Weapon' or equip_group == 'SubWeapon' or equip_group == 'THWeapon') and gem_type == 'skill' then
+		msg = 'OnlyEquipColorGem'
+	end
+
 
 	if equip_group ~= 'SubWeapon' and group_name == 'Armor' and gem_type == 'skill' then
 		return true
 	end
 	
-	return false
+	if equip_group ~= 'SubWeapon' and group_name == 'Armor' and gem_type == 'normal' then
+		msg = 'OnlyEquipSkillGem'
+	end
+
+	return false, msg
 end
 
 -- 장착 가능한 에테르 젬인가

@@ -2211,6 +2211,80 @@
 			</Creation>
 		</Layer>
 	</ItemList>
+	<ItemList ItemClassName="wing_goddessLaima_papaya">
+		<Layer effect="F_light111_pink_star_loop" TargetNode="point001" scale="0.2" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" ReinforceEffectState="None" UseAttach="YES" Use2DEffect="YES" IgnoreAnimEventEffect="YES" SubWeaponPistol="NO" AlwaysVisible="YES"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+		<Layer effect="F_light111_pink_star_loop" TargetNode="point002" scale="0.3" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" ReinforceEffectState="None" UseAttach="YES" Use2DEffect="YES" IgnoreAnimEventEffect="YES" SubWeaponPistol="NO" AlwaysVisible="YES"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+		<Layer effect="F_light111_pink_star_loop" TargetNode="point003" scale="0.15" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" ReinforceEffectState="None" UseAttach="YES" Use2DEffect="YES" IgnoreAnimEventEffect="YES" SubWeaponPistol="NO" AlwaysVisible="YES"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+		<Layer effect="F_light111_pink_star_loop" TargetNode="point004" scale="0.3" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" ReinforceEffectState="None" UseAttach="YES" Use2DEffect="YES" IgnoreAnimEventEffect="YES" SubWeaponPistol="NO" AlwaysVisible="YES"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+		<Layer effect="F_light111_pink_star_loop" TargetNode="point005" scale="0.15" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" ReinforceEffectState="None" UseAttach="YES" Use2DEffect="YES" IgnoreAnimEventEffect="YES" SubWeaponPistol="NO" AlwaysVisible="YES"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+		<Layer effect="F_levitation005_pink" TargetNode="Dummy_wingR001" scale="0.6" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" ReinforceEffectState="None" UseAttach="NO" Use2DEffect="YES" IgnoreAnimEventEffect="YES" SubWeaponPistol="NO" AlwaysVisible="YES"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+		<Layer effect="F_light015_violet_loop4" TargetNode="Dummy_wingR002" scale="1" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" ReinforceEffectState="None" UseAttach="YES" Use2DEffect="YES" IgnoreAnimEventEffect="YES" SubWeaponPistol="NO" AlwaysVisible="YES"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+		<Layer effect="F_levitation005_pink" TargetNode="Dummy_wingL001" scale="0.6" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" ReinforceEffectState="None" UseAttach="NO" Use2DEffect="YES" IgnoreAnimEventEffect="YES" SubWeaponPistol="NO" AlwaysVisible="YES"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+		<Layer effect="F_light015_violet_loop4" TargetNode="Dummy_wingL002" scale="1" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" ReinforceEffectState="None" UseAttach="YES" Use2DEffect="YES" IgnoreAnimEventEffect="YES" SubWeaponPistol="NO" AlwaysVisible="YES"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+	</ItemList>
 	<ItemList ItemClassName="wing_ep13cybersoldier">
 		<Layer effect="F_light177_green_loop" TargetNode="wing_Dummy_effect_L001" scale="1" offset="0;0">
 			<Creation>
@@ -3974,6 +4048,88 @@
 			<Creation>
 				<Property PlayMoment="None">
 					<Option ReinforceValue="0" UseAttach="YES" Use2DEffect="YES" IgnoreAnimEventEffect="NO" SubWeaponPistol="NO"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+	</ItemList>
+	<ItemList ItemClassName="ep15spring01_rapier">
+		<Layer effect="F_light225_pink_loop" TargetNode="Dummy_effect_weapon" scale="0.4" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" UseAttach="YES" Use2DEffect="YES" IgnoreAnimEventEffect="NO" SubWeaponPistol="NO"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+		<Layer effect="I_spread_out017_light_leaf1" TargetNode="Dummy_effect_weapon" scale="0.5" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" UseAttach="YES" Use2DEffect="YES" IgnoreAnimEventEffect="NO" SubWeaponPistol="NO"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+	</ItemList>
+	<ItemList ItemClassName="ep15spring01_shield">
+		<Layer effect="F_light226_pink_loop" TargetNode="Dummy_effect_shield" scale="0.7" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" UseAttach="YES" Use2DEffect="YES" IgnoreAnimEventEffect="NO" SubWeaponPistol="NO"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+		<Layer effect="I_spread_out017_light_leaf2" TargetNode="Dummy_effect_shield" scale="0.8" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" UseAttach="YES" Use2DEffect="YES" IgnoreAnimEventEffect="NO" SubWeaponPistol="NO"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+	</ItemList>
+	<ItemList ItemClassName="ep15spring01_thmace">
+		<Layer effect="F_light225_pink_loop" TargetNode="Dummy_effect_weapon" scale="0.6" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" UseAttach="YES" Use2DEffect="YES" IgnoreAnimEventEffect="NO" SubWeaponPistol="NO"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+		<Layer effect="I_spread_out017_light_leaf1" TargetNode="Dummy_effect_weapon" scale="0.6" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" UseAttach="YES" Use2DEffect="YES" IgnoreAnimEventEffect="NO" SubWeaponPistol="NO"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+	</ItemList>
+	<ItemList ItemClassName="ep15spring01_mace">
+		<Layer effect="F_light225_pink_loop" TargetNode="Dummy_effect_weapon" scale="0.45" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" UseAttach="YES" Use2DEffect="YES" IgnoreAnimEventEffect="NO" SubWeaponPistol="NO"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+		<Layer effect="I_spread_out017_light_leaf1" TargetNode="Dummy_effect_weapon" scale="0.5" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" UseAttach="YES" Use2DEffect="YES" IgnoreAnimEventEffect="NO" SubWeaponPistol="NO"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+	</ItemList>
+	<ItemList ItemClassName="wing_ep15elf">
+		<Layer effect="BodyAura_GlitterPowder_Yellow_01" TargetNode="Dummy_wing" scale="0.2" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" UseAttach="YES" Use2DEffect="NO" IgnoreAnimEventEffect="NO" SubWeaponPistol="NO" UnityEffect="YES"/>
 					<Sound SoundName="None" SoundVolume="1"/>
 				</Property>
 			</Creation>

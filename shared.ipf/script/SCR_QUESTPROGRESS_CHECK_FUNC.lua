@@ -510,6 +510,9 @@ function SCR_QUEST_REASON_TXT(pc, questIES, quest_reason)
                         end
                         
                         if reasonQuestName ~= nil and reasonQuestName ~= '' then
+                            if reasonQuestName ~= "None" then
+                                reasonQuestName = TranArgMsg(reasonQuestName);
+                            end
                             txt = txt..reasonQuestName..' '..reasonQuestState
                         end
                     end

@@ -5107,6 +5107,46 @@ function SCR_Get_HEAL_PWR_VER2(self)
     return math.floor(value);
 end
 
+-- 툴팁용 표기
+function GET_SHOW_HEAL_PWR(self, real_value)
+    local atk = SCR_GET_DEFAULT_ATK_COMPARE(self)
+    local byAttack = atk / 4
+    
+    local byRateBuff = TryGetProp(self, "HEAL_PWR_RATE_BM", 0);     
+    local sum_of_heal_power = 0
+    local byAbil = GetExProp(self, "ABIL_MACE_ADDHEAL") -- 클레릭: 치유력 특성
+    if byAbil == nil then
+        byAbil = 0
+    end
+    
+    sum_of_heal_power = sum_of_heal_power + byAbil
+
+    local seal_option = GetExProp(self, "ITEM_Cleric_PatronSaint_HwpRate") -- 보루타 인장 - 클레릭
+    if seal_option > 0 then
+        seal_option = seal_option / 1000
+        sum_of_heal_power = sum_of_heal_power + seal_option
+    end
+    if GetExProp(self, "ITEM_goddess_seal_lv1") > 0 then -- 보루타 인장 - 공용
+        seal_option = GetExProp(self, "ITEM_goddess_seal_lv1")
+        seal_option = seal_option / 1000
+        sum_of_heal_power = sum_of_heal_power + seal_option
+    end
+    
+    real_value = real_value / (1 + sum_of_heal_power) / (1 + byRateBuff)
+    real_value  = ((real_value - (byAttack * 0.6)) / 0.4)
+    
+    real_value = ((real_value) + (byAttack * 0.6))
+    real_value = real_value * (1 + sum_of_heal_power) 
+    
+    real_value = real_value * (1 + byRateBuff)
+
+    if real_value < 1 then
+    	real_value = 1;
+    end
+
+    return math.floor(real_value);
+end
+
 -- 기존 연산식
 function SCR_Get_HEAL_PWR_VER1(self)
     
@@ -5375,4 +5415,20 @@ function GET_HEAL_CTRL_RAID_HEAL_PWR_RATE_BM(self)
         return -0.9; -- 90% 감소
     end
     return 0;
+end
+
+function SCR_GET_STATUS_BY_ITEM(self, statString)
+    local byItem = GetSumOfEquipItem(self, statString);
+    if byItem == nil then
+        byItem = 0;
+    end
+    
+    local byItemBuff = TryGetProp(self, statString.."_ITEM_BM");
+    if byItemBuff == nil then
+        byItemBuff = 0
+    end
+
+    local value = byItem + byItemBuff
+    
+    return math.floor(value);
 end

@@ -560,6 +560,26 @@ end"/>
 					<PosDist Angle="0" Dist="0"/>
 					<Num Num="0"/>
 				</Scp>
+				<Scp Scp="C_FORCE_EFT" Client="YES_Time" UseSleep="NO" Time="400">
+					<Str_Arg Str="I_archer_canon_force4#Dummy_effect_canon" Arg="1"/>
+					<Str Str="arrow_cast"/>
+					<Str_Arg Str="F_archer_ShootDown_hit_explosion" Arg="0.69999999"/>
+					<Str Str="arrow_blow"/>
+					<Str Str="SLOW"/>
+					<Num Num="900"/>
+					<Num Num="1"/>
+					<Num Num="0"/>
+					<Angle_Abs Angle="0"/>
+					<Num Num="0"/>
+					<Num Num="5"/>
+					<Num Num="10"/>
+					<Num Num="0"/>
+					<Num Num="1"/>
+					<Num Num="1"/>
+					<Str Str="None"/>
+					<PosDist Angle="0" Dist="0"/>
+					<Num Num="0"/>
+				</Scp>
 				<Scp Scp="C_VOICE_SOUND" Client="YES" UseSleep="NO" Time="400">
 					<Str Str="voice_archer_m_cannonshot_shot"/>
 					<Str Str="voice_archer_cannonshot_shot"/>

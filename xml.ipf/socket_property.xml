@@ -3095,4 +3095,28 @@
 		<Level Level="0" PropList_TopLeg="OptDesc/현신 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/현신 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
 		<Level Level="1" PropList_TopLeg="OptDesc/현신 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/현신 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
 	</Item>
+	<Item Name="GEM_Engineer_FlameTurret">
+		<Level Level="0" PropList_TopLeg="OptDesc/플레임 터렛 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/플레임 터렛 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
+		<Level Level="1" PropList_TopLeg="OptDesc/플레임 터렛 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/플레임 터렛 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
+	</Item>
+	<Item Name="GEM_Engineer_ArrowTurret">
+		<Level Level="0" PropList_TopLeg="OptDesc/에로우 터렛 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/에로우 터렛 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
+		<Level Level="1" PropList_TopLeg="OptDesc/에로우 터렛 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/에로우 터렛 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
+	</Item>
+	<Item Name="GEM_Engineer_LightningTurret">
+		<Level Level="0" PropList_TopLeg="OptDesc/라이트닝 터렛 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/라이트닝 터렛 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
+		<Level Level="1" PropList_TopLeg="OptDesc/라이트닝 터렛 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/라이트닝 터렛 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
+	</Item>
+	<Item Name="GEM_Engineer_BuffTurret">
+		<Level Level="0" PropList_TopLeg="OptDesc/버프 터렛 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/버프 터렛 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
+		<Level Level="1" PropList_TopLeg="OptDesc/버프 터렛 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/버프 터렛 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
+	</Item>
+	<Item Name="GEM_Engineer_KingMechaV">
+		<Level Level="0" PropList_TopLeg="OptDesc/킹 메카 V 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/킹 메카 V 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
+		<Level Level="1" PropList_TopLeg="OptDesc/킹 메카 V 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/킹 메카 V 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
+	</Item>
+	<Item Name="GEM_Engineer_RepairKit">
+		<Level Level="0" PropList_TopLeg="OptDesc/리페어 키트 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/리페어 키트 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
+		<Level Level="1" PropList_TopLeg="OptDesc/리페어 키트 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/리페어 키트 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
+	</Item>
 </SocketProperty>

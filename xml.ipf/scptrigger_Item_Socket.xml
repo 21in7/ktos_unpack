@@ -16998,4 +16998,137 @@
 			</Trigger>
 		</TriggerList>
 	</SpcItem>
+	<!-- 엔지니어 스킬 젬  -->
+	<SpcItem Name="GEM_Engineer_FlameTurret">
+		<TriggerList Act="UnEquip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+						<Str Str="Engineer_FlameTurret"/>
+						<Num Num="-1"/>
+					</ToolScp>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="Equip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+						<Str Str="Engineer_FlameTurret"/>
+						<Num Num="1"/>
+					</ToolScp>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+	</SpcItem>
+	<SpcItem Name="GEM_Engineer_ArrowTurret">
+		<TriggerList Act="UnEquip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+						<Str Str="Engineer_ArrowTurret"/>
+						<Num Num="-1"/>
+					</ToolScp>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="Equip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+						<Str Str="Engineer_ArrowTurret"/>
+						<Num Num="1"/>
+					</ToolScp>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+	</SpcItem>
+	<SpcItem Name="GEM_Engineer_LightningTurret">
+		<TriggerList Act="UnEquip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+						<Str Str="Engineer_LightningTurret"/>
+						<Num Num="-1"/>
+					</ToolScp>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="Equip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+						<Str Str="Engineer_LightningTurret"/>
+						<Num Num="1"/>
+					</ToolScp>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+	</SpcItem>
+	<SpcItem Name="GEM_Engineer_BuffTurret">
+		<TriggerList Act="UnEquip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+						<Str Str="Engineer_BuffTurret"/>
+						<Num Num="-1"/>
+					</ToolScp>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="Equip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+						<Str Str="Engineer_BuffTurret"/>
+						<Num Num="1"/>
+					</ToolScp>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+	</SpcItem>
+	<SpcItem Name="GEM_Engineer_KingMechaV">
+		<TriggerList Act="UnEquip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+						<Str Str="Engineer_KingMechaV"/>
+						<Num Num="-1"/>
+					</ToolScp>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="Equip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+						<Str Str="Engineer_KingMechaV"/>
+						<Num Num="1"/>
+					</ToolScp>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+	</SpcItem>
+	<SpcItem Name="GEM_Engineer_RepairKit">
+		<TriggerList Act="UnEquip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+						<Str Str="Engineer_RepairKit"/>
+						<Num Num="-1"/>
+					</ToolScp>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+		<TriggerList Act="Equip">
+			<Trigger>
+				<ExecList>
+					<ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+						<Str Str="Engineer_RepairKit"/>
+						<Num Num="1"/>
+					</ToolScp>
+				</ExecList>
+			</Trigger>
+		</TriggerList>
+	</SpcItem>
 </SpcItemList>

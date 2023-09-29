@@ -111,7 +111,15 @@
                 <Num Num="1"/>
                 <Num Num="45"/>
                 <Num Num="0"/>
-                <Num Num="0"/>
+                <Num Num="1" UseFunc="1" FuncTxt="local value = 1
+                local abil = session.GetAbilityByName(&quot;Miko18&quot;)
+                if abil ~= nil then
+                    local abilObj = GetIES(abil:GetObject())
+                    if abilObj ~= nil and abilObj.ActiveState == 1 then
+                        value = 0
+                    end
+                end
+                return value"/>
                 <Num Num="0"/>
                 <Str Str="None"/>
                 <Str Str="None"/>

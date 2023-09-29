@@ -34,7 +34,9 @@ function GET_RELICQUEST_MAP_LIST_RESULT(pc, group)
     local fieldTB15 = {
         'ep15_1_f_abbey_1',
         'ep15_1_f_abbey_2',
-        'ep15_1_f_abbey_3'
+        'ep15_1_f_abbey_3',
+        'ep15_2_d_nicopolis_1',
+        'ep15_2_d_nicopolis_2'
     }
 
     local indunTypeTB13 = {"MythicDungeon_Auto", "MythicDungeon_Auto_Hard", "Challenge_Auto",

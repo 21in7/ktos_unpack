@@ -239,13 +239,17 @@ function OVERRIDE_INHERITANCE_PROPERTY(item)
         local propName = commonPropList[i];
         if basicTooltipPropTable[propName] == nil then
             local inheritValue = inheritanceItem[propName];
-            if except_list[propName] ~= true and growth_rate > 0 and growth_rate < 1 then
-                local growth_value = math.floor(inheritValue * growth_rate);
-                if inheritValue > 0 and growth_value <= 0 then
-                    -- 해당 값이 존재하면 성장 비율 계산의 최소치 보정을 해준다
-                    growth_value = 1;
+            if except_list[propName] ~= true then
+                if growth_rate > 0 and growth_rate < 1 then
+                    local growth_value = math.floor(inheritValue * growth_rate);
+                    if inheritValue > 0 and growth_value <= 0 then
+                        -- 해당 값이 존재하면 성장 비율 계산의 최소치 보정을 해준다
+                        growth_value = 1;
+                    end
+                    inheritValue = growth_value;
                 end
-                inheritValue = growth_value;
+                -- 강화에 따라 성장하는 아이템
+                inheritValue = inheritValue + GET_ITEM_GROWTH_VALUE_BY_REINF(item, propName)
             end
             item[propName] = item[propName] + inheritValue;
         end
@@ -1089,6 +1093,21 @@ function IS_WEAPON_TYPE(classType)
         return true
     end
     
+    return false
+end
+
+-- 방어구인지 확인, 악세는 아님
+function IS_ARMOR_TYPE(EquipGroup)
+    if EquipGroup == 'SHIRT' then
+        return true
+    elseif EquipGroup == 'PANTS' then
+        return true
+    elseif EquipGroup == 'GLOVES' then
+        return true
+    elseif EquipGroup == 'BOOTS' then
+        return true
+    end
+
     return false
 end
 

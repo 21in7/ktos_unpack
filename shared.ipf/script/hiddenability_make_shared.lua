@@ -129,30 +129,34 @@ function IS_HIDDENABILITY_DECOMPOSE_MATERIAL(itemObj)
 end
 
 -- 분해 가능한 신비한 서 인가
-function IS_HIDDENABILITY_DECOMPOSE_BOOK_MATERIAL(itemObj)
+function IS_HIDDENABILITY_DECOMPOSE_BOOK_MATERIAL(itemObj)  
     local ClassName = TryGetProp(itemObj, 'ClassName', 'None')
     local StringArg = TryGetProp(itemObj, 'StringArg', 'None')
 
     if StringArg == 'HiddenAbility_MasterPiece' then
-      return false
+        return false
     end
 
     if StringArg == 'Event_HiddenAbility_MasterPiece' then
-      return false
+        return false
     end
 
     if StringArg == "HiddenAbility_MasterPiece_Novice" then
-      return false;
+        return false;
     end
     
+    if ClassName == 'HiddenAbility_MasterPiece_Fragment_Event' then
+        return false
+    end
+
     if string.find(ClassName, 'HiddenAbility_') ~= nil and string.find(string.lower(ClassName), 'box') == nil  then
         local cls = GetClass('Item', ClassName)
         if cls ~= nil then
             return true
         end
     end
-    
-    return false
+
+return false
 end
 
 -- 상급 강화인가?
@@ -218,8 +222,8 @@ function IS_HIDDENABILITY_MASTERPIECE_NOVICE_LIST(ctrlType)
   end
 
   -- 미식별 신비한 서 아이템인지 확인
-  function IS_HIDDENABILITY_MATERIAL_MASTER_PIECE(itemObj)
-    if itemObj.StringArg == "HiddenAbility_MasterPiece_Fragment" then
+  function IS_HIDDENABILITY_MATERIAL_MASTER_PIECE(itemObj)          
+    if itemObj.StringArg == "HiddenAbility_MasterPiece_Fragment" or itemObj.StringArg == "HiddenAbility_MasterPiece_Fragment_DisDecompose"then
       return true;
     end
 
@@ -239,11 +243,13 @@ function IS_HIDDENABILITY_MASTERPIECE_NOVICE_LIST(ctrlType)
   -- isNovice = 0 or 1, 1일 경우 시작의 미식별 신비한 서 사용
   function GET_TOTAL_HIDDENABILITY_MASTER_PIECE_COUNT(pc, isNovice)
     local totalCnt = 0;
+
     if IsServerObj(pc) == 1 then
       local invItemList = GetInvItemList(pc);
       for i = 1, #invItemList do
         local invItem = invItemList[i];
         local check = (isNovice == 1 and IS_HIDDENABILITY_MASTERPIECE_NOVICE(invItem) == true) or (isNovice == 0 and IS_HIDDENABILITY_MASTERPIECE_NOVICE(invItem) == false)
+
         if check == true and IsFixedItem(invItem) ~= 1 and IS_HIDDENABILITY_MATERIAL_MASTER_PIECE(invItem) == true then
           local curCnt = GetInvItemCount(pc, invItem.ClassName);
           totalCnt = totalCnt + curCnt;
@@ -253,8 +259,7 @@ function IS_HIDDENABILITY_MASTERPIECE_NOVICE_LIST(ctrlType)
       return totalCnt;
     else
       local itemList = session.GetInvItemList();
-      local guidList = itemList:GetGuidList();
-
+      local guidList = itemList:GetGuidList(); 
       for i = 0, guidList:Count() - 1 do
         local guid = guidList:Get(i);
         local invItem = itemList:GetItemByGuid(guid);

@@ -654,4 +654,7 @@
 	<hierarchy Name="CastingSpeed">
 		<Child Name="CastingSpeed_BM"/>
 	</hierarchy>
+	<hierarchy Name="MaxHateCount">
+		<Child Name="MaxHateCount_BM"/>
+	</hierarchy>
 </property>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Kim TaekBin (IMCGames Co., Ltd) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by imc (imc) -->
 <PropertyShop>
 	<Shop Name="PVPShop" PointScript="GET_PVP_POINT">
 		<Item Script="None" Name="misc_pvp_mine2" Count="14" Price="1" DailyBuyLimit="0"/>
@@ -137,9 +137,40 @@
 		<Item Script="None" Name="Relic_exp_refine_conversion" Count="1" Price="500" DailyBuyLimit="0" AccountNeedProperty=""/>
 		<Item Script="None" Name="Relic_gem_upgrade_token" Count="1" Price="250" DailyBuyLimit="0" AccountNeedProperty=""/>
 		<Item Script="None" Name="misc_Relic_Gem" Count="1" Price="1" DailyBuyLimit="0" AccountNeedProperty=""/>
-		<Item Script="None" Name="piece_EP14_GoddessIcor_Weapon_NoTrade" Count="1" Price="3500" DailyBuyLimit="0"/>
-		<Item Script="None" Name="piece_EP14_GoddessIcor_Armor_NoTrade" Count="1" Price="3500" DailyBuyLimit="0"/>
+		<Item Script="None" Name="piece_EP15_GoddessIcor_Weapon_NoTrade" Count="1" Price="3500" DailyBuyLimit="0"/>
+		<Item Script="None" Name="piece_EP15_GoddessIcor_Armor_NoTrade" Count="1" Price="3500" DailyBuyLimit="0"/>
 		<Item Script="None" Name="piece_random_skill_gem_480_NoTrade" Count="1" Price="3000" DailyBuyLimit="0"/>
+		<Item Script="None" Name="DRESS_ROOM_COLLECT_12" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2304_1"/>
+		<Item Script="None" Name="DRESS_ROOM_COLLECT_13" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2305_1"/>
+		<Item Script="None" Name="DRESS_ROOM_COLLECT_14" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2306_1"/>
+		<Item Script="None" Name="DRESS_ROOM_COLLECT_15" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2308_1"/>
+		<Item Script="None" Name="DRESS_ROOM_COLLECT_16" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2309_1"/>
+	</Shop>
+	<Shop Name="CONTENTS_TOTAL_SHOP_PAPAYA" PointScript="GET_CONTENTS_TOTAL_POINT">
+		<Item Script="None" Name="Gesture_CLOCK" Count="1" Price="5000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2109_1"/>
+		<Item Script="None" Name="motion_malsuns_emotion82" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2109_2"/>
+		<Item Script="None" Name="motion_malsuns_emotion100" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2109_3"/>
+		<Item Script="None" Name="motion_malsuns_emotion77" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2109_4"/>
+		<Item Script="None" Name="Chat_Balloon_Cat_30d" Count="1" Price="2500" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2109_5"/>
+		<Item Script="None" Name="Chat_Balloon_Dog_30d" Count="1" Price="2500" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2109_6"/>
+		<Item Script="None" Name="PersonalHousing_Item_hp_h_barrack_12_clock" Count="1" Price="10000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2105_1"/>
+		<Item Script="None" Name="PersonalHousing_Item_hp_h_barrack_12_bird" Count="1" Price="10000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2105_2"/>
+		<Item Script="None" Name="Mulia_emotion_Pack1" Count="1" Price="6000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2208_1"/>
+		<Item Script="None" Name="Spreader_moticon01" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2208_2"/>
+		<Item Script="None" Name="Spreader_moticon02" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2208_3"/>
+		<Item Script="None" Name="Falouros_moticon01" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2209_1"/>
+		<Item Script="None" Name="Falouros_moticon02" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2209_2"/>
+		<Item Script="None" Name="DRESS_ROOM_COLLECT_8" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2209_3"/>
+		<Item Script="None" Name="DRESS_ROOM_COLLECT_9" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2211_1"/>
+		<Item Script="None" Name="DRESS_ROOM_COLLECT_10" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2301_1"/>
+		<Item Script="None" Name="DRESS_ROOM_COLLECT_11" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2302_1"/>
+		<Item Script="None" Name="Relic_exp_token" Count="1" Price="25" DailyBuyLimit="0" AccountNeedProperty=""/>
+		<Item Script="None" Name="Relic_exp_refine_conversion" Count="1" Price="500" DailyBuyLimit="0" AccountNeedProperty=""/>
+		<Item Script="None" Name="Relic_gem_upgrade_token" Count="1" Price="250" DailyBuyLimit="0" AccountNeedProperty=""/>
+		<Item Script="None" Name="misc_Relic_Gem" Count="1" Price="1" DailyBuyLimit="0" AccountNeedProperty=""/>
+		<Item Script="None" Name="piece_EP15_GoddessIcor_Weapon_NoTrade" Count="1" Price="3500" DailyBuyLimit="0"/>
+		<Item Script="None" Name="piece_EP15_GoddessIcor_Armor_NoTrade" Count="1" Price="3500" DailyBuyLimit="0"/>
+		<Item Script="None" Name="piece_random_skill_gem_480_NoTrade" Count="1" Price="3000" DailyBuyLimit="0"/>		
 	</Shop>
 	<Shop Name="SEASONOFF_CONTENTS_TOTAL_SHOP" PointScript="GET_CONTENTS_TOTAL_POINT">
 		<Item Script="None" Name="DRESS_ROOM_COLLECT_1" Count="1" Price="3600" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2009_9"/>
@@ -191,6 +222,13 @@
 		<Item Script="None" Name="give_ticket_ep13cherryblossom02_2_f" Count="1" Price="12000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2103_11"/>
 		<Item Script="None" Name="give_ticket_ep13cherryblossom03_2_m" Count="1" Price="12000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2103_12"/>
 		<Item Script="None" Name="give_ticket_ep13cherryblossom03_2_f" Count="1" Price="12000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2103_13"/>
+		<Item Script="None" Name="DRESS_ROOM_COLLECT_7_JP" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2304_2"/>
+		<Item Script="None" Name="give_ticket_ep13cherryblossom02_m_JP" Count="1" Price="12000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2304_3"/>
+		<Item Script="None" Name="give_ticket_ep13cherryblossom02_f_JP" Count="1" Price="12000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2304_4"/>
+		<Item Script="None" Name="give_ticket_ep13cherryblossom02_2_m_JP" Count="1" Price="12000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2304_5"/>
+		<Item Script="None" Name="give_ticket_ep13cherryblossom02_2_f_JP" Count="1" Price="12000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2304_6"/>
+		<Item Script="None" Name="give_ticket_ep13cherryblossom03_2_m_JP" Count="1" Price="12000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2304_7"/>
+		<Item Script="None" Name="give_ticket_ep13cherryblossom03_2_f_JP" Count="1" Price="12000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2304_8"/>
 	</Shop>
 	<Shop Name="TOSHeroTradeShop_TUTO" PointScript="GET_TOSHERO_TRADE_POINT">
 		<Item Script="None" Name="TOSHero_SWORD" Count="1" Price="1" DailyBuyLimit="0"/>

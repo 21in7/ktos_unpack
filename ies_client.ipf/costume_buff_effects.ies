@@ -50,3 +50,5 @@ ClassID,ClassName,Name,ShowEffect,EffectName
 4738,"LEAF_STAMP_EFFECT","너구리의 나뭇잎","NO",""
 4749,"EP15SNOWKNIGHT_EFFECT_Aurora","스노우플레이크 오로라 이펙트","NO","F_pc_ep15snowknight02"
 4750,"EP15SNOWKNIGHT_EFFECT_Snowflake","스노우플레이크 눈송이 이펙트","NO","F_pc_ep15snowknight01"
+4751,"EP15_SPRING01_EFFECT","둥실둥실 봄 뽀송이","NO","F_pc_item_wing_spring_loop"
+4752,"EP15_UNICORN_EFFECT","반짝반짝 유니콘 하트","NO","F_pc_item_wing_unicorn_heart_loop"

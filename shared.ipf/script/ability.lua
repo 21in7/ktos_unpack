@@ -1047,10 +1047,12 @@ function SCR_ABIL_MACE_ACTIVE(self, ability)
     addHeaLPwrRate = ability.Level * 0.02
 
     SetExProp(self, "ABIL_MACE_ADDHEAL", addHeaLPwrRate);
+    SendPCExProp(self, "ABIL_MACE_ADDHEAL", addHeaLPwrRate)
 end
 
 function SCR_ABIL_MACE_INACTIVE(self, ability)
     DelExProp(self, "ABIL_MACE_ADDHEAL");
+    SendPCExProp(self, "ABIL_MACE_ADDHEAL", 0)
 end
 
 
@@ -1386,6 +1388,31 @@ function SCR_ABIL_Exorcist19_INACTIVE(self, ability)
         skill.Attribute = attribute;
     end
 end
+
+function SCR_ABIL_Engineer29_ACTIVE(self, ability)
+    AddInstSkill(self, "Engineer_KingMechaV_Flame", 1);
+end
+
+function SCR_ABIL_Engineer29_INACTIVE(self, ability)
+    RemoveInstSkill(self, "Engineer_KingMechaV_Flame");
+end
+
+function SCR_ABIL_Engineer30_ACTIVE(self, ability)
+
+end
+
+function SCR_ABIL_Engineer30_INACTIVE(self, ability)
+
+end
+
+function SCR_ABIL_Engineer31_ACTIVE(self, ability)
+    AddInstSkill(self, "Engineer_KingMechaV_Frozen", 1);
+end
+
+function SCR_ABIL_Engineer31_INACTIVE(self, ability)
+    RemoveInstSkill(self, "Engineer_KingMechaV_Frozen");
+end
+
 
 function SCR_ABIL_Hoplite33_ACTIVE(self, ability)
     local skill = GetSkill(self, "Hoplite_ThrouwingSpear");
@@ -4021,46 +4048,47 @@ function SCR_ABIL_CompMastery7_INACTIVE(self, ability)
 end
 
 function SCR_ABIL_SpearMaster18_ACTIVE(self, ability)
-    local skl = GetSkill(self, 'SpearMaster_FlyingSerpentFall')
-    if skl ~= nil then
-        local slash_skl = GetSkill(self, 'SpearMaster_FlyingSerpentFall_Slash')
-        if slash_skl == nil then
-            slash_skl = AddInstSkill(self, 'SpearMaster_FlyingSerpentFall_Slash', TryGetProp(skl, 'Level', 1))
-        end
+    local stance = GetExProp(self, "SPEARMASTER_STANCE");
+    if stance == 2 then
+        local skl = GetSkill(self, 'SpearMaster_FlyingSerpentFall')
+        if skl ~= nil then
+            local slash_skl = GetClass("Skill", "SpearMaster_FlyingSerpentFall_Slash");
+            if slash_skl ~= nil then
+                local shootTime = TryGetProp(slash_skl, 'ShootTime', 0)
+                local cancelTime = TryGetProp(slash_skl, 'CancelTime', 0)
 
-        if slash_skl ~= nil then
-            local shootTime = TryGetProp(slash_skl, 'ShootTime', 0)
-            local cancelTime = TryGetProp(slash_skl, 'CancelTime', 0)
-
-            SetExProp(ability, 'SpearMaster18_shootTime', shootTime)
-            SetExProp(ability, 'SpearMaster18_cancelTime', cancelTime)
-
-            slash_skl.ShootTime = 1000
-            slash_skl.CancelTime = 1000
-
-            InvalidateSkill(self, slash_skl.ClassName)
-            SendSkillProperty(self, slash_skl)
+                SetExProp(ability, 'SpearMaster18_shootTime', shootTime)
+                SetExProp(ability, 'SpearMaster18_cancelTime', cancelTime)
+        
+                skl.ShootTime = 1000
+                skl.CancelTime = 1000
+                skl.CastingCategory = "instant"
+        
+                InvalidateSkill(self, "SpearMaster_FlyingSerpentFall")
+                SendSkillProperty(self, skl)
+            end
         end
     end
 end
 
 function SCR_ABIL_SpearMaster18_INACTIVE(self, ability)
-    local skl = GetSkill(self, 'SpearMaster_FlyingSerpentFall')
-    if skl ~= nil then
-        local slash_skl = GetSkill(self, 'SpearMaster_FlyingSerpentFall_Slash')
-        if slash_skl == nil then
-            slash_skl = AddInstSkill(self, 'SpearMaster_FlyingSerpentFall_Slash', TryGetProp(skl, 'Level', 1))
-        end
-
-        if slash_skl ~= nil then
+    local stance = GetExProp(self, "SPEARMASTER_STANCE");
+    if stance == 2 then
+        local skl = GetSkill(self, 'SpearMaster_FlyingSerpentFall')
+        if skl ~= nil then
             local shootTime = GetExProp(ability, 'SpearMaster18_shootTime')
             local cancelTime = GetExProp(ability, 'SpearMaster18_cancelTime')
 
-            slash_skl.ShootTime = shootTime
-            slash_skl.CancelTime = cancelTime
-
-            InvalidateSkill(self, slash_skl.ClassName)
-            SendSkillProperty(self, slash_skl)
+            if shootTime == nil or shootTime == 0 then 
+                shootTime = 3000;
+            end
+    
+            skl.ShootTime = shootTime
+            skl.CancelTime = cancelTime
+            skl.CastingCategory = "channeling"            
+    
+            InvalidateSkill(self, "SpearMaster_FlyingSerpentFall")
+            SendSkillProperty(self, skl)
         end
     end
 end

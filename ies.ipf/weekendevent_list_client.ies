@@ -25,7 +25,7 @@ ClassID,ClassName,EventName,BuffName,ContentsName
 24,"BurningEvent_024","성물 레이드 - 자동매칭(Normal) 보상 증가","EVENT_MYTHIC_REWARD_BOOST","Mythic_startower_Auto/Mythic_FireTower_Auto/Mythic_thorn2_Auto/Mythic_castle_Auto"
 25,"BurningEvent_025","마신의 성소 - 자동매칭, 1인(Normal) 보상 증가","EVENT_GILTINE_REWARD_BOOST","Legend_Raid_Giltine_Auto/Legend_Raid_Giltine_Solo"
 26,"BurningEvent_026","챌린지 모드 보상 증가","EVENT_CHALLENGE_REWARD_BOOST","Challenge_Auto_Hard_Party"
-27,"BurningEvent_027","분열 특이점(자동매칭) 모드 보상 증가","EVENT_DIVISION_CHALLENGE_REWARD_BOOST","Challenge_Division_Auto_1"
+27,"BurningEvent_027","분열 특이점(자동매칭) 모드 보상 증가","EVENT_DIVISION_CHALLENGE_REWARD_BOOST","Challenge_Division_Auto_1/Challenge_Division_Auto_2"
 28,"BurningEvent_028","베르니케 파편 던전 에테르 젬 강화 횟수 증가","EVENT_SOLO_DUNGEON_REWARD_BOOST","Solo_dungeon"
 29,"BurningEvent_029","가라앉는 나포선: 가디스(자동 매칭) 콘텐츠 보상 증가","EVENT_JELLYZELE_REWARD_BOOST","Goddess_Raid_Jellyzele_Auto"
 30,"BurningEvent_030","델무어 격전지: 가디스(자동 매칭) 콘텐츠 보상 증가","EVENT_DELMORE_REWARD_BOOST","Goddess_Raid_Delmore_Auto"

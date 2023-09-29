@@ -95,6 +95,23 @@ function get_tooltip_OMEN_EDGEWISE_arg2(pc)
     return rate, 'DAMAGERATE_DEBUFF', 1, 'PercentUp'
 end
 
+-- 시안 젬 - 영원의 해방
+function get_tooltip_ETERNAL_LIBERATE_arg1(pc)
+	local rate = 2000
+	if IsPVPField(pc) == 1 then
+		rate = 670
+	end
+    return rate, 'RELIC_SKILLFACTOR', 1, 'Percent'
+end
+
+function get_tooltip_ETERNAL_LIBERATE_arg2(pc)
+	local rate = 55
+	if IsPVPField(pc) == 1 then
+		rate = 27.5
+	end
+    return rate, 'DEBUFF_ATK_SKILLFACTOR', 1, 'Percent'
+end
+
 -------- 마젠타 젬 -------------------------------------------
 
 --- 마젠타 젬 PVP 지역 효과 감소 비율

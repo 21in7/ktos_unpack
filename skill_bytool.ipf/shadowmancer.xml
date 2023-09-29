@@ -475,4 +475,63 @@ return value" Num="0" UseFunc="1" />
             </SubSkl>
         </ByCondSkills>
 	</Skill>
+    <Skill Name="Common_Shadowmancer_ShadowPool">
+        <EndScripts>
+            <ToolScp Client="YES" Scp="C_EFFECT" UseSleep="NO">
+                <Str_Arg Arg="1" Str="F_archer_DetonateTraps_explosion" />
+                <Str Str="None" />
+                <Num Num="0" />
+            </ToolScp>
+        </EndScripts>
+        <MainSkl JumpFlee="NO" MSPDToUsePos="0" ScrLock="None">
+            <EtcList>
+                <Scp Client="YES" Scp="C_EFFECT" Time="0" UseSleep="NO">
+                    <Str_Arg Arg="1.5" Str="F_wizard_ShadowPool_cast" />
+                    <Str Str="None" />
+                    <Num Num="0" />
+                </Scp>
+                <Scp Client="YES" Scp="C_VOICE_SOUND" Time="0" UseSleep="NO">
+                    <Str Str="voice_wiz_m_ShadowPool_cast" />
+                    <Str Str="voice_wiz_f_ShadowPool_cast" />
+                </Scp>
+                <Scp Client="NO" Scp="SKL_RESET_COOLTIME" Time="0" UseSleep="NO">
+                    <Str Str="None" UseFunc="1" FuncTxt="local value = 'Common_Shadowmancer_ShadowPool' return value"/>
+                </Scp>
+                <Scp Client="NO" Scp="SKL_BUFF" Time="50" UseSleep="NO">
+                    <Str Str="None" UseFunc="1" FuncTxt="local value = 'ShadowPool_Buff' return value"/>
+                    <Num FuncTxt="return obj.Level;" Num="0" UseFunc="1" />
+                    <Num Num="0" />
+                    <Num FuncTxt="local value = obj.Level * 500; return value" Num="0" UseFunc="1" />
+                    <Num Num="1" />
+                    <Num Num="100" />
+                    <Num Num="0" />
+                </Scp>
+                <Scp Client="NO" Scp="SKL_TGT_REMOVE_DEBUFF" Time="110" UseSleep="NO">
+                <Str FuncTxt="local func_name = 'get_remove_debuff_tooltip_' .. TryGetProp(obj, 'ClassName', 'None')
+               local func = _G[func_name]
+               if func == nil then return end
+               return func(obj.Level)" Str="0" UseFunc="1"/>
+               </Scp>
+            </EtcList>
+        </MainSkl>
+    <ByCondSkills>
+            <SubSkl>
+                <Cond>
+                    <ToolScp Client="NO" Scp="SKL_SELECT_BUFF" UseSleep="NO">
+                        <Str Str="ShadowPool_Buff" />
+                    </ToolScp>
+                </Cond>
+                <Skill JumpFlee="NO" MSPDToUsePos="0" ScrLock="None">
+                    <EtcList>
+                        <Scp Client="NO" Scp="SKL_BUFF_REMOVE" Time="0" UseSleep="NO">
+                            <Str Str="ShadowPool_Buff" />
+                        </Scp>
+                        <Scp Client="NO" Scp="SET_INVIN" Time="0" UseSleep="NO">
+                            <Num Num="0" />
+                        </Scp>
+                    </EtcList>
+                </Skill>
+            </SubSkl>
+        </ByCondSkills>
+    </Skill>
 	</ToolSkill>

@@ -143,6 +143,37 @@ function GET_ITEM_GROWTH_RATE(item)
 end
 
 -- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function GET_ITEM_GROWTH_VALUE_BY_REINF(item, propName)
+    if item == nil then
+        return 0
+    end
+
+    local reinfVal = TryGetProp(item, 'Reinforce_2', 0)
+    if reinfVal <= 0 then
+        return 0
+    end
+
+    local stringArg = TryGetProp(item, 'StringArg', 'None')
+    local argList = StringSplit(stringArg, '/')
+    if #argList ~= 2 then
+        return 0
+    end
+
+    if argList[1] ~= 'Growth_By_Reinforce' then
+        return 0
+    end
+
+    local cls = GetClass(argList[1], argList[2])
+    if cls == nil then
+        return 0
+    end
+
+    local addVal = TryGetProp(cls, propName, 0)
+
+    return reinfVal * addVal
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
 function INIT_WEAPON_PROP(item, class)
     local except_list = { MINATK = true, MAXATK = true, MATK = true, MSTA = true } -- 공격력은 별도의 성장 비율 계산을 하고 있으므로 제외
     local growth_rate = 1
@@ -154,13 +185,17 @@ function INIT_WEAPON_PROP(item, class)
     for i = 1, #commonPropList do
         local propName = commonPropList[i];     
         local propValue = class[propName];
-        if except_list[propName] ~= true and growth_rate > 0 and growth_rate < 1 then
+        if except_list[propName] ~= true then
+            if growth_rate > 0 and growth_rate < 1 then
             local growth_value = math.floor(propValue * growth_rate);
             if propValue > 0 and growth_value <= 0 then
                 -- 해당 값이 존재하면 성장 비율 계산의 최소치 보정을 해준다
                 growth_value = 1;
             end
             propValue = growth_value;
+        end
+            -- 강화에 따라 성장하는 아이템
+            propValue = propValue + GET_ITEM_GROWTH_VALUE_BY_REINF(item, propName)
         end
         item[propName] = propValue;
     end
@@ -179,7 +214,8 @@ function INIT_ARMOR_PROP(item, class)
     for i = 1, #commonPropList do
         local propName = commonPropList[i];        
         local propValue = class[propName];
-        if except_list[propName] ~= true and growth_rate > 0 and growth_rate < 1 then
+        if except_list[propName] ~= true then
+            if growth_rate > 0 and growth_rate < 1 then
             local growth_value = math.floor(propValue * growth_rate);
             if propValue > 0 and growth_value <= 0 then
                 -- 해당 값이 존재하면 성장 비율 계산의 최소치 보정을 해준다
@@ -187,6 +223,9 @@ function INIT_ARMOR_PROP(item, class)
             end
             propValue = growth_value;
         end    
+            -- 강화에 따라 성장하는 아이템
+            propValue = propValue + GET_ITEM_GROWTH_VALUE_BY_REINF(item, propName)
+        end
         item[propName] = propValue;
     end
     OVERRIDE_INHERITANCE_PROPERTY(item);
@@ -271,10 +310,16 @@ function GET_REINFORCE_ADD_VALUE_ATK(item, ignoreReinf, reinfBonusValue, basicTo
     end
     
     if grade == 6 then
+        local itemstring = TryGetProp(item, 'StringArg', 'None')
+        local argList = StringSplit(itemstring, '/')
+        if #argList == 2 and GetClass(argList[1], argList[2]) ~= nil then
+            value = SCR_GET_GODDESS_GROWTH_REINFORCE_VALUE(item)
+        else
         value = SCR_GET_GODDESS_REINFORCE(item)
         if classType == 'Trinket' then
             value = value * 0.3
         end
+    end
     end
 
     value = value + buffValue
@@ -411,12 +456,91 @@ function GET_REINFORCE_ADD_VALUE(prop, item, ignoreReinf, reinfBonusValue)
     value = value * (item.ReinforceRatio / 100);
 
     if grade == 6 then
+        local itemstring = TryGetProp(item, 'StringArg', 'None')
+        local argList = StringSplit(itemstring, '/')
+        if #argList == 2 and GetClass(argList[1], argList[2]) ~= nil then
+            value = SCR_GET_GODDESS_GROWTH_REINFORCE_VALUE(item)
+        else
         value = SCR_GET_GODDESS_REINFORCE(item)
+    end
     end
 
     value = value + buffValue;
 
     return SyncFloor(value);
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_GODDESS_GROWTH_BASIC_VALUE(item)
+    local value = 0
+
+    local stringArg = TryGetProp(item, 'StringArg', 'None')
+    local argList = StringSplit(stringArg, '/')
+    if #argList == 2 and GetClass(argList[1], argList[2]) ~= nil then
+        local cls = GetClass(argList[1], argList[2])
+        local groupName = TryGetProp(item, 'GroupName', 'None')
+        local classType = TryGetProp(item, 'ClassType', 'None')
+        local equipGroup = TryGetProp(item, 'EquipGroup', 'None')
+        if groupName == 'Armor' then
+            value = TryGetProp(cls, 'BasicDef', 0)
+            if equipGroup == 'SubWeapon' then
+                value = TryGetProp(cls, 'BasicShdDef', 0)
+            elseif classType == 'Shirt' or classType == 'Pants' then
+                value = TryGetProp(cls, 'BasicBodyDef', 0)
+            elseif classType == 'Neck' or classType == 'Ring' then
+                value = TryGetProp(cls, 'BasicAccAtk', 0)
+            end
+        elseif groupName == 'Weapon' or groupName == 'SubWeapon' then
+            value = TryGetProp(cls, 'BasicAtk', 0)
+            if equipGroup == 'THWeapon' then
+                value = TryGetProp(cls, 'BasicTHAtk', 0)
+            elseif classType == 'Trinket' then
+                value = TryGetProp(cls, 'BasicTrkAtk', 0)
+            end
+        end
+    end
+
+    return value
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_GODDESS_GROWTH_REINFORCE_VALUE(item)
+    local reinforceValue = TryGetProp(item, 'Reinforce_2', 0)
+    if reinforceValue == 0 then
+        return 0
+    end
+
+    local value = 0
+
+    local stringArg = TryGetProp(item, 'StringArg', 'None')
+    local argList = StringSplit(stringArg, '/')
+    if #argList == 2 and GetClass(argList[1], argList[2]) ~= nil then
+        local cls = GetClass(argList[1], argList[2])
+        local groupName = TryGetProp(item, 'GroupName', 'None')
+        local classType = TryGetProp(item, 'ClassType', 'None')
+        local equipGroup = TryGetProp(item, 'EquipGroup', 'None')
+        if groupName == 'Armor' then
+            value = TryGetProp(cls, 'AddDef', 0)
+            if equipGroup == 'SubWeapon' then
+                value = TryGetProp(cls, 'AddShdDef', 0)
+            elseif classType == 'Shirt' or classType == 'Pants' then
+                value = TryGetProp(cls, 'AddBodyDef', 0)
+            elseif classType == 'Neck' or classType == 'Ring' then
+                value = TryGetProp(cls, 'AddAccAtk', 0)
+            end
+        elseif groupName == 'Weapon' or groupName == 'SubWeapon' then
+            value = TryGetProp(cls, 'AddAtk', 0)
+            if equipGroup == 'THWeapon' then
+                value = TryGetProp(cls, 'AddTHAtk', 0)
+            elseif classType == 'Trinket' then
+                value = TryGetProp(cls, 'AddTrkAtk', 0)
+            end
+        end
+    end
+
+    value = value * reinforceValue
+
+    return value
 end
 
 -- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
@@ -517,6 +641,10 @@ function GET_BASIC_ATK(item)
     end
 
     if grade == 6 then
+        local argList = StringSplit(itemstring, '/')
+        if #argList == 2 and GetClass(argList[1], argList[2]) ~= nil then
+            itemATK = SCR_GET_GODDESS_GROWTH_BASIC_VALUE(item)
+        else
         local cls = GetClassByType('item_goddess_reinforce_' .. lv, 1)
         if cls ~= nil then
             itemATK = TryGetProp(cls, 'BasicAtk', 0)
@@ -530,6 +658,7 @@ function GET_BASIC_ATK(item)
                 itemATK = itemATK * 1.15
             end
         end
+    end
     end
 
     local maxAtk = itemATK * damageRange;
@@ -640,6 +769,11 @@ function GET_BASIC_MATK(item)
     end
     
     if grade == 6 then
+        local itemstring = TryGetProp(item, 'StringArg', 'None')
+        local argList = StringSplit(itemstring, '/')
+        if #argList == 2 and GetClass(argList[1], argList[2]) ~= nil then
+            itemATK = SCR_GET_GODDESS_GROWTH_BASIC_VALUE(item)
+        else
         local cls = GetClassByType('item_goddess_reinforce_' .. lv, 1)
         if cls ~= nil then
             itemATK = TryGetProp(cls, 'BasicAtk', 0)
@@ -653,6 +787,7 @@ function GET_BASIC_MATK(item)
                 itemATK = itemATK * 1.15
             end
         end
+    end
     end
     
     return itemATK;
@@ -903,6 +1038,17 @@ function SCR_REFRESH_ARMOR(item, enchantUpdate, ignoreReinfAndTranscend, reinfBo
         
             basicDef = basicDef * armorMaterialRatio[equipMaterial]
         else
+            local itemstring = TryGetProp(item, 'StringArg', 'None')
+            local argList = StringSplit(itemstring, '/')
+            if #argList == 2 and GetClass(argList[1], argList[2]) ~= nil then
+                local cls = GetClass(argList[1], argList[2])
+                basicDef = TryGetProp(cls, 'BasicDef', 0)
+                if TryGetProp(item, 'EquipGroup', 'None') == 'SubWeapon' then
+                    basicDef = TryGetProp(cls, 'BasicShdDef', 0)
+                elseif classType == 'Shirt' or classType == 'Pants' then
+                    basicDef = TryGetProp(cls, 'BasicBodyDef', 0)
+                end
+            else
             local cls = GetClassByType('item_goddess_reinforce_' .. lv, 1)
             if cls ~= nil then
                 if TryGetProp(item, "EquipGroup", "None") == "SubWeapon" then
@@ -920,6 +1066,7 @@ function SCR_REFRESH_ARMOR(item, enchantUpdate, ignoreReinfAndTranscend, reinfBo
                     if armorMaterialRatio ~= nil then                        
                     basicDef = basicDef * armorMaterialRatio[equipMaterial]
                 end
+            end
             end
             end
             upgradeRatio = upgradeRatio + GET_UPGRADE_ADD_DEF_RATIO(item, ignoreReinfAndTranscend) / 100;
@@ -1172,16 +1319,20 @@ function APPLY_RANDOM_OPTION(item)
         local propName = "RandomOption_"..i;
         local propValue = "RandomOptionValue_"..i;
         local getProp = TryGetProp(item, propName);
-        if getProp ~= nil and item[propValue] ~= 0 and item[propName] ~= "None" then            
-            if GetClass('goddess_special_option', item[propName]) == nil and GetClass('goddess_atk_def_option', item[propName]) == nil then
-                local prop = item[propName];
-                local propData = item[prop]
+        if getProp ~= nil and item[propValue] ~= 0 and item[propName] ~= "None" then
+            if GetClass('goddess_special_option', item[propName]) == nil and GetClass('goddess_atk_def_option', item[propName]) == nil 
+            and GetClass('goddess_set_option', item[propName]) == nil then
+                local prop = TryGetProp(item, propName, 'None') -- RandomOption_%d                
+                if prop ~= '0' and prop ~= 'None' then                    
+                    local propData = TryGetProp(item, prop, 0) -- prop:CON 
                 local addValue = math.floor(item[propValue] * growth_rate);
                 if addValue <= 0 then
                     -- RandomOption_i 가 None이 아니라는 것은 랜덤옵션이 존재한다는 뜻이므로 무조건 성장 비율에 대한 최소치 보정을 해준다
                     addValue = 1
                 end
-                item[prop] = propData + addValue
+                    
+                    item[prop] = propData + addValue                    
+                end
             end
         end
     end
@@ -1890,7 +2041,7 @@ function SCR_GET_STA_COOLDOWN(item)
   return item.ItemCoolDown;
 end
 
--- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+
 function SCR_GET_HP_COOLDOWN(item)    
     local owner = GetItemOwner(item)    
     if owner == nil then
@@ -1912,8 +2063,8 @@ function SCR_GET_HP_COOLDOWN(item)
     local ret = IsHealControlMap(owner)
     if ret == 1 then
         local item_cool_down = item.ItemCoolDown;
-        if item_cool_down < 100000 then
-            return 100000 -- 100초
+        if item_cool_down < 60000 then
+            return 60000 -- 60초
         end
     end
 

@@ -805,18 +805,27 @@ function GET_ABILITY_POINT_BY_NAME(pc, name)
     end
 
     local job_list = TryGetProp(cls, 'Job', 'None')
-    if job_list == 'None' then
+    if job_list == 'None' then        
         return 0
     end
 
     local need_skill = TryGetProp(cls, 'SkillCategory', 'None')
     if  need_skill ~= 'All' and need_skill ~= 'None' then
-        local skill = GetSkill(pc, need_skill)
-        if skill == nil then
+        local token = StringSplit(need_skill, ';')
+        local exist = false
+        for i = 1, #token do
+            local skill_name = token[i];
+            local skill = GetSkill(pc, skill_name);
+            if skill ~= nil then
+                exist = true
+                break
+            end            
+        end
+        
+        if exist == false then            
             return 0
         end
     end
-
 
     local token = StringSplit(job_list, ';')
     for i = 1, #token do
@@ -850,7 +859,7 @@ function GET_ABILITY_POINT_BY_NAME(pc, name)
                 end
                 
                 if func_name ~= 'None' and flag == true then
-                    local func = _G[func_name]                    
+                    local func = _G[func_name]               
                     if func ~= nil then
                         local point = 0                        
                         for j = 1, level do

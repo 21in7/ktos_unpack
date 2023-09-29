@@ -17,6 +17,7 @@ ClassID,SilverCost,MaterialCnt_1,MaterialCnt_2,Ratio,ClassName,Material_1,Materi
 2003,0,0,0,0,"RelicGem_Compositon_List_Legend_Cyan_003","","","RelicGem_Compositon_Legend_Cyan","Gem_Relic_Cyan_L_003"
 3001,0,0,0,0,"RelicGem_Compositon_List_Goddess_Cyan_001","","","RelicGem_Compositon_Goddess_Cyan","Gem_Relic_Cyan_G_001"
 3002,0,0,0,0,"RelicGem_Compositon_List_Goddess_Cyan_002","","","RelicGem_Compositon_Goddess_Cyan","Gem_Relic_Cyan_G_002"
+3003,0,0,0,0,"RelicGem_Compositon_List_Goddess_Cyan_003","","","RelicGem_Compositon_Goddess_Cyan","Gem_Relic_Cyan_G_003"
 4001,0,0,0,0,"RelicGem_Compositon_List_Legend_Magenta_001","","","RelicGem_Compositon_Legend_Magenta","Gem_Relic_Magenta_L_001"
 4002,0,0,0,0,"RelicGem_Compositon_List_Legend_Magenta_002","","","RelicGem_Compositon_Legend_Magenta","Gem_Relic_Magenta_L_002"
 4003,0,0,0,0,"RelicGem_Compositon_List_Legend_Magenta_003","","","RelicGem_Compositon_Legend_Magenta","Gem_Relic_Magenta_L_003"

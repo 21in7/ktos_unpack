@@ -3,6 +3,61 @@
 <!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by MintPC (Mi) -->
 <skinset name="Base">
 	<imagelist category="eventbanner">
+		<!-- GLOBAL_JP -->
+		<image name="inGame_E1_JP" file="\event_banner\inGame_E1_JP.jpg" imgrect="0 0 480 180"/>
+		<image name="inGame_E2_JP" file="\event_banner\inGame_E2_JP.jpg" imgrect="0 0 480 180"/>
+		<image name="inGame_E3_JP" file="\event_banner\inGame_E3_JP.jpg" imgrect="0 0 480 180"/>
+		<image name="inGame_E4_JP" file="\event_banner\inGame_E4_JP.jpg" imgrect="0 0 480 180"/>
+		<image name="inGame_E5_JP" file="\event_banner\inGame_E5_JP.jpg" imgrect="0 0 480 180"/>
+		<image name="inGame_E6_JP" file="\event_banner\inGame_E6_JP.jpg" imgrect="0 0 480 180"/>
+		<!-- GLOBAL -->
+		<image name="inGame_E1_GLOBAL" file="\event_banner\inGame_E1_GLOBAL.jpg" imgrect="0 0 480 180"/>
+		<image name="inGame_E2_GLOBAL" file="\event_banner\inGame_E2_GLOBAL.jpg" imgrect="0 0 480 180"/>
+		<image name="inGame_E3_GLOBAL" file="\event_banner\inGame_E3_GLOBAL.jpg" imgrect="0 0 480 180"/>
+		<image name="inGame_E4_GLOBAL" file="\event_banner\inGame_E4_GLOBAL.jpg" imgrect="0 0 480 180"/>
+		<image name="inGame_E5_GLOBAL" file="\event_banner\inGame_E5_GLOBAL.jpg" imgrect="0 0 480 180"/>
+		<image name="inGame_E6_GLOBAL" file="\event_banner\inGame_E6_GLOBAL.jpg" imgrect="0 0 480 180"/>
+		<image name="inGame_E7_GLOBAL" file="\event_banner\inGame_E7_GLOBAL.jpg" imgrect="0 0 480 180"/>
+		<image name="inGame_E8_GLOBAL" file="\event_banner\inGame_E8_GLOBAL.jpg" imgrect="0 0 480 180"/>
+		<!-- TAIWAN -->
+		<image name="inGame_E1_TAIWAN" file="\event_banner\inGame_E1_TAIWAN.jpg" imgrect="0 0 480 180"/>
+		<image name="inGame_E2_TAIWAN" file="\event_banner\inGame_E2_TAIWAN.jpg" imgrect="0 0 480 180"/>
+		<image name="inGame_E3_TAIWAN" file="\event_banner\inGame_E3_TAIWAN.jpg" imgrect="0 0 480 180"/>
+		<image name="inGame_E4_TAIWAN" file="\event_banner\inGame_E4_TAIWAN.jpg" imgrect="0 0 480 180"/>
+		<image name="inGame_E5_TAIWAN" file="\event_banner\inGame_E5_TAIWAN.jpg" imgrect="0 0 480 180"/>
+		<image name="inGame_E6_TAIWAN" file="\event_banner\inGame_E6_TAIWAN.jpg" imgrect="0 0 480 180"/>
+		<!-- PAPAYA -->
+		<image name="0919_In_game_banner_cube" file="\event_banner\0919_In_game_banner_cube.jpg" imgrect="0 0 480 180"/>
+		<image name="0919_In_game_banner_Popoboost" file="\event_banner\0919_In_game_banner_Popoboost.jpg" imgrect="0 0 480 180"/>
+		<!-- 해외 JPN/STM 전용 이미지 고정 경로 터치 금지 끝 -->
+		<image name="event2309_spring" file="\event_banner\event2309_spring.png" imgrect="0 0 480 180"/>
+		<image name="event2309_goddess" file="\event_banner\event2309_goddess.png" imgrect="0 0 480 180"/>
+		<image name="event2309_ep15package" file="\event_banner\event2309_ep15package.png" imgrect="0 0 480 180"/>
+		<image name="event2308_resalecube" file="\event_banner\event2308_resalecube.png" imgrect="0 0 480 180"/>
+		<image name="event2309_leticia" file="\event_banner\event2309_leticia.png" imgrect="0 0 480 180"/>
+		<image name="event2308_goddess" file="\event_banner\event2308_goddess.png" imgrect="0 0 480 180"/>
+		<image name="event2307_SummerPackage" file="\event_banner\event2307_SummerPackage.jpg" imgrect="0 0 480 180"/>
+		<image name="event2306_goddess" file="\event_banner\event2306_goddess.png" imgrect="0 0 480 180"/>
+		<image name="0728_Tos_News_banner" file="\event_banner\0728_Tos_News_banner.jpg" imgrect="0 0 480 180"/>
+		<image name="20230627_News_banner" file="\event_banner\20230627_News_banner.png" imgrect="0 0 480 180"/>
+		<image name="20230718_NewsBanner_Engineer" file="\event_banner\20230718_NewsBanner_Engineer.jpg" imgrect="0 0 480 180"/>
+		<image name="0725_in_game_banner_news_banner" file="\event_banner\0725_in_game_banner_news_banner.jpg" imgrect="0 0 480 180"/>
+		<image name="0905_In_game_banner_News_banner" file="\event_banner\0905_In_game_banner_News_banner.jpg" imgrect="0 0 480 180"/>
+		<image name="0912_In_game_News_banner" file="\event_banner\0912_In_game_News_banner.jpg" imgrect="0 0 480 180"/>
+		<image name="0926_In_game_banner_News_banner" file="\event_banner\0926_In_game_banner_News_banner.jpg" imgrect="0 0 480 180"/>		
+		<image name="0815_NEWS_BANNER" file="\event_banner\0815_NEWS_BANNER.jpg" imgrect="0 0 480 180"/>
+		<image name="0824_In_game_News_banner" file="\event_banner\0824_In_game_News_banner.jpg" imgrect="0 0 480 180"/>
+		<image name="GTW_Newsbanner" file="\event_banner\GTW_Newsbanner.jpg" imgrect="0 0 480 180"/>
+		<image name="0627_In-game_News_page" file="\event_banner\0627_In-game_News_page.jpg" imgrect="0 0 480 180"/>
+		<image name="0531_Ingame_banners1" file="\event_banner\0531_Ingame_banners1.jpg" imgrect="0 0 480 180"/>
+		<image name="0531_Ingame_banners2" file="\event_banner\0531_Ingame_banners2.jpg" imgrect="0 0 480 180"/>
+		<image name="0531_Ingame_banner3" file="\event_banner\0531_Ingame_banner3.jpg" imgrect="0 0 480 180"/>
+		<image name="0531_Ingame_banners4" file="\event_banner\0531_Ingame_banners4.jpg" imgrect="0 0 480 180"/>
+		<image name="event2305_goddess" file="\event_banner\event2305_goddess.png" imgrect="0 0 480 180"/>
+		<image name="event2304_toswattendance" file="\event_banner\event2304_toswattendance.jpg" imgrect="0 0 480 180"/>
+		<image name="event2304_toswpackage" file="\event_banner\event2304_toswpackage.jpg" imgrect="0 0 480 180"/>
+		<image name="event2304_arbor" file="\event_banner\event2304_arbor.jpg" imgrect="0 0 480 180"/>
+		<image name="event2304_goddess" file="\event_banner\event2304_goddess.jpg" imgrect="0 0 480 180"/>
 		<image name="event2303_SpearMasterPackage" file="\event_banner\event2303_SpearMasterPackage.png" imgrect="0 0 480 180"/>
 		<image name="event2301_NewbiePackage" file="\event_banner\event2301_NewbiePackage.png" imgrect="0 0 480 180"/>
 		<image name="event2301_NewYearPackage" file="\event_banner\event2301_NewYearPackage.png" imgrect="0 0 480 180"/>
@@ -370,5 +425,25 @@
 	<imagelist category="banner">
 		<image name="tpshop_event_banner" file="\skin\tpshop_event_banner.tga" imgrect="0 0 520 250"/>
 		<image name="news_event_banner" file="\skin\news_event_banner.tga" imgrect="0 0 480 180"/>
+		<image name="0531_Ingame_banners4_520x250" file="\event_banner\0531_Ingame_banners4_520x250.jpg" imgrect="0 0 520 250"/>
+		<image name="20230627_TP_Shop_10" file="\event_banner\20230627_TP_Shop_10.png" imgrect="0 0 520 250"/>
+		<image name="20230704_TP_Shop_normal" file="\event_banner\20230704_TP_Shop_normal.png" imgrect="0 0 520 250"/>
+		<image name="20230718_TPBanner_Engineer" file="\event_banner\20230718_TPBanner_Engineer.png" imgrect="0 0 520 250"/>
+		<image name="0905_In_game_banner_TP_Shop" file="\event_banner\0905_In_game_banner_TP_Shop.png" imgrect="0 0 520 250"/>
+		<image name="0919_TP_banner_cube" file="\event_banner\0919_TP_banner_cube.png" imgrect="0 0 520 250"/>
+		<image name="0926_In_game_banner_TP_Shop_banner" file="\event_banner\0926_In_game_banner_TP_Shop_banner.png" imgrect="0 0 520 250"/>
+		<image name="0725_TP_Shop" file="\event_banner\0725_TP_Shop.png" imgrect="0 0 520 250"/>
+		<image name="0815_TP_SHOP_BANNER" file="\event_banner\0815_TP_SHOP_BANNER.png" imgrect="0 0 520 250"/>
+		<image name="0824_In_game_TP_shop_banner" file="\event_banner\0824_In_game_TP_shop_banner.png" imgrect="0 0 520 250"/>
+		<image name="TP_SHOP_KOR" file="\event_banner\TP_SHOP_KOR.png" imgrect="0 0 520 250"/>
+		<image name="TP_SHOP_JP" file="\event_banner\TP_SHOP_JP.png" imgrect="0 0 520 250"/>
+		<image name="TP_SHOP_GLOBAL" file="\event_banner\TP_SHOP_GLOBAL.png" imgrect="0 0 520 250"/>
+	</imagelist>
+	<imagelist category="popoboost_banner">
+		<image name="popoboost_banner_2023_KOR" file="\popoboost_banner\popo_KR2.png" imgrect="0 0 1200 150"/>
+		<image name="popoboost_banner_2023_GLOBAL" file="\popoboost_banner\popo_GLO2.png" imgrect="0 0 1200 150"/>
+		<image name="popoboost_banner_2023_JP" file="\popoboost_banner\popo_JP2.png" imgrect="0 0 1200 150"/>
+		<image name="popoboost_banner_2023_TAI" file="\popoboost_banner\popo_GLO2.png" imgrect="0 0 1200 150"/>
+		<image name="popoboost_banner_2023_PAPAYA" file="\popoboost_banner\popo_PAPAYA.png" imgrect="0 0 1200 150"/>
 	</imagelist>
 </skinset>

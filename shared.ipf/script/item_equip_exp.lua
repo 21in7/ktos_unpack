@@ -192,6 +192,8 @@ function GET_MORE_EVENT_EXP(pc)
 		sumExp = sumExp + 12
 	end
 
+	sumExp = sumExp + IsBuffAppliedEXP(pc, 'ExpUpGuildEvent'); 	
+
 	return sumExp; 
 end
 

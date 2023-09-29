@@ -58,6 +58,12 @@ function get_hp_recovery_ratio(pc, value, ignore_healcontrol)
     if IsHealControlMap(pc) == 1 and ignore_healcontrol == false then        
         ratio = ratio * 0.1
     end
+
+    -- 시련 : 젤리젤 줄어든 공기방울 - 산소 포화 상태.
+    local tb_jellyzele_reduce_bubble = GetExProp(pc, "tb_jellyzele_reduce_bubble");
+    if tb_jellyzele_reduce_bubble == 1 then
+        ratio = 0;
+    end
     
     return math.floor(ratio)
 end

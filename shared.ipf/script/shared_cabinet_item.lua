@@ -570,7 +570,14 @@ function GET_UPGRADE_CABINET_ACC_ITEM_NAME(cls, lv)
 end
 
 function CHECK_ENCHANT_VALIDATION(target_item, category, type, aObj, pc)
-    if target_item == nil then return end
+    if target_item == nil then 
+        return false, 'IMPOSSIBLE_ITEM'
+    end
+    
+    if item_goddess_growth.is_goddess_growth_item(target_item) == true then
+        return false, 'IMPOSSIBLE_ITEM'
+    end
+
     if TryGetProp(target_item, 'ItemGrade', 1) < 6 then        
         return false, "OnlyEquipGoddessItemOnSlot";
     end

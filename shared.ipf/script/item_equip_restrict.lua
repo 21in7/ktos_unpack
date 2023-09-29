@@ -1472,6 +1472,50 @@ function CHECK_GODDESS_EQUIP_EP14(pc)
 	return true; 
 end
 
+function CHECK_GODDESS_EQUIP_EP15(pc)
+	local icorable_spot = {	RH = "NoWeapon", LH = "NoWeapon", SHIRT = "NoShirt", PANTS = "NoPants", GLOVES = "NoGloves", BOOTS = "NoBoots" };
+
+	local function _check_equip(pc, item, check)
+		-- no equip
+		if item == nil then return false, "MustEquipWeaponArmorToEnter"; end
+		local class_name = TryGetProp(item, "ClassName", "None");
+		if class_name == check then return false, "MustEquipWeaponArmorToEnter"; end
+		-- item grade
+		local item_grade = TryGetProp(item, "ItemGrade");
+		if item_grade < 6 then return false, "MustGoddessEquipWeaponArmorToEnter";end
+		-- pvp
+		local string_arg = TryGetProp(item, "StringArg", "None");
+		if string_arg == "FreePVP" then return false, "NotAllowFreePvPEquip"; end
+		-- UseLv
+		local use_lv = TryGetProp(item, "UseLv", 0);
+		if use_lv < 500 then return false, "MustGoddessEquipWeaponbArmorUseLvToEnter_500"; end
+		return true, "None";
+	end
+
+	for spot, check in pairs(icorable_spot) do
+		local item = GetEquipItem(pc, spot);
+		local ret, msg = _check_equip(pc, item, check);
+		if ret == false then			
+			return false, msg;
+		end
+
+		-- two hand check
+		if spot == "RH" then
+			local equip_group = TryGetProp(item, "EquipGroup", "None");
+			if equip_group == "THWeapon" then
+				local sub_spot = "LH";
+				local sub_check = "NoOuter";
+				local sub_item = GetEquipItem(pc, sub_spot);
+				ret, msg = _check_equip(pc, sub_item, sub_check);
+				if ret == false then					
+					return false, msg;
+				end
+			end
+		end
+	end
+	return true; 
+end
+
 function CHECK_GODDESS_EQUIP_ADD_SUB_SLOT(pc)
 	local icorable_spot = {	RH = "NoWeapon", LH = "NoWeapon", RH_SUB = "NoWeapon", LH_SUB = "NoWeapon", SHIRT = "NoShirt", PANTS = "NoPants", GLOVES = "NoGloves", BOOTS = "NoBoots" };
 
@@ -1522,7 +1566,7 @@ function CHECK_GEAR_SCORE_FOR_CONTENTS(pc, indun_cls)
 	local indun_name = TryGetProp(indun_cls, "ClassName", "None")
 	local restrict_gear_score = TryGetProp(indun_cls, "GearScore", 0)
 	local restrict_ability_score = TryGetProp(indun_cls, "AbilityScore", 0)
-
+	
 	-- 기어 스코어 체크
 	if restrict_gear_score > 0 then
 		if gear_score < restrict_gear_score then
@@ -1548,7 +1592,7 @@ function CHECK_GEAR_SCORE_FOR_CONTENTS(pc, indun_cls)
 		end
 
 		-- 가디스 장비 체크
-		local ret, msg = CHECK_GODDESS_EQUIP_EP14(pc)
+		local ret, msg = CHECK_GODDESS_EQUIP_EP15(pc)
 		if ret == false then
 			SendSysMsg(pc, msg)
 			return false;

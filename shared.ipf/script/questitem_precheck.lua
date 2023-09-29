@@ -9351,3 +9351,30 @@ local tb = {
     end
     return 0
 end
+--EP15_2_MAINSTREAM
+function SCR_PRE_EP15_2_D_NICOPOLIS_1_MQ_4_ITEM_01(self, argstring, argnum1, argnum2)
+    if GetZoneName(self) == "ep15_2_d_nicopolis_1" then
+    if GetLayer(self) == 0 then
+        local result01 = SCR_QUEST_CHECK(self, 'EP15_2_D_NICOPOLIS_1_MQ_4')
+        local result02 = SCR_QUEST_CHECK(self, 'EP15_2_D_NICOPOLIS_1_MQ_5')
+        local result03 = SCR_QUEST_CHECK(self, 'EP15_2_D_NICOPOLIS_1_MQ_6')
+        if result01 == 'PROGRESS' or 
+           result02 == 'PROGRESS'  or 
+           result03 == 'PROGRESS' then
+            local fndList, fndCnt = SelectObject(self, 250, 'ALL', 1)
+            local i
+            if fndCnt > 0 then
+                for i = 1, fndCnt do
+                    if fndList[i].ClassName == 'ep15_2_Papillon_Solider' or 
+                    fndList[i].ClassName == 'ep15_2_Papillon_Assassin' or   
+                    fndList[i].ClassName == 'ep15_2_Papillon_Leader' or
+                    fndList[i].ClassName == 'statue_vakarine' then                   
+                        return GetHandle(fndList[i])
+                        end
+                    end
+                end
+            end
+        end
+    end
+    return 0
+end

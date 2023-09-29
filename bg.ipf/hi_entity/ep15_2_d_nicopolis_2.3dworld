@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by k (IMCGames Co., Ltd) -->
+<!-- edited with XMLSpy v2006 U (http://www.altova.com) by Administrator (EMBRACE) -->
+<World>
+	<ModelDir IpfName="bg_hi2" Path="\dungeon\ep15_2_d_nicopolis_2\"/>
+	<LightMap File="ep15_2_d_nicopolis_2_lightmap.jpg" Length="2500 2500" Offset="4.271 -47.5" Size="512 512"/>
+	<TexDir IpfName="bg_texture" Path="\nicopolis\"/>
+	<AnimationDir IpfName="bg_hi2" Path="\dungeon\ep15_2_d_nicopolis_2\"/>
+	<ShaTexDir IpfName="bg_hi2" Path="\dungeon\ep15_2_d_nicopolis_2\"/>
+	<Model File="ep15_2_d_nicopolis_2_model_01.xac" Model="ep15_2_d_nicopolis_2_model_01" ShadowMap="ep15_2_d_nicopolis_2" pos="-71.0361 -13.0253 915.1252" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_model_02.xac" Model="ep15_2_d_nicopolis_2_model_02" ShadowMap="ep15_2_d_nicopolis_2" pos="965.3274 -35.6262 -255.3754" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_model_03.xac" Model="ep15_2_d_nicopolis_2_model_03" ShadowMap="ep15_2_d_nicopolis_2" pos="535.4547 33.3853 -757.8889" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_model_04.xac" Model="ep15_2_d_nicopolis_2_model_04" ShadowMap="ep15_2_d_nicopolis_2" pos="569.0652 -140.9265 -1035.5463" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_model_05.xac" Model="ep15_2_d_nicopolis_2_model_05" ShadowMap="ep15_2_d_nicopolis_2" pos="-426.1913 -47.3373 -1054.1124" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_model_06.xac" Model="ep15_2_d_nicopolis_2_model_06" ShadowMap="ep15_2_d_nicopolis_2" pos="-1013.3973 -32.6909 -849.8911" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_model_07.xac" Model="ep15_2_d_nicopolis_2_model_07" ShadowMap="ep15_2_d_nicopolis_2" pos="-959.9744 14.5365 -224.4358" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_model_08.xac" Model="ep15_2_d_nicopolis_2_model_08" ShadowMap="ep15_2_d_nicopolis_2" pos="-607.2664 -133.3053 -360.7633" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_model_09.xac" Model="ep15_2_d_nicopolis_2_model_09" ShadowMap="ep15_2_d_nicopolis_2" pos="-52.9373 -255.7343 -157.9595" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_model_10.xac" Model="ep15_2_d_nicopolis_2_model_10" ShadowMap="ep15_2_d_nicopolis_2" pos="697.6771 -245.5382 636.7153" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_model_11.xac" Model="ep15_2_d_nicopolis_2_model_11" ShadowMap="ep15_2_d_nicopolis_2" pos="-1013.8246 -245.5382 -1030.9769" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_ground.xac" Model="ep15_2_d_nicopolis_2_ground" ShadowMap="ep15_2_d_nicopolis_2" pos="-22.3474 -44.0150 -114.5087" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_b_model.xac" Model="ep15_2_d_nicopolis_2_b_model" ShadowMap="ep15_2_d_nicopolis_2" pos="-460.5696 -464.2227 541.0903" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_tile.xac" Model="ep15_2_d_nicopolis_2_tile" ShadowMap="ep15_2_d_nicopolis_2" pos="-39.8960 -173.6630 -56.2930" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_tree.xac" Model="ep15_2_d_nicopolis_2_tree" ShadowMap="ep15_2_d_nicopolis_2" pos="12.6990 -97.4481 -90.1045" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_grass.xac" Model="ep15_2_d_nicopolis_2_grass" ShadowMap="ep15_2_d_nicopolis_2" pos="39.2048 -96.6340 -168.8934" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_tp.xac" Model="ep15_2_d_nicopolis_2_tp" ShadowMap="ep15_2_d_nicopolis_2" pos="23.2088 41.0072 557.2007" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_book.xac" Model="ep15_2_d_nicopolis_2_book" ShadowMap="ep15_2_d_nicopolis_2" pos="-118.9675 -130.4255 80.7881" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_gr_a_01.xac" Model="ep15_2_d_nicopolis_2_gr_a_01" ShadowMap="ep15_2_d_nicopolis_2" pos="39.6849 -18.1498 -187.9668" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="ep15_2_d_nicopolis_2_gr_a_02.xac" Model="ep15_2_d_nicopolis_2_gr_a_02" ShadowMap="ep15_2_d_nicopolis_2" pos="134.0470 -55.9017 -187.4243" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+</World>

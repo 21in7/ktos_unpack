@@ -854,3 +854,5 @@ ClassID,TargetX,TargetY,TargetZ,Latitude,Longitude,StartDir,ClassName,CMM_Name,T
 3064,-797,48,1607,45,45,0,"EP15_1_FABBEY_2_TO_EP15_1_FABBEY_1","노바하 서고  -> 노바하 본원","ep15_1_f_abbey_1"
 3065,-14,186,-1310,45,45,0,"EP15_1_FABBEY_2_TO_EP15_1_FABBEY_3","노바하 서고  -> 참회의 기도소","ep15_1_f_abbey_3"
 3066,-1508,74,1726,45,45,0,"EP15_1_FABBEY_3_TO_EP15_1_FABBEY_2","참회의 기도소  -> 노바하 서고","ep15_1_f_abbey_2"
+3067,-250,74,-1181,45,45,0,"NICO811_EP15_2_D_NICOPOLIS_1","스타리 타운 -> 비밀실험실","ep15_2_d_nicopolis_1"
+3068,2223,-19,-106,45,45,0,"EP15_2_D_NICOPOLIS_1_NICO811","비밀실험실 -> 스타리 타운","f_nicopolis_81_1"

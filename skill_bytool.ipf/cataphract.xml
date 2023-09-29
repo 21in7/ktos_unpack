@@ -597,6 +597,47 @@ return value' Num="40" UseFunc="1"/>
 			</EtcList>
 		</MainSkl>
 	</Skill>
+	<Skill Name="Common_Cataphract_Trot">
+		<MainSkl JumpFlee="NO" MSPDToUsePos="0" ScrLock="None">
+			<HitList>
+				<Frame Angle="0" AniTime="9999" Dist="0" ForceATK="0" HitCount="1" Length="30" PosType="0" RandDist="0" RandomPerHit="0" RotAngle="0" SklAngle="0.17453292" TermMax="0" TermMin="0" Time="9799" Type="FAN" Width="30"/>
+			</HitList>
+			<EtcList>
+				<Scp Client="NO" Scp="SKL_BUFF" Time="0" UseSleep="NO">
+					<Str Str="Trot_Buff"/>
+					<Num FuncTxt="return obj.Level" Num="0" UseFunc="1"/>
+					<Num Num="0"/>
+					<Num Num="0"/>
+					<Num Num="1"/>
+					<Num Num="100"/>
+					<Num Num="0"/>
+				</Scp>
+				<Scp Client="YES" Scp="C_VOICE_SOUND" Time="100" UseSleep="NO">
+					<Str Str="voice_war_atk_medium"/>
+					<Str Str="voice_atk_medium_war_f"/>
+				</Scp>
+			</EtcList>
+		</MainSkl>
+		<ByCondSkills>
+			<SubSkl>
+				<Cond>
+					<ToolScp Client="NO" Scp="SKL_SELECT_BUFF" UseSleep="NO">
+						<Str Str="Trot_Buff"/>
+					</ToolScp>
+				</Cond>
+				<Skill JumpFlee="NO" MSPDToUsePos="0" ScrLock="None">
+					<HitList>
+						<Frame Angle="0" AniTime="9999" Dist="0" ForceATK="0" HitCount="1" Length="30" PosType="0" RandDist="0" RandomPerHit="0" RotAngle="0" SklAngle="0.17453292" TermMax="0" TermMin="0" Time="9799" Type="FAN" Width="30"/>
+					</HitList>
+					<EtcList>
+						<Scp Client="NO" Scp="SKL_BUFF_REMOVE" Time="80" UseSleep="NO">
+							<Str Str="Trot_Buff"/>
+						</Scp>
+					</EtcList>
+				</Skill>
+			</SubSkl>
+		</ByCondSkills>
+	</Skill>
 	<Skill Name="Cataphract_Rush_2">
 		<EndScripts>
 			<ToolScp Client="YES" Scp="MONSKL_C_CLEAR_RESERVE_ANIM" UseSleep="NO"/>

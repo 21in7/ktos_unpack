@@ -20,3 +20,5 @@ ClassID,GenType,Lv,Range,GenRange,RespawnTime,MaxPop,Minimap,Hide,UseAIOufOfPC,A
 19,19,1,40,1,15000,60,1,0,0,0,0,0,"ep15_1_Goblin_Saman","","","","","","","","","","","NO","YES","NO","Monster","","","",""
 20,20,1,40,1,60000,1,1,0,0,0,0,0,"orsha_m_14_2","고립된 학자","","","","","","","EP15_1_ABBEY2_SQ3_NPC","","","NO","YES","NO","Neutral","Anim/event_loop3","","",""
 21,21,1,40,1,60000,1,1,0,0,0,0,0,"npc_sailor_f","탐욕스러운 여상인","","","","","","","EP15_1_ABBEY2_SQ1_NPC","","","NO","YES","NO","Netural","","","",""
+22,22,1,400,1,60000,1,0,0,0,0,0,0,"Hiddennpc_Q2","","","","","","","","","EP15_2_D_NICOPOLIS_2_MQ_2_HIDDEN","","NO","YES","NO","Neutral","","","",""
+23,23,1,40,1,60000,1,1,0,0,0,0,0,"npc_PID_master","","","","","","","","EP15_2_D_NICOPOLIS_2_MQ_2_PIP","","","NO","YES","NO","Netural","","","",""

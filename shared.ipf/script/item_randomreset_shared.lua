@@ -96,13 +96,17 @@ function IS_ENCHANT_JEWELL_ITEM(item)
 	return false;
 end
 
-function CHECK_JEWELL_COMMON_CONSTRAINT(item)
+function CHECK_JEWELL_COMMON_CONSTRAINT(item)	
 	if item == nil then
 		return false;
 	end
 	
 	if TryGetProp(item, 'ClassType', 'None') == 'Ring' or TryGetProp(item, 'ClassType', 'None') == 'Neck' then
-		return 'WebService_38'
+		return false
+	end
+
+	if item_goddess_growth.is_goddess_growth_item(item) == true then
+		return false
 	end
 
 	local group_name = TryGetProp(item, 'GroupName', 'None')
@@ -200,8 +204,7 @@ function IS_ENABLE_APPLY_JEWELL(jewell, targetItem)
 end
 
 -- 아이템 툴팁 인챈트 불가 표시
-function IS_ENABLE_APPLY_JEWELL_TOOLTIPTEXT(targetItem)
-
+function IS_ENABLE_APPLY_JEWELL_TOOLTIPTEXT(targetItem)	
 	local itemStarCheck = TryGetProp(targetItem , 'ItemStar')
 	if itemStarCheck < 0 then
 	    return false, 'Type';
@@ -216,7 +219,7 @@ function IS_ENABLE_APPLY_JEWELL_TOOLTIPTEXT(targetItem)
 	    return false, 'WoodCarving';
 	end
 	
-	if targetItem.ItemLifeTimeOver > 0 or tonumber(targetItem.LifeTime) > 0 then
+	if TryGetProp(targetItem,'ItemLifeTimeOver', 0) > 0 or tonumber(TryGetProp(targetItem, 'LifeTime', 0)) > 0 then
 		return false, 'LimitTime';
 	end
 		

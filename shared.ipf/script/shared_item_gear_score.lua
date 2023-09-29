@@ -124,7 +124,7 @@ function GET_BELT_GEAR_SCORE(item)
     else
 
     end
-    
+
     local high = 0
     if string.find(TryGetProp(item, 'ClassName', 'None'), '_high') ~= nil then
         high = 100
@@ -217,6 +217,16 @@ function GET_GEAR_SCORE(item, pc)
         end
     end
     
+    if item_goddess_growth.is_goddess_growth_item(item) == true then
+        if use_lv == 1 then
+            return reinforce * 10
+        elseif use_lv == 75 then
+            return 200 + (reinforce * 10)
+        elseif use_lv == 150 then
+            return 400 + (reinforce * 10)
+        end
+    end
+
     use_lv = math.max(use_lv, item_lv)
     
     if check_slot_list[type] == nil then        
@@ -407,13 +417,16 @@ function GET_GEAR_SCORE(item, pc)
                     add_acc = 80
                 elseif grade >= 6 and use_lv >= 470 then
                     add_acc = 100 + math.max(0, (use_lv - 470) * 20)
+                    if use_lv > 490 then
+                        add_acc = 100 + math.max(0, (use_lv - 470) * 15)
+                    end
                 elseif TryGetProp(item, 'StringArg', 'None') == 'Acc_EP12' then
                     add_acc = 70
                 elseif grade >= 6 then
                     add_acc = 100
                 else
                     add_acc = 30
-                end
+                end                
             end
         else
             local prefix = TryGetProp(item, 'LegendPrefix', 'None')               
@@ -493,6 +506,8 @@ function GET_PLAYER_GEAR_SCORE(pc)
                 local invitem = GET_ITEM_BY_GUID(equipItem:GetIESID());
                 local itemobj = GetIES(invitem:GetObject());
                 score = score + GET_GEAR_SCORE(itemobj, pc)
+
+                local strarg = TryGetProp(itemobj,"StringArg")
             end            
         end        
         
@@ -539,6 +554,96 @@ function GET_PLAYER_GEAR_SCORE(pc)
             missing_count = missing_count + 1
         end
         
+        local add = 0
+        if missing_count > 0 then
+            local div = total - missing_count
+            if div > 0 then
+                add = math.floor(score / div * missing_count)                 
+            end
+        end
+        score = score + add
+
+        return math.floor(score + 0.5)
+    end
+end
+
+function GET_PLAYER_POPOBOOST_GEAR_SCORE(pc)        
+    local total = 14
+    local score = 0
+    local popoboostCheckTable = { ["BELT"] = 1,["SEAL"] = 1, ["ARK"] = 1,["EARRING"] = 1,["SHOULDER"] = 1 };
+    if IsServerSection() ~= 1 then -- client
+        local equipList = session.GetEquipItemList();        
+        for j = 0, equipList:Count() - 1     do
+            local equipItem = equipList:GetEquipItemByIndex(j);
+            
+            if equipItem ~= nil and equipItem:GetIESID() ~= '0' then
+                local invitem = GET_ITEM_BY_GUID(equipItem:GetIESID());
+                local itemobj = GetIES(invitem:GetObject());     
+                local popoboostProp = TryGetProp(itemobj,"popoboost", 0)
+                local spotname = TryGetProp(itemobj,"DefaultEqpSlot","None")
+
+                if popoboostProp == 1 then
+                    score = score + GET_GEAR_SCORE(itemobj, pc)
+                else
+                    local check = popoboostCheckTable[spotname];
+                    if check ~= nil then
+                        score = score + GET_GEAR_SCORE(itemobj, pc)
+                    end
+                end
+            end            
+        end        
+        
+        local item_sub_rh = session.GetEquipItemBySpot(item.GetEquipSpotNum('RH_SUB')) -- RH_SUB
+        local item_sub_lh = session.GetEquipItemBySpot(item.GetEquipSpotNum('LH_SUB')) -- LH_SUB
+
+        local missing_count = 0
+        if item_sub_rh ~= nil and item_sub_rh:GetIESID() == '0' then
+            missing_count = missing_count + 1
+        end
+
+        if item_sub_lh ~= nil and item_sub_lh:GetIESID() == '0' then
+            missing_count = missing_count + 1
+        end
+                
+        local add = 0
+        if missing_count > 0 then
+            local div = total - missing_count
+            if div > 0 then
+                add = math.floor(score / div * missing_count)                 
+            end
+        end
+        score = score + add
+        return math.floor(score + 0.5)
+    else
+        local equipList = GetEquipItemList(pc)        
+        local before_score = 0
+        for i = 1, #equipList do
+            local itemobj = equipList[i]
+            if itemobj ~= nil then
+                local spotname = TryGetProp(itemobj,"DefaultEqpSlot")
+                local check = popoboostCheckTable[spotname];
+                local popoboostProp = TryGetProp(itemobj,"popoboost", 0)
+                
+                if popoboostProp == 1 then                
+                    score = score + GET_GEAR_SCORE(itemobj, pc)
+                elseif check ~= nil then
+                    score = score + GET_GEAR_SCORE(itemobj, pc)
+                end
+            end
+        end
+
+        before_score = score
+
+        local missing_count = 0
+        local item_sub_lh = GetEquipItemIgnoreDur(pc, 'LH_SUB')        
+        if TryGetProp(item_sub_lh, 'ClassName', 'None') == 'NoWeapon' or TryGetProp(item_sub_lh, 'ClassName', 'None') == 'None' then
+            missing_count = missing_count + 1
+        end
+        local item_sub_rh = GetEquipItemIgnoreDur(pc, 'RH_SUB')        
+        if TryGetProp(item_sub_rh, 'ClassName', 'None') == 'NoWeapon' or TryGetProp(item_sub_rh, 'ClassName', 'None') == 'None' then
+            missing_count = missing_count + 1
+        end
+
         local add = 0
         if missing_count > 0 then
             local div = total - missing_count
@@ -738,4 +843,16 @@ function GET_PLAYER_ABILITY_SCORE(pc)
         ret = 100
     end
     return string.format('%.2f', ret)
+end
+
+function GET_PLAYER_STATUS_BY_NAME(pc, name)    
+    if name == 'ATK' then
+        local sum = TryGetProp(pc, 'MINPATK', 0) + TryGetProp(pc, 'MAXPATK', 0)
+        return math.floor(sum / 2)
+    elseif name == 'MATK' then
+        local sum = TryGetProp(pc, 'MINMATK', 0) + TryGetProp(pc, 'MAXMATK', 0)
+        return math.floor(sum / 2)
+    else
+        return TryGetProp(pc, name, 0)
+    end
 end

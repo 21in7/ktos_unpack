@@ -215,4 +215,6 @@ ClassID,ConditionArg4,ClassName,UseType,ValueType,PropertyType,ConditionScp,Cond
 214,0,"Legend_card_Jellyzele","BeforeAttack","StarCount","","","","","","SCR_CARDEFFECT_ATTACK_FINALHITBLOCKBREAK","","","5","블록 관통 확률 +{@st66d_y}{s16}[%d]{/}{/}%% 증가","5"
 215,0,"Legend_card_Spreader","BeforeAttack","StarCount","","","","","","SCR_CARDEFFECT_ATTACK_FINALHITBLOCKRATE","","","3","블록 확률 +{@st66d_y}{s16}[%d]{/}{/}%% 증가","3"
 216,0,"Legend_card_Falouros","Always","StarCount","","","","","","SCR_CARDEFFECT_ATTACK_DODGERATIO","","","5","회피 확률 +{@st66d_y}{s16}[%d]{/}{/}%% 증가","5"
-217,0,"Legend_card_Rozethemiserable","Always","StarCount","","","","","","SCR_CARDEFFECT_ALLMATERIALTYPE_ATK_AND_MHP","AllMaterialType_Atk_BM/MHP_BM","","800/4000","모든 방어구 재질 공격력 +{@st66d_y}{s16}[%d]{/}{/}%% 증가, 최대 HP +{@st66d_y}{s16}[%d]{/}{/}%% ","800/4000"
+217,0,"Legend_card_Rozethemiserable","Always","StarCount","","","","","","SCR_CARDEFFECT_ALLMATERIALTYPE_ATK_AND_MHP","AllMaterialType_Atk_BM/MHP_BM","","800/4000","모든 방어구 재질 공격력 +{@st66d_y}{s16}[%d]{/}{/} 증가, 최대 HP +{@st66d_y}{s16}[%d]{/}{/} ","800/4000"
+218,0,"Legend_card_Upinis","Always","StarCount","","","","","","SCR_CARDEFFECT_ADD_EXPROP_STARVALUE_PC_SKILL_COOLDOWN","card_SkillCoolDown","","0","스킬 재사용 대기시간 +{@st66d_y}{s16}[%d]%%{/}{/} 감소{/}{/}","1"
+219,0,"Legend_card_Slogutis","Always","StarCount","","","","","","SCR_CARDEFFECT_ADD_EXPROP_STARVALUE_PC","card_Slogutis_Legendcard","","0","보스 몬스터에게 주는 대미지{@st66d_y}{s16}[%d]{/}{/}%% 증가 ","10"

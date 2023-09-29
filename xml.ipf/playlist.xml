@@ -1,5 +1,5 @@
 <!-- edited with XMLSpy v2021 (x64) (http://www.altova.com) by sevin (IMCGAMES) -->
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by imc (IMCGames Co., Ltd) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by imc (imc) -->
 <PlayList>
 	<BGM PlayListName="Login_Barrack" Volume="90" FileName1="tos_Kevin_TOS_Carol_2017.mp3" FileName2="tos_Tree_of_Savior_Piano.mp3" FileName3="tos_SFA_Openup_Po10.mp3"/>
 	<BGM PlayListName="NoMusic" Volume="90" FileName1="tos_mute_1minute.mp3"/>
@@ -130,7 +130,8 @@
 	<BGM PlayListName="master_Keraunos" Volume="130" FileName1="tos_SFA_Openup_Keraunos.mp3"/>
 	<BGM PlayListName="master_Lama" Volume="130" FileName1="tos_Initium_Anthem_of_Lama.mp3"/>
 	<BGM PlayListName="master_Jaguar" Volume="130" FileName1="tos_SFA_Vanish_Demoniac.mp3"/>
-	<BGM PlayListName="master_SpearMaster" Volume="130" FileName1="tos_SFA_Spears_of_God.mp3"/>
+	<BGM PlayListName="master_Spear_Master" Volume="130" FileName1="tos_SFA_Spears_of_God.mp3"/>
+	<BGM PlayListName="master_Engineer" Volume="130" FileName1="tos_Initium_Springtime_of_Salvation.mp3"/>
 	<BGM PlayListName="NPC_CHRISTMASTREE01" Volume="120" FileName1="Orgel_No_Matter_Christmas.mp3"/>
 	<BGM PlayListName="NPC_CHRISTMASTREE02" Volume="120" FileName1="Orgel_Dont_Cry.mp3"/>
 	<BGM PlayListName="raid_velcoffer" Volume="120" FileName1="tos_Drogo_Uno_Impetu.mp3" FileName2="tos_Drogo_Velvet_Penetration.mp3" FileName3="tos_Gaudium_Wrong_Theory.mp3"/>
@@ -162,6 +163,8 @@
 	<BGM PlayListName="f_episode_15_1_1" Volume="130" FileName1="tos_SFA_O_Deive_piano.mp3" FileName2="tos_SFA_Hunter_Green_piano.mp3"/>
 	<BGM PlayListName="f_episode_15_1_2" Volume="130" FileName1="tos_SFA_Chase.mp3" FileName2="tos_Drogo_Zummer.mp3"/>
 	<BGM PlayListName="f_episode_15_1_3" Volume="140" FileName1="tos_7clouds_Nevero.mp3"/>
+	<BGM PlayListName="f_episode_15_2_1" Volume="130" FileName1="tos_SFA_Dienos_advento_world.mp3"/>
+	<BGM PlayListName="f_episode_15_2_2" Volume="140" FileName1="tos_SFA_The_Last_Parade.mp3"/>
 	<BGM PlayListName="raid_delmore_1" Volume="130" FileName1="tos_SFA_The_Mirror_of_Fate.mp3"/>
 	<BGM PlayListName="raid_delmore_2" Volume="130" FileName1="tos_Symphonix_miles_to_go.mp3"/>
 	<BGM PlayListName="raid_earring" Volume="130" FileName1="tos_SFA_Perseguir_la_cola.mp3"/>
@@ -169,6 +172,9 @@
 	<BGM PlayListName="raid_turbulentcore" Volume="130" FileName1="tos_Gaudium_Searching.mp3"/>
 	<BGM PlayListName="raid_baubas" Volume="130" FileName1="tos_Cinenote_Action4_Baubas.mp3"/>
 	<BGM PlayListName="raid_roze" Volume="130" FileName1="tos_SFA_Legendary_Nova.mp3"/>
+	<BGM PlayListName="raid_bridge" Volume="130" FileName1="tos_SFA_Maurcien.mp3"/>
+	<BGM PlayListName="raid_dreamyforest" Volume="130" FileName1="tos_SFA_Bring_It_Down.mp3"/>
+	<BGM PlayListName="raid_abyssalobserver" Volume="130" FileName1="tos_SFA_Scappato.mp3"/>
 	<BGM PlayListName="boss_spreader" Volume="130" FileName1="tos_Cinenote_Action7_Spreader.mp3"/>
 	<BGM PlayListName="boss_falouros" Volume="130" FileName1="tos_Cinenote_Battle3_Falouros.mp3"/>
 	<BGM PlayListName="track" Volume="90" FileName1="track.mp3"/>
@@ -179,6 +185,7 @@
 	<BGM PlayListName="VIVID_Orsha" Volume="120" FileName1="tos_Kevin_Amaranto.mp3" FileName2="tos_Kevin_Beautiful_than_Flowers.mp3" FileName3="tos_Kevin_Snow_Hill.mp3" FileName4="tos_Kevin_Signs_of_Penance.mp3"/>
 	<BGM PlayListName="VIVID_Fedimian" Volume="120" FileName1="tos_SoundTeMP_Village_School.mp3" FileName2="tos_SFA_Coral_Crumble.mp3" FileName3="tos_Kevin_Even_Horizon.mp3" FileName4="tos_Kevin_Black_Flag.mp3"/>
 	<BGM PlayListName="event_newyear" Volume="90" FileName1="tos_SFA_Tranquilty.mp3"/>
+	<BGM PlayListName="event_moon_rabbit" Volume="140" FileName1="tos_SFA_Dieno_Blossom.mp3"/>
 	<BGM PlayListName="DLC_5" Volume="140" FileName1="tos_SFA_UNITogether_Tsukasa_Uchiyama(DLC_Special_Edition).mp3" FileName2="tos_SFA_Openup_Po10_Unpluged(DLC_Bonus_Track).mp3"/>
 	<BGM PlayListName="DLC_6" Volume="140" FileName1="tos_SFA_Openup_Po10_EDM_mix(DLC_Special_Edition).mp3" FileName2="tos_SFA_Openup_Po10_EDM_mix(Instrumental).mp3"/>
 	<BGM PlayListName="DLC_7" Volume="140" FileName1="tos_SFA_Deives_Veliava_feat_Romanas(DLC_special_edition).mp3" FileName2="tos_SFA_Cherish_the_Memory(bonus_track).mp3"/>

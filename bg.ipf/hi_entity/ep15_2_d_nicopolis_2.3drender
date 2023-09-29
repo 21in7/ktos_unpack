@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by k (IMCGames Co., Ltd) -->
+<Render>
+	<GEGlow Enable="0" Intensity="9.999999"/>
+	<SharpFilter Enable="0" Intensity="29"/>
+	<ColorGrading Enable="0" GradingTexture=""/>
+	<Bloom Enable="1" SmallScale="50" MediumScale="30.000002" LargeScale="9.999999"/>
+	<LinearFog Enable="1" FogColor="0.14 0.13 0.21" FogStart="350" FogEnd="1700"/>
+	<ShadowColor ShadowColor="0.00 0.00 0.00"/>
+	<WarFog Enable="1" SpotLightSize="400" FireSize="10" WarFogColor="0.00 0.00 0.00" WarFogAlpha="0.50"/>
+	<Vignette VignetteEnable="1" VignetteMinValue="1.00" VignetteMaxValue="1.50" VignetteCorrectValue="0.50" VignetteColor="0.03 0.02 0.03"/>
+</Render>

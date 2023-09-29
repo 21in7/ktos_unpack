@@ -25,6 +25,8 @@ relic_gem_type = {
     Gem_Relic_Black = 2,
 }
 
+relic_gem_list = { {'Gem_Relic_Cyan', 0} , {'Gem_Relic_Magenta', 1} , {'Gem_Relic_Black', 2} }
+
 local relic_parameter_list = nil
 function make_relic_parameter_list()
 	if relic_parameter_list ~= nil then
@@ -303,7 +305,7 @@ end
 
 -- 경험치 재료
 shared_item_relic.get_exp_material_name = function()
-    local name_list = { 'Relic_exp_token_refine', 'Relic_exp_token_refine_Trade', }
+    local name_list = { 'Relic_exp_token_refine', 'Relic_exp_token_refine_Trade', 'Relic_exp_token_refine_event' }
     return name_list
 end
 

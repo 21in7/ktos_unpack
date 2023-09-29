@@ -36,14 +36,20 @@ function GET_MON_STAT(self, lv, statStr)
         
         totalStatRate = totalStatRate + statRateTemp;
     end
+
+     -- Calc Ratio --
+    local by_buff = GetExProp(self, "MON_STAT_ADD_RATIO");
+    if by_buff ~= nil and by_buff ~= 0 then
+        local ratio_value = statRate * by_buff;
+        statRate = statRate + ratio_value;
+    end
     
     -- Calc Stat --
     local value = allStatMax * (statRate / totalStatRate);
-    
     if value < 1 then
         value = 1;
     end
-    
+
     return math.floor(value);
 end
 
@@ -241,30 +247,14 @@ function SCR_Get_MON_MHP(self)
     if zone_name ~= nil then
         local prefix = 'field_monster_status_' .. zone_name
         local spec_cls = GetClass(prefix, self.ClassName)
-        if spec_cls ~= nil then
+        if spec_cls ~= nil and GetExProp(self, 'IsChallengeModeMon') == 0 then
             if TryGetProp(spec_cls, 'MHP', 0) > 0 then
                 return TryGetProp(spec_cls, 'MHP', 0) 
             end
         end
-    end
-
-    value = GET_CONVERT_EXCEPTION_MHP(self, value);
+    end    
 
     return math.floor(value);
-end
-
-function GET_CONVERT_EXCEPTION_MHP(self, value)
-    local zone_name = nil;
-    if IsServerSection(self) == 1 then zone_name = GetZoneName(self)
-    else zone_name = GetZoneName(); end
-
-    -- 샤울레이 서쪽 숲 : 초반 퀘스트 진행 보정(최저 스탯 값보다 낮은 체력을 세팅하기 위해 별도의 보정)
-    if zone_name ~= nil and zone_name == "f_siauliai_west" and TryGetProp(self, "MonRank", "None") ~= "Boss" then
-        value = value / 2;
-    end
-
-    -- 별도의 특정 조건 추가 가능.
-    return value;
 end
 
 function SCR_Get_MON_MSP(self)
@@ -314,7 +304,7 @@ function SCR_GET_MON_EXP(self)
     local zone_name = GetZoneName(self)
     local prefix = 'field_monster_status_' .. zone_name
     local spec_cls = GetClass(prefix, self.ClassName)
-    if spec_cls ~= nil then
+    if spec_cls ~= nil and GetExProp(self, 'IsChallengeModeMon') == 0 then
         if TryGetProp(spec_cls, 'EXP', 0) > 0 then
             return TryGetProp(spec_cls, 'EXP', 0) 
         end        
@@ -349,7 +339,7 @@ function SCR_GET_MON_JOBEXP(self)
     local zone_name = GetZoneName(self)
     local prefix = 'field_monster_status_' .. zone_name
     local spec_cls = GetClass(prefix, self.ClassName)
-    if spec_cls ~= nil then
+    if spec_cls ~= nil and GetExProp(self, 'IsChallengeModeMon') == 0 then
         if TryGetProp(spec_cls, 'JOBEXP', 0) > 0 then
             return TryGetProp(spec_cls, 'JOBEXP', 0) 
         end
@@ -455,7 +445,7 @@ function SCR_Get_MON_DEF(self)
     local zone_name = GetZoneName(self)
     local prefix = 'field_monster_status_' .. zone_name
     local spec_cls = GetClass(prefix, self.ClassName)
-    if spec_cls ~= nil then
+        if spec_cls ~= nil and GetExProp(self, 'IsChallengeModeMon') == 0 then
         if TryGetProp(spec_cls, 'DEF', 0) > 0 then
             return TryGetProp(spec_cls, 'DEF', 0) 
         end
@@ -562,7 +552,7 @@ function SCR_Get_MON_MDEF(self)
     local zone_name = GetZoneName(self)
     local prefix = 'field_monster_status_' .. zone_name
     local spec_cls = GetClass(prefix, self.ClassName)
-    if spec_cls ~= nil then
+    if spec_cls ~= nil and GetExProp(self, 'IsChallengeModeMon') == 0 then
         if TryGetProp(spec_cls, 'MDEF', 0) > 0 then
             return TryGetProp(spec_cls, 'MDEF', 0) 
         end
@@ -603,7 +593,7 @@ function SCR_Get_MON_HR(self)
     local zone_name = GetZoneName(self)
     local prefix = 'field_monster_status_' .. zone_name
     local spec_cls = GetClass(prefix, self.ClassName)
-    if spec_cls ~= nil then
+    if spec_cls ~= nil and GetExProp(self, 'IsChallengeModeMon') == 0 then
         if TryGetProp(spec_cls, 'HR', 0) > 0 then
             return TryGetProp(spec_cls, 'HR', 0) 
         end
@@ -646,7 +636,7 @@ function SCR_Get_MON_DR(self)
     local zone_name = GetZoneName(self)
     local prefix = 'field_monster_status_' .. zone_name
     local spec_cls = GetClass(prefix, self.ClassName)
-    if spec_cls ~= nil then
+    if spec_cls ~= nil and GetExProp(self, 'IsChallengeModeMon') == 0 then
         if TryGetProp(spec_cls, 'DR', 0) > 0 then
             return TryGetProp(spec_cls, 'DR', 0) 
         end
@@ -690,7 +680,7 @@ function SCR_Get_MON_CRTHR(self)
     local zone_name = GetZoneName(self)
     local prefix = 'field_monster_status_' .. zone_name
     local spec_cls = GetClass(prefix, self.ClassName)
-    if spec_cls ~= nil then
+    if spec_cls ~= nil and GetExProp(self, 'IsChallengeModeMon') == 0 then
         if TryGetProp(spec_cls, 'CRTHR', 0) > 0 then
             return TryGetProp(spec_cls, 'CRTHR', 0) 
         end
@@ -748,7 +738,7 @@ function SCR_Get_MON_CRTDR(self)
     local zone_name = GetZoneName(self)
     local prefix = 'field_monster_status_' .. zone_name
     local spec_cls = GetClass(prefix, self.ClassName)
-    if spec_cls ~= nil then
+    if spec_cls ~= nil and GetExProp(self, 'IsChallengeModeMon') == 0 then
         if TryGetProp(spec_cls, 'CRTDR', 0) > 0 then
             return TryGetProp(spec_cls, 'CRTDR', 0) 
         end
@@ -777,7 +767,7 @@ function SCR_Get_MON_CRTATK(self)
     local zone_name = GetZoneName(self)
     local prefix = 'field_monster_status_' .. zone_name
     local spec_cls = GetClass(prefix, self.ClassName)
-    if spec_cls ~= nil then
+    if spec_cls ~= nil and GetExProp(self, 'IsChallengeModeMon') == 0 then
         if TryGetProp(spec_cls, 'CRTATK', 0) > 0 then
             return TryGetProp(spec_cls, 'CRTATK', 0) 
         end
@@ -806,7 +796,7 @@ function SCR_Get_MON_CRTMATK(self)
     local zone_name = GetZoneName(self)
     local prefix = 'field_monster_status_' .. zone_name
     local spec_cls = GetClass(prefix, self.ClassName)
-    if spec_cls ~= nil then
+    if spec_cls ~= nil and GetExProp(self, 'IsChallengeModeMon') == 0 then
         if TryGetProp(spec_cls, 'CRTMATK', 0) > 0 then
             return TryGetProp(spec_cls, 'CRTMATK', 0) 
         end
@@ -918,7 +908,7 @@ function SCR_Get_MON_MINPATK(self)
     local zone_name = GetZoneName(self)
     local prefix = 'field_monster_status_' .. zone_name
     local spec_cls = GetClass(prefix, self.ClassName)
-    if spec_cls ~= nil then
+    if spec_cls ~= nil and GetExProp(self, 'IsChallengeModeMon') == 0 then
         if TryGetProp(spec_cls, 'MINPATK', 0) > 0 then
             return TryGetProp(spec_cls, 'MINPATK', 0) 
         end
@@ -1030,7 +1020,7 @@ function SCR_Get_MON_MAXPATK(self)
     local zone_name = GetZoneName(self)
     local prefix = 'field_monster_status_' .. zone_name
     local spec_cls = GetClass(prefix, self.ClassName)
-    if spec_cls ~= nil then
+    if spec_cls ~= nil and GetExProp(self, 'IsChallengeModeMon') == 0 then
         if TryGetProp(spec_cls, 'MAXPATK', 0) > 0 then
             return TryGetProp(spec_cls, 'MAXPATK', 0) 
         end
@@ -1142,7 +1132,7 @@ function SCR_Get_MON_MINMATK(self)
     local zone_name = GetZoneName(self)
     local prefix = 'field_monster_status_' .. zone_name
     local spec_cls = GetClass(prefix, self.ClassName)
-    if spec_cls ~= nil then
+    if spec_cls ~= nil and GetExProp(self, 'IsChallengeModeMon') == 0 then
         if TryGetProp(spec_cls, 'MINMATK', 0) > 0 then
             return TryGetProp(spec_cls, 'MINMATK', 0) 
         end
@@ -1254,7 +1244,7 @@ function SCR_Get_MON_MAXMATK(self)
     local zone_name = GetZoneName(self)
     local prefix = 'field_monster_status_' .. zone_name
     local spec_cls = GetClass(prefix, self.ClassName)
-    if spec_cls ~= nil then
+    if spec_cls ~= nil and GetExProp(self, 'IsChallengeModeMon') == 0 then
         if TryGetProp(spec_cls, 'MAXMATK', 0) > 0 then
             return TryGetProp(spec_cls, 'MAXMATK', 0) 
         end        
@@ -1304,7 +1294,7 @@ function SCR_Get_MON_BLK(self)
     local zone_name = GetZoneName(self)
     local prefix = 'field_monster_status_' .. zone_name
     local spec_cls = GetClass(prefix, self.ClassName)
-    if spec_cls ~= nil then
+    if spec_cls ~= nil and GetExProp(self, 'IsChallengeModeMon') == 0 then
         if TryGetProp(spec_cls, 'BLK', 0) > 0 then
             return TryGetProp(spec_cls, 'BLK', 0) 
         end        
@@ -1343,7 +1333,7 @@ function SCR_Get_MON_BLK_BREAK(self)
     local zone_name = GetZoneName(self)
     local prefix = 'field_monster_status_' .. zone_name
     local spec_cls = GetClass(prefix, self.ClassName)
-    if spec_cls ~= nil then
+    if spec_cls ~= nil and GetExProp(self, 'IsChallengeModeMon') == 0 then
         if TryGetProp(spec_cls, 'BLK_BREAK', 0) > 0 then
             return TryGetProp(spec_cls, 'BLK_BREAK', 0) 
         end  
@@ -1906,59 +1896,8 @@ function CLIENT_SORCERER_SUMMONING_MON(self, caster, skl, item)
     -- self.MDEF_BM = (monMDef / 2 + (caster.MNA * sklbonus)) * itembonus
 
     -- calculating is changed(it depends on owner's status)
-    local ownerMATK = math.floor((caster.MINMATK + caster.MAXMATK) / 2);
-    local sklRate = 0;
-    local mhpRate = 0;
-    local atkRate = 0;
-    local defRate = 0;
-    if skl.ClassName == 'Sorcerer_Summoning' then
-        sklRate = 0.16 + skl.Level * 0.056;
-        mhpRate = 1.5;
-        atkRate = 1;
-        defRate = 1;
-    elseif skl.ClassName == 'Necromancer_CreateShoggoth' then
-        sklRate = skl.Level * 0.2;
-        
-        local MAX_CARD_COUNT = 4;
-        local cardCnt = 0;
-        local etc = nil;
-        if IsServerSection(caster) == 1 then
-            etc = GetETCObject(caster);
-        else
-            etc = GetMyEtcObject();
-        end
-        
-        for i = 1, MAX_CARD_COUNT do
-            local cardGuid = etc['Necro_bosscardGUID' .. i];
-            local invCard = nil;
-            if cardGuid ~= nil and cardGuid ~= 'None' then
-                if IsServerSection(caster) == 1 then
-                    invCard = GetInvItemByGuid(caster, cardGuid);
-                else
-                    invCard = session.GetInvItemByGuid(cardGuid);
-                end
-            end
+    SCR_SUMMONED_MON_STATE_CALC(self, caster, skl)
 
-            if invCard ~= nil then
-                cardCnt = cardCnt + 1;
-            end
-        end
-
-        mhpRate = 1 + cardCnt * 0.1;
-        atkRate = 1;
-        defRate = 1;
-    end
-    
-    self.MHP_BM = self.MHP_BM + math.floor(caster.MHP * mhpRate * sklRate - self.MHP);
-    self.MINPATK_BM = self.MINPATK_BM + math.floor(ownerMATK * 0.9 * atkRate * sklRate - self.MINPATK);
-    self.MAXPATK_BM = self.MAXPATK_BM + math.floor(ownerMATK * 1.1 * atkRate * sklRate - self.MAXPATK);
-    self.MATK_BM = self.MATK_BM + math.floor(ownerMATK * atkRate * sklRate - (self.MINMATK + self.MAXMATK) / 2);
-    self.DEF_BM = self.DEF_BM + math.floor(caster.DEF * defRate * sklRate - self.DEF);
-    self.MDEF_BM = self.MDEF_BM + math.floor(caster.MDEF * defRate * sklRate - self.MDEF);
-
-    if skl.ClassName == 'Necromancer_CreateShoggoth' then
-        self.CON = self.CON + math.floor(caster.MNA * 0.1);
-    end
 end
 
 function SCR_GET_MON_SKILLFACTORRATE(self)
@@ -2608,9 +2547,9 @@ function SCR_MON_OWNERITEM_ARMOR_CALC(self, defType)
         end
     end
 
-    local owner = GetOwner(self);
+    local owner = GetTopOwner(self);
     if owner == nil then 
-        return;
+        return 0;
     end
 
     local itemSpotList = { "SHIRT", "PANTS", "GLOVES", "BOOTS" };
@@ -2621,7 +2560,7 @@ function SCR_MON_OWNERITEM_ARMOR_CALC(self, defType)
     
     for i = 1, listCnt do
         local item = GetEquipItem(owner, itemSpotList[i]);
-        if item == nil then return end;
+        if item == nil then return 0 end;
 
         local item_grade = TryGetProp(item, "ItemGrade", 1);
         local item_reinforce = TryGetProp(item, "Reinforce_2", 0);
@@ -2823,6 +2762,16 @@ function SCR_GET_MON_BOSS_ATK(self)
     local value = 0
 
     local byBuff = TryGetProp(self, 'BOSS_ATK_BM', 0)
+
+    value = value + byBuff
+
+    return math.floor(byBuff)
+end
+
+function SCR_GET_MON_RES_ADD_DAMAGE(self)
+    local value = 0
+
+    local byBuff = TryGetProp(self, 'ResAdd_Damage_BM', 0)
 
     value = value + byBuff
 

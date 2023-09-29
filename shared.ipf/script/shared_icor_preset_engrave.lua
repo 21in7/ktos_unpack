@@ -35,10 +35,22 @@ end
 
 -- 각인이 가능한 아이템인가?, 아이커인 경우, 방어구 랜덤 아이커만 가능
 -- return,  가능여부, 기본성공확률
-function IS_ENABLE_TO_ENGARVE(item_obj)    
-    if shared_item_goddess_icor.get_goddess_icor_grade(item_obj) > 0 then
-        return true, 100
+-- type : {0:각인 저장(아이커), 2:각인 저장(옛날)}
+function IS_ENABLE_TO_ENGARVE(item_obj, type)    
+    if item_goddess_growth.is_goddess_growth_item(item_obj) == true then
+        return false, 0
     end
+
+    if type == 2 then                
+        if TryGetProp(item_obj, 'UseLv', 0) > 460 then
+            return false, 0
+        end
+    end
+    
+
+    if shared_item_goddess_icor.get_goddess_icor_grade(item_obj) > 0 then        
+        return true, 100
+    end    
 
     if TryGetProp(item_obj, 'GroupName', 'None') == 'Icor' and TryGetProp(item_obj, 'InheritanceRandomItemName', 'None') ~= 'None' then
         local cls = GetClass('Item', TryGetProp(item_obj, 'InheritanceRandomItemName', 'None'))
@@ -120,6 +132,8 @@ function GET_COST_APPLY_ENGRAVE(item_obj)
 
     if lv == 480 then
         coin = 'VakarineCertificate'
+    elseif lv == 500 then
+        coin = 'RadaCertificate'
     end
 
     local cost = math.floor((lv / 20) * 3)    
@@ -268,12 +282,12 @@ function GET_ITEM_RANDOMOPTION_DIC(item_obj)
     end
 
     local option_dic = {}
-    option_dic['Size'] = 4
-    for i = 1, 4 do
+    option_dic['Size'] = 0    
+    for i = 1, MAX_RANDOM_OPTION_COUNT do
         local prop_name = 'RandomOption_' .. i
         local group_name = 'RandomOptionGroup_' .. i
         local prop_value = 'RandomOptionValue_' .. i
-        local prop = TryGetProp(item_obj, prop_name, 'None')
+        local prop = TryGetProp(item_obj, prop_name, 'None')        
         if prop ~= 'None' then
             local group = TryGetProp(item_obj, group_name, 'None')
             local value = TryGetProp(item_obj, prop_value, 0)
@@ -281,14 +295,10 @@ function GET_ITEM_RANDOMOPTION_DIC(item_obj)
             option_dic[prop_name] = prop
             option_dic[group_name] = group
             option_dic[prop_value] = value
-        else
-            option_dic['Size'] = i - 1
-            break
+            option_dic['Size'] = option_dic['Size'] + 1            
+        else            
+            
         end
-    end
-
-    if option_dic['Size'] == 0 then
-        return nil
     end
 
     return option_dic
@@ -333,6 +343,10 @@ end
 function IS_ENABLE_TO_ENGRAVE_APPLY(item_obj, index, spot, etc)
     if item_obj == nil then return false, 'None' end
 
+    if item_goddess_growth.is_goddess_growth_item(item_obj) == true then
+        return false, 'IMPOSSIBLE_ITEM'
+    end
+    
     local suffix = string.format('IsGoddessIcorOption_%d_%s', tonumber(index), spot) 
     local is_goddess_icor_option = TryGetProp(etc, suffix, 0) -- 저장된 옵션이 가디스 아이커 옵션인가?    
     if TryGetProp(item_obj, 'ItemGrade', 0) ~= 6 then

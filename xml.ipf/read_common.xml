@@ -5,6 +5,7 @@
 	<ReadXml Name="item_goddess_reinforce_470"/>
 	<ReadXml Name="item_goddess_reinforce_480"/>
 	<ReadXml Name="item_goddess_reinforce_490"/>
+	<ReadXml Name="item_goddess_reinforce_500"/>
 	<ReadXml Name="pharmacy_material_type"/>	
 	<ReadXml Name="skill_Simony"/>
 	<ReadXml Name="archeology_property"/>
@@ -167,6 +168,9 @@
 	<ReadXml Name="foodtable"/>
 	<ReadXml Name="zoneobject_contents"/>
 	<ReadXml Name="dismount_ani"/>
+	<ReadXml Name="damage_font"/>
+	<ReadXml Name="damage_effect"/>
+	<ReadXml Name="hud_skin_list"/>
 	<ReadXml Name="subeffect"/>
 	<ReadXml Name="changeanim"/>
 	<ReadXml Name="cardbattle"/>
@@ -184,6 +188,7 @@
 	<ReadXml Name="monster_guild"/>
 	<ReadXml Name="item_premium"/>
 	<ReadXml Name="tpitem"/>
+	<ReadXml Name="TPitem_PAPAYA"/>
 	<ReadXml Name="dummystruct"/>
 	<ReadXml Name="worldpvp_expcard"/>
 	<ReadXml Name="sharedconst_system"/>
@@ -197,6 +202,9 @@
 	<ReadXml Name="warpscrolllist"/>
 	<ReadXml Name="item_package"/>
 	<ReadXml Name="recycle_shop"/>
+	<ReadXml Name="recycle_shop_papaya"/>
+	<ReadXml Name="recycle_shop_sell"/>
+	<ReadXml Name="recycle_shop_sell_papaya"/>
 	<ReadXml Name="skill_dynamiccastcancel"/>
 	<ReadXml Name="addon_d_list"/>
 	<ReadXml Name="item_grade"/>
@@ -247,7 +255,9 @@
 	<ReadXml Name="item_growth"/>
 	<ReadXml Name="skill_buff_condition"/>
 	<ReadXml Name="tpitem_user_new"/>
+	<ReadXml Name="tpitem_user_new_papaya"/>
 	<ReadXml Name="tpitem_return_user"/>
+	<ReadXml Name="tpitem_return_user_papaya"/>
 	<ReadXml Name="exchangeWeaponTypeList"/>
 	<ReadXml Name="ExchangeAntiqueList"/>
 	<ReadXml Name="shop_tax"/>
@@ -306,6 +316,7 @@
 	<ReadXml Name="event_ranking_data"/>
 	<ReadXml Name="item_gem_composition"/>
 	<ReadXml Name="dress_room"/>
+	<ReadXml Name="dress_room_papaya"/>
 	<ReadXml Name="dress_room_reward"/>
 	<ReadXml Name="point_extract_item"/>
 	<ReadXml Name="Beauty_Shop_Preview_Leticia"/>
@@ -356,6 +367,7 @@
 	<ReadXml Name="rank_system\GLOBAL_JP_rank_system_season_table"/>
 	<ReadXml Name="rank_system\GLOBAL_rank_system_season_table"/>
 	<ReadXml Name="rank_system\TAIWAN_rank_system_season_table"/>
+	<ReadXml Name="rank_system\PAPAYA_rank_system_season_table"/>
 	<ReadXml Name="rank_system\tribulation_season_table"/>
 	<ReadXml Name="rank_system_reward_list"/>
 	<ReadXml Name="goddess_recipe"/>
@@ -383,16 +395,26 @@
 	<ReadXml Name="goddess_special_option"/>	
 	<ReadXml Name="monster_obj_interaction"/>
 	<ReadXml Name="goddess_atk_def_option"/>
+	<ReadXml Name="goddess_set_option"/>
 	<ReadXml Name="ecs_system"/>
 	<ReadXml Name="rank_system_contents_list"/>
 	<ReadXml Name="tribulation_system_reward_list"/>
 	<ReadXml Name="class_tree_recommend"/>
+	<ReadXml Name="enchant_skill_list"/>	
 	<ReadXml Name="guide_mission\guide_main"/>
 	<ReadXml Name="guide_mission\guide_submission"/>
 	<ReadXml Name="tpitem_season"/>		
 	<ReadXml Name="skill_attribute_mon"/>
 	<ReadXml Name="buff_attribute"/>
+<ReadXml Name="growth_by_reinforce"/>
 	<ReadXml Name="weekendevent_list_client"/>	
 	<ReadXml Name="job_damage_reduce"/>	
 	<ReadXml Name="monster_mark"/>
+	<ReadXml Name="vertigo_games\vertigo_games_product"/>
+	<ReadXml Name="monster_aura_intensive"/>
+	<ReadXml Name="region_channel_info"/>
+	<ReadXml Name="skill_conversion_info"/>
+	<ReadXml Name="popoboost_information"/>
+	<ReadXml Name="master_ex_list"/>
+	<ReadXml Name="popoboost_banner"/>
 </Category>

@@ -1,7 +1,22 @@
+local function replace(text, to_be_replaced, replace_with)
+	local retText = text
+	local strFindStart, strFindEnd = string.find(text, to_be_replaced)	
+    if strFindStart ~= nil then
+		local nStringCnt = string.len(text)		
+		retText = string.sub(text, 1, strFindStart-1) .. replace_with ..  string.sub(text, strFindEnd+1, nStringCnt)
+    else
+        retText = text
+	end
+	
+    return retText
+end
+
 function GET_LIMITATION_TO_BUY(tpItemID)
     local tpItemObj = GetClassByType('TPitem', tpItemID);
     if IS_SEASON_SERVER() == 'YES' then
         tpItemObj = GetClassByType('TPitem_SEASON', tpItemID);
+    elseif GetServerNation() == 'PAPAYA' then
+        tpItemObj = GetClassByType('TPitem_PAPAYA', tpItemID);
     end
     
     if tpItemObj == nil then
@@ -36,12 +51,20 @@ function GET_LIMITATION_TO_BUY_WITH_SHOPTYPE(tpItemID, shopType)
     -- shopType normal(0), return User(1), newbie(2)
     if shopType == 1 then
         tpItemObj = GetClassByType('TPitem_Return_User', tpItemID);
+        if GetServerNation() == "PAPAYA" then 
+            tpItemObj = GetClassByType('TPitem_Return_User_PAPAYA', tpItemID);
+        end
     elseif shopType == 2 then
         tpItemObj = GetClassByType('TPitem_User_New', tpItemID);
+        if GetServerNation() == "PAPAYA" then 
+            tpItemObj = GetClassByType('TPitem_User_New_PAPAYA', tpItemID);
+        end
     else
         tpItemObj = GetClassByType('TPitem', tpItemID);
         if IS_SEASON_SERVER() == 'YES' then
             tpItemObj = GetClassByType('TPitem_SEASON', tpItemID);
+        elseif GetServerNation() == 'PAPAYA' then
+            tpItemObj = GetClassByType('TPitem_PAPAYA', tpItemID);
         end
     end
     
@@ -317,3 +340,180 @@ function IS_REGISTER_ENABLE_COSTUME(item)
 
     return true
 end
+
+local nation_code_table = nil
+local function make_nation_code_table()
+    if nation_code_table ~= nil then return end
+
+    nation_code_table = {};
+    nation_code_table["GLOBAL_KOR"] = "ko"
+    nation_code_table["GLOBAL"] = "en"
+    nation_code_table["GLOBAL_JP"] = "ja"
+    nation_code_table["TAIWAN"] = "zh-TW" -- 중국어-번체
+    nation_code_table["PAPAYA"] = "en"
+
+end
+make_nation_code_table();
+
+function GET_NATION_TRANSLATE_CODE(nationName)
+    if nation_code_table == nil then print("nation_code_table is nil") return end
+    local ret = nation_code_table[nationName]
+    if ret ==nil then return end
+    return ret
+end
+
+--@Desc
+--추가 시 : PAPAGO 번역 지원 가능언어인지 확인 필요. 
+--url : https://developers.naver.com/docs/papago/papago-nmt-overview.md 
+
+-- 2023/04/13 기준 Papago 번역 지원 가능 언어
+-- 번역 요청 언어(타깃) : 번역가능 언어 1(목적), 번역가능 언어 2(목적)..
+-- 1  한국어 : 영어, 일본어, 중국어 간체, 중국어 번체(대만)..
+-- 2. 영어   : 한국어, 일본어, 중국어 간체, 중국어 번체(대만)
+-- 3. 일본어 : 한국어, 영어, 중국어 간체, 중국어 번체
+-- 4. 중국어 간체 : 한국어, 영어, 번체, 일본어
+-- 5. 중국어 번체(대만) : 한국어, 영어, 간체, 일본어
+item_etc_shared = {}
+
+local language_code_table = nil
+local client_curr_language_set = nil
+local curr_language_cnt = 0;
+local function make_language_code_table()
+    if language_code_table ~= nil then return end
+    language_code_table = {};
+    language_code_table["English"]      = "en"    --영어
+    language_code_table["Chinese"]      = "zh-CN" --중국어-간체
+    language_code_table["Japanese"]     = "ja"    --일본어
+    language_code_table["Korean"]       = "ko"    --한국어
+    language_code_table["Taiwanese"]    = "zh-TW" --중국어-번체
+
+    for k,v  in pairs(language_code_table) do
+        curr_language_cnt  = curr_language_cnt + 1
+    end
+end
+make_language_code_table();
+
+item_etc_shared.get_language_code_table = function()
+    if language_code_table == nil then
+        make_language_code_table();
+    end
+    return language_code_table
+end
+
+-- 세팅되어있는 번역 KEY 코드 가져오기
+item_etc_shared.get_language_translate_code = function(tgt)
+    if language_code_table == nil then
+        make_language_code_table();
+    end
+
+    if tgt==nil and client_curr_language_set==nil then
+        client_curr_language_set = "English"
+        return language_code_table[client_curr_language_set]
+    end
+
+    if tgt ~= nil then 
+        return language_code_table[tgt]
+    else
+        return language_code_table[client_curr_language_set]
+    end
+end
+
+-- KEY 코드 세팅 (client)
+item_etc_shared.set_language_translate_code = function(tgt)
+    client_curr_language_set = tgt
+end
+
+
+-- 등록되어있는 언어 코드 갯수
+item_etc_shared.get_language_table_cnt = function()
+    if language_code_table == nil then
+        make_language_code_table();
+    end
+    return curr_language_cnt
+end
+
+item_etc_shared.Is_Contain_LinkItem = function(str)
+    local replaceTxt = nil;
+
+    local searchCnt = 0
+    local partyStr = '{img link_party 24 24}'
+    local partyLinkCheck = string.find(str,partyStr)
+    local deleteTgtText = nil
+    if partyLinkCheck ~= nil then
+        deleteTgtText = item_etc_shared.extractPartyLinkFormat(str)
+    end
+
+    while partyLinkCheck~=nil and searchCnt<10 do
+        str= replace(str,deleteTgtText,'')
+        searchCnt = searchCnt + 1;
+        partyLinkCheck = string.find(str,partyStr)
+    end
+
+    if searchCnt > 0 then
+        replaceTxt = str
+    end
+
+    local check1 =  string.find(str,'{a SLI')
+    if check1 ~= nil then
+        return true
+    end
+    local check2 = string.find(str,'{img')
+    if check2 ~= nil then         
+        return true
+    end
+ 
+    return false,replaceTxt
+end
+
+local savedFormat = nil
+item_etc_shared.GetSavedPartyLinkFormat = function ()
+    if savedFormat ~= nil then
+        local tempstr = savedFormat
+        savedFormat = nil
+        return tempstr
+    end
+    return nil
+end
+
+item_etc_shared.SavePartyLinkFormat = function (str)
+    if savedFormat == nil then
+        savedFormat = item_etc_shared.extractPartyLinkFormat(str)
+    else
+
+    end
+end
+
+item_etc_shared.extractPartyLinkFormat = function(str)
+    local check1 = '{a SLP'
+    local check2 = '{img link_party 24 24}'
+    local startindex = string.find(str,check1)
+    local t1,endindex = string.find(str,check2)
+    local formatStr = string.sub(str,startindex,endindex)
+    return formatStr
+end
+-- item_etc_shared.Preserve_string_filtering_for_translation = function(str)
+-- 	local temp = str;
+-- 	local preserve_text =""
+-- 	local from;
+-- 	local to;
+--     local cnt = 0;
+-- 	while (string.find(temp,'{')~=nil and string.find(temp,'}')~=nil) do
+-- 		from = string.find(temp,'{')
+-- 		to = string.find(temp,'}')
+-- 		local sub_text;
+-- 		local f,t = string.find(temp,"FF}")
+-- 		if to == t then 
+-- 			local x, cuting_end = string.find(temp,"{/}")
+-- 			sub_text = string.sub(temp,from,cuting_end)
+-- 		else
+-- 			sub_text = string.sub(temp,from,to)
+-- 		end
+-- 		preserve_text = preserve_text..sub_text
+--         print(temp)
+-- 		temp = replace(temp,sub_text,"");
+--         print(temp)
+--         cnt = cnt + 1 
+--         if cnt > 10 then return str end;
+-- 	end
+-- 	return preserve_text,temp
+-- end

@@ -10,7 +10,7 @@ function IS_OVERBUY_SHOP(shopType)
         return true
     end
 
-    if shopType == 'GabijaCertificate' or shopType == 'VakarineCertificate' then
+    if string.find(shopType, 'Certificate') ~= nil then
         return true
     end
 end

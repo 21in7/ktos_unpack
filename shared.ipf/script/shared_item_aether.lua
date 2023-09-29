@@ -125,45 +125,31 @@ function get_ratio_success_aether_gem_equip(self, level)
     return 0;
 end
 
+function get_aether_gem_max_level(item)
+    local use_level = TryGetProp(item, "NumberArg1",0);
+    local pivot = 460    
+    local diff = (use_level - pivot) / 20
+    local max_level = 120
+    max_level = max_level + (30 * diff)
+    return math.floor(max_level)
+end
+
 -- by gem item
 function is_max_aether_gem_level(item)
     if item == nil then return false; end
-    local max_level = 0;
+    local max_level = get_aether_gem_max_level(item);
     local use_level = TryGetProp(item, "NumberArg1",0);
-    if use_level == 460 then
-        max_level = 120
-    elseif use_level == 480 then
-        max_level = 150
-    else
-        return false;
-    end
-    
+
     local cur_level = TryGetProp(item, "AetherGemLevel", 1);
     if cur_level >= max_level then return true;
     else return false; end
     return false;
 end
 
--- by gem level
-function is_max_aether_gem_level_equip(level)
-    if item == nil then return false; end
-    local max_level = 120;
-    if level >= max_level then return true;
-    else return false; end
-    return false;
-end
 
-function is_max_aether_gem_level_equip_new(level,NumberArg)
-    if item == nil then return false; end
-    local max_level = 0;
-    local use_level = NumberArg
-    if use_level == 460 then
-        max_level = 120
-    elseif use_level == 480 then
-        max_level = 150
-    else
-        return false;
-    end
+function is_max_aether_gem_level_equip_new(item, level)
+    local max_level = get_aether_gem_max_level(item);
+
     if level >= max_level then return true;
     else return false; end
     return false;
@@ -185,9 +171,6 @@ function tx_set_aether_gem_reinforce_count(self, count)
             local etc_object = GetETCObject(self);
             if etc_object ~= nil then
                 TxSetIESProp(tx, etc_object, "AetherGemReinforceCount", count);
-                --Lv480 에테르 젬 추가로 강화 etc_prop 추가
-                TxSetIESProp(tx, etc_object, "AetherGemReinforceCount_460", 0);
-                TxSetIESProp(tx, etc_object, "AetherGemReinforceCount_480", 0);
             end
             local ret = TxCommit(tx);
             return ret;
@@ -199,83 +182,92 @@ end
 -- 에테르 젬 강화 Base Count 가져오기
 function get_aether_gem_reinforce_count(self)
     local reinforce_count = 0;
+    local etc_object = nil
+
     if IsServerSection() == 0 then
-        local etc_object = GetMyEtcObject();
-        if etc_object ~= nil then
-            reinforce_count = TryGetProp(etc_object, "AetherGemReinforceCount", 0);
-        end
+        etc_object = GetMyEtcObject();        
     else
         if self ~= nil then
-            local etc_object = GetETCObject(self);
-            if etc_object ~= nil then
-                reinforce_count = TryGetProp(etc_object, "AetherGemReinforceCount", 0);
-            end
+            etc_object = GetETCObject(self);            
         end
     end
+
+    if etc_object ~= nil then
+        reinforce_count = TryGetProp(etc_object, "AetherGemReinforceCount", 0);
+    end
+
     return reinforce_count;
 end
 
 
 function get_aether_gem_reinforce_count_total(self)
     local reinforce_count_total = 0;
+    local etc_object = nil
     if IsServerSection() == 0 then
-        local etc_object = GetMyEtcObject();
-        if etc_object ~= nil then
-            local reinforce_count     = TryGetProp(etc_object, "AetherGemReinforceCount", 0);
-            local reinforce_count_460 = TryGetProp(etc_object, "AetherGemReinforceCount_460", 0);
-            local reinforce_count_480 = TryGetProp(etc_object, "AetherGemReinforceCount_480", 0);
-            reinforce_count_total = reinforce_count + reinforce_count_460 + reinforce_count_480
-        end
+        etc_object = GetMyEtcObject();        
     else
         if self ~= nil then
-            local etc_object = GetETCObject(self);
-            if etc_object ~= nil then
-                local reinforce_count     = TryGetProp(etc_object, "AetherGemReinforceCount", 0);
-                local reinforce_count_460 = TryGetProp(etc_object, "AetherGemReinforceCount_460", 0);
-                local reinforce_count_480 = TryGetProp(etc_object, "AetherGemReinforceCount_480", 0);
-                reinforce_count_total = reinforce_count + reinforce_count_460 + reinforce_count_480
-            end
+            etc_object = GetETCObject(self);            
         end
     end
+
+    if etc_object ~= nil then
+        local reinforce_count = TryGetProp(etc_object, "AetherGemReinforceCount", 0);
+        reinforce_count_total = reinforce_count_total + reinforce_count
+        for i = 460, PC_MAX_LEVEL, 20 do
+            reinforce_count_total = reinforce_count_total + TryGetProp(etc_object, "AetherGemReinforceCount_" .. i, 0);
+        end
+    end
+
     return reinforce_count_total;
 end
 
--- 에테르 젬 강화 460Lv Count 가져오기
-function get_aether_gem_reinforce_count_460(self)
+function get_aether_gem_reinforce_count_by_level(self, level)
     local reinforce_count = 0;
     if IsServerSection() == 0 then
         local etc_object = GetMyEtcObject();
         if etc_object ~= nil then
-            reinforce_count = TryGetProp(etc_object, "AetherGemReinforceCount_460", 0);
+            reinforce_count = TryGetProp(etc_object, "AetherGemReinforceCount_" .. level, 0);
         end
     else
         if self ~= nil then
             local etc_object = GetETCObject(self);
             if etc_object ~= nil then
-                reinforce_count = TryGetProp(etc_object, "AetherGemReinforceCount_460", 0);
+                reinforce_count = TryGetProp(etc_object, "AetherGemReinforceCount_" .. level, 0);
             end
         end
     end
     return reinforce_count;
 end
 
--- 480Lv 에테르 젬 강화 Count 가져오기
-function get_aether_gem_reinforce_count_480(self)
-    local reinforce_count = 0;
-    if IsServerSection() == 0 then
-        local etc_object = GetMyEtcObject();
-        if etc_object ~= nil then
-            reinforce_count = TryGetProp(etc_object, "AetherGemReinforceCount_480", 0);
-        end
-    else
-        if self ~= nil then
-            local etc_object = GetETCObject(self);
-            if etc_object ~= nil then
-                reinforce_count = TryGetProp(etc_object, "AetherGemReinforceCount_480", 0);
-            end
-        end
+function is_valid_transfer_aether_gem(left, right)
+    local left_grade = TryGetProp(left, 'NumberArg1', 0)
+    local right_grade = TryGetProp(right, 'NumberArg1', 0)
+
+    if left_grade == PC_MAX_LEVEL then
+        return false, 'None'
     end
-    return reinforce_count;
+
+    if left_grade >= right_grade then
+        return false, 'RequireNextGradeAetherGem'
+    end
+
+    if right_grade - left_grade ~= 20 then
+        return false, 'RequireNextGradeAetherGem'
+    end
+
+    local left_lv = get_current_aether_gem_level(left)
+    local right_lv = get_current_aether_gem_level(right)
+
+    if right_lv >= left_lv then
+        return false, 'aleadyHighLevel'
+    end
+
+    if is_max_aether_gem_level(left) == false then
+        return false, 'None'
+    end
+
+    return true, 'None'
 end
 
 -- 에테르 젬 강화 MaxCount 설정
@@ -318,6 +310,25 @@ end
 -- 에테르 젬(체력) --
 function get_aether_gem_CON_prop(level)
     return "CON", level * 2, true; -- prop_name, prop_value, use_operator   
+end
+
+
+-- lv480_aether_lvup_scroll_lv100
+function IS_ABLE_TO_USE_AETHER_LVUP_SCROLL(item, scroll)
+    if TryGetProp(scroll, 'StringArg', 'None') ~= 'aether_reinforce_scroll' then
+        return false, 'DontUseItem'
+    end 
+
+    local gem_level = get_current_aether_gem_level(item);    
+	if gem_level >= TryGetProp(scroll, 'NumberArg2', 0) then
+		return false, 'cant_use_more_than_lvup_point'
+	end
+
+    if TryGetProp(item, 'NumberArg1', 0) == TryGetProp(scroll, 'NumberArg1', 0) then
+        return true
+    end
+
+	return false, 'DontUseItem'
 end
 
 -- 테스트

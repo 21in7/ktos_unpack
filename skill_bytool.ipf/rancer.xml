@@ -693,6 +693,15 @@
                 <Scp Scp="SKL_RUN_SCRIPT" Client="NO" UseSleep="NO" Time="0">
                     <Str Str="SCR_VIBORA_THSPEAR_CRUSH_TRIGGER"/>
                 </Scp>
+                <Scp Scp="SKL_BUFF" Client="NO" UseSleep="NO" Time="500">
+                    <Str Str="Crush_Buff"/>
+                    <Num Num="1"/>
+                    <Num Num="0"/>
+                    <Num Num="5000"/>
+                    <Num Num="1"/>
+                    <Num Num="100"/>
+                    <Num Num="0"/>
+                </Scp>
             </EtcList>
             <ResultList>
                 <ToolScp Client="NO" Scp="S_R_TGTBUFF" UseSleep="NO">
@@ -704,16 +713,56 @@
                     <Num Num="100"/>
                     <Num Num="-1"/>
                 </ToolScp>
-                <ToolScp Client="NO" Scp="S_R_TGTBUFF" UseSleep="NO">
-                    <Str Str="Crush_Def_Debuff"/>
-                    <Num FuncTxt="return skill.Level;" Num="1" UseFunc="1"/>
+            </ResultList>
+        </MainSkl>
+    </Skill>
+    <Skill Name="Common_Rancer_Commence">
+        <MainSkl JumpFlee="NO" MSPDToUsePos="0" ScrLock="None">
+            <HitList>
+                <Frame Angle="0" AniTime="9999" Dist="0" ForceATK="0" HitCount="1" Length="30" PosType="0" RandDist="0" RandomPerHit="0" RotAngle="0" SklAngle="0.17453292" TermMax="0" TermMin="0" Time="9799" Type="FAN" Width="30"/>
+            </HitList>
+            <EtcList>
+                <Scp Client="NO" Scp="SKL_BUFF" Time="0" UseSleep="NO">
+                    <Str Str="Commence_Buff"/>
+                    <Num FuncTxt="return obj.Level" Num="1" UseFunc="1"/>
                     <Num Num="0"/>
-                    <Num Num="5000"/>
+                    <Num Num="30000"/>
                     <Num Num="1"/>
                     <Num Num="100"/>
-                    <Num Num="-1"/>
-                </ToolScp>                
-            </ResultList>
+                    <Num Num="0"/>
+                </Scp>                
+                <Scp Client="YES" Scp="C_VOICE_SOUND" Time="200" UseSleep="NO">
+                    <Str Str="voice_war_atk_short"/>
+                    <Str Str="voice_atk_short_war_f"/>
+                </Scp>
+            </EtcList>
+        </MainSkl>
+    </Skill>
+    <Skill Name="Common_Rancer_Prevent">
+        <MainSkl JumpFlee="NO" MSPDToUsePos="0" ScrLock="None">
+            <EtcList>                
+                <Scp Client="YES" Scp="C_VOICE_SOUND" Time="100" UseSleep="NO">
+                    <Str Str="voice_war_m_Prevent_cast"/>
+                    <Str Str="voice_war_Prevent_cast"/>
+                </Scp>
+                <Scp Client="YES" Scp="C_SOUND" Time="100" UseSleep="NO">
+                    <Str Str="skl_eff_rancer_prevent_sphere"/>
+                </Scp>
+                <Scp Client="YES" Scp="C_EFFECT" Time="250" UseSleep="NO">
+                    <Str_Arg Arg="5.5" Str="F_buff_basic049"/>
+                    <Str Str="Bip01 Neck"/>
+                    <Num Num="0"/>
+                </Scp>
+                <Scp Client="NO" Scp="SKL_BUFF" Time="300" UseSleep="NO">
+                    <Str Str="Prevent_Buff"/>
+                    <Num FuncTxt="return obj.Level;" Num="0" UseFunc="1"/>
+                    <Num Num="0"/>
+                    <Num FuncTxt="return 2000" Num="0" UseFunc="1"/>
+                    <Num Num="1"/>
+                    <Num Num="100"/>
+                    <Num Num="0"/>
+                </Scp>
+            </EtcList>
         </MainSkl>
     </Skill>
     <Skill Name="Rancer_Crush_2">

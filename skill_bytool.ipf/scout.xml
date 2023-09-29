@@ -103,7 +103,7 @@
 				</Scp>
 			</EtcList>
 			<ResultList>
-				<ToolScp Client="NO" Scp="S_R_SET_FORCE_DAMAGE" UseSleep="NO">
+				<ToolScp Client="NO" Scp="S_R_SET_FORCE_DAMAGE_ADDBLOW" UseSleep="NO">
 					<Num Num="1"/>
 					<Num Num="1"/>
 					<Num Num="2"/>
@@ -128,7 +128,7 @@
 				<ToolScp Client="NO" Scp="S_R_COND_TGTBUFF" UseSleep="NO">
 					<Str Str="JollyRoger_Enemy_Debuff"/>
 				</ToolScp>
-				<ToolScp Client="NO" Scp="S_R_SET_FORCE_DAMAGE" UseSleep="NO">
+				<ToolScp Client="NO" Scp="S_R_SET_FORCE_DAMAGE_ADDBLOW" UseSleep="NO">
 					<Num Num="1"/>
 					<Num Num="1"/>
 					<Num Num="2"/>

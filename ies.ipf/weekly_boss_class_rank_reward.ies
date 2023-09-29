@@ -87,3 +87,5 @@ ClassID,reward_id,class_id,Desc,rank_1
 86,1,2024,"케라우노스","Item_Achieve_Keraunos/1;"
 87,1,4022,"라마","Item_Achieve_Lama/1;"
 88,1,5018,"재규어","Item_Achieve_Jaguar/1;"
+89,1,1024,"신극","Item_Achieve_SpearMaster/1;"
+90,1,3106,"엔지니어","Item_Achieve_Enginner/1;"
