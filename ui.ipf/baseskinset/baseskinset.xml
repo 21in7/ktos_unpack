@@ -10803,17 +10803,17 @@
 		<image name="weekboss_legend_hud_R" file="\skin\weekbossraid_skin.tga" imgrect="414 435 54 145"/>
 		<image name="weekboss_goddess_hud_L" file="\skin\weekbossraid_skin.tga" imgrect="0 580 113 145" CMM_Caption="가디스 허드.VER1"/>
 		<image name="weekboss_goddess_hud_R" file="\skin\weekbossraid_skin.tga" imgrect="414 580 54 145"/>
-		<image name="weekboss_default_hud_L2" file="\skin\weekbossraid_skin.tga" imgrect="769 725 114 145" CMM_Caption="기본 허드.VER2"/>
+		<image name="weekboss_default_hud_L2" file="\skin\weekbossraid_skin.tga" imgrect="767 725 114 145" CMM_Caption="기본 허드.VER2"/>
 		<image name="weekboss_default_hud_R2" file="\skin\weekbossraid_skin.tga" imgrect="1180 725 54 145"/>
-		<image name="weekboss_normal_hud_L2" file="\skin\weekbossraid_skin.tga" imgrect="769 0 114 145" CMM_Caption="노말 허드.VER2"/>
+		<image name="weekboss_normal_hud_L2" file="\skin\weekbossraid_skin.tga" imgrect="767 0 114 145" CMM_Caption="노말 허드.VER2"/>
 		<image name="weekboss_normal_hud_R2" file="\skin\weekbossraid_skin.tga" imgrect="1180 0 54 145"/>
-		<image name="weekboss_magic_hud_L2" file="\skin\weekbossraid_skin.tga" imgrect="769 145 114 145" CMM_Caption="매직 허드.VER2"/>
+		<image name="weekboss_magic_hud_L2" file="\skin\weekbossraid_skin.tga" imgrect="767 145 114 145" CMM_Caption="매직 허드.VER2"/>
 		<image name="weekboss_magic_hud_R2" file="\skin\weekbossraid_skin.tga" imgrect="1180 145 54 145"/>
-		<image name="weekboss_unique_hud_L2" file="\skin\weekbossraid_skin.tga" imgrect="769 290 114 145" CMM_Caption="유니크 허드.VER2"/>
+		<image name="weekboss_unique_hud_L2" file="\skin\weekbossraid_skin.tga" imgrect="767 290 114 145" CMM_Caption="유니크 허드.VER2"/>
 		<image name="weekboss_unique_hud_R2" file="\skin\weekbossraid_skin.tga" imgrect="1180 290 54 145"/>
-		<image name="weekboss_legend_hud_L2" file="\skin\weekbossraid_skin.tga" imgrect="769 435 114 145" CMM_Caption="레전드 허드.VER2"/>
+		<image name="weekboss_legend_hud_L2" file="\skin\weekbossraid_skin.tga" imgrect="767 435 114 145" CMM_Caption="레전드 허드.VER2"/>
 		<image name="weekboss_legend_hud_R2" file="\skin\weekbossraid_skin.tga" imgrect="1180 435 54 145"/>
-		<image name="weekboss_goddess_hud_L2" file="\skin\weekbossraid_skin.tga" imgrect="769 580 114 145" CMM_Caption="가디스 허드.VER2"/>
+		<image name="weekboss_goddess_hud_L2" file="\skin\weekbossraid_skin.tga" imgrect="767 580 114 145" CMM_Caption="가디스 허드.VER2"/>
 		<image name="weekboss_goddess_hud_R2" file="\skin\weekbossraid_skin.tga" imgrect="1180 580 54 145"/>
 		<image name="weekboss_default_hud_pcinfo_L" file="\skin\weekbossraid_skin.tga" imgrect="1537 135 21 26" CMM_Caption="기본 체력바.VER1"/>
 		<image name="weekboss_default_hud_pcinfo_R" file="\skin\weekbossraid_skin.tga" imgrect="1662 135 21 26"/>
@@ -16625,12 +16625,11 @@
 		<image name="popolion_roulette_icon_clicked" file="\skin\popolion_roulette.tga" imgrect="786 2 72 72" CMM_Caption="포포리온 룰렛 타이틀"/>
 	</imagelist>
 		<imagelist category="hudskin">
-		<image name="weekboss_default_hud_soulCrystal_bg" file="\skin\indun_skin.tga" imgrect="614 552 84 86" CMM_Caption="소울크리스탈 횟수제한 UI"/>
-		<image name="weekboss_normal_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="0 0 84 86" CMM_Caption="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
-		<image name="weekboss_magic_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="84 0 84 86" CMM_CaptionFw="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
-		<image name="weekboss_unique_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="168 0 84 86" CMM_Caption="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
-		<image name="weekboss_legend_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="252 0 84 86" CMM_Caption="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
-		<image name="weekboss_goddess_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="336 0 84 86" CMM_Caption="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
-
+		<image name="weekboss_default_hud_soulCrystal_bg" file="\skin\indun_skin.tga" imgrect="614 552 83 86" CMM_Caption="소울크리스탈 횟수제한 UI"/>
+		<image name="weekboss_normal_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="0 0 83 86" CMM_Caption="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
+		<image name="weekboss_magic_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="84 0 83 86" CMM_CaptionFw="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
+		<image name="weekboss_unique_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="168 0 83 86" CMM_Caption="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
+		<image name="weekboss_legend_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="252 0 83 86" CMM_Caption="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
+		<image name="weekboss_goddess_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="336 0 83 86" CMM_Caption="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
 	</imagelist>
 </skinset>

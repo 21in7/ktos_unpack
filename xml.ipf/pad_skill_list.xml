@@ -30564,6 +30564,69 @@ return 3 + obj.Level * 0.5"/>
             </ToolScp>
         </updateEvent>
     </PadSkill>
+    <PadSkill Name="Slogutis_Restriction_SafeZone_Active_Pad" CheckerType="0" PadHeight="1" Range="40" UpdateTerm="1000" ApplyFlyMon="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="20000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_pattern013_ground2_green" Arg="0.6"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </createEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_TGT_SCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_SLOGUTIS_RESTRICTION_SAFE_ZONE_PAD_ENTER"/>
+            </ToolScp>
+        </enterEvent>
+          <leaveEvent>
+            <ToolScp Scp="PAD_TGT_SCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_SLOGUTIS_RESTRICTION_SAFE_ZONE_PAD_LEAVE"/>
+            </ToolScp>
+        </leaveEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_SLOGUTIS_RESTRICTION_SAFE_ZONE_PAD_UPDATE"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
+    <PadSkill Name="Slogutis_Restriction_SafeZone_UnActive_Pad" CheckerType="0" PadHeight="1" Range="40" UpdateTerm="1000" ApplyFlyMon="1" EnableSearch="0">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="20000"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="C_PAD_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Str_Arg Str="F_pattern013_ground2_red" Arg="0.6"/>
+                <Pos Angle="0" Dist="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="None" Arg="1"/>
+                <Num Num="0"/>
+            </ToolScp>
+        </createEvent>
+        <enterEvent>
+            <ToolScp Scp="PAD_TGT_SCRIPT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_SLOGUTIS_RESTRICTION_UNSAFE_ZONE_PAD_ENTER"/>
+            </ToolScp>
+        </enterEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1000"/>
+                <Num Num="0"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_FUNC_UPDATE_DIRECT" Client="NO" UseSleep="NO">
+                <Str Str="SCR_SLOGUTIS_RESTRICTION_UNSAFE_ZONE_PAD_UPDATE"/>
+            </ToolScp>
+        </updateEvent>
+    </PadSkill>
 	<PadSkill Name="VIBORA_ArousalCharm_Fire_Pad" CheckerType="0" deadProcess="1" Dist="5.1272907" Angle="1.6337266" Range="25" UpdateTerm="550" AutoDir="1" ApplyFlyMon="1" AllowOverlap="1">
 		<createEvent>
 			<ToolScp Scp="PAD_CONCURRENT_USE_COUNT" Client="NO" UseSleep="NO">

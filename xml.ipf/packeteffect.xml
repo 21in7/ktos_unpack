@@ -11626,6 +11626,11 @@
         <Effect Name="Event2023_Moon_Rabbit"/>
         <Effect Name="Event_Manager"/>
         <Effect Name="event_moon_rabbit"/>
+        <Effect Name="Slogutis_Restriction_SafeZone_Pad"/>
+        <Effect Name="F_pattern024_eye_loop"/>
+        <Effect Name="Slogutis_Restriction_SafeZone_Active_Pad"/>
+        <Effect Name="Slogutis_Restriction_SafeZone_UnActive_Pad"/>
+        <Effect Name="SlogutisRestriction"/>
     </Category>
     <Category ID="19">
         <Effect Name="I_fallen_statue_atk002_mash"/>

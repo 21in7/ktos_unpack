@@ -4461,7 +4461,6 @@ function CHECK_TOSW_WEEKLY_CONTENTS_RESTRICT_TIME()
     return false;
 end
 
-
 -- 트오세 W 통합 제한
 function CHECK_TOSW_RESTRICT_TIME()
     --[[ local time;
@@ -4529,6 +4528,51 @@ function CHECK_TOSW_TEAM_BATTLE_LEAGUE_RESTRICT_TIME()
     return false;
 end
 
+-- 트오세 W - 이벤트 제한
+function CHECK_TOSW_EVENT_RESTRICT_TIME(indun_class_name)
+    local time;
+    if IsServerSection() == 1 then
+        time = GetDBTime();
+    elseif IsServerSection() ~= 1 then
+        time = geTime.GetServerSystemTime();
+    end
+
+    if indun_class_name ~= "Event2023_Moon_Rabbit" then
+        return true;
+    end
+
+    if time ~= nil then
+        local month = time.wMonth;
+        if month == 10 then
+            local day = time.wDay;
+            local hour = time.wHour;
+            local nation = GetServerNation();
+            if nation == "GLOBAL" then
+                if day >= 24 then
+                    if hour >= 6 then
+                        return false;
+                    end
+                    return true;
+                end
+            elseif nation == "GLOBAL_JP" then
+                if day >= 24 then
+                    if hour >= 6 then
+                        return false;
+                    end
+                    return true;
+                end
+            elseif nation == "GLOBAL_KOR" then
+                if day >= 24 then
+                    if hour >= 6 then
+                        return false;
+                    end
+                    return true;
+                end
+            end
+        end
+    end
+    return false;
+end
 
 -- 사용한 tp 값에 따른 아이템 구입 가능 조건 체크
 -- ex) 플레이어의 사용 tp가 0일 때만 살 수 있는 아이템을 구입할 때 현재 플레이어의 사용 tp가 0이 맞으면 true 반환

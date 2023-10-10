@@ -22,6 +22,17 @@ end
 
 function GET_COLONY_REWARD_ITEM()
     local guild_colony_rule = GetClass('guild_colony_rule', 'GuildColony_Rule_Default');
+
+    if IsServerSection() == 1 then
+        if GetServiceNation() == 'PAPAYA' then
+            guild_colony_rule = GetClass('guild_colony_rule', 'GuildColony_Rule_PAPAYA')
+        end
+    else
+        if config.GetServiceNation() == 'PAPAYA' then
+            guild_colony_rule = GetClass('guild_colony_rule', 'GuildColony_Rule_PAPAYA')
+        end
+    end
+
     local rewardItem = TryGetProp(guild_colony_rule, 'RewardItem');
     if rewardItem == nil then
         return 'None';
@@ -92,16 +103,43 @@ end
 
 function GET_COLONY_MONSTER_CLASS_NAME()
     local ruleCls = GetClass('guild_colony_rule', 'GuildColony_Rule_Default');
+    if IsServerSection() == 1 then
+        if GetServiceNation() == 'PAPAYA' then
+            ruleCls = GetClass('guild_colony_rule', 'GuildColony_Rule_PAPAYA')
+        end
+    else
+        if config.GetServiceNation() == 'PAPAYA' then
+            ruleCls = GetClass('guild_colony_rule', 'GuildColony_Rule_PAPAYA')
+        end
+    end
     return ruleCls.GuildColonyBossClassName;
 end
 
 function GET_COLONY_TOWER_CLASS_NAME()
     local ruleCls = GetClass('guild_colony_rule', 'GuildColony_Rule_Default');
+    if IsServerSection() == 1 then
+        if GetServiceNation() == 'PAPAYA' then
+            ruleCls = GetClass('guild_colony_rule', 'GuildColony_Rule_PAPAYA')
+        end
+    else
+        if config.GetServiceNation() == 'PAPAYA' then
+            ruleCls = GetClass('guild_colony_rule', 'GuildColony_Rule_PAPAYA')
+        end
+    end
     return ruleCls.GuildColonyTowerClassName;
 end
 
 function GET_COLONY_ENHANCER_CLASS_NAME()
     local ruleCls = GetClass('guild_colony_rule', 'GuildColony_Rule_Default');
+    if IsServerSection() == 1 then
+        if GetServiceNation() == 'PAPAYA' then
+            ruleCls = GetClass('guild_colony_rule', 'GuildColony_Rule_PAPAYA')
+        end
+    else
+        if config.GetServiceNation() == 'PAPAYA' then
+            ruleCls = GetClass('guild_colony_rule', 'GuildColony_Rule_PAPAYA')
+        end
+    end
     return ruleCls.GuildColonyEnhancerClassName;
 end
 

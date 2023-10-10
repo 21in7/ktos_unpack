@@ -3411,7 +3411,7 @@ end
 function SCR_GET_ShieldTrain_Ratio(skill)
     local pc = GetSkillOwner(skill);
     local value = 10
-    if IsPVPField(self) == 1 and value > 2 then
+    if IsPVPField(pc) == 1 and value > 2 then
         value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
     end
     return value
@@ -15766,7 +15766,7 @@ function SCR_COMMON_COOLDOWN_DECREASE(pc, skill, basicCoolDown)
         if TryGetProp(tempskill, 'CastingCategory', 'None') == 'cast' and TryGetProp(tempskill, 'ValueType', 'None') == 'Attack' then
             basicCoolDown = basicCoolDown * (1 - (0.05 * stack)) -- 부위당 5%
         elseif TryGetProp(tempskill, 'CastingCategory', 'None') == 'dynamic_casting' and TryGetProp(tempskill, 'ValueType', 'None') == 'Attack' then
-            basicCoolDown = basicCoolDown * (1 - (0.05 * 0.75 * stack)) -- 부위당 3.75%
+                basicCoolDown = basicCoolDown * (1 - (0.05 * stack)) -- 부위당 5%
         end
     end
     end

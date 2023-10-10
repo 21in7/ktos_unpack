@@ -1122,7 +1122,7 @@
 			<picture name="index" rect="0 0 5 5" margin="14 0 0 0" hittest="false" layout_gravity="left center" image="white_dot" stretch="true"/>
 		</controls>
 	</controlset>
-	<controlset name="partyinfo" toggle="false" hittest="true" width="450" height="80" skin="" hittestset="true">
+	<controlset name="partyinfo" toggle="false" hittest="true" width="700" height="80" skin="" hittestset="true">
 		<controls>
 			<picture name="jobBG" rect="0 0 80 75" hittest="true" margin="1 2 0 0" layout_gravity="left top" stretch="true"/>
 			<gauge name="hp" rect="0 0 134 22" margin="76 10 0 0" ratewidth="true" skin="party_info_gauge_hp_2" text1="{ds}{b}%v / %m" textoffset1="0 1" textfont1="white_12_ol" textalign1="center top" hittest="false" layout_gravity="left center" point="100"/>
@@ -1132,8 +1132,8 @@
 			<picture name="jobportrait" parent="jobportrait_bg" rect="0 0 50 50" hittest="true" margin="-2 0 0 0" layout_gravity="left top" stretch="true"/>
 			<picture name="leader_img" rect="0 0 26 16" hittest="false" margin="28 4 0 0" layout_gravity="left top" image="party_leader_mark" stretch="true"/>
 			<richtext name="name_text" rect="0 0 150 30" margin="113 -10 0 0" spacey="0" fontname="white_16_ol" layout_gravity="left center" hittest="false" textalign="left center" caption="ASDSAASDADA" format="{@st43b}{s14}%s" param1="name" param1_def="ZZZZZZZZZZZZZZ"/>
-			<slotset name="buffList" margin="220 -10 0 0" rect="0 0 240 20" layout_gravity="left center" size="25 25" skin="slot_empty" enablepop="false" enabledrop="false" spc="2 2" image="slot" col="12" row="1"/>
-			<slotset name="debuffList" margin="220 32 0 0" rect="0 0 240 40" layout_gravity="left center" size="25 25" skin="slot_empty" enablepop="false" enabledrop="false" spc="2 2" image="slot" col="12" row="2"/>
+			<slotset name="buffList" margin="220 -10 0 0" rect="0 0 400 20" layout_gravity="left center" size="25 25" skin="slot_empty" enablepop="false" enabledrop="false" spc="2 2" image="slot" col="12" row="1"/>
+			<slotset name="debuffList" margin="220 32 0 0" rect="0 0 400 50" layout_gravity="left center" size="25 25" skin="slot_empty" enablepop="false" enabledrop="false" spc="2 2" image="slot" col="12" row="2"/>
 			<groupbox name="lvbox" margin="65 15 0 0" rect="0 0 46 30" hittestbox="false" skin="false" layout_gravity="left top" scrollbar="false"/>
 			<richtext name="level_text" rect="0 0 46 30" margin="0 0 0 0" resizebytext="false" updateparent="false" layout_gravity="center center" hittest="false" textalign="center center" format="{@st43b}{s14}%s" param1="lv" param1_def="1" scroll="false" parent="lvbox"/>
 		</controls>
@@ -1692,6 +1692,7 @@
 			<picture name="isNew_mark" margin="0 60 0 0" rect="0 0 72 34" hittest="false" image="new_mark2" changecursor="false" layout_gravity="left top"/>
 			<picture name="isHot_mark" margin="0 94 0 0" rect="0 0 72 34" hittest="false" image="hot_mark2" changecursor="false" layout_gravity="left top"/>
 			<picture name="isSale_mark" margin="0 94 0 0" rect="0 0 72 34" hittest="false" image="sale_mark2" changecursor="false" layout_gravity="left top"/>
+			<picture name="isLimit_mark" margin="0 60 0 0" rect="0 0 72 34" hittest="false" image="limit_mark_K" changecursor="false" layout_gravity="left top"/>
 		</controls>
 	</controlset>
 	<controlset name="tpshop_recycle_popup" hittest="true" width="440" height="90" hittestset="false" draw="true" skin="" stateskin="false">
