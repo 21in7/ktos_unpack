@@ -4571,7 +4571,7 @@ function CHECK_TOSW_EVENT_RESTRICT_TIME(indun_class_name)
             end
         end
     end
-    return false;
+    return true;
 end
 
 -- 사용한 tp 값에 따른 아이템 구입 가능 조건 체크

@@ -85,6 +85,9 @@
 			<ToolScp Client="NO" Scp="MONSKL_REMOVE_PAD" UseSleep="NO">
 				<Str Str="GravityPole_PVP" />
 			</ToolScp>
+			<ToolScp Client="NO" Scp="SKL_RUN_SCRIPT" UseSleep="NO">
+				<Str Str="SCR_ITEM_GravityPole_VIBORA_FINISH"/>
+			</ToolScp>
 		</EndScripts>
 		<KeyInput>
 			<ToolScp Client="YES" Scp="SKL_KEY_DYNAMIC_CASTING" UseSleep="NO">
@@ -165,9 +168,6 @@ return value"/>
 			<ToolScp Client="YES" Scp="MONSKL_C_CLEAR_RESERVE_ANIM" UseSleep="NO" />
 			<ToolScp Client="NO" Scp="SKL_BUFF_REMOVE" UseSleep="NO">
 				<Str Str="ITEM_BUFF_VIBORA_STAFF_PSYCHOKINO"/>
-			</ToolScp>
-			<ToolScp Client="NO" Scp="SKL_RUN_SCRIPT" UseSleep="NO">
-				<Str Str="SCR_ITEM_GravityPole_VIBORA_FINISH"/>
 			</ToolScp>
 		</KeyInputEnd>
 		<KeyCancelScp>
