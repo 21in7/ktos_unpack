@@ -17596,13 +17596,18 @@ return HitC;"/>
 	<PadSkill Name="Mergen_ArrowRain" CheckerType="0" Range="80" UpdateTerm="100">
 		<createEvent>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
-				<Num Num="0" UseFunc="1" FuncTxt="
-local castTime, skillID, maxCastingTime, isLoopingCharge = GetDynamicCastingSkill(self)
+                <Num Num="0" UseFunc="1" FuncTxt="local castTime, skillID, maxCastingTime, isLoopingCharge = GetDynamicCastingSkill(self) 
 local chargeTimeRatio
 if castTime &lt; 0 then
 	chargeTimeRatio = 0
 else
 	chargeTimeRatio = math.min(1, math.max(0, castTime / maxCastingTime))
+    local quick_cast_skill = GetSkill(self, &quot;Common_Chronomancer_QuickCast&quot;)
+    local quick_cast_ratio = SCR_Get_Quickcast_Ratio(quick_cast_skill);
+    if quick_cast_ratio > 0 then
+        quick_cast_ratio = quick_cast_ratio * 0.01;
+        chargeTimeRatio = chargeTimeRatio + quick_cast_ratio;
+    end
 end
 
 return chargeTimeRatio * 5000"/>
@@ -17671,9 +17676,20 @@ return chargeTimeRatio * 5000"/>
 		<createEvent>
 			<ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
 				<Num Num="0" UseFunc="1" FuncTxt="local cast, charge = GetDynamicCastingFlowTime(self)
-local value = charge * 5000
-
-return value"/>
+if charge > 0 then 
+    local quick_cast_skill = GetSkill(self, &quot;Common_Chronomancer_QuickCast&quot;) 
+    if quick_cast_skill ~= nil then 
+        local quick_cast_ratio = SCR_Get_Quickcast_Ratio(quick_cast_skill); 
+        if quick_cast_ratio > 0 then 
+            quick_cast_ratio = quick_cast_ratio * 0.01 
+            charge = charge + quick_cast_ratio 
+        end 
+        if charge > 1 then
+            charge = 1 
+        end 
+    end 
+end 
+return charge * 5000"/>
 				<Num Num="9999"/>
 			</ToolScp>
 		</createEvent>
