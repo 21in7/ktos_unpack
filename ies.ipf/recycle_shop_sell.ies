@@ -1647,3 +1647,5 @@ ClassID,BuyPrice,SellPrice,ClassName,Category,SubCategory,PackageList
 11649,0,17,"effect_ep15elf","Recyle_Shop_Sell","Recyle_Shop_Sell",""
 11650,0,17,"certificate_RidePet_ep15picnic","Recyle_Shop_Sell","Recyle_Shop_Sell",""
 11651,0,17,"Effect_ep15spring01","Recyle_Shop_Sell","Recyle_Shop_Sell",""
+11652,0,30,"wing_squirrel","Recyle_Shop_Sell","Recyle_Shop_Sell",""
+11653,0,17,"Hat_squirrel","Recyle_Shop_Sell","Recyle_Shop_Sell",""

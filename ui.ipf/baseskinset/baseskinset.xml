@@ -1607,6 +1607,28 @@
 			<img name="centerclose"/>
 			<img name="bottomclose"/>
 		</skin>
+		<skin name="cupole_main_frame" texture="\skin\cupole_hud.tga">
+			<img name="topleft" imgrect="1 78 40 40"/>
+			<img name="topcore" imgrect="42 78 40 40"/>
+			<img name="topright" imgrect="83 78 40 40"/>
+			<img name="bodyleft" imgrect="1 119 40 40"/>
+			<img name="bodycore" imgrect="42 119 40 40"/>
+			<img name="bodyright" imgrect="83 119 40 40"/>
+			<img name="bottomleft" imgrect="1 160 40 40"/>
+			<img name="bottomcore" imgrect="42 160 40 40"/>
+			<img name="bottomright" imgrect="83 160 40 40"/>
+		</skin>
+		<skin name="cupole_sub_frame" texture="\skin\cupole_hud.tga">
+			<img name="topleft" imgrect="124 78 30 30"/>
+			<img name="topcore" imgrect="155 78 30 30"/>
+			<img name="topright" imgrect="186 78 30 30"/>
+			<img name="bodyleft" imgrect="124 109 30 30"/>
+			<img name="bodycore" imgrect="155 109 30 30"/>
+			<img name="bodyright" imgrect="186 109 30 30"/>
+			<img name="bottomleft" imgrect="124 140 30 30"/>
+			<img name="bottomcore" imgrect="155 140 30 30"/>
+			<img name="bottomright" imgrect="186 140 30 30"/>
+		</skin>
 	</skinlist>
 	<skinlist category="testjoo_buttons">
 		<skin name="test_skin_01_btn" texture="\skin\pip_test.tga">
@@ -11286,6 +11308,9 @@
 		<image name="class_tree_job_hidden_btn" file="\skin\class_tree.tga" imgrect="1 335 317 109" CMM_Caption="전직_히든"/>
 		<image name="class_tree_job_hidden_btn_cursoron" file="\skin\class_tree.tga" imgrect="319 335 317 109"/>
 		<image name="class_tree_job_hidden_btn_clicked" file="\skin\class_tree.tga" imgrect="319 335 317 109"/>
+		<image name="class_tree_job_special_btn" file="\skin\class_tree.tga" imgrect="693 881 317 109" CMM_Caption="전직_히든"/>
+		<image name="class_tree_job_special_btn_cursoron" file="\skin\class_tree.tga" imgrect="693 881 317 109"/>
+		<image name="class_tree_job_special_btn_clicked" file="\skin\class_tree.tga" imgrect="693 881 317 109"/>
 		<image name="class_tree_job_hidden_sel_btn" file="\skin\class_tree.tga" imgrect="693 221 317 109" CMM_Caption="전직_전직한 히든"/>
 		<image name="class_tree_job_hidden_sel_btn_cursoron" file="\skin\class_tree.tga" imgrect="693 331 317 109"/>
 		<image name="class_tree_job_hidden_sel_btn_clicked" file="\skin\class_tree.tga" imgrect="693 331 317 109"/>
@@ -13880,6 +13905,7 @@
 		<image name="key_SPACE" file="\icon\keycap_icon.tga" imgrect="576 128 128 64"/>
 		<image name="key_wheel" file="\icon\keycap_icon.tga" imgrect="960 128 64 64"/>
 		<image name="key_empty" file="\icon\keycap_icon.tga" imgrect="768 256 64 64"/>
+		<image name="key_TAB" file="\icon\keycap_icon.tga" imgrect="832 192 64 64"/>
 	</imagelist>
 	<imagelist category="social_icon">
 		<image name="icon_life_sell" file="\icon\system\icon_life_sell.tga" imgrect="0 0 80 80"/>
@@ -15488,6 +15514,7 @@
 		<image name="icon_buff_ridepet_ep15explorer" file="\icon\buff_icon7.tga" imgrect="0 128 128 128" CMM_Caption="아기공룡 버프"/>
 		<image name="icon_debuff_disable_movingforward" file="\icon\buff_icon7.tga" imgrect="128 128 128 128" CMM_Caption="전방이동사용불가"/>
 		<image name="icon_buff_ridepet_ep15elf" file="\icon\buff_icon7.tga" imgrect="256 128 128 128" CMM_Caption="요정 여왕의 선물 버프"/>
+		<image name="icon_buff_ridepet_tw_zebra" file="\icon\buff_icon7.tga" imgrect="384 128 128 128" CMM_Caption="얼룩말 버프"/>
 	</imagelist>
 	<imagelist category="housing_bufficon">
 		<image name="icon_Weapon_Klaida" file="\icon\icon_hosing_buff.tga" imgrect="0 0 128 128"/>
@@ -16284,6 +16311,9 @@
 		<image name="plate_achieve_PAPAYA_Walking_tos_guide" file="\skin\user_title_skin2.tga" imgrect="1070 68 214 34" CMM_Caption=" "/>
 		<image name="plate_achieve_PAPAYA_tree_of_creator" file="\skin\user_title_skin2.tga" imgrect="856 68 214 34" CMM_Caption=" "/>
 		<image name="plate_achieve_PAPAYA_territorial_conquerors" file="\skin\user_title_skin2.tga" imgrect="0 102 214 34" CMM_Caption=" "/>
+		<image name="plate_achieve_roze_weekraid" file="\skin\user_title_skin2.tga" imgrect="214 102 214 34" CMM_Caption="로제 더 미저러블 주보레 칭호"/>
+		<image name="plate_achieve_upinis_weekraid" file="\skin\user_title_skin2.tga" imgrect="428 102 214 34" CMM_Caption="우피니스 주보레 칭호"/>
+		<image name="plate_achieve_slogutis_weekraid" file="\skin\user_title_skin2.tga" imgrect="642 102 214 34" CMM_Caption="슬로거티스 주보레 칭호"/>
 	</imagelist>
 	<imagelist category="skin_hair">
 		<image name="icon_skintone_01_m01" file="\skin\skinhair\icon_skintone_01_m01.png" imgrect="0 0 80 80" CMM_Caption="남성 01"/>
@@ -16440,6 +16470,7 @@
 		<image name="ridepet_unicorn" file="\icon\ridepet.tga" imgrect="80 160 80 80" CMM_Caption="유니콘"/>
 		<image name="ridepet_ep15explorer" file="\icon\ridepet.tga" imgrect="160 160 80 80" CMM_Caption="아기 공룡"/>
 		<image name="ridepet_ep15elf" file="\icon\ridepet.tga" imgrect="240 160 80 80" CMM_Caption="요정 여왕의 선물"/>
+		<image name="ridepet_zebra" file="\icon\ridepet.tga" imgrect="320 160 80 80" CMM_Caption="얼룩말"/>
 	</imagelist>
 	<effectimagelist category="effectlist">
 		<image name="blue_orb" file="\icon\blue_orb.tga" imgrect="0 0 256 256"/>
@@ -16624,7 +16655,7 @@
 		<image name="popolion_roulette_icon_cursoron" file="\skin\popolion_roulette.tga" imgrect="713 2 72 72" CMM_Caption="포포리온 룰렛 타이틀"/>
 		<image name="popolion_roulette_icon_clicked" file="\skin\popolion_roulette.tga" imgrect="786 2 72 72" CMM_Caption="포포리온 룰렛 타이틀"/>
 	</imagelist>
-		<imagelist category="hudskin">
+	<imagelist category="hudskin">
 		<image name="weekboss_default_hud_soulCrystal_bg" file="\skin\indun_skin.tga" imgrect="614 552 83 86" CMM_Caption="소울크리스탈 횟수제한 UI"/>
 		<image name="weekboss_normal_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="0 0 83 86" CMM_Caption="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
 		<image name="weekboss_magic_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="84 0 83 86" CMM_CaptionFw="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
@@ -16632,4 +16663,9 @@
 		<image name="weekboss_legend_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="252 0 83 86" CMM_Caption="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
 		<image name="weekboss_goddess_hud_soulCrystal_bg" file="\skin\hud_skin_soulcrystal.tga" imgrect="336 0 83 86" CMM_Caption="주간 보스 레이드 HUD 스킨 소울 크리스탈"/>
 	</imagelist>
+	<imagelist category="cupole">
+		<image name="cupole_ui_head" file="\skin\cupole_hud.tga" imgrect="1 1 590 76"/>
+
+	</imagelist>
+
 </skinset>

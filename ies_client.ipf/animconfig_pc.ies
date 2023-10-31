@@ -1631,3 +1631,6 @@ ClassID,BlendIn,BlendOut,Priority,OffsetValue,ClassName,Main,Loop,Freeze,Additiv
 1675,0,0,4,0,"STD_EP15ELF","YES","YES","NO","NO","YES","NO","NO","","YES","Stand"
 1676,0,0,4,0,"RUN_EP15ELF","YES","YES","NO","NO","YES","NO","NO","","NO","Stand"
 1677,0,0,4,0,"WLK_EP15ELF","YES","YES","NO","NO","YES","NO","NO","","NO","Stand"
+1678,0,0,4,0,"STD_TW_ZEBRA","YES","YES","NO","NO","YES","NO","NO","","YES","Stand"
+1679,0,0,4,0,"RUN_TW_ZEBRA","YES","YES","NO","NO","YES","NO","NO","","NO","Stand"
+1680,0,0,4,0,"WLK_TW_ZEBRA","YES","YES","NO","NO","YES","NO","NO","","NO","Stand"

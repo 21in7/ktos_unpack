@@ -196,3 +196,5 @@ ClassID,Count,Price,ClassName,ItemClassName,Group,GachaType,RewardGroup,PreCheck
 226,11,300,"Gacha_7TH_010_TWN","Gacha_7TH_010_TWN","CUBE","hair","Gacha_7TH_001_TWN","","Gacha_7TH_001_TWN","1","CUBE","NO","",""
 231,1,37,"Gacha_2023_W_Resale_001","Gacha_2023_W_Resale_001","CUBE","hair","Gacha_2023_W_Resale_001","","Gacha_2023_W_Resale_001","1","CUBE","YES","",""
 232,11,370,"Gacha_2023_W_Resale_010","Gacha_2023_W_Resale_010","CUBE","hair","Gacha_2023_W_Resale_001","","Gacha_2023_W_Resale_001","1","CUBE","YES","",""
+233,1,37,"Gacha_Halloween_Animals_Resale_001","Gacha_Halloween_Animals_Resale_001","CUBE","hair","Gacha_Halloween_Animals_Resale_001","","Gacha_Halloween_Animals_Resale_001","1","CUBE","YES","",""
+234,11,370,"Gacha_Halloween_Animals_Resale_010","Gacha_Halloween_Animals_Resale_010","CUBE","hair","Gacha_Halloween_Animals_Resale_001","","Gacha_Halloween_Animals_Resale_001","1","CUBE","YES","",""

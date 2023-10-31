@@ -204,6 +204,27 @@
 		<image name="icon_cler_DivinePunishment_Upgrade_1" file="\icon\skill\wizard\icon_cler_DivinePunishment_Upgrade_1.png" imgrect="0 0 128 128" CMM_Caption="천형부 강화"/>
 		<image name="icon_cler_EnergyWave_Upgrade_1" file="\icon\skill\wizard\icon_cler_EnergyWave_Upgrade_1.png" imgrect="0 0 128 128" CMM_Caption="강화부 강화"/>
 		<image name="icon_wiz_FlameRadiation_Upgrade_1" file="\icon\skill\wizard\icon_wiz_FlameRadiation_Upgrade_1.png" imgrect="0 0 128 128" CMM_Caption="멸화부 강화"/>
+		<image name="icon_wizar_Enervation2" file="\icon\skill\wizard\icon_wizar_Enervation2.png" imgrect="0 0 128 128" CMM_Caption="에너베이션 II"/>	
+		<image name="icon_wizrd_BlessOfBlood" file="\icon\skill\wizard\icon_wizrd_BlessOfBlood.png" imgrect="0 0 128 128" CMM_Caption="블레스 오브 블러드"/>		
+		<image name="icon_wizrd_ngadhundi2" file="\icon\skill\wizard\icon_wizrd_ngadhundi2.png" imgrect="0 0 128 128" CMM_Caption="은가둔디 II"/>
+		<image name="icon_wizrd_BloodPass" file="\icon\skill\wizard\icon_wizrd_BloodPass.png" imgrect="0 0 128 128" CMM_Caption="블러디 패스"/>
+		<image name="icon_wizrd_Kundela2" file="\icon\skill\wizard\icon_wizrd_Kundela2.png" imgrect="0 0 128 128" CMM_Caption="쿤델라 II"/>
+		<image name="icon_wizrd_Bloodburst" file="\icon\skill\wizard\icon_wizrd_Bloodburst.png" imgrect="0 0 128 128" CMM_Caption="블러드 버스트"/>
+		<image name="icon_wizrd_BloodSwamp" file="\icon\skill\wizard\icon_wizrd_BloodSwamp.png" imgrect="0 0 128 128" CMM_Caption="블러드 스웜프"/>
+		<image name="icon_wizrd_CurseOfPlague" file="\icon\skill\wizard\icon_wizrd_CurseOfPlague.png" imgrect="0 0 128 128" CMM_Caption="커스 오브 플레그"/>
+		<image name="ability_Wizard_Kadiatcha1" file="\icon\icon_ability_wizard10.tga" imgrect="128 0 128 128" CMM_Caption="블러드 팽: 강화"/>
+		<image name="ability_Wizard_Kadiatcha2" file="\icon\icon_ability_wizard10.tga" imgrect="384 0 128 128" CMM_Caption="[아츠] 블러드 팽: 상급 강화"/>
+		<image name="ability_Wizard_Kadiatcha3" file="\icon\icon_ability_wizard10.tga" imgrect="256 0 128 128" CMM_Caption="블러드 팽: 강화"/>
+		<image name="ability_Wizard_Kadiatcha4" file="\icon\icon_ability_wizard10.tga" imgrect="512 0 128 128" CMM_Caption="[아츠] 블러드 팽: 상급 강화"/>
+		<image name="ability_Wizard_Kadiatcha5" file="\icon\icon_ability_wizard10.tga" imgrect="640 0 128 128" CMM_Caption="블러드 코멧: 강화"/>
+		<image name="ability_Wizard_Kadiatcha6" file="\icon\icon_ability_wizard10.tga" imgrect="0 128 128 128" CMM_Caption="[아츠] 블러드 코멧: 상급 강화"/>
+		<image name="ability_Wizard_Kadiatcha7" file="\icon\icon_ability_wizard10.tga" imgrect="768 0 128 128" CMM_Caption="블러디 버스트: 강화"/>
+		<image name="ability_Wizard_Kadiatcha8" file="\icon\icon_ability_wizard10.tga" imgrect="128 128 128 128" CMM_Caption="[아츠] 블러디 버스트: 상급 강화"/>
+		<image name="ability_Wizard_Kadiatcha9" file="\icon\icon_ability_wizard10.tga" imgrect="896 0 128 128" CMM_Caption="블러드 스웜프 강화"/>
+		<image name="ability_Wizard_Kadiatcha10" file="\icon\icon_ability_wizard10.tga" imgrect="256 128 128 128" CMM_Caption="[아츠] 블러드 스웜프: 상급 강화"/>
+		<image name="ability_Wizard_Kadiatcha11" file="\icon\icon_ability_wizard10.tga" imgrect="512 128 128 128" CMM_Caption="[아츠] 블러드 팽: 출혈"/>
+		<image name="ability_Wizard_Kadiatcha12" file="\icon\icon_ability_wizard10.tga" imgrect="384 128 128 128" CMM_Caption="[아츠] 블러드 코멧: 부패"/>
+		<image name="ability_Wizard_Kadiatcha13" file="\icon\icon_ability_wizard10.tga" imgrect="768 128 128 128" CMM_Caption="[아츠] 커스 오브 플레이그: 업보"/>
 	</imagelist>
 	<imagelist category="archer_skillicon">
 		<image name="icon_arch_doubleShot" file="\icon\skill\archer\icon_arch_doubleShot.png" imgrect="0 0 128 128" CMM_Caption="멀티샷"/>

@@ -356,7 +356,7 @@ end
 function GET_ITEM_TOOLTIP_DESC(obj, desc)
 
 	local invDesc = GET_ITEM_DESC_BY_TOOLTIP_VALUE(obj);	
-	local byDescColumn = obj.Desc;
+	local byDescColumn = TryGetProp(obj, 'Desc', 'None');
 	if byDescColumn == 'None' then
 		byDescColumn = "";
 	end

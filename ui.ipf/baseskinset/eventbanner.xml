@@ -29,7 +29,15 @@
 		<!-- PAPAYA -->
 		<image name="0919_In_game_banner_cube" file="\event_banner\0919_In_game_banner_cube.jpg" imgrect="0 0 480 180"/>
 		<image name="0919_In_game_banner_Popoboost" file="\event_banner\0919_In_game_banner_Popoboost.jpg" imgrect="0 0 480 180"/>
+		<image name="1017News" file="\event_banner\1017News.jpg" imgrect="0 0 480 180"/>
+		<image name="1024_Packsales" file="\event_banner\1024_Packsales.jpg" imgrect="0 0 480 180"/>
+		<image name="1024_News_Halloween" file="\event_banner\1024_News_Halloween.jpg" imgrect="0 0 480 180"/>
+		<image name="1024News_Cube" file="\event_banner\1024News_Cube.jpg" imgrect="0 0 480 180"/>
+		<image name="1017TP" file="\event_banner\1017TP.png" imgrect="0 0 520 250"/>
 		<!-- 해외 JPN/STM 전용 이미지 고정 경로 터치 금지 끝 -->
+		<image name="event2311_leticia" file="\event_banner\event2311_leticia.png" imgrect="0 0 480 180"/>
+		<image name="event2311_halloween" file="\event_banner\event2311_halloween.png" imgrect="0 0 480 180"/>
+		<image name="event2311_cube" file="\event_banner\event2311_cube.png" imgrect="0 0 480 180"/>
 		<image name="event2309_spring" file="\event_banner\event2309_spring.png" imgrect="0 0 480 180"/>
 		<image name="event2309_goddess" file="\event_banner\event2309_goddess.png" imgrect="0 0 480 180"/>
 		<image name="event2309_ep15package" file="\event_banner\event2309_ep15package.png" imgrect="0 0 480 180"/>
@@ -44,7 +52,7 @@
 		<image name="0725_in_game_banner_news_banner" file="\event_banner\0725_in_game_banner_news_banner.jpg" imgrect="0 0 480 180"/>
 		<image name="0905_In_game_banner_News_banner" file="\event_banner\0905_In_game_banner_News_banner.jpg" imgrect="0 0 480 180"/>
 		<image name="0912_In_game_News_banner" file="\event_banner\0912_In_game_News_banner.jpg" imgrect="0 0 480 180"/>
-		<image name="0926_In_game_banner_News_banner" file="\event_banner\0926_In_game_banner_News_banner.jpg" imgrect="0 0 480 180"/>		
+		<image name="0926_In_game_banner_News_banner" file="\event_banner\0926_In_game_banner_News_banner.jpg" imgrect="0 0 480 180"/>
 		<image name="0815_NEWS_BANNER" file="\event_banner\0815_NEWS_BANNER.jpg" imgrect="0 0 480 180"/>
 		<image name="0824_In_game_News_banner" file="\event_banner\0824_In_game_News_banner.jpg" imgrect="0 0 480 180"/>
 		<image name="GTW_Newsbanner" file="\event_banner\GTW_Newsbanner.jpg" imgrect="0 0 480 180"/>

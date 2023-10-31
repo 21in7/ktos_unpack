@@ -18712,7 +18712,6 @@ function SCR_Get_SpendSP_Featherfoot(skill)
     
     local value = SCR_Get_MSP(pc) * (0.12 - (pcSP/pcMSP*0.1))
     
-
     if IsBuffApplied(pc, 'Wizard_Wild_buff') == 'YES' then
         value = value * 1.5 * spRatio;
         return math.floor(value);

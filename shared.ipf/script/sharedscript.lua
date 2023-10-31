@@ -3277,7 +3277,6 @@ function JOB_KERAUNOS_PRE_CHECK(pc, jobCount)
     return 'NO'
 end
 
-
 function JOB_LAMA_PRE_CHECK(pc, jobCount)
     if jobCount == nil then
         jobCount = GetTotalJobCount(pc);

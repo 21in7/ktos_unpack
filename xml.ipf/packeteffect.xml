@@ -44,6 +44,24 @@
         <Effect Name="F_sys_skillrange_circle_red"/>
         <Effect Name="artefact_dragonboat_paddle"/>
         <Effect Name="skl_eff_engineer_kingmechav_skl"/>
+        <Effect Name="Kadiatcha_Bloodpool_Pad"/>
+        <Effect Name="Kadiatcha_Enervation_Pad"/>
+        <Effect Name="BodyAura_DemonicEnergy_Red_01"/>
+        <Effect Name="BodyAura_Fire_Orange_01"/>
+        <Effect Name="GroundAura_DarkSoul_Red_01"/>
+        <Effect Name="Kadiatcha_Bloodlust_Pad"/>
+        <Effect Name="Portal_BloodClose_Red_01"/>
+        <Effect Name="eff_kupole_helgasercle_bloodywave_01"/>
+        <Effect Name="eff_pc_rogue_backstab_bloodburst"/>
+        <Effect Name="eff_pc_rogue_backstab_bloodburst_large"/>
+        <Effect Name="eff_kupole_helgasercle_bloodywave_02"/>
+        <Effect Name="skl_eff_featherfoot_bloodexplosion_shot"/>
+        <Effect Name="GroundAura_Blood_Red_01"/>
+        <Effect Name="Shockwave_Blood_Red_01"/>
+        <Effect Name="PowerUp_Blood_Red_03"/>
+        <Effect Name="eff_monster_rambandgad_red_skill04_launch_01"/>
+        <Effect Name="GroundAura_SkullGhost_Red_01"/>
+        <Effect Name="Bodyaura_GhostFire_Red_01"/>
     </Category>
 	<Category ID="181">
 		<Effect Name="Baubas_Guild_Raid"/>
