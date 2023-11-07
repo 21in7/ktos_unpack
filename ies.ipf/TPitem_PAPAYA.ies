@@ -1,4 +1,9 @@
 ClassID,Price,JobGrade,Itemdate,AccountLimitCount,BonusItemCnt,AccountLimitWeeklyCount,ClassName,Category,SubCategory,ItemClassName,Job,SellStartTime,SellEndTime,WarningMsg,BonusItemName,BonusOnlySeasonServer,AccountLimitWeeklyCountProperty,buyOptionFunc,MarkType,ItemSocial
+45,256,0,231107,1,0,0,"ClassName45","TP_Premium","TP_Package","tosw_2311_package_1a","","2023-11-07 18:00:00","2023-11-21 18:00:00","NO","","NO","","","",""
+46,196,0,231107,3,0,0,"ClassName46","TP_Premium","TP_Package","tosw_2311_package_1b","","2023-11-07 18:00:00","2023-11-21 18:00:00","NO","","NO","","","",""
+47,369,0,231107,3,0,0,"ClassName47","TP_Premium","TP_Package","tosw_2311_package_2a","","2023-11-07 18:00:00","2023-11-21 18:00:00","NO","","NO","","","",""
+48,369,0,231107,3,0,0,"ClassName48","TP_Premium","TP_Package","tosw_2311_package_2b","","2023-11-07 18:00:00","2023-11-21 18:00:00","NO","","NO","","","",""
+49,1071,0,231107,1,0,0,"ClassName49","TP_Premium","TP_Package","tosw_2311_package_3a","","2023-11-07 18:00:00","2023-11-21 18:00:00","NO","","NO","","","",""
 50,98,0,231024,1,0,0,"ClassName50","TP_Premium","TP_Package","Papaya_special_ep15_2_package","","2023-10-24 18:00:00","2023-11-07 18:00:00","NO","","NO","","","",""
 51,49,0,210430,0,0,1,"ClassName51","TP_Premium","TP_Package","rada_Dungeon_Key01_NoTrade_500ea","","","","NO","","NO","AccountLimitWeeklyCountProperty_1","","",""
 52,43,0,210429,0,0,2,"ClassName52","TP_Premium","TP_Package","GoddessCard_Reinforce_package","","","","NO","","NO","AccountLimitWeeklyCountProperty_2","","",""

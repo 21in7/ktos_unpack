@@ -34,6 +34,12 @@
 		<image name="1024_News_Halloween" file="\event_banner\1024_News_Halloween.jpg" imgrect="0 0 480 180"/>
 		<image name="1024News_Cube" file="\event_banner\1024News_Cube.jpg" imgrect="0 0 480 180"/>
 		<image name="1017TP" file="\event_banner\1017TP.png" imgrect="0 0 520 250"/>
+		<image name="1031_Ingame_News_banner" file="\event_banner\1031_Ingame_News_banner.jpg" imgrect="0 0 480 180"/>
+		<image name="1107Package_NewsBanner" file="\event_banner\1107Package_NewsBanner.jpg" imgrect="0 0 480 180"/>
+		<image name="1107Costume_NewsBanner" file="\event_banner\1107Costume_NewsBanner.jpg" imgrect="0 0 480 180"/>
+		<!-- TP Banner -->
+		<image name="1031_Ingame_TP_Sop_banner" file="\event_banner\1031_Ingame_TP_Sop_banner.png" imgrect="0 0 520 250"/>
+		<image name="1107Costume_TPShop" file="\event_banner\1107Costume_TPShop.png" imgrect="0 0 520 250"/>
 		<!-- 해외 JPN/STM 전용 이미지 고정 경로 터치 금지 끝 -->
 		<image name="event2311_leticia" file="\event_banner\event2311_leticia.png" imgrect="0 0 480 180"/>
 		<image name="event2311_halloween" file="\event_banner\event2311_halloween.png" imgrect="0 0 480 180"/>
