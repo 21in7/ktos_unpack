@@ -65,6 +65,10 @@ function get_hp_recovery_ratio(pc, value, ignore_healcontrol)
         ratio = 0;
     end
     
+    if GetExProp(self, 'force_rhp_zero') > 0 then
+        ratio = 0;
+    end
+    
     return math.floor(ratio)
 end
 

@@ -37,10 +37,14 @@
 		<image name="1031_Ingame_News_banner" file="\event_banner\1031_Ingame_News_banner.jpg" imgrect="0 0 480 180"/>
 		<image name="1107Package_NewsBanner" file="\event_banner\1107Package_NewsBanner.jpg" imgrect="0 0 480 180"/>
 		<image name="1107Costume_NewsBanner" file="\event_banner\1107Costume_NewsBanner.jpg" imgrect="0 0 480 180"/>
+		<image name="1114_GG_Ingame" file="\event_banner\1114_GG_Ingame.jpg" imgrect="0 0 480 180"/>
+		<image name="1114_Community_In_game" file="\event_banner\1114_Community_In_game.jpg" imgrect="0 0 480 180"/>
 		<!-- TP Banner -->
 		<image name="1031_Ingame_TP_Sop_banner" file="\event_banner\1031_Ingame_TP_Sop_banner.png" imgrect="0 0 520 250"/>
 		<image name="1107Costume_TPShop" file="\event_banner\1107Costume_TPShop.png" imgrect="0 0 520 250"/>
+		<image name="1114_GG_TPShop" file="\event_banner\1114_GG_TPShop.jpg" imgrect="0 0 520 250"/>
 		<!-- 해외 JPN/STM 전용 이미지 고정 경로 터치 금지 끝 -->
+		<image name="event2311_goddess" file="\event_banner\event2311_goddess.png" imgrect="0 0 480 180"/>
 		<image name="event2311_leticia" file="\event_banner\event2311_leticia.png" imgrect="0 0 480 180"/>
 		<image name="event2311_halloween" file="\event_banner\event2311_halloween.png" imgrect="0 0 480 180"/>
 		<image name="event2311_cube" file="\event_banner\event2311_cube.png" imgrect="0 0 480 180"/>

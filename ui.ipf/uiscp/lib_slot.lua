@@ -43,7 +43,7 @@ imcSlot = {
 	end,
 };
 
-function SET_SLOT_ITEM_CLS(slot, itemCls)
+function SET_SLOT_ITEM_CLS(slot, itemCls)	
 	if itemCls == nil then
 		return;
 	end
@@ -52,8 +52,9 @@ function SET_SLOT_ITEM_CLS(slot, itemCls)
 		img = itemCls.Icon
 	end
 	
-	SET_SLOT_IMG(slot, img);
+	SET_SLOT_IMG(slot, img);	
 	SET_ITEM_TOOLTIP_BY_TYPE(slot:GetIcon(), itemCls.ClassID);
+	return slot:GetIcon()
 end
 
 function SET_SLOT_ITEM_INFO(slot, itemCls, count, style, x, y)
@@ -179,21 +180,21 @@ function SET_SLOT_ITEM(slot, invItem, count)
 end
 
 function SET_SLOT_STAR_TEXT(slot, invItem)	
+	local starIconProp = TryGetProp(invItem, 'StarIcon', 'None');
+	local controlset = slot:CreateOrGetControlSet('inv_itemstar', "starmark", 0, 0);
 	if (TryGetProp(invItem, "StringArg", "None") == "SkillGem" and TryGetProp(invItem, "RandomOption_1", "None") ~= "None") then
-		local controlset = slot:CreateOrGetControlSet('inv_itemstar', "starmark", 0, 0);
 		local grade = GET_CHILD(controlset, "grade")
 		grade:SetText("{img star_mark 18 18}")
 		controlset:ShowWindow(1)
 		controlset:SetGravity(ui.RIGHT, ui.TOP)
-	elseif TryGetProp(invItem, 'StarIcon', 'None') ~= 'None' then
-		local controlset = slot:CreateOrGetControlSet('inv_itemstar', "starmark", 0, 0);
+	elseif starIconProp ~= 'None' then
 		local grade = GET_CHILD(controlset, "grade")
-		local name = string.format("{img %s 18 18}", TryGetProp(invItem, 'StarIcon', 'None'))
+		local name = string.format("{img %s 18 18}", starIconProp)
 		grade:SetText(name)
 		controlset:ShowWindow(1)
 		controlset:SetGravity(ui.RIGHT, ui.TOP)		
 	else
-		-- controlset:ShowWindow(0)
+		controlset:ShowWindow(0)
 	end
 end
 
@@ -320,7 +321,7 @@ function SET_SLOT_COUNT_TEXT(slot, cnt, font, hor, ver, stateX, stateY)
 		slot:SetText(font..cnt, 'count', hor, ver, stateX, stateY);
 end
 
-function SET_SLOT_STYLESET(slot, itemCls, itemGrade_Flag, itemLevel_Flag, itemAppraisal_Flag, itemReinforce_Flag, isInventory, is_barrack)
+function SET_SLOT_STYLESET(slot, itemCls, itemGrade_Flag, itemLevel_Flag, itemAppraisal_Flag, itemReinforce_Flag, isInventory, is_barrack)		
 	if slot == nil then
 		return
 	end
@@ -332,17 +333,21 @@ function SET_SLOT_STYLESET(slot, itemCls, itemGrade_Flag, itemLevel_Flag, itemAp
 	if itemGrade_Flag == nil or itemGrade_Flag == 1 then
 		if isInventory ~= nil and isInventory == 1 and config.GetXMLConfig("ViewGradeStyle") == 0 then
 			
-		else
+		else						
 			SET_SLOT_BG_BY_ITEMGRADE(slot, itemCls)
 		end
 	end
-
+	
 	if itemLevel_Flag == nil or itemLevel_Flag == 1 then
 		if isInventory ~= nil and isInventory == 1 and config.GetXMLConfig("ViewTranscendStyle") == 0 then
 		
 		else
 			SET_SLOT_TRANSCEND_LEVEL(slot, TryGetProp(itemCls, 'Transcend'))
 		end
+	end
+
+	if shared_enchant_special_option.is_hair_acc(itemCls) == true then
+		SET_SLOT_BG_BY_ITEMGRADE(slot, itemCls)
 	end
 
 	local needAppraisal = nil
@@ -417,7 +422,7 @@ function SET_SLOT_TRANSCEND_LEVEL(slot, transcendLv)
 	
 end
 
-function SET_SLOT_BG_BY_ITEMGRADE(slot, itemCls)
+function SET_SLOT_BG_BY_ITEMGRADE(slot, itemCls)	
 	local skinName = "invenslot_nomal"
 	if slot == nil then
 		return
@@ -429,6 +434,8 @@ function SET_SLOT_BG_BY_ITEMGRADE(slot, itemCls)
 	end
 
 	local itemgrade = TryGetProp(itemCls, 'ItemGrade', 0)
+	itemgrade = GET_ITEM_GRADE(itemCls)
+	
 	if itemgrade == nil or itemgrade == 0 or itemgrade == 1 or itemgrade == "None" then
 		slot:SetSkinName(skinName)
 		return

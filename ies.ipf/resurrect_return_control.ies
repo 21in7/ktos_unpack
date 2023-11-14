@@ -27,3 +27,4 @@ ClassID,SavePoint,SoulCrystal,MainLayer,GuildTower,StartPoint,ClassName,Type,Ret
 102,0,0,0,0,0,"TOSHero_Wheel","Contents","TOSHERO_RESURRECT_BUFF"
 103,0,0,0,0,0,"TOSHero_Grid","Contents","TOSHERO_RESURRECT_BUFF"
 104,0,1,0,0,1,"BridgeWailing_Party","Contents","BRIDGE_WAILING_AUTO_RESURRECT"
+105,0,1,0,0,1,"BridgeWailing_Dimension_Party","Contents","BRIDGE_WAILING_DIMENSION_AUTO_RESURRECT"

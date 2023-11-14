@@ -28,5 +28,9 @@ function IS_ENCHANT_ITEM(item)
 		return 1;
 	end
 
+	if TryGetProp(item, 'StringArg', 'None') == 'enchantchip_low' or TryGetProp(item, 'StringArg', 'None') == 'enchantchip_high' then
+		return 1
+	end
+
 	return 0;
 end

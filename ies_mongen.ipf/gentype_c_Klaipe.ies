@@ -91,3 +91,4 @@ ClassID,GenType,Lv,Range,GenRange,RespawnTime,MaxPop,Minimap,Hide,UseAIOufOfPC,A
 5296,10128,1,40,1,1,1,2,0,0,0,0,0,"Event_2110_Npc","[이벤트]{nl}유령 소녀","","","","","","KLAPEDA_EVENT_2110_GHOST","CITY_EVENT_2110_NPC","","","NO","YES","NO","Neutral","","","",""
 5297,10129,1,40,1,1,1,2,0,0,0,0,0,"Event_2110_npc_cauldron_stew","[이벤트]{nl}호박 스튜 솥","","","","","","KLAPEDA_EVENT_2110_NPC","EVENT_2110_POT_NPC","","","NO","YES","NO","Neutral","","","",""
 5298,10130,1,40,1,1,1,2,0,0,0,0,0,"Event_2110_Npc2","[이벤트]{nl}폐도 피난민","","","","","","KLAPEDA_EVENT_2110_NPC","CITY_EVENT_2110_NPC2","","","NO","YES","NO","Neutral","","","",""
+5299,10131,1,40,1,60000,1,2,0,0,0,0,0,"npc_kupole_Bernice","[포포부스트 케어]{nl}큐폴","","","","","","","CARE_POPOBOOST_STATUS","","","NO","YES","NO","Neutral","","","",""

@@ -8489,6 +8489,9 @@
 		<image name="icon_item_egg_chick_crowtit" file="\icon\payment\icon_item_egg_chick_crowtit.png" imgrect="0 0 256 256" CMM_Caption="병아리 알"/>
 		<image name="icon_item_enchantScroll_bundle_01" file="\icon\payment\icon_item_enchantScroll_bundle_01.png" imgrect="0 0 256 256" CMM_Caption="장인의 마법 부여 스크롤_다발 상품"/>
 		<image name="icon_item_enchantScroll_01" file="\icon\payment\icon_item_enchantScroll_01.png" imgrect="0 0 256 256" CMM_Caption="장인의 마법 부여 스크롤_단품 상품"/>
+		<image name="icon_item_enchantScroll_02" file="\icon\payment\icon_item_enchantScroll_02.png" imgrect="0 0 256 256" CMM_Caption=""/>
+		<image name="icon_item_enchantScroll_03" file="\icon\payment\icon_item_enchantScroll_03.png" imgrect="0 0 256 256" CMM_Caption=""/>
+		<image name="icon_item_enchantScroll_03_bundle" file="\icon\payment\icon_item_enchantScroll_03_bundle.png" imgrect="0 0 128 128" CMM_Caption=""/>
 		<image name="icon_item_romance_selectbox01" file="\icon\payment\icon_item_romance_selectbox01.png" imgrect="0 0 256 256" CMM_Caption="2019 5월 테마"/>
 		<image name="icon_item_romance_selectbox02" file="\icon\payment\icon_item_romance_selectbox02.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_romance_selectbox03" file="\icon\payment\icon_item_romance_selectbox03.png" imgrect="0 0 256 256"/>
@@ -9811,6 +9814,19 @@
 		<image name="icon_misc_slogutis_glove" file="\icon\item\icon_misc_slogutis_glove.png" imgrect="0 0 256 256" CMM_Caption="슬로거티스 데빌 글로브"/>
 		<image name="icon_selectbox_kadiatcha_hairacc" file="\icon\payment\icon_selectbox_kadiatcha_hairacc.png" imgrect="0 0 256 256" CMM_Caption="고위 주술 가면 선택 상자"/>
 		<image name="icon_leticia_kadiatcha_unlockbox" file="\icon\payment\icon_leticia_kadiatcha_unlockbox.png" imgrect="0 0 256 256" CMM_Caption="카디앗차 해금권 상자"/>
+		<image name="icon_item_Multiple_Token_BridgeWailing_Dimension_Party" file="\icon\payment\icon_item_Multiple_Token_BridgeWailing_Dimension_Party.png" imgrect="0 0 256 256" CMM_Caption="통곡의 묘지 - 이공간 배수권"/>
+		<image name="icon_item_BridgeWailing_Dimension_Party_Enter" file="\icon\item\icon_item_BridgeWailing_Dimension_Party_Enter.png" imgrect="0 0 256 256" CMM_Caption="통곡의 묘지 - 이공간 입장권"/>
+		<image name="icon_misc_bernice_NoTrade" file="\icon\item\icon_misc_bernice_NoTrade.png" imgrect="0 0 128 128" CMM_Caption="베르니케의 정수"/>
+		<image name="icon_item_ep15heartqueen_selectbox01" file="\icon\payment\icon_item_ep15heartqueen_selectbox01.png" imgrect="0 0 256 256" CMM_Caption="하트 여왕 코스튬 선택 상자 A"/>
+		<image name="icon_item_ep15heartqueen_costume01_m" file="\icon\payment\icon_item_ep15heartqueen_costume01_m.png" imgrect="0 0 256 256" CMM_Caption="하트 여왕의 코스튬 A (남)"/>
+		<image name="icon_item_ep15heartqueen_costume01_f" file="\icon\payment\icon_item_ep15heartqueen_costume01_f.png" imgrect="0 0 256 256" CMM_Caption="하트 여왕의 코스튬 A (여)"/>
+		<image name="icon_item_ep15heartqueen_selectbox02" file="\icon\payment\icon_item_ep15heartqueen_selectbox02.png" imgrect="0 0 256 256" CMM_Caption="하트 여왕 코스튬 선택 상자 B"/>
+		<image name="icon_item_ep15heartqueen_costume02_m" file="\icon\payment\icon_item_ep15heartqueen_costume02_m.png" imgrect="0 0 256 256" CMM_Caption="하트 여왕의 코스튬 B (남)"/>
+		<image name="icon_item_ep15heartqueen_costume02_f" file="\icon\payment\icon_item_ep15heartqueen_costume02_f.png" imgrect="0 0 256 256" CMM_Caption="하트 여왕의 코스튬 B (여)"/>
+		<image name="icon_item_ep15heartqueen_rapier" file="\icon\weapon\icon_item_ep15heartqueen_rapier.png" imgrect="0 0 256 256" CMM_Caption="하트 여왕의 레이피어"/>
+		<image name="icon_item_ep15heartqueen_mace" file="\icon\weapon\icon_item_ep15heartqueen_mace.png" imgrect="0 0 256 256" CMM_Caption="하트 여왕의 메이스"/>
+		<image name="icon_item_ep15heartqueen_thsword" file="\icon\weapon\icon_item_ep15heartqueen_thsword.png" imgrect="0 0 256 256" CMM_Caption="하트 여왕의 투 핸드 소드"/>
+		<image name="icon_item_wing_ep15heartqueen" file="\icon\payment\icon_item_wing_ep15heartqueen.png" imgrect="0 0 256 256" CMM_Caption="하트 여왕의 마술 카드"/>
 	</imagelist>
 	<imagelist category="seal">
 		<image name="icon_seal_yellow_cc_A1" file="\icon\seal\seal_yellow_cc_A1.tga" imgrect="0 0 80 80"/>

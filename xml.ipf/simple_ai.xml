@@ -27,6 +27,17 @@
 			</ToolScp>
 		</List>
 	</AI>
+	<AI Name="BW_Skiaclipse_BlackSphere_AI" ActiveMessageMapInBattle="1">
+		<List>
+			<ToolScp Scp="S_AI_CUSTOM_SCRIPT" Client="NO" UseSleep="YES">
+				<Str Str="SCR_BW_SKIACLIPSE_SKL8_AI"/>
+				<Num Num="100"/>
+			</ToolScp>
+		</List>
+		<StartList>
+			<ToolScp Scp="EnableAIOutOfPC" Client="NO" UseSleep="NO"/>
+		</StartList>
+	</AI>
     <AI Name="3CMLAKE262_SQ11_CHECK" ActiveMessageMapInBattle="1">
         <List>
             <ToolScp Scp="S_AI_ATTACK_NEAR_MAXHATECOUNT_CHECK" Client="NO" UseSleep="NO">

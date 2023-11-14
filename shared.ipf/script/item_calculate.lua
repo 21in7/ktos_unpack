@@ -1293,23 +1293,25 @@ function APPLY_OPTION_SOCKET(item)
 end
 
 -- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
-function SCR_REFRESH_HAIRACC(item)
+function SCR_REFRESH_HAIRACC(item)    
     local class = GetClassByType('Item', item.ClassID);
+    local self = GetItemOwner(item)
+    
     INIT_ARMOR_PROP(item, class)
     for i = 1, 3 do
         local propName = "HatPropName_"..i;
         local propValue = "HatPropValue_"..i;
-        local getProp = TryGetProp(item, propName);
-        if getProp ~= nil and item[propValue] ~= 0 and item[propName] ~= "None" then
+        local getProp = TryGetProp(item, propName);        
+        if getProp ~= nil and shared_enchant_special_option.is_special_option(getProp) == false and item[propValue] ~= 0 and item[propName] ~= "None" then
             local prop = item[propName];
-            local propData = item[prop]
+            local propData = item[prop]            
             item[prop] = propData + item[propValue];
         end
     end
 end
 
 -- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
-function APPLY_RANDOM_OPTION(item)
+function APPLY_RANDOM_OPTION(item)    
     local growth_rate = 1
     if IS_GROWTH_ITEM(item) == true then
         growth_rate = GET_ITEM_GROWTH_RATE(item)
@@ -1339,7 +1341,7 @@ function APPLY_RANDOM_OPTION(item)
 end
 
 -- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
-function APPLY_RARE_RANDOM_OPTION(item)
+function APPLY_RARE_RANDOM_OPTION(item)    
     local propName = "RandomOptionRare";
     local propValue = "RandomOptionRareValue";
     local getProp = TryGetProp(item, propName);
@@ -2513,6 +2515,63 @@ function MAKE_ITEM_OPTION_BY_OPTION_SOCKET(item)
         local invItem = GET_INV_ITEM_BY_ITEM_OBJ(item);
         if invItem ~= nil then
             invItem:ApplySocketOption();
+        end
+    end
+end
+
+
+-- 가장 마지막에 실행됨
+function COMMON_EQUIP_ITEM(pc, item)
+    if shared_enchant_special_option.is_hair_acc(item) == true then
+        for i = 1, 3 do
+            local propName = "HatPropName_"..i;
+            local propValue = "HatPropValue_"..i;
+
+            local option = TryGetProp(item, propName, 'None')
+            if shared_enchant_special_option.is_special_option(option) == true then
+                local value = TryGetProp(item, propValue, 0)
+                local cls = nil
+                if string.find(option, 'ALLSKILL_') ~= nil then
+                    cls = GetClass('enchant_special_option_ratio', 'ALLSKILL')                    
+                else
+                    cls = GetClass('enchant_special_option_ratio', option)                    
+                end
+                if cls ~= nil then
+                    local func = TryGetProp(cls, 'EquipFunc', 'None')
+                    if func ~= 'None' then
+                        func = _G[func]
+                        func(pc, item, option, value)
+                    end
+                end
+            end
+        end
+    end
+    
+end
+-- 가장 마지막에 실행됨
+function COMMON_UNEQUIP_ITEM(pc, item)
+    if shared_enchant_special_option.is_hair_acc(item) == true then
+        for i = 1, 3 do
+            local propName = "HatPropName_"..i;
+            local propValue = "HatPropValue_"..i;
+    
+            local option = TryGetProp(item, propName, 'None')
+            if shared_enchant_special_option.is_special_option(option) == true then
+                local value = TryGetProp(item, propValue, 0)
+                local cls = nil
+                if string.find(option, 'ALLSKILL_') ~= nil then
+                    cls = GetClass('enchant_special_option_ratio', 'ALLSKILL')                    
+                else
+                    cls = GetClass('enchant_special_option_ratio', option)                    
+                end
+                if cls ~= nil then
+                    local func = TryGetProp(cls, 'UnEquipFunc', 'None')
+                    if func ~= 'None' then
+                        func = _G[func]
+                        func(pc, item, option, -value)
+                    end
+                end
+            end            
         end
     end
 end

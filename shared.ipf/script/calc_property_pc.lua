@@ -2151,6 +2151,10 @@ function SCR_Get_RHP(self)
         value = 0;
     end
     
+    if GetExProp(self, 'force_rhp_zero') > 0 then
+        value = 0;
+    end
+    
     return math.floor(value);
 end
 
@@ -2273,6 +2277,12 @@ function SCR_GET_RSPTIME(self)
     
     if IsBuffApplied(self, 'SitRest') == 'YES' then 
         value = value * 0.5;
+    end
+
+    if GetExProp(self, 'reduce_rsp_time') > 0 then
+        local rsp = GetExProp(self, 'reduce_rsp_time') * 0.01
+        rsp = 1 - rsp
+        value = value * rsp
     end
 
     if value < 1000 then

@@ -11649,6 +11649,23 @@
         <Effect Name="Slogutis_Restriction_SafeZone_Active_Pad"/>
         <Effect Name="Slogutis_Restriction_SafeZone_UnActive_Pad"/>
         <Effect Name="SlogutisRestriction"/>
+        <Effect Name="F_rize029_yellow_loop"/>
+        <Effect Name="SKL_ENERVATION"/>
+        <Effect Name="SKL_NGADHUNDI"/>
+        <Effect Name="SKL_BLOODEXPLOSHION"/>
+        <Effect Name="SKL_BLOODPOOL"/>
+        <Effect Name="BW_skiaclipse_skl2_pad"/>
+        <Effect Name="BridgeWailing_Dimension_Party"/>
+        <Effect Name="BW_Dimension_Pattern_ElectricJumpRope"/>
+        <Effect Name="BW_Dimension_Pattern_FirePad"/>
+        <Effect Name="BW_skiaclipse_skl6_pad"/>
+        <Effect Name="BW_skiaclipse_skl8_pad"/>
+        <Effect Name="I_skillrange_donut0##0.8"/>
+        <Effect Name="I_skillrange_donut0##1.0"/>
+        <Effect Name="BW_misrus_dawnfall_pad"/>
+        <Effect Name="F_hit001_light_dark_blue"/>
+        <Effect Name="BW_misrus_follow_pad"/>
+        <Effect Name="BW_vasilissa_tsunami_pad"/>
     </Category>
     <Category ID="19">
         <Effect Name="I_fallen_statue_atk002_mash"/>

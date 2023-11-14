@@ -9545,6 +9545,7 @@
 		<image name="Map_Bridge_Wailing" file="\skin\indunmap\Map_Bridge_Wailing.png" imgrect="0 0 295 450" CMM_Caption="통곡의 다리"/>
 		<image name="Map_Ep15_2_Raid_1" file="\skin\indunmap\Map_Raid_Upinis.png" imgrect="0 0 295 450" CMM_Caption="몽환의 숲"/>
 		<image name="Map_Ep15_2_Raid_2" file="\skin\indunmap\Map_Raid_Slogutis.png" imgrect="0 0 295 450" CMM_Caption="심연의 관찰자"/>
+		<image name="Map_Bridge_Wailing_Dimension" file="\skin\indunmap\Map_Bridge_Wailing_Dimension.png" imgrect="0 0 295 450" CMM_Caption="통곡의 다리 - 이공간"/>
 	</imagelist>
 	<imagelist category="jootest_image">
 		<image name="market_hairacc" file="\skin\market_skin.tga" imgrect="1927 447 60 60" CMM_Caption="마켓_헤어악세사리"/>
@@ -16314,7 +16315,7 @@
 		<image name="plate_achieve_roze_weekraid" file="\skin\user_title_skin2.tga" imgrect="214 102 214 34" CMM_Caption="로제 더 미저러블 주보레 칭호"/>
 		<image name="plate_achieve_upinis_weekraid" file="\skin\user_title_skin2.tga" imgrect="428 102 214 34" CMM_Caption="우피니스 주보레 칭호"/>
 		<image name="plate_achieve_slogutis_weekraid" file="\skin\user_title_skin2.tga" imgrect="642 102 214 34" CMM_Caption="슬로거티스 주보레 칭호"/>
-	</imagelist>
+		</imagelist>
 	<imagelist category="skin_hair">
 		<image name="icon_skintone_01_m01" file="\skin\skinhair\icon_skintone_01_m01.png" imgrect="0 0 80 80" CMM_Caption="남성 01"/>
 		<image name="icon_skintone_01_m02" file="\skin\skinhair\icon_skintone_01_m02.png" imgrect="0 0 80 80" CMM_Caption=""/>
