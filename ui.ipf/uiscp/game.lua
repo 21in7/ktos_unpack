@@ -1129,7 +1129,8 @@ function GET_FULL_NAME(item, useNewLine, isEquiped, timeImgSize)
 		ownName = string.format("{img test_cooltime "..timeIconSize.." "..timeIconSize.."}%s{/}", ownName);
 	end
 	
-	if TryGetProp(item, "popoboost", 0) == 1 then
+	local PopoItemProp = GET_POPOBOOST_ITEMPROP();
+	if PopoItemProp > 0 and TryGetProp(item, "popoboost", 0) == PopoItemProp then
 		ownName = "[Event] "..ownName;
 	end
 	

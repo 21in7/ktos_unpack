@@ -581,8 +581,9 @@ function GET_PLAYER_POPOBOOST_GEAR_SCORE(pc)
                 local itemobj = GetIES(invitem:GetObject());     
                 local popoboostProp = TryGetProp(itemobj,"popoboost", 0)
                 local spotname = TryGetProp(itemobj,"DefaultEqpSlot","None")
+                local PopoItemProp = GET_POPOBOOST_ITEMPROP();
 
-                if popoboostProp == 1 then
+                if PopoItemProp > 0 and popoboostProp == PopoItemProp then
                     score = score + GET_GEAR_SCORE(itemobj, pc)
                 else
                     local check = popoboostCheckTable[spotname];
@@ -616,15 +617,16 @@ function GET_PLAYER_POPOBOOST_GEAR_SCORE(pc)
         return math.floor(score + 0.5)
     else
         local equipList = GetEquipItemList(pc)        
-        local before_score = 0
+        local before_score = 0;
         for i = 1, #equipList do
             local itemobj = equipList[i]
             if itemobj ~= nil then
                 local spotname = TryGetProp(itemobj,"DefaultEqpSlot")
                 local check = popoboostCheckTable[spotname];
+                local PopoItemProp = GET_POPOBOOST_ITEMPROP();
                 local popoboostProp = TryGetProp(itemobj,"popoboost", 0)
                 
-                if popoboostProp == 1 then                
+                if PopoItemProp > 0 and popoboostProp == PopoItemProp then                
                     score = score + GET_GEAR_SCORE(itemobj, pc)
                 elseif check ~= nil then
                     score = score + GET_GEAR_SCORE(itemobj, pc)
@@ -652,7 +654,6 @@ function GET_PLAYER_POPOBOOST_GEAR_SCORE(pc)
             end
         end
         score = score + add
-
         return math.floor(score + 0.5)
     end
 end
@@ -781,7 +782,6 @@ end
 
 function GET_PLAYER_ABILITY_SCORE(pc)
     local job_list = GetJobHistoryList(pc)
-
     local total_score_list = {}
     table.insert(total_score_list, 600000)
     table.insert(total_score_list, 600000)

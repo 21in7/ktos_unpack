@@ -88,7 +88,4 @@ ClassID,GenType,Lv,Range,GenRange,RespawnTime,MaxPop,Minimap,Hide,UseAIOufOfPC,A
 5294,10126,1,40,1,60000,1,2,0,0,0,0,0,"npc_kupole_Bernice","[스킬 연성 도우미]{nl}큐폴","","","","","","","DUCTILITY_NPC","","","NO","YES","NO","Neutral","","","",""
 5295,10127,1,40,1,60000,1,2,0,0,0,0,0,"Tos_Coin_Shop_NPC","[오래된 여신의 증표 상점]{nl}큐폴","","","","","","","PREVIOUS_COIN_SHOP","","","NO","YES","NO","Neutral","","","",""
 5500,5500,1,60,1,60000,1,2,0,0,0,0,0,"Tos_Event_Coin_NPC","TOS 주화 안내원","","","","","","","EVENT_TOS_WHOLE_NPC","","","NO","YES","NO","Neutral","","","",""
-5296,10128,1,40,1,1,1,2,0,0,0,0,0,"Event_2110_Npc","[이벤트]{nl}유령 소녀","","","","","","KLAPEDA_EVENT_2110_GHOST","CITY_EVENT_2110_NPC","","","NO","YES","NO","Neutral","","","",""
-5297,10129,1,40,1,1,1,2,0,0,0,0,0,"Event_2110_npc_cauldron_stew","[이벤트]{nl}호박 스튜 솥","","","","","","KLAPEDA_EVENT_2110_NPC","EVENT_2110_POT_NPC","","","NO","YES","NO","Neutral","","","",""
-5298,10130,1,40,1,1,1,2,0,0,0,0,0,"Event_2110_Npc2","[이벤트]{nl}폐도 피난민","","","","","","KLAPEDA_EVENT_2110_NPC","CITY_EVENT_2110_NPC2","","","NO","YES","NO","Neutral","","","",""
 5299,10131,1,40,1,60000,1,2,0,0,0,0,0,"npc_kupole_Bernice","[포포부스트 케어]{nl}큐폴","","","","","","","CARE_POPOBOOST_STATUS","","","NO","YES","NO","Neutral","","","",""

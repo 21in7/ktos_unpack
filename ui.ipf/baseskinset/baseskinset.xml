@@ -9462,6 +9462,18 @@
 			<img name="cooltime" imgrect="1565 804 54 54"/>
 			<img name="selected" imgrect="1565 804 54 54"/>
 		</skin>
+		<skin name="cupole_ui_slot" texture="\skin\cupole_hud.tga">
+			<img name="slot" imgrect="1 202 100 100"/>
+			<img name="mouseon" imgrect="102 202 100 100"/>
+			<img name="cooltime" imgrect="102 202 100 100"/>
+			<img name="selected" imgrect="102 202 100 100"/>
+		</skin>
+		<skin name="cupole_ui_frame_slot" texture="\skin\cupole_hud.tga">
+			<img name="slot" imgrect="203 202 100 100"/>
+			<img name="mouseon" imgrect="304 202 100 100"/>
+			<img name="cooltime" imgrect="304 202 100 100"/>
+			<img name="selected" imgrect="304 202 100 100"/>
+		</skin>
 	</skinlist>
 	<imagelist category="wearing_weapon">
 		<image name="weapon_OHS" file="\icon\wearing_weapon.tga" imgrect="0 0 20 20" CMM_Caption="한손검"/>
@@ -16655,6 +16667,9 @@
 		<image name="popolion_roulette_icon" file="\skin\popolion_roulette.tga" imgrect="640 2 72 72" CMM_Caption="포포리온 룰렛 타이틀"/>
 		<image name="popolion_roulette_icon_cursoron" file="\skin\popolion_roulette.tga" imgrect="713 2 72 72" CMM_Caption="포포리온 룰렛 타이틀"/>
 		<image name="popolion_roulette_icon_clicked" file="\skin\popolion_roulette.tga" imgrect="786 2 72 72" CMM_Caption="포포리온 룰렛 타이틀"/>
+		<image name="popoboost_guide_quest_icon" file="\skin\popoboost_event_skin.tga" imgrect="703 652 72 72"/>
+		<image name="popoboost_guide_quest_icon_cursoron" file="\skin\popoboost_event_skin.tga" imgrect="776 652 72 72"/>
+		<image name="popoboost_guide_quest_icon_clicked" file="\skin\popoboost_event_skin.tga" imgrect="849 652 72 72"/>
 	</imagelist>
 	<imagelist category="hudskin">
 		<image name="weekboss_default_hud_soulCrystal_bg" file="\skin\indun_skin.tga" imgrect="614 552 83 86" CMM_Caption="소울크리스탈 횟수제한 UI"/>

@@ -78,14 +78,16 @@ end
 function EVENT_STAMP_GET_CURRENT_MISSION(groupName,currentpage)	
 	local clsList, allmissionCnt = GetClassList('note_eventlist');
 	local cnt = 0
-	local missionCls = nil
-	for i = 0,allmissionCnt-1 do
-		missionCls = GetClassByIndexFromList(clsList, i);
-		if missionCls.Group == groupName then
-			if currentpage == cnt then
-				return missionCls;
+
+	for i = 0, allmissionCnt-1 do
+		local missionCls = GetClassByIndexFromList(clsList, i);
+		if missionCls ~= nil then
+			if missionCls.Group == groupName then
+				if currentpage == cnt then
+					return missionCls;
+				end
+				cnt = cnt  + 1
 			end
-			cnt = cnt  + 1
 		end
 	end
 

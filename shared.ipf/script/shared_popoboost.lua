@@ -1,5 +1,6 @@
 ﻿-- shared_popoboost
 local item_list = nil
+local ticket_item_list = nil
 local maxProgress = 3;
 function popoboost_table()
     if item_list == nil then
@@ -30,15 +31,12 @@ function popoboost_table()
         item_list["Normal0"]['Event_JobexpCard_BOX'] = 1
         item_list["Normal0"]['open_ticket_cabinet_vibora_lv4'] = 1
         item_list["Normal0"]['open_ticket_cabinet_goddess_lv3'] = 4
-        item_list["Normal0"]['relicgem_lvup_scroll_lv7'] = 2
-        item_list["Normal0"]['Relic_exp_token_refine_event'] = 4930
     end
 
     item_list["Normal1"] = {}
-    item_list["Normal1"]['Event_Roulette_Coin_PoPo'] = 1
-    item_list["Normal1"]['misc_RevivalPaulius_NoTrade'] = 150
-    item_list["Normal1"]['Ticket_RevivalPaulius_Auto_Enter_NoTrade'] = 2
-    item_list["Normal1"]['Event_ChallengeModeReset_6'] = 10
+    item_list["Normal1"]['misc_RevivalPaulius_NoTrade'] = 100
+    item_list["Normal1"]['Ticket_RevivalPaulius_Auto_Enter_NoTrade'] = 4
+    item_list["Normal1"]['Event_ChallengeModeReset_6'] = 5
     item_list["Normal1"]['SEASONLETICIA_GabijaCertificateCoin_50000p'] = 1
     if IsPAPAYA == true then
         item_list["Normal1"]['misc_RevivalPaulius_NoTrade'] = 100
@@ -47,10 +45,10 @@ function popoboost_table()
     
     
     item_list["Normal2"] = {}
-    item_list["Normal2"]['Event_Roulette_Coin_PoPo'] = 1
     item_list["Normal2"]['misc_RevivalPaulius_NoTrade'] = 200
-    item_list["Normal2"]['Ticket_RevivalPaulius_Auto_Enter_NoTrade'] = 5
-    item_list["Normal2"]['Event_ChallengeModeReset_6'] = 10
+    item_list["Normal2"]['Ticket_RevivalPaulius_Auto_Enter_NoTrade'] = 7
+    item_list["Normal2"]['Event_ChallengeModeReset_6'] = 5
+    item_list["Normal2"]['Relic_exp_token_refine_event'] = 4930
     item_list["Normal2"]['SEASONLETICIA_GabijaCertificateCoin_50000p'] = 2
 
     if IsPAPAYA == true then
@@ -61,35 +59,37 @@ function popoboost_table()
     end
 
     item_list["Normal3"] = {}
-    item_list["Normal3"]['Event_Roulette_Coin_PoPo'] = 1
-    item_list["Normal3"]['misc_RevivalPaulius_NoTrade'] = 200
+    item_list["Normal3"]['misc_RevivalPaulius_NoTrade'] = 150
     item_list["Normal3"]['Ticket_TurbulentCore_Auto_Enter_NoTrade'] = 5
+    item_list["Normal3"]['selectbox_Gem_Relic_Cyan'] = 1
+    item_list["Normal3"]['selectbox_Gem_Relic_Magenta'] = 1
+    item_list["Normal3"]['selectbox_Gem_Relic_Black'] = 1
     item_list["Normal3"]['VakarineCertificateCoin_50000p'] = 1
 
     if IsPAPAYA == true then
         item_list["Normal3"]['misc_RevivalPaulius_NoTrade'] = 100
     else
-        item_list["Normal3"]['misc_transmutationSpreader_NoTrade'] = 300
+        item_list["Normal3"]['misc_transmutationSpreader_NoTrade'] = 350
     end
 
     item_list["Normal4"] = {}
-    item_list["Normal4"]['Event_Roulette_Coin_PoPo'] = 1
     item_list["Normal4"]['Ticket_TurbulentCore_Auto_Enter_NoTrade'] = 5
-    item_list["Normal4"]['Event_ChallengeModeReset_6'] = 10
+    item_list["Normal4"]['Event_ChallengeModeReset_6'] = 5
     item_list["Normal4"]['VakarineCertificateCoin_50000p'] = 2
+    item_list["Normal4"]['relicgem_lvup_scroll_lv7'] = 3
+
     if IsPAPAYA == true then
         item_list["Normal4"]['Ticket_TurbulentCore_Auto_Enter_NoTrade'] = 3
         item_list["Normal4"]['Event_ChallengeModeReset_6'] = 3
         item_list["Normal4"]['VakarineCertificateCoin_50000p'] = 1;
     else
-        item_list["Normal4"]['misc_leatherFalouros_NoTrade'] = 300
+        item_list["Normal4"]['misc_leatherFalouros_NoTrade'] = 350
     end
 
     item_list["Normal5"] = {}
-    item_list["Normal5"]['Event_Roulette_Coin_PoPo'] = 1
     item_list["Normal5"]['misc_ribbonRoze_NoTrade'] = 100
     item_list["Normal5"]['Ticket_Rozethemisterable_Auto_Enter_NoTrade'] = 5
-    item_list["Normal5"]['Ticket_TurbulentCore_Auto_Enter_NoTrade'] = 5
+    item_list["Normal5"]['Ticket_TurbulentCore_Auto_Enter_NoTrade'] = 10
     item_list["Normal5"]['VakarineCertificateCoin_50000p'] = 2
 
     if IsPAPAYA == true then
@@ -97,14 +97,14 @@ function popoboost_table()
         item_list["Normal5"]['Ticket_TurbulentCore_Auto_Enter_NoTrade'] = 3
         item_list["Normal5"]['VakarineCertificateCoin_50000p'] = 1
     else
-        item_list["Normal5"]['misc_transmutationSpreader_NoTrade'] = 300
+        item_list["Normal5"]['misc_leatherFalouros_NoTrade'] = 250
     end
     item_list["Normal6"] = {}
     item_list["Normal6"]['EVENT_2308_POPO_FESTA'] = 1
-    item_list["Normal6"]['Event_Roulette_Coin_PoPo'] = 2
+    item_list["Normal6"]['Event_Roulette_Coin_PoPo'] = 5
     item_list["Normal6"]['RadaCertificateCoin_50000p'] = 4
-    item_list["Normal6"]['Ticket_TurbulentCore_Party_Enter_NoTrade'] = 4
-    item_list["Normal6"]['Ticket_Rozethemisterable_Party_Enter_NoTrade'] = 2
+    item_list["Normal6"]['Ticket_TurbulentCore_Party_Enter_NoTrade'] = 10
+    item_list["Normal6"]['Ticket_Rozethemisterable_Party_Enter_NoTrade'] = 10
     item_list["Normal6"]['ChallengeExpertModeCountUp_Ev_1'] = 10
     if IsPAPAYA == true then
         item_list["Normal6"]['RadaCertificateCoin_50000p'] = 2
@@ -118,7 +118,7 @@ function popoboost_table()
     item_list["Premium0"]['misc_Ether_Gem_Socket_480_NoTrade'] = 2
     item_list["Premium0"]['selectbox_Gem_High_480'] = 2
     item_list["Premium0"]['lv480_aether_lvup_scroll_lv100'] = 2
-    item_list["Premium0"]['emoticonItem_summer_popo_1'] = 1
+    item_list["Premium0"]['emoticonItem_2312_popo'] = 1
     if IsPAPAYA == true then
         item_list["Normal0"]['open_ticket_cabinet_vibora_lv1'] = 1
         item_list["Premium0"]['lv480_aether_lvup_scroll_lv100'] = 1
@@ -128,72 +128,100 @@ function popoboost_table()
     end
 
     item_list["Premium1"] = {}
-    item_list["Premium1"]['Event_Roulette_Coin_PoPo'] = 2
-    item_list["Premium1"]['misc_RevivalPaulius_NoTrade'] = 150
-    item_list["Premium1"]['Ticket_RevivalPaulius_Auto_Enter_NoTrade'] = 2
-    item_list["Premium1"]['Event_ChallengeModeReset_6'] = 10
+    item_list["Premium1"]['misc_RevivalPaulius_NoTrade'] = 100
+    item_list["Premium1"]['Event_ChallengeModeReset_6'] = 5
     item_list["Premium1"]['RadaCertificateCoin_50000p'] = 1
     if IsPAPAYA == true then
 
     else
-        item_list["Premium1"]['misc_reinforce_percentUp_490_NoTrade'] = 100
+        item_list["Premium1"]['misc_reinforce_percentUp_490_NoTrade'] = 50
     end
+
     item_list["Premium2"] = {}
-    item_list["Premium2"]['Event_Roulette_Coin_PoPo'] = 2
-    item_list["Premium2"]['misc_RevivalPaulius_NoTrade'] = 200
-    item_list["Premium2"]['Ticket_RevivalPaulius_Auto_Enter_NoTrade'] = 5
-    item_list["Premium2"]['Event_ChallengeModeReset_6'] = 10
+    item_list["Premium2"]['misc_RevivalPaulius_NoTrade'] = 150
+    item_list["Premium2"]['Event_ChallengeModeReset_6'] = 5
+    item_list["Premium2"]['misc_reinforce_percentUp_490_NoTrade'] = 50
     item_list["Premium2"]['RadaCertificateCoin_50000p'] = 2
+
     if IsPAPAYA == true then
         item_list["Premium2"]['RadaCertificateCoin_50000p'] = 1
     end
+
     item_list["Premium3"] = {}
-    item_list["Premium3"]['Event_Roulette_Coin_PoPo'] = 2
-    item_list["Premium3"]['misc_RevivalPaulius_NoTrade'] = 200
+    item_list["Premium3"]['Event_ChallengeModeReset_6'] = 5
     item_list["Premium3"]['RadaCertificateCoin_50000p'] = 1
     if IsPAPAYA == true then
     else
-        item_list["Premium3"]['misc_reinforce_percentUp_490_NoTrade'] = 100
-        item_list["Premium3"]['misc_transmutationSpreader_NoTrade'] = 300
+        item_list["Premium3"]['misc_reinforce_percentUp_490_NoTrade'] = 50
+        item_list["Premium3"]['misc_transmutationSpreader_NoTrade'] = 150
     end
+
     item_list["Premium4"] = {}
-    item_list["Premium4"]['Event_Roulette_Coin_PoPo'] = 2
-    item_list["Premium4"]['Event_ChallengeModeReset_6'] = 10
+    item_list["Premium4"]['Event_ChallengeModeReset_6'] = 5
     item_list["Premium4"]['RadaCertificateCoin_50000p'] = 2
     
     if IsPAPAYA == true then
         item_list["Premium4"]['RadaCertificateCoin_50000p'] = 1
     else
-        item_list["Premium4"]['misc_leatherFalouros_NoTrade'] = 300
-        item_list["Premium4"]['misc_Premium_reinforce_percentUp_460'] = 20
+        item_list["Premium4"]['misc_leatherFalouros_NoTrade'] = 150
+        item_list["Premium4"]['misc_Premium_reinforce_percentUp_460'] = 50
     end
+
     item_list["Premium5"] = {}
-    item_list["Premium5"]['Event_Roulette_Coin_PoPo'] = 2
     item_list["Premium5"]['misc_ribbonRoze_NoTrade'] = 100
     item_list["Premium5"]['Ticket_Rozethemisterable_Auto_Enter_NoTrade'] = 5
+    item_list["Premium5"]['misc_leatherFalouros_NoTrade'] = 150
     item_list["Premium5"]['RadaCertificateCoin_50000p'] = 2
+
     if IsPAPAYA == true then
         item_list["Premium5"]['RadaCertificateCoin_50000p'] = 1        
     else
-        item_list["Premium5"]['misc_transmutationSpreader_NoTrade'] = 300
-        item_list["Premium5"]['misc_reinforce_percentUp_490_NoTrade'] = 100
+        item_list["Premium5"]['misc_transmutationSpreader_NoTrade'] = 150
+        item_list["Premium5"]['misc_reinforce_percentUp_490_NoTrade'] = 50
     end
 
     item_list["Premium6"] = {}
-    item_list["Premium6"]['EVENT_2308_POPO_FESTA_IMAGE_2'] = 1
-    item_list["Premium6"]['Event_Roulette_Coin_PoPo'] = 3
+    item_list["Premium6"]['Event_Roulette_Coin_PoPo'] = 5
     item_list["Premium6"]['RadaCertificateCoin_50000p'] = 4
-    item_list["Premium6"]['Ticket_TurbulentCore_Party_Enter_NoTrade'] = 4
+    item_list["Premium6"]['Ticket_TurbulentCore_Party_Enter_NoTrade'] = 10
     item_list["Premium6"]['Ticket_Rozethemisterable_Party_Enter_NoTrade'] = 2
     item_list["Premium6"]['ChallengeExpertModeCountUp_Ev_1'] = 10
+    item_list["Premium6"]['piece_GabijaEarring_select_job_NoTrade_Belonging'] = 1
+
     if IsPAPAYA == true then
         item_list["Premium6"]['RadaCertificateCoin_50000p'] = 2
         item_list["Premium6"]['Ticket_TurbulentCore_Party_Enter_NoTrade'] = 3        
-    else
-        item_list["Premium6"]['misc_Premium_reinforce_percentUp_460'] = 20
     end
     
     return item_list
+end
+
+function GET_TICKET_ITEM_LIST()
+    if ticket_item_list == nil then
+        ticket_item_list = {}
+    end
+
+    local IsPAPAYA = false;
+
+    if IsServerSection() == 1 then
+        if GetServiceNation() == "PAPAYA" then
+            IsPAPAYA = true;
+        end
+    else
+        if config.GetServiceNation() =="PAPAYA" then
+            IsPAPAYA = true;
+        end
+    end
+
+    ticket_item_list["EVENT_2023_POPOBOOST"] ={}
+    ticket_item_list["EVENT_2023_POPOBOOST"]["emoticonItem_summer_popo_1"] = 1
+    ticket_item_list["EVENT_2023_POPOBOOST"]["class_unlock_achievement_select"] = 1
+    ticket_item_list["EVENT_2023_POPOBOOST"]["open_ticket_cabinet_vibora_lv4"] = 2
+    ticket_item_list["EVENT_2023_POPOBOOST"]["misc_Ether_Gem_Socket_480_NoTrade"] = 2
+    ticket_item_list["EVENT_2023_POPOBOOST"]["selectbox_Gem_High_480"] = 2
+    ticket_item_list["EVENT_2023_POPOBOOST"]["lv480_aether_lvup_scroll_lv100"] = 2
+
+    return ticket_item_list;
 end
 
 function GET_POPOBOOST_PARTICIPATE_MAX_PROGRESS()
@@ -212,7 +240,7 @@ function POPOBOOST_CHECK_ELIGIBILITY(lv, gearscore)
         end
     end
     
-    if lv >= 460 or gearscore > 8000 then
+    if lv >= 10 then
         return false;
     end
 
@@ -229,7 +257,8 @@ function POPOBOOST_SET_MAX_GEARSCORE(pc)
     if etc == nil then
         return;
     end
-	local maxGearScore = TryGetProp(etc,"EVENT_2023_POPOBOOST_MAX_GEARSCORE",0);
+    local maxprop = GET_POPOBOOST_MAXPROP();
+	local maxGearScore = TryGetProp(etc,maxprop,0);
     local currentGearScore = POPOBOOST_GET_GEARSCORE(pc);
 
     if IsServerSection(pc) ~= 1 then
@@ -245,10 +274,30 @@ function POPOBOOST_SET_MAX_GEARSCORE(pc)
         if tx == nil then
             return;
         end
-	    TxSetIESProp(tx, etc, "EVENT_2023_POPOBOOST_MAX_GEARSCORE", currentGearScore);
+        local maxprop = GET_POPOBOOST_MAXPROP();
+	    TxSetIESProp(tx, etc, maxprop, currentGearScore);
 
         local ret = TxCommit(tx)
 
+        if ret == "SUCCESS" then
+            local equipList = GetEquipItemList(pc)        
+            local itemcnt = 0;
+            for i = 1, #equipList do
+                local itemobj = equipList[i]
+                if itemobj ~= nil then
+                    local spotname = TryGetProp(itemobj,"DefaultEqpSlot")
+                    local PopoItemProp = GET_POPOBOOST_ITEMPROP();
+                    local popoboostProp = TryGetProp(itemobj,"popoboost", 0)
+                    
+                    if PopoItemProp > 0 and popoboostProp == PopoItemProp then 
+                        itemcnt = itemcnt + 1;               
+                    end
+                end
+            end
+            if itemcnt == 11 then
+                RunScript("TX_EVENT_STAMP_TOUR_PROP_SET_POPOBOOST",pc,5,1,"POPO_EVENT_STAMP_2312")
+            end
+        end
     end
 end
 
@@ -269,7 +318,8 @@ function POPOBOOST_GET_MAX_GEARSCORE(pc)
     if etcObj == nil then
         return 0;
     end
-	local maxGearScore = TryGetProp(etcObj,"EVENT_2023_POPOBOOST_MAX_GEARSCORE",0);
+    local maxprop = GET_POPOBOOST_MAXPROP();
+	local maxGearScore = TryGetProp(etcObj,maxprop,0);
     local currentGearScore = POPOBOOST_GET_GEARSCORE(pc);
 
     if maxGearScore > currentGearScore then
@@ -319,20 +369,15 @@ function POPOBOOST_POPOBUFF_REMINE_TIME(pc)
     if gearscore >= 19000 then
         return true;
     end
-    if IsServerSection() == 1 then        
-        local now = date_time.get_lua_now_datetime_str()
-        local ret = date_time.is_later_than(now, end_time)	
-        return ret
-    else        
-        local serverTime = geTime.GetServerSystemTime()
-        local now = string.format("%04d-%02d-%02d %02d:%02d:%02d", serverTime.wYear, serverTime.wMonth, serverTime.wDay, serverTime.wHour, serverTime.wMinute, serverTime.wSecond)
-        local ret = date_time.is_later_than(now, end_time)	        
-        return ret
+
+    if GET_CURRENT_SEASCON_POPOBOST_INFO() == nil then
+        return true;
     end
+
+    return false;
 end
 
 function GET_POPOBOOST_END_TIME()
-    
     local end_time ="0000-00-00 00:00:00";
 
     local popobannerlist , cnt = GetClassList("popoboost_banner");
@@ -340,36 +385,140 @@ function GET_POPOBOOST_END_TIME()
         return end_time;
     end
 
-    if IsServerSection() == 1 then        
-        for i = 0 , cnt - 1 do
-            local popobannercls = GetClassByIndexFromList(popobannerlist, i);
-            if GetServiceNation() == TryGetProp(popobannercls,"Nation","None") then
-                end_time = TryGetProp(popobannercls,"EndDateTime","0000-00-00 00:00:00");
-            end
+    for i = 0 , cnt - 1 do
+        local popobannercls = GetClassByIndexFromList(popobannerlist, i);
+        local Nation;
+        if IsServerSection() == 1 then        
+            Nation = GetServiceNation();
+        else
+            Nation = config.GetServiceNation();
         end
-
-    else
-        for i = 0 , cnt - 1 do
-            local popobannercls = GetClassByIndexFromList(popobannerlist, i);
-            if config.GetServiceNation() == TryGetProp(popobannercls,"Nation","None") then
-                end_time = TryGetProp(popobannercls,"EndDateTime","0000-00-00 00:00:00");
+        if Nation == TryGetProp(popobannercls,"Nation","None") then
+            local accprop = TryGetProp(popobannercls,"AccountProp","None");
+            local PopoboostAccountProp = GET_POPOBOOST_ACCPROP();
+            if accprop == PopoboostAccountProp then
+                end_time = TryGetProp(popobannercls,"EndDateTime", "0000-00-00 00:00:00");
             end
         end
     end
+
     return end_time;
 end
 
 -- true == end /// false == not end
 function IS_POPOBOOST_END()
-    local end_time = GET_POPOBOOST_END_TIME();
+    local cls = GET_CURRENT_SEASCON_POPOBOST_INFO();
+    if cls == nil then
+        return true;
+    else
+        return false;
+    end
+
+    -- if IsServerSection() == 1 then        
+    --     local now = date_time.get_lua_now_datetime_str()
+    --     local ret = date_time.is_later_than(now, end_time)	
+    --     return ret
+    -- else        
+    --     local serverTime = geTime.GetServerSystemTime()
+    --     local now = string.format("%04d-%02d-%02d %02d:%02d:%02d", serverTime.wYear, serverTime.wMonth, serverTime.wDay, serverTime.wHour, serverTime.wMinute, serverTime.wSecond)
+    --     local ret = date_time.is_later_than(now, end_time)	        
+    --     return ret
+    -- end
+end
+
+local function POPOPBOOST_PREIODE_CHECK(start_time, end_time)
     if IsServerSection() == 1 then        
-        local now = date_time.get_lua_now_datetime_str()
-        local ret = date_time.is_later_than(now, end_time)	
-        return ret
+        local ret = date_time.is_between_time(start_time, end_time);
+        if ret == true then
+            return true;
+        end
     else        
         local serverTime = geTime.GetServerSystemTime()
         local now = string.format("%04d-%02d-%02d %02d:%02d:%02d", serverTime.wYear, serverTime.wMonth, serverTime.wDay, serverTime.wHour, serverTime.wMinute, serverTime.wSecond)
-        local ret = date_time.is_later_than(now, end_time)	        
-        return ret
+        local EndRet = date_time.is_later_than(now, end_time)	        
+        local StartRet = date_time.is_later_than(now, start_time)
+        if EndRet == false and StartRet == true then
+            return true;
+        end
+    end        
+end
+
+function GET_CURRENT_SEASCON_POPOBOST_INFO()
+    local clsList, cnt = GetClassList("popoboost_season_info")
+    if clsList == nil then
+        return nil;
     end
+    for i = 0, 2 do
+        local info = GetClassByIndexFromList(clsList, i);
+        if info ~= nil then
+            local start_time = ""
+            local end_time = ""
+            local IsPAPAYA = false;
+            if IsServerSection() == 1 then
+                if GetServiceNation() == "PAPAYA" then
+                    IsPAPAYA = true;
+                end
+            else
+                if config.GetServiceNation() =="PAPAYA" then
+                    IsPAPAYA = true;
+                end
+            end
+            if IsPAPAYA == true then
+                start_time = TryGetProp(info, "PAPAYAStartTime", "0000-00-00 00:00:00");
+                end_time = TryGetProp(info, "PAPAYAEndTime", "0000-00-00 00:00:00");
+            else
+                start_time = TryGetProp(info, "StartTime", "0000-00-00 00:00:00");
+                end_time = TryGetProp(info, "EndTime", "0000-00-00 00:00:00");
+            end
+            if POPOPBOOST_PREIODE_CHECK(start_time,end_time) == true then
+                return info;    
+            end        
+        end
+    end   
+    return nil
+end
+
+function GET_POPOBOOST_ACCPROP()
+    local cls = GET_CURRENT_SEASCON_POPOBOST_INFO()
+    if cls == nil then
+        return "None"
+    end
+    local AccProp = TryGetProp(cls, "AccountProp", "None");
+    return AccProp;
+end
+
+function GET_POPOBOOST_ETCPROP()
+    local cls = GET_CURRENT_SEASCON_POPOBOST_INFO()
+    if cls == nil then
+        return "None"
+    end
+    local etcprop = TryGetProp(cls, "EtcProperty", "None");
+    return etcprop;
+end
+
+function GET_POPOBOOST_MAXPROP()
+    local cls = GET_CURRENT_SEASCON_POPOBOST_INFO()
+    if cls == nil then
+        return "None"
+    end
+    local MaxScoreProp = TryGetProp(cls, "MaxScoreProp", "None");
+    return MaxScoreProp;
+end
+
+function GET_POPOBOOST_ITEMPROP()
+    local cls = GET_CURRENT_SEASCON_POPOBOST_INFO()
+    if cls == nil then
+        return 0
+    end
+    local prop = TryGetProp(cls, "ItemPropValue", 0);
+    return prop;
+end
+
+function GET_POPOBOOST_PROGRESPROP()
+    local cls = GET_CURRENT_SEASCON_POPOBOST_INFO()
+    if cls == nil then
+        return "None"
+    end
+    local prop = TryGetProp(cls, "GiveItemProp", "None");
+    return prop;
 end

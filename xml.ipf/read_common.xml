@@ -417,8 +417,9 @@
 	<ReadXml Name="popoboost_information"/>
 	<ReadXml Name="master_ex_list"/>
 	<ReadXml Name="popoboost_banner"/>
+	<ReadXml Name="popoboost_season_info"/>
 	<ReadXml Name="enchant_special_option"/>
 	<ReadXml Name="enchant_rank_up_ratio"/>	
 	<ReadXml Name="enchant_special_option_ratio_low"/>		
-	<ReadXml Name="enchant_special_option_ratio"/>		
+	<ReadXml Name="enchant_special_option_ratio"/>	
 </Category>
