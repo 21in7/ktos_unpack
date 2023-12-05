@@ -1305,6 +1305,7 @@ function TPITEM_DRAW_ITEM_WITH_CATEGORY(frame, category, subcategory, initdraw, 
 			local searchFortext = input:GetText();
 			if string.len(searchFortext) > 0 then
 				filter = input:GetText();
+				filter = string.lower(filter)
 			end
 			mainText:ClearText();
 		end
@@ -1347,6 +1348,7 @@ function TPITEM_DRAW_ITEM_WITH_CATEGORY(frame, category, subcategory, initdraw, 
 			  if config.GetServiceNation() ~= "KOR" and config.GetServiceNation() ~= "GLOBAL_KOR" then
 				  targetItemName = dic.getTranslatedStr(targetItemName);				
 			  end
+			  targetItemName = string.lower(targetItemName)
 			  local startNum, endNum = string.find(targetItemName, filter);
 			  if (startNum ~= nil) or (endNum ~= nil) then
 			  	isFounded = true;					
@@ -2397,6 +2399,9 @@ function TPSHOP_ITEMSEARCH_ENTER(parent, control, strArg, intArg)
 	local frame = ui.GetFrame("tpitem");
 	local input = GET_CHILD_RECURSIVELY(frame, "input");
 	local searchFortext = input:GetText();
+	
+	searchFortext = string.lower(searchFortext)
+	
 	MAKE_CATEGORY_TREE();	
 
 	if string.len(searchFortext) <= 0 then
@@ -4261,7 +4266,7 @@ function GETBANNERURL(webUrl)
 	
 	local url = config.GetBannerImgURL();	
 	local urlStr = string.format("%s%s.png", url,webUrl );
-	print(url,webUrl,urlStr)
+	
 	return urlStr;
 end
 

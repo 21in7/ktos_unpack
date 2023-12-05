@@ -15,10 +15,24 @@ end
 
 
 
+--이번 시즌에 해당하는 프로그래스를 넘긴다.
 local function POPOBOOSET_GET_PROGRESS_INFORMATION(index)
     local list, cnt = GetClassList("popoboost_inforamation");
-	local cls = GetClassByIndexFromList(list,index);
-    return cls;
+    local AccountProp = GET_POPOBOOST_ACCPROP();
+    local count = 0;
+    for i = 1, cnt - 1 do
+        local cls = GetClassByIndexFromList(list,i);
+        if cls ~= nil then
+            local seasonprop = TryGetProp(cls, "SeasonProperty", "None")
+            if seasonprop == AccountProp then
+                if count == index then
+                    return cls;
+                end
+                count = count + 1;
+            end
+        end
+    end
+    return nil;
 end
 
 local function POPOBOOST_GET_REWARD_INFO(pc, index)
@@ -416,6 +430,7 @@ function OPEN_POPOBOOST()
     --서버에서 가져와야하는거 아닌가??
 
     POPOBOOST_RESET_ITEM_REWARD(frame)
+    POPO_GUIDE_QUEST_RED_DOT(frame)
 end
 
 ----- 기어스코어 게이지 업데이트
@@ -660,7 +675,6 @@ function POPOBOOST_OPEN_INDUN_SHORTCUT(frame,msg,argStr,argNum)
     local ShortcutParam = TryGetProp(popo_info_cls,"ShortcutParam", 0);
 
     local script = _G[ShortcutScriptName];
-
     if progress == 0 then
         script(nil,nil,nil,ShortcutParam);
     else
@@ -691,7 +705,6 @@ function POPOBOOST_PREMIUM_APPLY_ITEM_CLEINT_SCRIPT(invItem)
         local itemIES = invItem:GetIESID();
         local itemobj = GetIES(invItem:GetObject());
         local className = itemobj.ClassName;
-        print("POPOBOOST_PREMIUN_APPLY",itemIES, className)
         pc.ReqExecuteTx_Item("POPOBOOST_PREMIUN_APPLY",itemIES, className);
         return;
     end
@@ -753,4 +766,17 @@ function POPO_GUIDE_QUEST_OPEN(parent, ctrl, argStr, argNum)
     if frame ~= nil then
         frame:ShowWindow(0)
     end
+end
+
+function POPO_GUIDE_QUEST_RED_DOT(frame)
+	local point = EVENT_STAMP_GET_RECEIVABLE_REWARD_COUNT_POPOBOOST(GetMyAccountObj())
+
+	local notice = GET_CHILD_RECURSIVELY(frame, 'notice_bg')    
+
+	if point > 0 then
+		notice:ShowWindow(1)
+        -- SYSMENU_NOTICE_TEXT_RESIZE(notice, point)
+	elseif point == 0 then
+		notice:ShowWindow(0)
+	end
 end

@@ -1,5 +1,5 @@
 ClassID,Price,JobGrade,Itemdate,AccountLimitCount,BonusItemCnt,AccountLimitWeeklyCount,ClassName,Category,SubCategory,ItemClassName,Job,SellStartTime,SellEndTime,WarningMsg,BonusItemName,BonusOnlySeasonServer,AccountLimitWeeklyCountProperty,buyOptionFunc,MarkType,ItemSocial
-10,296,0,231107,3,0,0,"ClassName10","TP_Premium","TP_Package","Halloeen_Cube_Special_Package","","2023-11-07 18:00:00","2023-12-05 18:00:00","NO","","NO","","","",""
+10,296,0,231107,3,0,0,"ClassName10","TP_Premium","TP_Package","Halloween_Cube_Special_Package","","2023-11-07 18:00:00","2023-12-05 18:00:00","NO","","NO","","","",""
 45,256,0,231107,1,0,0,"ClassName45","TP_Premium","TP_Package","tosw_2311_package_1a","","2023-11-07 18:00:00","2023-11-21 18:00:00","NO","","NO","","","",""
 46,324,0,231107,3,0,0,"ClassName46","TP_Premium","TP_Package","tosw_2311_package_1b","","2023-11-07 18:00:00","2023-11-21 18:00:00","NO","","NO","","","",""
 47,369,0,231107,3,0,0,"ClassName47","TP_Premium","TP_Package","tosw_2311_package_2a","","2023-11-07 18:00:00","2023-11-21 18:00:00","NO","","NO","","","",""
@@ -40,8 +40,7 @@ ClassID,Price,JobGrade,Itemdate,AccountLimitCount,BonusItemCnt,AccountLimitWeekl
 124,33,0,210617,0,0,0,"ClassName124","TP_Premium","TP_Useable","ExchangeACC_Book_490","","","","NO","","NO","","","",""
 201,37,0,231029,0,0,0,"ClassName201","TP_Premium","TP_Package","Gacha_Halloween_Animals_Resale_001","","2023-11-07 18:00:00","2023-12-05 18:00:00","YES","","","","","",""
 202,370,0,231030,0,0,0,"ClassName202","TP_Premium","TP_Package","Gacha_Halloween_Animals_Resale_010","","2023-11-07 18:00:00","2023-12-05 18:00:00","YES","","","","","",""
-301,8,0,210125,0,0,0,"ClassName301","TP_Premium","TP_Consume","Premium_Enchantchip","","","","NO","","NO","","","",""
-302,128,0,210124,0,0,0,"ClassName302","TP_Premium","TP_Consume","Premium_Enchantchip_20","","","","NO","","NO","","","",""
+302,160,0,231101,0,0,0,"ClassName302","TP_Premium","TP_Consume","Premium_Enchantchip_high_20","","","","NO","","NO","","","",""
 303,3,0,210123,0,0,0,"ClassName303","TP_Premium","TP_Consume","Premium_repairPotion","","","","NO","","NO","","","",""
 304,2,0,210122,0,0,0,"ClassName304","TP_Premium","TP_Consume","RestartCristal","","","","NO","","NO","","","",""
 305,18,0,210121,0,0,0,"ClassName305","TP_Premium","TP_Consume","RestartCristal_bundle10","","","","NO","","NO","","","",""

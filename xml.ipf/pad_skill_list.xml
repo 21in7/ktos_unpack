@@ -24587,12 +24587,7 @@ return 30000 + obj.Level * 5000"/>
 			</ToolScp>
 			<ToolScp Scp="PAD_DESTROY_EFFECT_BLENDTIME" Client="NO" UseSleep="NO">
 				<Num Num="0.5"/>
-			</ToolScp>
-			<ToolScp Scp="C_PAD_DELAY_EFFECT_FORCE" Client="YES" UseSleep="NO">
-				<Str_Arg Str="F_wizard_DimensionCompression_dead" Arg="0.40000001"/>
-				<Num Num="20"/>
-				<Num Num="3.2"/>
-			</ToolScp>
+			</ToolScp>			
 			<ToolScp Scp="PAD_USEABLE_RELATION_ENEMY" Client="NO" UseSleep="NO"/>
 			<ToolScp Scp="PAD_CONCURRENT_USE_COUNT" Client="NO" UseSleep="NO">
 				<Num Num="0" UseFunc="1" FuncTxt="local value = 3
@@ -24602,6 +24597,14 @@ return 30000 + obj.Level * 5000"/>
                 return value"/>
 			</ToolScp>
 		</createEvent>
+        <destroyEvent>
+            <ToolScp Scp="C_PAD_DESTROY_EFFECT_POS" Client="YES" UseSleep="NO">
+                <Pos Angle="0" Dist="0" Height="20"/>
+                <Str_Arg Str="F_wizard_DimensionCompression_dead" Arg="0.40000001"/>
+                <Num Num="0"/>
+                <Num Num="0.2"/>
+            </ToolScp>
+        </destroyEvent>
 		<enterEvent>
 			<ToolScp Scp="PAD_GATHER_ENEMY_DAMAGE" Client="NO" UseSleep="NO"/>
 			<ToolScp Scp="PAD_TGT_BUFF" Client="NO" UseSleep="NO">
@@ -39662,5 +39665,134 @@ end"/>
                 <Num Num="1"/>
             </ToolScp>
         </updateEvent>
+    </PadSkill>
+    <PadSkill Name="Pontifex_Evangelism_pad" CheckerType="0" Range="80" UpdateTerm="2000" ApplyFlyMon="1">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="15000"/>
+                <Num Num="99999"/>
+            </ToolScp>       
+            <ToolScp Scp="PAD_CONCURRENT_USE_COUNT" Client="NO" UseSleep="NO">
+                <Num Num="10" UseFunc="1" FuncTxt="local value = 10
+                if IsPVPField(self) == 1 and value &gt; 2 then
+                value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+                end
+                return value"/>
+            </ToolScp>     
+            <ToolScp Scp="C_PAD_EFFECT_FORCE" Client="YES" UseSleep="NO">
+                <Str_Arg Str="Projectile_ElectricBall_Yellow_01" Arg="2" />                
+                <Num Num="35"/>
+            </ToolScp>            
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="eff_flash_normal_yellow_start_01" Arg="0.3"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-1990"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="SCR_PLAY_GROUND_EFFECT_Pontifex_Evangelism" Client="NO" UseSleep="NO">                
+                <Str_Arg Str="eff_cast_lightning_yellow_01" Arg="1.5"/>
+                <Num Num="0.5"/>
+            </ToolScp>
+        </updateEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_LEAVE_Pontifex_Evangelism_pad" Client="NO" UseSleep="NO" >
+                <Str Str="ENEMY"/>
+            </ToolScp>
+        </destroyEvent>        
+    </PadSkill>
+    <PadSkill Name="Pontifex_Didache_pad" CheckerType="0" Range="40" UpdateTerm="500" ApplyFlyMon="1">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="10000"/>
+                <Num Num="99999"/>
+            </ToolScp>       
+            <ToolScp Scp="PAD_CONCURRENT_USE_COUNT" Client="NO" UseSleep="NO">
+                <Num Num="10" UseFunc="1" FuncTxt="local value = 10
+                if IsPVPField(self) == 1 and value &gt; 2 then
+                value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+                end
+                return value"/>
+            </ToolScp>                 
+            <ToolScp Scp="C_PAD_EFFECT_FORCE" Client="YES" UseSleep="NO">
+                <Str_Arg Str="eff_monster_fallen_statue_skill01_launch_01" Arg="0.5" />                
+                <Num Num="35"/>
+            </ToolScp>   
+            <ToolScp Scp="SCR_CREATE_Pontifex_Didache_pad" Client="NO" UseSleep="NO" />
+        </createEvent>
+        <updateEvent>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1" UseFunc="1" FuncTxt="return GET_PAD_SIN_BUFF_RATIO(self, obj, userData)" />
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="eff_flash_normal_red_end_01" Arg="0.3"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-500"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="SCR_PLAY_GROUND_EFFECT_Pontifex_Didache" Client="NO" UseSleep="NO">                
+                <Str_Arg Str="eff_fellow_rogue_backstab_hit_01" Arg="0.5"/>
+                <Num Num="0.5"/>
+            </ToolScp>
+        </updateEvent>
+        <destroyEvent>
+            <ToolScp Scp="PAD_LEAVE_Pontifex_Didache_pad" Client="NO" UseSleep="NO" >
+                <Str Str="ENEMY"/>
+            </ToolScp>
+        </destroyEvent>
+    </PadSkill>
+    <PadSkill Name="Pontifex_Didache_explosion_pad" CheckerType="0" Range="130" UpdateTerm="300" ApplyFlyMon="1">
+        <createEvent>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="5000"/>
+                <Num Num="99999"/>
+            </ToolScp>       
+            <ToolScp Scp="PAD_CONCURRENT_USE_COUNT" Client="NO" UseSleep="NO">
+                <Num Num="20" UseFunc="1" FuncTxt="local value = 20
+                if IsPVPField(self) == 1 and value &gt; 2 then
+                value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+                end
+                return value"/>
+            </ToolScp>                 
+            <ToolScp Scp="C_PAD_EFFECT_FORCE" Client="YES" UseSleep="NO">
+                <Str_Arg Str="eff_monster_zesty_skill03_cast_01" Arg="1" />
+                <Num Num="0"/>
+            </ToolScp>   
+            <ToolScp Scp="C_PAD_EFFECT_FORCE" Client="YES" UseSleep="NO">
+                <Str_Arg Str="eff_kupole_lecifer_launch_01" Arg="3" />
+                <Num Num="0"/>
+            </ToolScp>
+        </createEvent>        
+        <updateEvent>
+            <ToolScp Scp="PAD_DAMAGE_ENEMY" Client="NO" UseSleep="NO">
+                <Num Num="1" UseFunc="1" FuncTxt="return GET_PAD_SIN_BUFF_RATIO(self, obj, userData)" />
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str_Arg Str="eff_flash_normal_red_end_01" Arg="0.3"/>
+                <Num Num="0"/>
+                <Num Num="0"/>
+                <Str Str="None"/>
+            </ToolScp>
+            <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
+                <Num Num="-300"/>
+                <Num Num="1"/>
+            </ToolScp>
+            <ToolScp Scp="UPDATE_PLAY_GROUND_EFFECT_Pontifex_Didache_explosion" Client="NO" UseSleep="NO">                
+                <Str_Arg Str="eff_monster_clymen_skill04_launch_02" Arg="0.4"/>
+                <Num Num="1"/>
+            </ToolScp>
+        </updateEvent>        
     </PadSkill>
 </PadSkills>

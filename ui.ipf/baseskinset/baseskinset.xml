@@ -9059,6 +9059,14 @@
 			<img name="barmiddle" imgrect="1 545 1199 20"/>
 			<img name="barright" imgrect="1200 545 1 20"/>
 		</skin>
+		<skin name="black_market_gauge" texture="\skin\black_market_gauge.tga">
+			<img name="bgleft" imgrect="0 0 1 40"/>
+			<img name="bgmiddle" imgrect="1 0 1029 40"/>
+			<img name="bgright" imgrect="1030 0 1 40"/>
+			<img name="barleft" imgrect="0 39 1 40"/>
+			<img name="barmiddle" imgrect="1 39 1029 40"/>
+			<img name="barright" imgrect="1030 39 1 40"/>
+		</skin>
 	</skinlist>
 	<skinlist category="labellines">
 		<skin name="labelline_def_5" texture="\skin\tooltip_skin_3.tga">
@@ -10709,6 +10717,7 @@
 		<image name="goddess_roulette_board_06" file="\skin\goddess_roulette.tga" imgrect="1366 364 363 363" CMM_Caption="룰렛 보드_06"/>
 		<image name="goddess_roulette_board_07" file="\skin\goddess_roulette.tga" imgrect="1730 364 363 363" CMM_Caption="룰렛 보드_07"/>
 		<image name="goddess_roulette_board_08" file="\skin\goddess_roulette.tga" imgrect="1002 728 363 363" CMM_Caption="룰렛 보드_08"/>
+		<image name="goddess_roulette_board_09" file="\skin\goddess_roulette.tga" imgrect="1366 728 363 363" CMM_Caption="룰렛 보드_09"/>
 		<image name="housing_contest_01" file="\skin\housing.tga" imgrect="0 48 42 51" CMM_Caption="홍보게시판_금"/>
 		<image name="housing_contest_02" file="\skin\housing.tga" imgrect="43 48 42 51" CMM_Caption="홍보게시판_은"/>
 		<image name="housing_contest_03" file="\skin\housing.tga" imgrect="86 48 42 51" CMM_Caption="홍보게시판_동"/>
@@ -11556,6 +11565,33 @@
 		<image name="stamp_life_02" file="\skin\stamp_tour.tga" imgrect="645 584 102 52" CMM_Caption="스탬프 투어_생활02"/>
 		<image name="stamp_life_02_cursoron" file="\skin\stamp_tour.tga" imgrect="748 584 102 52"/>
 		<image name="stamp_life_02_clicked" file="\skin\stamp_tour.tga" imgrect="851 584 102 52"/>
+		<image name="stamp_popoboost_01" file="\skin\stamp_tour.tga" imgrect="1423 56 102 52" CMM_Caption="포포부스트 가이드 퀘스트_01"/>
+		<image name="stamp_popoboost_01_cursoron" file="\skin\stamp_tour.tga" imgrect="1526 56 102 52"/>
+		<image name="stamp_popoboost_01_clicked" file="\skin\stamp_tour.tga" imgrect="1629 56 102 52"/>
+		<image name="stamp_popoboost_step_01" file="\skin\stamp_tour.tga" imgrect="1448 107 102 52" CMM_Caption="포포부스트 가이드 퀘스트_02"/>
+		<image name="stamp_popoboost_step_01_cursoron" file="\skin\stamp_tour.tga" imgrect="1551 107 102 52"/>
+		<image name="stamp_popoboost_step_01_clicked" file="\skin\stamp_tour.tga" imgrect="1654 107 102 52"/>
+		<image name="stamp_popoboost_step_02" file="\skin\stamp_tour.tga" imgrect="1448 160 102 52" CMM_Caption="포포부스트 가이드 퀘스트_03"/>
+		<image name="stamp_popoboost_step_02_cursoron" file="\skin\stamp_tour.tga" imgrect="1551 160 102 52"/>
+		<image name="stamp_popoboost_step_02_clicked" file="\skin\stamp_tour.tga" imgrect="1654 160 102 52"/>
+		<image name="stamp_popoboost_step_03" file="\skin\stamp_tour.tga" imgrect="1448 213 102 52" CMM_Caption="포포부스트 가이드 퀘스트_03"/>
+		<image name="stamp_popoboost_step_03_cursoron" file="\skin\stamp_tour.tga" imgrect="1551 213 102 52"/>
+		<image name="stamp_popoboost_step_03_clicked" file="\skin\stamp_tour.tga" imgrect="1654 213 102 52"/>
+		<image name="stamp_popoboost_step_04" file="\skin\stamp_tour.tga" imgrect="1448 266 102 52" CMM_Caption="포포부스트 가이드 퀘스트_04"/>
+		<image name="stamp_popoboost_step_04_cursoron" file="\skin\stamp_tour.tga" imgrect="1551 266 102 52"/>
+		<image name="stamp_popoboost_step_04_clicked" file="\skin\stamp_tour.tga" imgrect="1654 266 102 52"/>
+		<image name="stamp_popoboost_step_05" file="\skin\stamp_tour.tga" imgrect="1448 319 102 52" CMM_Caption="포포부스트 가이드 퀘스트_05"/>
+		<image name="stamp_popoboost_step_05_cursoron" file="\skin\stamp_tour.tga" imgrect="1551 319 102 52"/>
+		<image name="stamp_popoboost_step_05_clicked" file="\skin\stamp_tour.tga" imgrect="1654 319 102 52"/>
+		<image name="stamp_popoboost_step_06" file="\skin\stamp_tour.tga" imgrect="1448 372 102 52" CMM_Caption="포포부스트 가이드 퀘스트_06"/>
+		<image name="stamp_popoboost_step_06_cursoron" file="\skin\stamp_tour.tga" imgrect="1551 372 102 52"/>
+		<image name="stamp_popoboost_step_06_clicked" file="\skin\stamp_tour.tga" imgrect="1654 372 102 52"/>
+		<image name="stamp_popoboost_step_07" file="\skin\stamp_tour.tga" imgrect="1448 425 102 52" CMM_Caption="포포부스트 가이드 퀘스트_07"/>
+		<image name="stamp_popoboost_step_07_cursoron" file="\skin\stamp_tour.tga" imgrect="1551 425 102 52"/>
+		<image name="stamp_popoboost_step_07_clicked" file="\skin\stamp_tour.tga" imgrect="1654 425 102 52"/>
+		<image name="stamp_popoboost_step_08" file="\skin\stamp_tour.tga" imgrect="1448 478 102 52" CMM_Caption="포포부스트 가이드 퀘스트_08"/>
+		<image name="stamp_popoboost_step_08_cursoron" file="\skin\stamp_tour.tga" imgrect="1551 478 102 52"/>
+		<image name="stamp_popoboost_step_08_clicked" file="\skin\stamp_tour.tga" imgrect="1654 478 102 52"/>
 		<image name="housing_magnifier" file="\skin\pip_test2.tga" imgrect="672 286 28 28" CMM_Caption="개인하우징_커스텀_돋보기"/>
 		<image name="housing_magnifier_cursoron" file="\skin\pip_test2.tga" imgrect="701 286 28 28"/>
 		<image name="housing_magnifier_clicked" file="\skin\pip_test2.tga" imgrect="730 286 28 28"/>
@@ -13368,6 +13404,8 @@
 		<image name="Beholder_Aprilfool" file="\icon\emoticon\Beholder_Aprilfool.png" imgrect="0 0 128 128"/>
 		<image name="emoticonItem_summer_popo_160" file="\icon\emoticon\popolion_yami.png" imgrect="0 0 128 128"/>
 		<image name="emoticonItem_summer_popo_161" file="\icon\emoticon\popolion_tube.png" imgrect="0 0 128 128"/>
+		<image name="emoticonItem_2312_popo_10" file="\icon\emoticon\popo_hi.png" imgrect="0 0 128 128"/>
+		<image name="emoticonItem_2312_popo_11" file="\icon\emoticon\popo_nodding.png" imgrect="0 0 128 128"/>
 	</imagelist>
 	<imagelist category="itemtooltip_image">
 		<image name="circle_gem" file="\skin\tooltip_skin_3.tga" imgrect="805 228 30 30"/>
@@ -14713,6 +14751,7 @@
 		<image name="Dlg_port_SpearMaster" file="\npcimg\SpearMaster.png" imgrect="0 0 1000 800" CMM_Caption="신극"/>
 		<image name="Dlg_port_EnginnerMaster" file="\npcimg\Enginner_Master.png" imgrect="0 0 950 800" CMM_Caption="엔지니어"/>
 		<image name="Dlg_port_Slogutis" file="\npcimg\Slogutis.png" imgrect="0 0 1120 900" CMM_Caption="마신 슬로거티스"/>
+		<image name="Dlg_port_PontifexMaster" file="\npcimg\Pontifex_Master.png" imgrect="0 0 950 800" CMM_Caption="폰티펙스"/>
 	</imagelist>
 	<imagelist category="Dlg_boss">
 		<image name="balloon_Skiaclipse" file="\skin\monster_Dlg.tga" imgrect="0 0 220 260" CMM_Caption="스키아클립스"/>
@@ -16327,6 +16366,10 @@
 		<image name="plate_achieve_roze_weekraid" file="\skin\user_title_skin2.tga" imgrect="214 102 214 34" CMM_Caption="로제 더 미저러블 주보레 칭호"/>
 		<image name="plate_achieve_upinis_weekraid" file="\skin\user_title_skin2.tga" imgrect="428 102 214 34" CMM_Caption="우피니스 주보레 칭호"/>
 		<image name="plate_achieve_slogutis_weekraid" file="\skin\user_title_skin2.tga" imgrect="642 102 214 34" CMM_Caption="슬로거티스 주보레 칭호"/>
+		<image name="plate_achieve_spreader_weekraid" file="\skin\user_title_skin2.tga" imgrect="856 102 214 34" CMM_Caption="변질의 전파자 주보레 칭호"/>
+		<image name="plate_achieve_popo_8th_Anni" file="\skin\user_title_skin2.tga" imgrect="642 68 214 136" CMM_Caption="8주년 칭호"/>
+        <image name="plate_achieve_Pontifex_weekraid" file="\skin\user_title_skin2.tga" imgrect="0 136 214 34" CMM_Caption="폰티펙스 주보레 칭호"/>
+		<image name="plate_achieve_Pontifex" file="\skin\user_title_skin2.tga" imgrect="1070 102 214 34" CMM_Caption="폰티펙스 칭호"/>
 		</imagelist>
 	<imagelist category="skin_hair">
 		<image name="icon_skintone_01_m01" file="\skin\skinhair\icon_skintone_01_m01.png" imgrect="0 0 80 80" CMM_Caption="남성 01"/>
@@ -16667,9 +16710,9 @@
 		<image name="popolion_roulette_icon" file="\skin\popolion_roulette.tga" imgrect="640 2 72 72" CMM_Caption="포포리온 룰렛 타이틀"/>
 		<image name="popolion_roulette_icon_cursoron" file="\skin\popolion_roulette.tga" imgrect="713 2 72 72" CMM_Caption="포포리온 룰렛 타이틀"/>
 		<image name="popolion_roulette_icon_clicked" file="\skin\popolion_roulette.tga" imgrect="786 2 72 72" CMM_Caption="포포리온 룰렛 타이틀"/>
-		<image name="popoboost_guide_quest_icon" file="\skin\popoboost_event_skin.tga" imgrect="703 652 72 72"/>
-		<image name="popoboost_guide_quest_icon_cursoron" file="\skin\popoboost_event_skin.tga" imgrect="776 652 72 72"/>
-		<image name="popoboost_guide_quest_icon_clicked" file="\skin\popoboost_event_skin.tga" imgrect="849 652 72 72"/>
+		<image name="popoboost_guide_quest_icon" file="\skin\popoboost_event_skin.tga" imgrect="703 652 72 72" CMM_Caption="포포리온 룰렛 타이틀"/>
+		<image name="popoboost_guide_quest_icon_cursoron" file="\skin\popoboost_event_skin.tga" imgrect="776 652 72 72" CMM_Caption="포포리온 룰렛 타이틀"/>
+		<image name="popoboost_guide_quest_icon_clicked" file="\skin\popoboost_event_skin.tga" imgrect="849 652 72 72" CMM_Caption="포포리온 룰렛 타이틀"/>
 	</imagelist>
 	<imagelist category="hudskin">
 		<image name="weekboss_default_hud_soulCrystal_bg" file="\skin\indun_skin.tga" imgrect="614 552 83 86" CMM_Caption="소울크리스탈 횟수제한 UI"/>
@@ -16681,7 +16724,6 @@
 	</imagelist>
 	<imagelist category="cupole">
 		<image name="cupole_ui_head" file="\skin\cupole_hud.tga" imgrect="1 1 590 76"/>
-
 	</imagelist>
 
 </skinset>

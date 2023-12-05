@@ -4106,3 +4106,27 @@ function SCR_ABIL_SpearMaster20_INACTIVE(self, ability)
         SetSkillOverHeat(self, skl.ClassName, 0, 1)
     end
 end
+
+function SCR_ABIL_Pontifex1_ACTIVE(self, ability)
+    local list, cnt = GetPartyMemberList(self, PARTY_NORMAL)
+    local caster = self
+    for i = 1, cnt do
+        RemoveBuffByCaster(list[i], caster, 'Missa_Buff') 
+    end
+end
+
+function SCR_ABIL_Pontifex1_INACTIVE(self, ability)
+    local list, cnt = GetPartyMemberList(self, PARTY_NORMAL)
+    local caster = self
+    for i = 1, cnt do
+        RemoveBuffByCaster(list[i], caster, 'Missa_Buff') 
+    end
+end
+
+function SCR_ABIL_Pontifex2_ACTIVE(self, ability)
+    RemoveBuff(self, 'Sin_Buff')
+end
+
+function SCR_ABIL_Pontifex2_INACTIVE(self, ability)
+
+end

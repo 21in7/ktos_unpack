@@ -20039,3 +20039,74 @@ function SCR_GET_SKL_COOLDOWN_Common_MovingForward(skill)
     return basicCoolDown
 end
 
+
+
+
+-------------------------- 폰티펙스(Pontifex)
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_Missa_Ratio(skill)
+    local value = 1 + (skill.Level * TryGetProp(skill, 'SklFactor', 0)) * 0.01
+    return value
+end
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_Get_SpendSP_Missa(skill)
+    local value = SCR_Get_SpendSP_Magic(skill)
+    local pc = GetSkillOwner(skill);
+
+    if pc == nil then
+        return math.floor(value);
+    end
+    
+    local over = GetBuffOver(pc, 'Missa_Buff')    
+    over = math.min(over, 2)
+    local multiple = 1 + (over * 0.5)        
+    multiple = math.max(multiple, 1)    
+    return value * multiple
+end
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function GET_Missa_buff_hp_point(skill)
+    local pc = GetSkillOwner(skill)
+    local value = TryGetProp(pc, 'MHP', 0) * SCR_GET_Missa_Ratio(skill) * 0.01
+    return math.floor(value)
+end
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_GET_EvilBurn_Target_Count(skill)
+    local pc = GetSkillOwner(skill);
+    local value = 10;    
+    if IsPVPField(pc) == 1 and value > 2 then
+        value = math.floor((math.max(0, value-2)^0.5))+math.min(2, value)
+    end
+    
+    return value;
+end
+
+-- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+function SCR_Get_SpendSP_BySinBuff(skill)
+    local value = SCR_Get_SpendSP_Magic(skill)    
+    local pc = GetSkillOwner(skill);
+
+    if pc == nil then
+        return math.floor(value);
+    end
+
+    local over = GetBuffOver(pc, 'Sin_Buff')
+    over = math.min(over, 5)    
+    local multiple = 1.5^over
+    return value * multiple
+end
+
+function SCR_GET_Gospel_Ratio(skill)
+    -- done, 해당 함수 내용은 cpp로 이전되었습니다. 변경 사항이 있다면 반드시 프로그램팀에 알려주시기 바랍니다.
+    local level = TryGetProp(skill, 'Level', 0)    
+    local ratio = 1
+    local pc = GetSkillOwner(skill)    
+    local abil = GetAbility(pc, 'Pontifex51');
+    if abil ~= nil and 1 == TryGetProp(abil, "ActiveState", 0) then
+        -- 특성이 활성화 되었다면 0.25
+        ratio = 0.25
+    end
+
+    local value = 5 + (level * TryGetProp(skill, 'SklFactor', 0) * 0.01)
+    value = value * ratio
+    return value
+end

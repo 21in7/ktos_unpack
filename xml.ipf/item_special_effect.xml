@@ -3963,6 +3963,16 @@
 			</Creation>
 		</Layer>
 	</ItemList>
+	<ItemList ItemClassName="wing_pontifex">
+		<Layer effect="BodyAura_GoldenWheel_Orange_01" TargetNode="Dummy_cross" scale="1.0" offset="0;0">
+			<Creation>
+				<Property PlayMoment="None">
+					<Option ReinforceValue="0" UseAttach="YES" Use2DEffect="NO" IgnoreAnimEventEffect="NO" SubWeaponPistol="NO" UnityEffect="YES"/>
+					<Sound SoundName="None" SoundVolume="1"/>
+				</Property>
+			</Creation>
+		</Layer>
+	</ItemList>
 	<ItemList ItemClassName="wing_ep14tarot01">
 		<Layer effect="F_pc_item_wing_tarot_star_loop" TargetNode="Dummy_effect_wing001" scale="0.7" offset="0;0">
 			<Creation>

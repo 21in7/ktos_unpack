@@ -699,3 +699,16 @@ function get_remove_buff_tooltip_Rangda_Keletihan(level)
     local str = string.format('Buff/3/%d/%.2f/ENEMY/0', remove_count, percent)    
     return str
 end
+
+function get_remove_buff_tooltip_Pontifex_Evangelism(level)
+    local percent = 2.5 * tonumber(level)    
+    if percent > 100 then
+        percent = 100
+    end
+
+    local remove_count = 1
+
+    -- buff_type, lv, count, percent, relation, boss_check
+    local str = string.format('Buff/3/%d/%.2f/ENEMY/0', remove_count, percent)    
+    return str
+end

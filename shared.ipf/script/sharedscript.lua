@@ -3300,6 +3300,24 @@ function JOB_LAMA_PRE_CHECK(pc, jobCount)
     return 'NO'
 end
 
+function JOB_Pontifex_PRE_CHECK(pc, jobCount)    
+    local aObj = nil
+    if IsServerSection() == 0 then
+        aObj = GetMyAccountObj();
+    else
+        aObj = GetAccountObj(pc);
+    end
+    
+    if aObj ~= nil then
+        local value = TryGetProp(aObj, 'UnlockQuest_Char4_23', 0)
+        if value == 1 then
+            return 'YES'
+        end
+    end
+
+    return 'NO'
+end
+
 function JOB_JAGUAR_PRE_CHECK(pc, jobCount)
     if jobCount == nil then
         jobCount = GetTotalJobCount(pc);
@@ -4028,24 +4046,24 @@ function UQ_GET_JOB_SETTING_JOB(JobClassName) -- job_unlockquest.xml에서 cls�
     if cnt == 0 or cnt == nil then return end
     
     local resultJob = nil
-
+    
     if JobClassName == "ALL" then
         local AllList = {}
-        for p  = 0, cnt - 1 do
-            local cls = GetClassByIndexFromList(list, p);
-            local clsID = TryGetProp(cls, "ClassID", 0)
+            for p  = 0, cnt - 1 do
+                local cls = GetClassByIndexFromList(list, p);
+                local clsID = TryGetProp(cls, "ClassID", 0)
+    
+                if clsID >= JobNumLimt then
+                    break
+                end
+    
+                if clsID < JobNumLimt then
+                    AllList[#AllList + 1] = cls                    
+                end
+            end    
 
-            if clsID >= JobNumLimt then
-                break
-            end
-
-            if clsID < JobNumLimt then
-                AllList[#AllList + 1] = cls
-            end
-        end
-
-        return AllList
-    end
+            return AllList
+        end        
 
     for i  = 0, cnt - 1 do
         local cls = GetClassByIndexFromList(list, i);

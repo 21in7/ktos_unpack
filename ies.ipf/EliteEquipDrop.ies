@@ -89,3 +89,4 @@ ClassID,minLv,maxLv,dropRatio,ClassName,Name,ServerMsg,EventCompositon,Dropable,
 88,420,450,2,"TBW04_126_6","바이보라 비전 - 컴패니언 애호가","NO","NO","YES","Hunter"
 89,420,450,2,"TSP04_128_3","바이보라 비전 - 용호상박","NO","NO","YES","SpearMaster"
 90,420,450,2,"TBW04_126_7","바이보라 비전 - 최대 출력","NO","NO","YES","Engineer"
+93,420,450,2,"TMAC04_119_1","바이보라 비전 - 원죄","NO","NO","YES","Pontifex"

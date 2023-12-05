@@ -27790,3 +27790,8 @@ ClassID,ClassName,Mesh,Path,ArmbandInfo,UseAlpha,IsJiggleBoneHair,CustomRot
 738022,"ep15heartqueen_rapier","item_hi\pc_item\weapon\ep15heartqueen_rapier.xac","item_texture\","","NO","",""
 738023,"ep15heartqueen_mace","item_hi\pc_item\weapon\ep15heartqueen_mace.xac","item_texture\","","NO","",""
 738024,"ep15heartqueen_thsword","item_hi\pc_item\weapon\ep15heartqueen_thsword.xac","item_texture\","","NO","",""
+738025,"npc_pontifex","char_hi\npc\npc_pontifex\npc_pontifex_set.xac","char_texture\npc\npc_pontifex\","","NO","",""
+738026,"cleric_m_pontifex","char_hi\pc\Cleric_m\cleric_m_pontifex.xac","char_texture\pc\body\cleric_m_pontifex\","L;Dummy_LF_armband","NO","",""
+738027,"cleric_f_pontifex","char_hi\pc\Cleric_f\cleric_f_pontifex.xac","char_texture\pc\body\cleric_f_pontifex\","S;Dummy_LF_armband","NO","",""
+738028,"accessory_Pontifexglass","char_hi\pc\accessory\accessory_Pontifexglass.xac","char_texture\pc\accessory\","","NO","",""
+738029,"wing_PontifexCross","char_hi\npc\wing_PontifexCross\wing_PontifexCross.xac","char_texture\npc\wing_PontifexCross\","","NO","",""

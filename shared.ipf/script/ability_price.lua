@@ -916,3 +916,7 @@ function GET_MAX_REQUIRED_ABILITY_POINT(pc, name)
     return nil
 end
                 
+
+function ABIL_REINFORCE_PRICE_Pontifex_Gospel(pc, abilName, abilLevel, maxLevel)    
+    return 100000, 0
+end

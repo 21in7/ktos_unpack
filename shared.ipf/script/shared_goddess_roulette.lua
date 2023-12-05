@@ -17,7 +17,7 @@ function GET_USE_ROULETTE_COUNT(type, accObj)
         ["GODDESS_ROULETTE"] = TryGetProp(accObj, "GODDESS_ROULETTE_USE_ROULETTE_COUNT2"),
         ["GODDESS_COSTUME_ROULETTE"] = TryGetProp(accObj, "GODDESS_COSTUME_ROULETTE_USE_ROULETTE_COUNT"),
         ["GODDESS_RAINBOW_ROULETTE"] = TryGetProp(accObj, "GODDESS_RAINBOW_ROULETTE_USE_ROULETTE_COUNT"),
-        ["POPO_ROULETTE"] = TryGetProp(accObj, "POPO_ROULETTE_USE_ROULETTE_COUNT")
+    ["POPO_ROULETTE"] = TryGetProp(accObj, "POPO_ROULETTE_USE_ROULETTE_COUNT")
     }
 
 	return table[type];
@@ -41,7 +41,7 @@ function GET_ROULETTE_COIN_CLASSNAME(type)
         ["GODDESS_ROULETTE"] = "Event_Roulette_Coin_3",
         ["GODDESS_COSTUME_ROULETTE"] = "Event_Roulette_Coin_4",
         ["GODDESS_RAINBOW_ROULETTE"] = "Event_Roulette_Coin_5",
-        ["POPO_ROULETTE"] = "Event_Roulette_Coin_PoPo"
+        ["POPO_ROULETTE"] = "Event_Roulette_Coin_PoPo_2312"
     }
 
 	return table[type];

@@ -35,8 +35,8 @@ function MINIMIZED_POPOBOOST_BUTTON_OPEN_CHECK(frame, msg, argStr, argNum)
     end
     
     local etcProp = GET_POPOBOOST_ETCPROP();
-    local isParticipate = TryGetProp(etc, etcProp, 0);
-    if isParticipate == 0 then
+    local isParticipate = TryGetProp(etc, etcProp, -1);
+    if isParticipate <= 0 then
         frame:ShowWindow(0);
     else
         frame:ShowWindow(1);

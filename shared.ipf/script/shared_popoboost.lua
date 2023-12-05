@@ -101,9 +101,9 @@ function popoboost_table()
     end
     item_list["Normal6"] = {}
     item_list["Normal6"]['EVENT_2308_POPO_FESTA'] = 1
-    item_list["Normal6"]['Event_Roulette_Coin_PoPo'] = 5
+    item_list["Normal6"]['Event_Roulette_Coin_PoPo_2312'] = 5
     item_list["Normal6"]['RadaCertificateCoin_50000p'] = 4
-    item_list["Normal6"]['Ticket_TurbulentCore_Party_Enter_NoTrade'] = 10
+    item_list["Normal6"]['Ticket_TurbulentCore_Auto_Enter_NoTrade'] = 10
     item_list["Normal6"]['Ticket_Rozethemisterable_Party_Enter_NoTrade'] = 10
     item_list["Normal6"]['ChallengeExpertModeCountUp_Ev_1'] = 10
     if IsPAPAYA == true then
@@ -134,13 +134,13 @@ function popoboost_table()
     if IsPAPAYA == true then
 
     else
-        item_list["Premium1"]['misc_reinforce_percentUp_490_NoTrade'] = 50
+        item_list["Premium1"]['misc_reinforce_percentUp_500_NoTrade'] = 50
     end
 
     item_list["Premium2"] = {}
     item_list["Premium2"]['misc_RevivalPaulius_NoTrade'] = 150
     item_list["Premium2"]['Event_ChallengeModeReset_6'] = 5
-    item_list["Premium2"]['misc_reinforce_percentUp_490_NoTrade'] = 50
+    item_list["Premium2"]['misc_reinforce_percentUp_500_NoTrade'] = 50
     item_list["Premium2"]['RadaCertificateCoin_50000p'] = 2
 
     if IsPAPAYA == true then
@@ -152,7 +152,7 @@ function popoboost_table()
     item_list["Premium3"]['RadaCertificateCoin_50000p'] = 1
     if IsPAPAYA == true then
     else
-        item_list["Premium3"]['misc_reinforce_percentUp_490_NoTrade'] = 50
+        item_list["Premium3"]['misc_reinforce_percentUp_500_NoTrade'] = 50
         item_list["Premium3"]['misc_transmutationSpreader_NoTrade'] = 150
     end
 
@@ -177,13 +177,13 @@ function popoboost_table()
         item_list["Premium5"]['RadaCertificateCoin_50000p'] = 1        
     else
         item_list["Premium5"]['misc_transmutationSpreader_NoTrade'] = 150
-        item_list["Premium5"]['misc_reinforce_percentUp_490_NoTrade'] = 50
+        item_list["Premium5"]['misc_reinforce_percentUp_500_NoTrade'] = 50
     end
 
     item_list["Premium6"] = {}
-    item_list["Premium6"]['Event_Roulette_Coin_PoPo'] = 5
+    item_list["Premium6"]['Event_Roulette_Coin_PoPo_2312'] = 5
     item_list["Premium6"]['RadaCertificateCoin_50000p'] = 4
-    item_list["Premium6"]['Ticket_TurbulentCore_Party_Enter_NoTrade'] = 10
+    item_list["Premium6"]['Ticket_TurbulentCore_Auto_Enter_NoTrade'] = 10
     item_list["Premium6"]['Ticket_Rozethemisterable_Party_Enter_NoTrade'] = 2
     item_list["Premium6"]['ChallengeExpertModeCountUp_Ev_1'] = 10
     item_list["Premium6"]['piece_GabijaEarring_select_job_NoTrade_Belonging'] = 1
@@ -311,10 +311,6 @@ function POPOBOOST_GET_MAX_GEARSCORE(pc)
     else
         etcObj = GetMyEtcObject();
     end
-
-    if pc == nil then
-        return 0;
-    end    
     if etcObj == nil then
         return 0;
     end
@@ -521,4 +517,52 @@ function GET_POPOBOOST_PROGRESPROP()
     end
     local prop = TryGetProp(cls, "GiveItemProp", "None");
     return prop;
+end
+
+function IS_POPOBOOST_PARTICIPATE_CHARACTER(pc)
+    if pc== nil then
+        return false;
+    end
+    local etcObj
+    if IsServerSection(pc) == 1 then
+        etcObj = GetETCObject(pc);
+    else
+        etcObj = GetMyEtcObject(pc);
+    end
+
+    if etcObj == nil then
+        return false;
+    end
+
+    local etcprop = GET_POPOBOOST_ETCPROP()
+    local isParticipate = TryGetProp(etcObj, etcprop, -1);
+    if isParticipate > 0 then
+        return true;
+    end
+
+    return false;
+end
+
+function IS_POPOBOOST_PARTICIPATE_ACCOUNT(pc)
+    if pc== nil then
+        return false;
+    end
+    local acc = nil;
+    if IsServerSection() == 1 then
+        acc = GetAccountObj(pc);
+    else
+        acc = GetMyAccountObj(pc);
+    end
+    if acc == nil then
+        return false;
+    end
+
+    local accprop = GET_POPOBOOST_ACCPROP()
+    
+    local isParticipate = TryGetProp(acc, accprop, -1);
+    if isParticipate > 0 then
+        return true;
+    end
+
+    return false;
 end
