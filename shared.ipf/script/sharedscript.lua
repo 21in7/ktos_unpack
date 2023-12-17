@@ -3915,7 +3915,7 @@ function IS_LEFT_SUBFRAME_ACC(item)
     local str = TryGetProp(item, 'StringArg', 'None')
     local ClsName = TryGetProp(item, 'ClassName', 'None')
     local class_type = TryGetProp(item, 'ClassType', 'None')
-    if class_type == 'Ring' or class_Type == 'Neck' then
+    if class_type == 'Ring' or class_type == 'Neck' then        
         if TryGetProp(item, 'ItemGrade', 0) >= 6 then
             return true
         end

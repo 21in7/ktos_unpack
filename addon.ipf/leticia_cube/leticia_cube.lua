@@ -207,6 +207,6 @@ function LETICIA_CUBE_ITEM_LIST_BUTTON_URL()
     if config.GetServiceNation() == 'PAPAYA' then
         login.OpenURL('https://tos.papayaplay.com/tos.do?tp=news.view&postid=4759');
     else
-        login.OpenURL('https://steamcommunity.com/games/2178420/partnerevents/preview/3866965910201898613')
+        login.OpenURL('https://steamcommunity.com/games/2178420/announcements/detail/3866965910201898614')
     end
 end

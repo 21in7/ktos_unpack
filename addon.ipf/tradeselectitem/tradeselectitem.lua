@@ -1033,9 +1033,13 @@ function OPEN_TRADE_SELECT_ITEM_STIRNG_SPLIT(invItem)
 
 	for i = 1, index do
 		local itemName = TryGetProp(cls, "SelectItemClsMsg_"..i)
-		
+		local conditionfunction = nil;
+		if itemobj.ClassName == "popoboost_special_equipment_box" then
+			conditionfunction = SET_SELECT_CONDITION_POPOBOOST
+		end
+
 		if itemName ~= 'None' and itemName ~= nil then
-			y = TRRADE_SELECT_STRING_SPLIT_CTRL(box, y, i, itemName, itemobj.ClassName, SET_SELECT_CONDITION_POPOBOOST);	
+			y = TRRADE_SELECT_STRING_SPLIT_CTRL(box, y, i, itemName, itemobj.ClassName, conditionfunction);	
 			y = y + 5
 		end
 	end

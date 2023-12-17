@@ -11705,6 +11705,8 @@
         <Effect Name="master_Pontifex"/>
         <Effect Name="c_nunnery"/>
         <Effect Name="master_Spear_Master"/>
+        <Effect Name="Bip001 Neck"/>
+        <Effect Name="Bone_hair_B01"/>
     </Category>
     <Category ID="19">
         <Effect Name="I_fallen_statue_atk002_mash"/>
