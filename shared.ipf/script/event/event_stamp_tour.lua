@@ -133,8 +133,22 @@ function EVENT_STAMP_GET_RECEIVABLE_REWARD_COUNT(aObj)
 end
 
 function EVENT_STAMP_GET_RECEIVABLE_REWARD_COUNT_POPOBOOST(aObj)
+	local CurrentPage = 0;
+	local maxpopoboostpage = 8;
+	for i = 1, maxpopoboostpage do
+		local res = EVENT_STAMP_TOUR_POPOBOOST_CLEAR_CHECK("POPO_EVENT_STAMP_2312",i);
+		if res == false then
+			CurrentPage = i;
+			break;
+		end
+	end
+
+
 	local clsList, cnt = GetClassListByProp('note_eventlist', 'Group', 'POPO_EVENT_STAMP_2312')
 	local rewardCnt = 0
+	if CurrentPage ~= maxpopoboostpage then
+		cnt = CurrentPage;
+	end
 	for j = 1, cnt do
 		local cls = clsList[j]
 		for i = 1, 3 do

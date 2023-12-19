@@ -1011,8 +1011,8 @@
         <Effect Name="F_line025_white"/>
         <Effect Name="CantMoveToPrivateRegion"/>
         <Effect Name="F_archer_Brotherhood_buff"/>
-        <Effect Name="F_blood015_spin"/>
-         <Effect Name="CHALLENGE_DIVISION_AUTO_EX"/>
+        <Effect Name="F_blood015_spin"/>        
+        <Effect Name="CHALLENGE_DIVISION_AUTO_EX"/>
         <Effect Name="skl_eff_inquisitor_judgment_body"/>
         <Effect Name="fire_master_bless_pad"/>
         <Effect Name="SKL8"/>
@@ -1084,6 +1084,8 @@
         <Effect Name="skl_explosion01"/>
         <Effect Name="common_yoryung"/>
         <Effect Name="skl_eff_fireball_cast_loop"/>
+        <Effect Name="skl_wiz_fireball"/>
+        <Effect Name="GroundImpact_CoinBomb_Gold_02"/>
         <Effect Name="skl_wiz_firepillar_shot"/>
         <Effect Name="skl_wiz_firepillar_shot"/>
         <Effect Name="skl_eff_special_cast_3"/>
@@ -11705,8 +11707,20 @@
         <Effect Name="master_Pontifex"/>
         <Effect Name="c_nunnery"/>
         <Effect Name="master_Spear_Master"/>
+        <Effect Name="EVENT_2023_SNIGO_DUNGEON"/>
+        <Effect Name="F_ground113_ice3"/>
+        <Effect Name="F_ground113_ice3##1.5"/>
+        <Effect Name="F_ground113_ice3##1.5"/>
+        <Effect Name="F_ground114_ice2"/>
+        <Effect Name="skl_eff_arquebusier_luckystrike_shot"/>
+        <Effect Name="pc_making_ball"/>
+        <Effect Name="F_circle029_ground1"/>
+        <Effect Name="skl_explosion01"/>
+        <Effect Name="SKL_ASSISTATTACK_BUBBLEWRAP"/>
+        <Effect Name="SKL_ASSISTATTACK_CONFUSION"/>
         <Effect Name="Bip001 Neck"/>
         <Effect Name="Bone_hair_B01"/>
+        <Effect Name="F_water020_burstup"/>
     </Category>
     <Category ID="19">
         <Effect Name="I_fallen_statue_atk002_mash"/>

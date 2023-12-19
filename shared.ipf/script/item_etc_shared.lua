@@ -335,6 +335,10 @@ function IS_REGISTER_ENABLE_COSTUME(item)
     end
 
     if TryGetProp(item, "TeamBelonging", 0) == 1 then
+        local itemName =  TryGetProp(item, "StringArg", "None");
+        if itemName == "snigo_costume" then
+            return true;
+        end
         return false, "CantRegisterCuzTeamBelonging"
     end
 

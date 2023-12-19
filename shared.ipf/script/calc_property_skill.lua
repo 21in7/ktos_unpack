@@ -16415,7 +16415,7 @@ end
 function SCR_Get_SkillFactor_Vibora_Matross(skill)
     local pc = GetSkillOwner(skill)
     local Explosion = GetSkill(pc, "Matross_Explosion")
-    local value = math.floor(TryGetProp(Explosion, "SkillFactor", 0) * 0.3)
+    local value = math.floor(TryGetProp(Explosion, "SkillFactor", 0) * 0.6)
     return value
 end
 
@@ -16640,7 +16640,7 @@ end
 function SCR_Get_SkillFactor_LewaAdvent(skill)
     local pc = GetSkillOwner(skill)
     local skl = GetSkill(pc, "Bokor_Damballa")
-    local value = math.floor(TryGetProp(skl, "SkillFactor", 0) * 0.75)
+    local value = math.floor(TryGetProp(skl, "SkillFactor", 0) * 0.9)
 
     return value
 end
@@ -17899,8 +17899,7 @@ end
 function SCR_Get_SkillFactor_DobleAtaque(skill)
     local pc = GetSkillOwner(skill)
     local skl = GetSkill(pc, "Luchador_LuchaDeSilla")
-    local value = math.floor(TryGetProp(skl, "SkillFactor", 0)) 
-    
+    local value = math.floor(TryGetProp(skl, "SkillFactor", 0)*1.35) 
     return value
 end
 
@@ -17934,7 +17933,7 @@ end
 function SCR_Get_SkillFactor_Buceando(skill)
     local pc = GetSkillOwner(skill)
     local skl = GetSkill(pc, "Luchador_Chocar")
-    local value = math.floor(TryGetProp(skl, "SkillFactor", 0) * 0.7) 
+    local value = math.floor(TryGetProp(skl, "SkillFactor", 0) * 0.875) 
     
     return value
 end
@@ -17943,7 +17942,7 @@ end
 function SCR_Get_SkillFactor_Rodando(skill)
     local pc = GetSkillOwner(skill)
     local skl = GetSkill(pc, "Luchador_LuchaDeSilla")
-    local value = math.floor(TryGetProp(skl, "SkillFactor", 0) * 0.35) 
+    local value = math.floor(TryGetProp(skl, "SkillFactor", 0) * 0.466) 
     
     return value
 end

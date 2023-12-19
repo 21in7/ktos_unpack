@@ -1634,3 +1634,6 @@ ClassID,BlendIn,BlendOut,Priority,OffsetValue,ClassName,Main,Loop,Freeze,Additiv
 1678,0,0,4,0,"STD_TW_ZEBRA","YES","YES","NO","NO","YES","NO","NO","","YES","Stand"
 1679,0,0,4,0,"RUN_TW_ZEBRA","YES","YES","NO","NO","YES","NO","NO","","NO","Stand"
 1680,0,0,4,0,"WLK_TW_ZEBRA","YES","YES","NO","NO","YES","NO","NO","","NO","Stand"
+1697,0,0,4,0,"STD_SNIEGO","YES","YES","NO","NO","YES","NO","NO","","YES","Stand"
+1698,0,0,4,0,"RUN_SNIEGO","YES","YES","NO","NO","YES","NO","NO","","NO","Stand"
+1699,0,0,4,0,"WLK_SNIEGO","YES","YES","NO","NO","YES","NO","NO","","NO","Stand"

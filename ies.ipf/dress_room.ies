@@ -85,3 +85,7 @@ ClassID,ClassName,Thema,ItemClassName,Group
 136,"dress_ep15heartqueen01_2","ep15heartqueen_theme","costume_ep15heartqueen01_f","dress_room_blessed_cube"
 137,"dress_ep15heartqueen02_1","ep15heartqueen_theme","costume_ep15heartqueen02_m","dress_room_blessed_cube"
 138,"dress_ep15heartqueen02_2","ep15heartqueen_theme","costume_ep15heartqueen02_f","dress_room_blessed_cube"
+139,"dress_costume_sniego01_m","costume_sniego_theme","costume_sniego01_m","dress_room_blessed_cube"
+140,"dress_costume_sniego01_f","costume_sniego_theme","costume_sniego01_f","dress_room_blessed_cube"
+141,"dress_costume_sniego02_m","costume_sniego_theme","costume_sniego02_m","dress_room_blessed_cube"
+142,"dress_costume_sniego02_f","costume_sniego_theme","costume_sniego02_f","dress_room_blessed_cube"

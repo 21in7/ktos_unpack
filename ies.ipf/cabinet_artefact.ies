@@ -37,3 +37,8 @@ ClassID,Upgrade,MakeCostSilver,MaxUpgrade,Basic,Category,ClassName,GetItemFunc,R
 36,0,10000,1,0,"Artefact","ep15heartqueen_rapier","GET_CABINET_ITEM_NAME","TX_REGISTER_CABINET_ITEM","TX_BRIQUET_GODDESS_ITEM","ep15heartqueen_rapier_cabinet","","하트 여왕의 레이피어"
 37,0,10000,1,0,"Artefact","ep15heartqueen_mace","GET_CABINET_ITEM_NAME","TX_REGISTER_CABINET_ITEM","TX_BRIQUET_GODDESS_ITEM","ep15heartqueen_mace_cabinet","","하트 여왕의 메이스"
 38,0,10000,1,0,"Artefact","ep15heartqueen_thsword","GET_CABINET_ITEM_NAME","TX_REGISTER_CABINET_ITEM","TX_BRIQUET_GODDESS_ITEM","ep15heartqueen_thsword_cabinet","","하트 여왕의 투 핸드 소드"
+39,0,10000,1,0,"Artefact","sniego_sword","GET_CABINET_ITEM_NAME","TX_REGISTER_CABINET_ITEM","TX_BRIQUET_GODDESS_ITEM","sniego_sword_cabinet","","스니고 소드"
+40,0,10000,1,0,"Artefact","sniego_staff","GET_CABINET_ITEM_NAME","TX_REGISTER_CABINET_ITEM","TX_BRIQUET_GODDESS_ITEM","sniego_staff_cabinet","","스니고 스태프"
+41,0,10000,1,0,"Artefact","sniego_crossbow","GET_CABINET_ITEM_NAME","TX_REGISTER_CABINET_ITEM","TX_BRIQUET_GODDESS_ITEM","sniego_crossbow_cabinet","","스니고 크로스보우"
+42,0,10000,1,0,"Artefact","sniego_thmace","GET_CABINET_ITEM_NAME","TX_REGISTER_CABINET_ITEM","TX_BRIQUET_GODDESS_ITEM","sniego_thmace_cabinet","","스니고 투 핸드 메이스"
+43,0,10000,1,0,"Artefact","sniego_pistol","GET_CABINET_ITEM_NAME","TX_REGISTER_CABINET_ITEM","TX_BRIQUET_GODDESS_ITEM","sniego_pistol_cabinet","","스니고 피스톨"

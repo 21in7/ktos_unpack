@@ -82,12 +82,13 @@ function EVENT_STAMP_TOUR_SET_PAGE(frame,t,tt,tt)
 	local currentpage = label_tab:GetSelectItemIndex();
 	local groupName = frame:GetUserValue("GROUP_NAME")
 	local missionCls = EVENT_STAMP_GET_CURRENT_MISSION(groupName, currentpage)
-
-
+	
 	if groupName == "POPO_EVENT_STAMP_2312" then
+		local maxpopoboostpage = 7;
 		local popoboost_stamp_value = EVENT_STAMP_TOUR_POPOBOOST_CLEAR_CHECK(groupName, currentpage);
-		if popoboost_stamp_value == false then
+		if popoboost_stamp_value == false and currentpage ~= maxpopoboostpage then
 			label_tab:ChangeTab(Prev_Page)
+			ui.SysMsg(ClMsg('popoboostguidequestblock'));
 			return;
 		end
 	end
@@ -104,15 +105,13 @@ function EVENT_STAMP_TOUR_SET_PAGE(frame,t,tt,tt)
 		ctrlSet = tolua.cast(ctrlSet, 'ui::CControlSet');
 		--포포 가이드 퀘스트 시 desc이 없이 생성하기.
 		local groupName = frame:GetUserValue("GROUP_NAME")
-		if groupName ~= "POPO_EVENT_STAMP_2312" then
-			if TryGetProp(missionCls,"Desc"..i,'None') == 'None' then
-				for j = i,3 do
-					local unCtrlSet = GET_CHILD_RECURSIVELY(misson_gb, 'MISSIONBLOCK_'..j);
-					unCtrlSet:ShowWindow(0)
-				end
-				break
-			end	
-		end		
+		if TryGetProp(missionCls,"Desc"..i,'None') == 'None' then
+			for j = i,3 do
+				local unCtrlSet = GET_CHILD_RECURSIVELY(misson_gb, 'MISSIONBLOCK_'..j);
+				unCtrlSet:ShowWindow(0)
+			end
+			break
+		end	
 
 		ctrlSet:ShowWindow(1)
 		
@@ -236,7 +235,7 @@ function EVENT_STAMP_TOUR_SET_PAGE(frame,t,tt,tt)
 				if groupName ~= "POPO_EVENT_STAMP_2312" then
 					helpBtn:SetextTooltip(helpDesc.."{nl} {nl}"..helpText)
 				else
-					if helpDesc == nil or helpDesc == "None" then
+					if helpDesc == nil or helpDesc == "null" then
 						helpBtn:SetTextTooltip(helpText)
 					else
 						helpBtn:SetTextTooltip(helpDesc.."{nl} {nl}"..helpText)

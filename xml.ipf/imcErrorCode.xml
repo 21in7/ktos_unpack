@@ -683,4 +683,5 @@
 	<Code Code="ERROR_ASSET" Team="PROGRAM" Category="ASSET" SubCategory="" Logger="root" Enabled="YES" CallStack="NO" Desc="AssetDatabase 오류"/>
 	<Code Code="WARNING_ASSET" Team="PROGRAM" Category="ASSET" SubCategory="" Logger="root" Enabled="YES" CallStack="NO" Desc="AssetDatabase 경고"/>
 	<Code Code="ERROR_PACKET_EFFECT" Team="PROGRAM" Category="ASSET" SubCategory="" Logger="root" Enabled="YES" CallStack="NO" Desc="패킷이펙트 찾지 못함 에러"/>
+  <Code Code="INFO_BLACK_MARKET" Team="tos_team" Category="SYSTEM" SubCategory="" Logger="root" Enabled="YES" CallStack="NO" Desc="블랙 마켓 경매 정보 로그"/>
 </imcErrorCode>

@@ -30,4 +30,4 @@ ClassID,AppearRatio_D,AppearRatio_C,AppearRatio_B,AppearRatio_A,ClassName,MergeT
 123,1900,1500,1200,1000,"high_lighting_res","enchant_special_option","high_lighting_res","EQUIP_ENCHANT_OPTION_HIGH_RESIST","UNEQUIP_ENCHANT_OPTION_HIGH_RESIST"
 124,1900,1500,1200,1000,"high_poison_res","enchant_special_option","high_poison_res","EQUIP_ENCHANT_OPTION_HIGH_RESIST","UNEQUIP_ENCHANT_OPTION_HIGH_RESIST"
 125,1900,1500,1200,1000,"high_laceration_res","enchant_special_option","high_laceration_res","EQUIP_ENCHANT_OPTION_HIGH_RESIST","UNEQUIP_ENCHANT_OPTION_HIGH_RESIST"
-126,1900,1500,1200,1000,"portion_expansion","enchant_special_option","portion_expansion","EQUIP_ENCHANT_OPTION_SEND_SET_EXPROP","UNEQUIP_ENCHANT_OPTION_SEND_SET_EXPROP"
+126,1900,1500,1200,1000,"portion_expansion","enchant_special_option","portion_expansion","EQUIP_ENCHANT_OPTION_HIGH_RESIST","UNEQUIP_ENCHANT_OPTION_HIGH_RESIST"

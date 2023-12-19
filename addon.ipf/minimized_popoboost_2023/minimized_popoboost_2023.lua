@@ -28,7 +28,7 @@ function MINIMIZED_POPOBOOST_BUTTON_OPEN_CHECK(frame, msg, argStr, argNum)
         frame:ShowWindow(0);
         return;
     end
-    local popoProp = TryGetProp(acc,AccProp, 0);
+    local popoProp = TryGetProp(acc,AccProp, -1);
     if popoProp == 0 or popoProp == 2 then
         frame:ShowWindow(1);
         return ;

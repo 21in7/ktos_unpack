@@ -59,3 +59,4 @@ ClassID,RideMSPD,MaxVehicle,OffsetY,RidingOffsetY,AddSpeed,JobID,LifeMin,Balloon
 58,4,1,2,2,50,0,0,0,"pet_jpn3th_fox","","0","NO","YES","NO","NO","","YES","YES","pet_jpn3th_fox_buff"
 59,6,1,0,2.300000,50,0,0,0,"Pet_Sled_green","","","NO","YES","YES","NO","","YES","NO",""
 60,4,1,2,3,50,0,0,0,"pet_nightrabbit","","0","NO","YES","NO","NO","","YES","YES","pet_nightrabbit_buff"
+61,6,1,2,3,50,0,0,0,"pet_snigo","","","NO","YES","YES","NO","","YES","NO","pet_snigo_buff"

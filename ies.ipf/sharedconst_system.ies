@@ -90,6 +90,7 @@ ClassID,Value,Value2,ClassName,Desc,UseInScript
 100080,2,0,"MAX_EQUIPTED_UNIQUE_VIBORA_COUNT","최대 장착 고유 바이보라 개수","YES"
 100081,0,0,"USE_SYNC_PACKET","싱크 패킷 사용 여부","NO"
 100082,20,0,"WORLD_EVENT_MAX_MULTIPLE","월드 이벤트 최대 배수","YES"
+100083,1000000,0,"BALCK_MARKET_BID_UNIT","입찰 단위","YES"
 110000,21,0,"TEST_VAL_1","테스트용","NO"
 110001,0,0,"TEST_VAL_2","테스트용","NO"
 110002,1,0,"TEST_VAL_3","테스트용","NO"

@@ -1354,6 +1354,7 @@ function TPITEM_DRAW_ITEM_WITH_CATEGORY(frame, category, subcategory, initdraw, 
 			  	isFounded = true;					
 			  end
 		  end
+		  
           local itemcset = nil;
 		      if (allFlag == nil) then	
 			      if CHECK_TPITEM_ENABLE_VIEW(obj) == true and CHECK_USEDTPITEM_ENABLE_VIEW(obj, isFounded) == true then
@@ -2086,7 +2087,7 @@ local frame, alignTypeList, typeIndex, mainSubGbox
 function TPSHOP_SORT_LIST(a, b)
 	local itemcset1 = mainSubGbox:GetControlSet('tpshop_item', 'eachitem_'..a);
 	local itemcset2 = mainSubGbox:GetControlSet('tpshop_item', 'eachitem_'..b);
-	if (itemcset1 == nil) or  (itemcset2 == nil)then
+	if (itemcset1 == nil) or (itemcset2 == nil)then
 		return false;
 	end
 	
@@ -2107,14 +2108,13 @@ function TPSHOP_SORT_LIST(a, b)
 	if (obj1 == nil) or (obj2 == nil) then
 		return false;
 	end
-	
+
 	local itemobj1 = GetClass("Item", obj1.ItemClassName);
 	local itemobj2 = GetClass("Item", obj2.ItemClassName);
 	if (itemobj1 == nil) or (itemobj2 == nil) then
 		return false;
 	end
 		
-
 	if typeIndex == 5 then	
 		return itemobj1.Name < itemobj2.Name;
 	elseif typeIndex == 6 then
@@ -2153,10 +2153,12 @@ function TPSHOP_SORT_LIST(a, b)
 
 			return d1 < d2;
 		elseif typeIndex == 0 then
+			if obj1.Itemdate == obj2.Itemdate then
+				return obj1.ClassID < obj2.ClassID; 
+			end
 			return obj1.Itemdate > obj2.Itemdate;
 		end
-	end;
-
+	end
 	
 	return false;
 end
@@ -2171,6 +2173,7 @@ function TPSHOP_TPITEM_ALIGN_LIST(cnt)
 	frame = ui.GetFrame("tpitem");
 	alignTypeList = GET_CHILD_RECURSIVELY(frame,"alignTypeList");	
 	typeIndex = alignTypeList:GetSelItemIndex();
+
 	mainSubGbox = GET_CHILD_RECURSIVELY(frame,"mainSubGbox");
 	
 	table.sort(srcTable, TPSHOP_SORT_LIST);
@@ -2244,7 +2247,7 @@ function TPITEM_SET_SPECIALMARK(isNew_mark, isHot_mark, isEvent_mark, isLimit_ma
 		if founded_info.bRecommandNO == true then
 			bisEvent = 1;
 		end
-	end;
+	end
 
 	isNew_mark:SetVisible(bisNew);
 	isHot_mark:SetVisible(bisHot);		
@@ -2267,6 +2270,10 @@ function TPITEM_SET_SPECIALMARK(isNew_mark, isHot_mark, isEvent_mark, isLimit_ma
 	if TryGetProp(GetClassByType(id_space, classID), 'MarkType', 'None') == 'Sale' then
 		bisSale = 0
 		cubeSale = 1
+	end
+
+	if TryGetProp(GetClassByType(id_space, classID), 'MarkType', 'None') == 'Recommand' then
+		isEvent_mark:SetVisible(1);
 	end
 
 	isSale_mark:SetVisible(bisSale)
@@ -4407,19 +4414,25 @@ function GET_TPITEMID_BY_ITEM_NAME(itemName)
 end
 
 function CHECK_ALREADY_IN_LIMIT_ITEM(frame, tpItem)
-	local limit = GET_LIMITATION_TO_BUY(tpItem.ClassID);
+	local limit, limit_count = GET_LIMITATION_TO_BUY(tpItem.ClassID);
 	if limit == 'NO' then
 		return true;
 	end
 
+	local basket_count = 0;
 	local basketslotset = GET_CHILD_RECURSIVELY(frame, 'basketslotset');
 	local slotCnt = basketslotset:GetSlotCount();
 	for i = 0, slotCnt - 1 do
 		local slot = basketslotset:GetSlotByIndex(i);
 		if slot:GetUserValue('TPITEMNAME') == tpItem.ClassName then
-			return false;		
+			basket_count = basket_count + 1;
 		end	
 	end
+	
+	if basket_count >= limit_count then
+		return false;
+	end
+
 	return true;
 end
 

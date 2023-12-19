@@ -17,3 +17,4 @@ ClassID,ClassName,Name,PropList,RewardPerPiece
 16,"ep15explorer_theme","탐험가","MHP_BM/2500;","YES"
 17,"ep15elf_theme","엘프","MHP_BM/2500;","YES"
 18,"ep15heartqueen_theme","하트 여왕","MHP_BM/2500;","YES"
+19,"costume_sniego_theme","스니고의 기억","PATK_BM/250;MATK_BM/250;","YES"

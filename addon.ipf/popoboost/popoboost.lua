@@ -201,13 +201,13 @@ local function POPOBOOST_SET_GUIDE_TEXT(frame)
 end
 
 local function POPOBOOST_SET_PREMIUM_BOX(frame)
-    local premiumRewardUnActive = GET_CHILD_RECURSIVELY(frame,"premiumRewardUnActive");
+    local RewardGBox = GET_CHILD_RECURSIVELY(frame,"RewardGBox");
+    local premiumRewardUnActive = GET_CHILD_RECURSIVELY(RewardGBox,"premiumRewardUnActive");
     if premiumRewardUnActive == nil then
         return ;
     end
 
     local isPremium = POPOBOOST_IS_PREMIUM();
-
     if isPremium == true then
         premiumRewardUnActive:ShowWindow(0);
     else
@@ -374,27 +374,6 @@ local function POPOBOOST_SET_BANNER(frame)
             end
         end
     end
-end
-
-local function POPOBOOST_GUDIDE_SET(frame)
-	local btn = GET_CHILD(gb, "openBtn");
-	local title = GET_CHILD(gb, "title");
-	-- SEASON_SERVER
-	local curmapname = session.GetMapName();
-	local mapprop = geMapTable.GetMapProp(curmapname);
-	local mapname = mapprop:GetClassName();
-
-	if mapname == "c_klaipe_castle" then
-		return 
-	end
-
-	--btn:ShowWindow(1)
-	--btn:SetImage("stamptour_btn");
-	btn:SetEventScript(ui.LBUTTONUP, "POPO_GUIDE_QUEST_OPEN");
-	-- title:SetTextByKey("value", ClMsg("STAMP_TOUR"));
-	--MINIMIZED_EVENT_PROGRESS_CHECK_NOTICE_BUTTON(btn)
-	--gb:ShowWindow(1);
-
 end
 
 -------- main function

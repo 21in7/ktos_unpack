@@ -205,6 +205,7 @@
 	<ReadXml Name="recycle_shop_papaya"/>
 	<ReadXml Name="recycle_shop_sell"/>
 	<ReadXml Name="recycle_shop_sell_papaya"/>
+	<ReadXml Name="recycle_thema_sell"/>
 	<ReadXml Name="skill_dynamiccastcancel"/>
 	<ReadXml Name="addon_d_list"/>
 	<ReadXml Name="item_grade"/>
@@ -422,4 +423,5 @@
 	<ReadXml Name="enchant_rank_up_ratio"/>	
 	<ReadXml Name="enchant_special_option_ratio_low"/>		
 	<ReadXml Name="enchant_special_option_ratio"/>	
+	<ReadXml Name="auction\black_market_schedule"/>		
 </Category>

@@ -2607,6 +2607,23 @@ function GET_COMMAED_STRING(num) -- unsigned long 범위내에서 가능하게 �
     return retStr;
 end
 
+function GET_COMMAED_STRING2(num)
+    -- unsigned long 범위내에서 가능하게 수정함
+    if num == nil then
+        return "0";
+    end
+    local retStr = "";
+    num = tonumber(num);
+    if num >= 0 then
+        retStr = GetCommaedString(num);
+    else
+        retStr = '-' .. GetCommaedString(- num);
+    end
+    return retStr;
+end
+
+
+
 function GET_NOT_COMMAED_NUMBER(commaedString)
     local retStr = "";
     local strLen = string.len(commaedString);
@@ -4554,33 +4571,46 @@ function CHECK_TOSW_EVENT_RESTRICT_TIME(indun_class_name)
         time = geTime.GetServerSystemTime();
     end
 
-    if indun_class_name ~= "Event2023_Moon_Rabbit" then
+    if indun_class_name ~= "Evnet2023_SnigoDungeon" then
         return true;
     end
 
     if time ~= nil then
+        local year = time.wYear;
         local month = time.wMonth;
-        if month == 10 then
+        if year == 2024 and month == 1 then
             local day = time.wDay;
             local hour = time.wHour;
+            local min = time.wMin;
             local nation = GetServerNation();
             if nation == "GLOBAL" then
-                if day >= 24 then
+                if day >= 22 then
                     if hour >= 6 then
                         return false;
                     end
                     return true;
                 end
             elseif nation == "GLOBAL_JP" then
-                if day >= 24 then
+                if day >= 22 then
                     if hour >= 6 then
                         return false;
                     end
                     return true;
                 end
             elseif nation == "GLOBAL_KOR" then
-                if day >= 24 then
+                if day >= 22 then
                     if hour >= 6 then
+                        return false;
+                    end
+                    return true;
+                end
+            elseif nation =="PAPAYA" then
+                if day >= 23 then
+                    if hour == 17 then
+                        if min >= 30 then
+                            return false;
+                        end
+                    elseif hour > 17 then
                         return false;
                     end
                     return true;
@@ -4622,4 +4652,14 @@ function IS_ABLE_TO_JOIN_GUILD_EVENT(pc, cls)
     else
         return true
     end
+end
+
+
+function GET_BLACK_MARKET_COIN_NAME()
+    return SEASON_COIN_NAME 
+end
+
+function GET_BLACK_MARKET_RETURN_ITEM_ID()
+-- RadaCertificateCoin_1000000p
+    return 1000000, '11200350'  -- 뒤에서 부터 1번    
 end

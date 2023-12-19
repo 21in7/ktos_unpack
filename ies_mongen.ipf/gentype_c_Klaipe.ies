@@ -89,3 +89,5 @@ ClassID,GenType,Lv,Range,GenRange,RespawnTime,MaxPop,Minimap,Hide,UseAIOufOfPC,A
 5295,10127,1,40,1,60000,1,2,0,0,0,0,0,"Tos_Coin_Shop_NPC","[오래된 여신의 증표 상점]{nl}큐폴","","","","","","","PREVIOUS_COIN_SHOP","","","NO","YES","NO","Neutral","","","",""
 5500,5500,1,60,1,60000,1,2,0,0,0,0,0,"Tos_Event_Coin_NPC","TOS 주화 안내원","","","","","","","EVENT_TOS_WHOLE_NPC","","","NO","YES","NO","Neutral","","","",""
 5299,10131,1,40,1,60000,1,2,0,0,0,0,0,"npc_kupole_Bernice","[포포부스트 케어]{nl}큐폴","","","","","","","CARE_POPOBOOST_STATUS","","","NO","YES","NO","Neutral","","","",""
+5300,10132,1,40,1,60000,1,2,0,0,0,0,0,"npc_auctioneer","[블랙 마켓]{nl}경매인","","","","","","BLACK_MARKET_AI","BLACK_MARKET","","","NO","YES","NO","Neutral","","","",""
+5301,10133,1,40,1,60000,1,2,0,0,0,0,0,"npc_event_glacier","[스니고의 기억]{nl}꼬마 글레이시어","","","","","","","LITTLE_GLACIER","","","NO","YES","NO","Neutral","","","",""

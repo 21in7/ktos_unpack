@@ -7017,6 +7017,17 @@
 			<img name="bottomcore" imgrect="1937 882 20 30"/>
 			<img name="bottomright" imgrect="2004 882 40 30"/>
 		</skin>
+		<skin name="popoboost_banner_bg" texture="\skin\popoboost_event_skin.tga">
+			<img name="topleft" imgrect="0 0 580 43"/>
+			<img name="topcore" imgrect="581 0 38 43"/>
+			<img name="topright" imgrect="620 0 580 43"/>
+			<img name="bodyleft" imgrect="0 44 580 38"/>
+			<img name="bodycore" imgrect="581 44 38 38"/>
+			<img name="bodyright" imgrect="620 44 580 38"/>
+			<img name="bottomleft" imgrect="0 83 580 42"/>
+			<img name="bottomcore" imgrect="581 83 38 42"/>
+			<img name="bottomright" imgrect="620 83 580 42"/>
+		</skin>
 		<skin name="market_grade_1" texture="\skin\market_skin.tga">
 			<img name="on" imgrect="37 131 47 24"/>
 			<img name="off" imgrect="85 131 47 24"/>
@@ -13404,8 +13415,10 @@
 		<image name="Beholder_Aprilfool" file="\icon\emoticon\Beholder_Aprilfool.png" imgrect="0 0 128 128"/>
 		<image name="emoticonItem_summer_popo_160" file="\icon\emoticon\popolion_yami.png" imgrect="0 0 128 128"/>
 		<image name="emoticonItem_summer_popo_161" file="\icon\emoticon\popolion_tube.png" imgrect="0 0 128 128"/>
-		<image name="emoticonItem_2312_popo_10" file="\icon\emoticon\popo_hi.png" imgrect="0 0 128 128"/>
-		<image name="emoticonItem_2312_popo_11" file="\icon\emoticon\popo_nodding.png" imgrect="0 0 128 128"/>
+		<image name="emoticonItem_2312_popo_162" file="\icon\emoticon\popo_hi.png" imgrect="0 0 128 128"/>
+		<image name="emoticonItem_2312_popo_163" file="\icon\emoticon\popo_nodding.png" imgrect="0 0 128 128"/>
+		<image name="emoticonItem_2312_164" file="\icon\emoticon\snigo_kira.png" imgrect="0 0 128 128"/>
+		<image name="emoticonItem_2312_165" file="\icon\emoticon\snigo_no.png" imgrect="0 0 128 128"/>
 	</imagelist>
 	<imagelist category="itemtooltip_image">
 		<image name="circle_gem" file="\skin\tooltip_skin_3.tga" imgrect="805 228 30 30"/>
@@ -15567,6 +15580,7 @@
 		<image name="icon_debuff_disable_movingforward" file="\icon\buff_icon7.tga" imgrect="128 128 128 128" CMM_Caption="전방이동사용불가"/>
 		<image name="icon_buff_ridepet_ep15elf" file="\icon\buff_icon7.tga" imgrect="256 128 128 128" CMM_Caption="요정 여왕의 선물 버프"/>
 		<image name="icon_buff_ridepet_tw_zebra" file="\icon\buff_icon7.tga" imgrect="384 128 128 128" CMM_Caption="얼룩말 버프"/>
+		<image name="icon_buff_ridepet_snigo" file="\icon\buff_icon7.tga" imgrect="640 128 128 128" CMM_Caption="형상기억 스니고"/>
 	</imagelist>
 	<imagelist category="housing_bufficon">
 		<image name="icon_Weapon_Klaida" file="\icon\icon_hosing_buff.tga" imgrect="0 0 128 128"/>
@@ -16367,7 +16381,7 @@
 		<image name="plate_achieve_upinis_weekraid" file="\skin\user_title_skin2.tga" imgrect="428 102 214 34" CMM_Caption="우피니스 주보레 칭호"/>
 		<image name="plate_achieve_slogutis_weekraid" file="\skin\user_title_skin2.tga" imgrect="642 102 214 34" CMM_Caption="슬로거티스 주보레 칭호"/>
 		<image name="plate_achieve_spreader_weekraid" file="\skin\user_title_skin2.tga" imgrect="856 102 214 34" CMM_Caption="변질의 전파자 주보레 칭호"/>
-		<image name="plate_achieve_popo_8th_Anni" file="\skin\user_title_skin2.tga" imgrect="642 68 214 136" CMM_Caption="8주년 칭호"/>
+		<image name="plate_achieve_popo_8th_Anni" file="\skin\user_title_skin2.tga" imgrect="214 136 214 34" CMM_Caption="8주년 칭호"/>
         <image name="plate_achieve_Pontifex_weekraid" file="\skin\user_title_skin2.tga" imgrect="0 136 214 34" CMM_Caption="폰티펙스 주보레 칭호"/>
 		<image name="plate_achieve_Pontifex" file="\skin\user_title_skin2.tga" imgrect="1070 102 214 34" CMM_Caption="폰티펙스 칭호"/>
 		</imagelist>
@@ -16527,6 +16541,7 @@
 		<image name="ridepet_ep15explorer" file="\icon\ridepet.tga" imgrect="160 160 80 80" CMM_Caption="아기 공룡"/>
 		<image name="ridepet_ep15elf" file="\icon\ridepet.tga" imgrect="240 160 80 80" CMM_Caption="요정 여왕의 선물"/>
 		<image name="ridepet_zebra" file="\icon\ridepet.tga" imgrect="320 160 80 80" CMM_Caption="얼룩말"/>
+		<image name="ridepet_snigo" file="\icon\ridepet.tga" imgrect="480 160 80 80" CMM_Caption="형상기억 스니고"/>
 	</imagelist>
 	<effectimagelist category="effectlist">
 		<image name="blue_orb" file="\icon\blue_orb.tga" imgrect="0 0 256 256"/>
