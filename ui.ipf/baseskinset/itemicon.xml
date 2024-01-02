@@ -7187,6 +7187,7 @@
 		<image name="weekboss_hud_skin_goddess" file="\icon\item\weekboss_hud_skin_goddess.png" imgrect="0 0 256 256" CMM_Caption="주간 보스 레이드 HUD 스킨 - 가디스"/>
 		<image name="icon_item_event_roulette_weaponbox1_popo" file="\icon\item\icon_item_event_roulette_weaponbox1_popo.png" imgrect="0 0 128 128" CMM_Caption="포포 스페셜 장비 상자"/>
                 <image name="icon_item_Piece_Of_Memory_Snigo" file="\icon\item\icon_item_recyclemedal.png" imgrect="0 0 256 256" CMM_Caption="스니고의 기억조각"/>
+		<image name="icon_2024_NewYear_Coin" file="\icon\item\2024_NewYear_Coin.png" imgrect="0 0 256 256" CMM_Caption="2024 신년 주화"/>
 	</imagelist>
 	<imagelist category="housing">
 		<image name="icon_item_housing_craft_bronze_1" file="\icon\item\icon_item_housing_craft_bronze_1.png" imgrect="0 0 256 256" CMM_Caption="[하우징 공방] 쿠폰"/>

@@ -241,7 +241,6 @@ function POPOBOOST_SET_MAX_GEARSCORE(pc)
     local maxprop = GET_POPOBOOST_MAXPROP();
 	local maxGearScore = TryGetProp(etc,maxprop,0);
     local currentGearScore = POPOBOOST_GET_GEARSCORE(pc);
-
     if IsServerSection(pc) ~= 1 then
         return;
     end
@@ -261,25 +260,25 @@ function POPOBOOST_SET_MAX_GEARSCORE(pc)
         local ret = TxCommit(tx)
 
         if ret == "SUCCESS" then
-            local equipList = GetEquipItemList(pc)        
-            local itemcnt = 0;
-            for i = 1, #equipList do
-                local itemobj = equipList[i]
-                if itemobj ~= nil then
-                    local spotname = TryGetProp(itemobj,"DefaultEqpSlot")
-                    local PopoItemProp = GET_POPOBOOST_ITEMPROP();
-                    local popoboostProp = TryGetProp(itemobj,"popoboost", 0)
-                    
-                    if PopoItemProp > 0 and popoboostProp == PopoItemProp then 
-                        itemcnt = itemcnt + 1;               
-                    end
-                end
-            end
-            if itemcnt == 11 then
-                RunScript("TX_EVENT_STAMP_TOUR_PROP_SET_POPOBOOST",pc,5,1,"POPO_EVENT_STAMP_2312")
+        end
+    end
+    local equipList = GetEquipItemList(pc)        
+    local itemcnt = 0;
+    for i = 1, #equipList do
+        local itemobj = equipList[i]
+        if itemobj ~= nil then
+            local PopoItemProp = GET_POPOBOOST_ITEMPROP();
+            local popoboostProp = TryGetProp(itemobj,"popoboost", 0)
+            
+            if PopoItemProp > 0 and popoboostProp == PopoItemProp then 
+                itemcnt = itemcnt + 1;               
             end
         end
     end
+    if itemcnt >= 11 then
+        RunScript("TX_EVENT_STAMP_TOUR_PROP_SET_POPOBOOST",pc,5,1,"POPO_EVENT_STAMP_2312")
+    end
+
 end
 
 function POPOBOOST_GET_MAX_GEARSCORE(pc)
@@ -421,6 +420,9 @@ function GET_CURRENT_SEASCON_POPOBOST_INFO()
             elseif IsPAPAYA == 2 then
                 startprop = "TAIWANStartTime"
                 endprop = "TAIWANTEndTime"
+            elseif IsPAPAYA == 3 then
+                startprop = "GlobalStartTime"
+                endprop = "GlobalEndTime"
             else
                 startprop = "StartTime"
                 endprop = "EndTime"
@@ -469,7 +471,7 @@ function GET_POPOBOOST_ITEMPROP()
         return 0
     end
     local prop = TryGetProp(cls, "ItemPropValue", 0);
-    return prop;
+    return tonumber(prop);
 end
 
 function GET_POPOBOOST_PROGRESPROP()
@@ -538,6 +540,8 @@ function GET_POPOBOOST_SERVER()
             return 1;
         elseif GetServiceNation() == "TAIWAN" then
             return 2
+        elseif GetServiceNation() =="GLOBAL" then
+            return 3;
         else
             return 0;
         end
@@ -546,6 +550,8 @@ function GET_POPOBOOST_SERVER()
             return 1;
         elseif config.GetServiceNation() == "TAIWAN" then
             return 2
+        elseif config.GetServiceNation() =="GLOBAL" then
+            return 3;
         else
             return 0;
         end

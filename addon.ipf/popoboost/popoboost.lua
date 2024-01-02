@@ -20,7 +20,7 @@ local function POPOBOOSET_GET_PROGRESS_INFORMATION(index)
     local list, cnt = GetClassList("popoboost_inforamation");
     local AccountProp = GET_POPOBOOST_ACCPROP();
     local count = 0;
-    for i = 1, cnt - 1 do
+    for i = 0, cnt - 1 do
         local cls = GetClassByIndexFromList(list,i);
         if cls ~= nil then
             local seasonprop = TryGetProp(cls, "SeasonProperty", "None")
@@ -80,7 +80,7 @@ end
 
 
 local function POPOBOOST_GET_PROGRESS()
-    return currentIndex;
+    return tonumber(currentIndex);
 end
 
 local function POPOBOOST_IS_PREMIUM()
@@ -293,7 +293,7 @@ local function POPOBOOST_IS_OVER_GEARSCORE()
     local rewardClass = POPOBOOSET_GET_PROGRESS_INFORMATION(Progress);
     local gearscore = POPOBOOST_GET_MAX_GEARSCORE(pc);
     local destScore = TryGetProp(rewardClass,"RewardScore","30000");
-    if gearscore >= destScore then
+    if tonumber(gearscore) >= tonumber(destScore) then
         return true;
     end
     return false;
@@ -655,7 +655,7 @@ function POPOBOOST_OPEN_INDUN_SHORTCUT(frame,msg,argStr,argNum)
 
     local script = _G[ShortcutScriptName];
     if progress == 0 then
-        script(nil,nil,nil,ShortcutParam);
+        --script(nil,nil,nil,ShortcutParam);
     else
         script(ShortcutParam,0,1,1,0)
     end

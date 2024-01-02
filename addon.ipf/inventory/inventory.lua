@@ -2870,10 +2870,13 @@ function SET_VISIBLE_DYE_BTN_BY_VISIBLE(frame, IsVisible)
 			-- HAIR slot의 아이템 오브젝트의 카테고리 알아냄
 			-- Name == Helmet인 헬맷 착용중 - item_Eqip.xml Category = "Helmet" 참조
 			local equipSpotItem = session.GetEquipItemBySpot(ES_HELMET);
-		
-			if equipSpotItem.type ~= 10000 then 
-				hairColorBtn:ShowWindow(0);
-			-- Name != Helmet인 무언가가 있다. (Icon이 null이 아니므로 무언가 착용 중 인것.)
+			if equipSpotIte ~= nil then
+				if equipSpotItem.type ~= 10000 then 
+					hairColorBtn:ShowWindow(0);
+				-- Name != Helmet인 무언가가 있다. (Icon이 null이 아니므로 무언가 착용 중 인것.)
+				else
+					CHANGE_HAIR_DYE_ICON_VISIBLITY(frame, hairColorBtn);
+				end
 			else		
 				CHANGE_HAIR_DYE_ICON_VISIBLITY(frame, hairColorBtn);
 			end

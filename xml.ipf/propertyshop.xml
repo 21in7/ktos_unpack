@@ -108,8 +108,7 @@
 	</Shop>
 	<Shop Name="GUILD_CONTRIBUTION_SHOP" PointScript="GET_GUILD_CONTRIBUTION_POINT">
 		<Item Script="None" Name="BRC99_114_guildshop_7d" Count="1" Price="1000" DailyBuyLimit="0"/>
-		<Item Script="None" Name="NECK99_102_guildshop_7d" Count="1" Price="4000" DailyBuyLimit="0"/>
-		<Item Script="None" Name="Ghaca_Guild_Contribution_Shop_MISC" Count="1" Price="20" DailyBuyLimit="0"/>
+		<Item Script="None" Name="NECK99_102_guildshop_7d" Count="1" Price="4000" DailyBuyLimit="0"/>		
 	</Shop>
 	<Shop Name="GUILD_MILEAGE_SHOP" PointScript="GET_GUILD_MILEAGE_POINT">
 		<Item Script="None" Name="GuildQuestEnterCount_1add" Count="1" Price="500" DailyBuyLimit="0"/>
@@ -146,7 +145,7 @@
 		<Item Script="None" Name="DRESS_ROOM_COLLECT_15" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2308_1"/>
 		<Item Script="None" Name="DRESS_ROOM_COLLECT_16" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2309_1"/>
 		<Item Script="None" Name="DRESS_ROOM_COLLECT_17" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2311_1"/>
-		<Item Script="None" Name="DRESS_ROOM_COLLECT_18" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2311_1"/>
+		<Item Script="None" Name="DRESS_ROOM_COLLECT_18" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2312_1"/>
 	</Shop>
 	<Shop Name="CONTENTS_TOTAL_SHOP_PAPAYA" PointScript="GET_CONTENTS_TOTAL_POINT">
 		<Item Script="None" Name="Gesture_CLOCK" Count="1" Price="5000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2109_1"/>
@@ -173,6 +172,7 @@
 		<Item Script="None" Name="piece_EP15_GoddessIcor_Weapon_NoTrade" Count="1" Price="3500" DailyBuyLimit="0"/>
 		<Item Script="None" Name="piece_EP15_GoddessIcor_Armor_NoTrade" Count="1" Price="3500" DailyBuyLimit="0"/>
 		<Item Script="None" Name="piece_random_skill_gem_480_NoTrade" Count="1" Price="3000" DailyBuyLimit="0"/>		
+		<Item Script="None" Name="DRESS_ROOM_COLLECT_18" Count="1" Price="3000" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2312_1"/>
 	</Shop>
 	<Shop Name="SEASONOFF_CONTENTS_TOTAL_SHOP" PointScript="GET_CONTENTS_TOTAL_POINT">
 		<Item Script="None" Name="DRESS_ROOM_COLLECT_1" Count="1" Price="3600" DailyBuyLimit="0" AccountNeedProperty="ContentsTotalShop_2009_9"/>

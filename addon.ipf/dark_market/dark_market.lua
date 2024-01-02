@@ -257,10 +257,10 @@ function BM_REMIAN_TIME_UPDATE(frame)
 end
 
 function BM_SCHEDULE_FRAME_UPDATE(frame)
-    local EndTime = frame:GetUserValue("ctrlEnd");
+    local startTime = frame:GetUserValue("ctrlStart");
     local sysTime = geTime.GetServerSystemTime();
     local nowTime = string.format("%04d-%02d-%02d %02d:%02d:%02d", sysTime.wYear, sysTime.wMonth, sysTime.wDay, sysTime.wHour, sysTime.wMinute, sysTime.wSecond)
-    local diffsec = date_time.get_diff_sec(EndTime,nowTime);
+    local diffsec = date_time.get_diff_sec(startTime,nowTime);
     if diffsec < 0 then
         diffsec = 0
     end
@@ -315,8 +315,8 @@ function SET_BM_SCHEDULE(frame)
 
                 local itemCls = GetClass("Item", ItemClsName)
                 local itemName = TryGetProp(itemCls, "Name", "None");
-
-                local diffsec = date_time.get_diff_sec(endTime,nowTime);
+                
+                local diffsec = date_time.get_diff_sec(startTime,nowTime);
                 if diffsec < 0 then
                     diffsec = 0
                 end

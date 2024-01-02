@@ -4571,49 +4571,105 @@ function CHECK_TOSW_EVENT_RESTRICT_TIME(indun_class_name)
         time = geTime.GetServerSystemTime();
     end
 
-    if indun_class_name ~= "Evnet2023_SnigoDungeon" then
+    if indun_class_name ~= "Evnet2023_SnigoDungeon" and indun_class_name ~= "Evnet2024_NewYear" then
         return true;
     end
 
     if time ~= nil then
         local year = time.wYear;
         local month = time.wMonth;
-        if year == 2024 and month == 1 then
-            local day = time.wDay;
-            local hour = time.wHour;
-            local min = time.wMin;
-            local nation = GetServerNation();
-            if nation == "GLOBAL" then
-                if day >= 22 then
-                    if hour >= 6 then
-                        return false;
-                    end
-                    return true;
-                end
-            elseif nation == "GLOBAL_JP" then
-                if day >= 22 then
-                    if hour >= 6 then
-                        return false;
-                    end
-                    return true;
-                end
-            elseif nation == "GLOBAL_KOR" then
-                if day >= 22 then
-                    if hour >= 6 then
-                        return false;
-                    end
-                    return true;
-                end
-            elseif nation =="PAPAYA" then
-                if day >= 23 then
-                    if hour == 17 then
-                        if min >= 30 then
+        if indun_class_name == "Evnet2023_SnigoDungeon" then
+            if year == 2024 and month == 1 then
+                local day = time.wDay;
+                local hour = time.wHour;
+                local min = time.wMin;
+                local nation = GetServerNation();
+                if nation == "GLOBAL" then
+                    if day >= 22 then
+                        if hour >= 6 then
                             return false;
                         end
-                    elseif hour > 17 then
-                        return false;
+                        return true;
                     end
-                    return true;
+                elseif nation == "GLOBAL_JP" then
+                    if day >= 22 then
+                        if hour >= 6 then
+                            return false;
+                        end
+                        return true;
+                    end
+                elseif nation == "GLOBAL_KOR" then
+                    if day >= 22 then
+                        if hour >= 6 then
+                            return false;
+                        end
+                        return true;
+                    end
+                elseif nation =="PAPAYA" then
+                    if day >= 23 then
+                        if hour == 17 then
+                            if min >= 30 then
+                                return false;
+                            end
+                        elseif hour > 17 then
+                            return false;
+                        end
+                        return true;
+                    end
+                elseif nation == "TWN" then
+                    if day >= 29 then
+                        if hour >= 6 then
+                            return false;
+                        end
+                        return true;
+                    end
+                end
+            end
+        elseif indun_class_name == "Evnet2024_NewYear" then
+            if year == 2024 and month == 2 then
+                local day = time.wDay;
+                local hour = time.wHour;
+                local min = time.wMin;
+                local nation = GetServerNation();
+                if nation == "GLOBAL" then
+                    if day >= 5 then
+                        if hour >= 6 then
+                            return false;
+                        end
+                        return true;
+                    end
+                elseif nation == "GLOBAL_JP" then
+                    if day >= 5 then
+                        if hour >= 6 then
+                            return false;
+                        end
+                        return true;
+                    end
+                elseif nation == "GLOBAL_KOR" then
+                    if day >= 5 then
+                        if hour >= 6 then
+                            return false;
+                        end
+                        return true;
+                    end
+                elseif nation =="PAPAYA" then
+                    --[[ if day >= 23 then
+                        if hour == 17 then
+                            if min >= 30 then
+                                return false;
+                            end
+                        elseif hour > 17 then
+                            return false;
+                        end
+                        return true;
+                    end ]]
+                elseif nation == "TWN" then
+                    --[[ if day >= 29 then
+                        if hour >= 6 then
+                            return false;
+                        end
+                        return true;
+                    end ]]
                 end
             end
         end

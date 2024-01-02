@@ -1,8 +1,10 @@
+local POPOBOOST_DEALY_TIME = 0;
 function MINIMIZED_POPOBOOST_2023_ON_INIT(addon, frame)
 	addon:RegisterMsg('GAME_START', 'MINIMIZED_POPOBOOST_BUTTON_OPEN_CHECK');
 	addon:RegisterMsg('GAME_START', 'POPOBOOST_ALRET');
 	addon:RegisterMsg('POPOBOOST_ALREST_RESET', 'POPOBOOST_ALRET');
 end
+
 
 function MINIMIZED_POPOBOOST_BUTTON_OPEN_CHECK(frame, msg, argStr, argNum)
     if IS_POPOBOOST_END() == true then

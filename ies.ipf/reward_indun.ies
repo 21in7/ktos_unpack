@@ -1143,6 +1143,7 @@ ClassID,Group,ItemName
 25001,"Goddess_Raid_AbyssalObserver_Auto","misc_slogutis_fragments"
 25100,"Goddess_Raid_AbyssalObserver_Solo","misc_slogutis_fragments_NoTrade"
 25200,"Evnet2023_SnigoDungeon","Piece_Of_Memory_Snigo"
+25300,"Evnet2024_NewYear","EVENT_2401_Newyear_Coin"
 21000,"EVENT_1910_HALLOWEEN","EVENT_HALLOWEENCANDY_1"
 21001,"EVENT_1910_HALLOWEEN","EVENT_HALLOWEENCANDY_2"
 30001,"Iredian_lv380","misc_BlessedStone"
