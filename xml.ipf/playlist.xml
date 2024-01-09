@@ -133,6 +133,7 @@
 	<BGM PlayListName="master_Spear_Master" Volume="130" FileName1="tos_SFA_Spears_of_God.mp3"/>
 	<BGM PlayListName="master_Engineer" Volume="130" FileName1="tos_Initium_Springtime_of_Salvation.mp3"/>
 	<BGM PlayListName="master_Pontifex" Volume="130" FileName1="tos_SFA_Dusk.mp3"/>
+	<BGM PlayListName="master_Illusionist" Volume="130" FileName1="tos_7clouds_Illuminator.mp3"/>
 	<BGM PlayListName="NPC_CHRISTMASTREE01" Volume="120" FileName1="Orgel_No_Matter_Christmas.mp3"/>
 	<BGM PlayListName="NPC_CHRISTMASTREE02" Volume="120" FileName1="Orgel_Dont_Cry.mp3"/>
 	<BGM PlayListName="raid_velcoffer" Volume="120" FileName1="tos_Drogo_Uno_Impetu.mp3" FileName2="tos_Drogo_Velvet_Penetration.mp3" FileName3="tos_Gaudium_Wrong_Theory.mp3"/>

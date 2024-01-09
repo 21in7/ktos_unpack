@@ -14765,6 +14765,7 @@
 		<image name="Dlg_port_EnginnerMaster" file="\npcimg\Enginner_Master.png" imgrect="0 0 950 800" CMM_Caption="엔지니어"/>
 		<image name="Dlg_port_Slogutis" file="\npcimg\Slogutis.png" imgrect="0 0 1120 900" CMM_Caption="마신 슬로거티스"/>
 		<image name="Dlg_port_PontifexMaster" file="\npcimg\Pontifex_Master.png" imgrect="0 0 950 800" CMM_Caption="폰티펙스"/>
+		<image name="Dlg_port_IllusionistMaster" file="\npcimg\Illusionist_Master.png" imgrect="0 0 946 800" CMM_Caption="일루저니스트"/>
 	</imagelist>
 	<imagelist category="Dlg_boss">
 		<image name="balloon_Skiaclipse" file="\skin\monster_Dlg.tga" imgrect="0 0 220 260" CMM_Caption="스키아클립스"/>
@@ -16384,6 +16385,8 @@
 		<image name="plate_achieve_popo_8th_Anni" file="\skin\user_title_skin2.tga" imgrect="214 136 214 34" CMM_Caption="8주년 칭호"/>
         <image name="plate_achieve_Pontifex_weekraid" file="\skin\user_title_skin2.tga" imgrect="0 136 214 34" CMM_Caption="폰티펙스 주보레 칭호"/>
 		<image name="plate_achieve_Pontifex" file="\skin\user_title_skin2.tga" imgrect="1070 102 214 34" CMM_Caption="폰티펙스 칭호"/>
+		<image name="plate_achieve_Illusionist_weekraid" file="\skin\user_title_skin2.tga" imgrect="428 136 214 34" CMM_Caption="일루저니스트 주보레 칭호"/>
+		<image name="plate_achieve_Illusionist" file="\skin\user_title_skin2.tga" imgrect="642 136 214 34" CMM_Caption="일루저니스트 칭호"/>
 		</imagelist>
 	<imagelist category="skin_hair">
 		<image name="icon_skintone_01_m01" file="\skin\skinhair\icon_skintone_01_m01.png" imgrect="0 0 80 80" CMM_Caption="남성 01"/>

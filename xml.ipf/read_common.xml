@@ -424,4 +424,6 @@
 	<ReadXml Name="enchant_special_option_ratio_low"/>		
 	<ReadXml Name="enchant_special_option_ratio"/>	
 	<ReadXml Name="auction\black_market_schedule"/>		
+	<ReadXml Name="auction\black_market_schedule_TAIWAN"/>
+	<ReadXml Name="auction\black_market_schedule_PAPAYA"/>
 </Category>

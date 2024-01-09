@@ -687,7 +687,10 @@ function POPOBOOST_PREMIUM_APPLY_ITEM_CLEINT_SCRIPT(invItem)
         pc.ReqExecuteTx_Item("POPOBOOST_PREMIUN_APPLY",itemIES, className);
         return;
     end
-
+    local popo_server = GET_POPOBOOST_SERVER();
+    if popo_server == 1 then
+        return;
+    end
     local itemIES = invItem:GetIESID();
     local itemobj = GetIES(invItem:GetObject());
     local className = itemobj.ClassName;

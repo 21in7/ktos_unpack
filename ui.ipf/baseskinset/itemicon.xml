@@ -944,6 +944,10 @@
 		<image name="icon_item_upinis_leather_gloves" file="\icon\equip\icon_ep15_raid_leather_hand.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_upinis_leather_pants" file="\icon\equip\icon_ep15_raid_leather_leg.png" imgrect="0 0 256 256"/>
 		<image name="icon_item_upinis_leather_shoes" file="\icon\equip\icon_ep15_raid_leather_foot.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_mage_illusionist01_m" file="\icon\equip\mage_illusionist01_m.png" imgrect="0 0 256 256" CMM_Caption="일루저니스트"/>
+		<image name="icon_item_mage_illusionist01_f" file="\icon\equip\mage_illusionist01_f.png" imgrect="0 0 256 256"/>
+		<image name="icon_item_mage_illusionist02_m" file="\icon\equip\mage_illusionist02_m.png" imgrect="0 0 256 256" CMM_Caption="일루저니스트 스페셜"/>
+		<image name="icon_item_mage_illusionist02_f" file="\icon\equip\mage_illusionist02_f.png" imgrect="0 0 256 256"/>
 	</imagelist>
 	<imagelist category="256_costume_icons">
 		<image name="icon_item_Alchemist_f" file="\icon\equip\Alchemist_f_icon.png" imgrect="0 0 256 256" CMM_Caption="알케미스트"/>
@@ -4545,6 +4549,7 @@
 		<image name="icon_item_accessory_scootergoggle" file="\icon\hairacc\icon_item_accessory_scootergoggle.png" imgrect="0 0 256 256" CMM_Caption="포포 스쿠터 고글"/>
 		<image name="icon_item_helmet_ep15snowknight01" file="\icon\hairacc\icon_item_helmet_ep15snowknight01.png" imgrect="0 0 256 256" CMM_Caption="2023.02테마 헬멧"/>
 		<image name="icon_item_accessory_engineer" file="\icon\hairacc\icon_item_accessory_engineer.png" imgrect="0 0 256 256" CMM_Caption="엔지니어 스페셜 헤어악세사리"/>
+		<image name="icon_item_accessory_illusionist" file="\icon\hairacc\icon_accessory_illusionist.png" imgrect="0 0 256 256" CMM_Caption="일루저니스트 스페셜 헤어악세사리"/>
 	</imagelist>
 	<imagelist category="collection_item">
 		<image name="icon_collitem_collection" file="\icon\colletion\icon_item_collection.tga" imgrect="0 0 673 419" CMM_Caption="월계수"/>
@@ -9822,6 +9827,8 @@
 		<image name="icon_misc_slogutis_glove" file="\icon\item\icon_misc_slogutis_glove.png" imgrect="0 0 256 256" CMM_Caption="슬로거티스 데빌 글로브"/>
 		<image name="icon_selectbox_kadiatcha_hairacc" file="\icon\payment\icon_selectbox_kadiatcha_hairacc.png" imgrect="0 0 256 256" CMM_Caption="고위 주술 가면 선택 상자"/>
 		<image name="icon_leticia_kadiatcha_unlockbox" file="\icon\payment\icon_leticia_kadiatcha_unlockbox.png" imgrect="0 0 256 256" CMM_Caption="카디앗차 해금권 상자"/>
+		<image name="icon_item_illusionist_staff" file="\icon\weapon\icon_illusionist_staff.png" imgrect="0 0 256 256" CMM_Caption="일루저니스트 스태프"/>
+		<image name="icon_item_illusionist_thsword" file="\icon\weapon\icon_illusionist_thsword.png" imgrect="0 0 256 256" CMM_Caption="일루저니스트 환영검"/>
 		<image name="icon_item_Multiple_Token_BridgeWailing_Dimension_Party" file="\icon\payment\icon_item_Multiple_Token_BridgeWailing_Dimension_Party.png" imgrect="0 0 256 256" CMM_Caption="통곡의 묘지 - 이공간 배수권"/>
 		<image name="icon_item_BridgeWailing_Dimension_Party_Enter" file="\icon\item\icon_item_BridgeWailing_Dimension_Party_Enter.png" imgrect="0 0 256 256" CMM_Caption="통곡의 묘지 - 이공간 입장권"/>
 		<image name="icon_misc_bernice_NoTrade" file="\icon\item\icon_misc_bernice_NoTrade.png" imgrect="0 0 128 128" CMM_Caption="베르니케의 정수"/>
@@ -9860,6 +9867,11 @@
 		<image name="icon_item_sniego_memory" file="\icon\item\icon_item_sniego_memory.png" imgrect="0 0 256 256" CMM_Caption="스니고의 기억"/>
 		<image name="icon_item_sniego_memory10" file="\icon\item\icon_item_sniego_memory10.png" imgrect="0 0 256 256" CMM_Caption="스니고의 기억x10"/>
 		<image name="icon_item_sniego_memorypiece" file="\icon\item\icon_item_sniego_memorypiece.png" imgrect="0 0 256 256" CMM_Caption="스니고의 기억조각"/>
+		<image name="icon_item_wing_illusionist" file="\icon\payment\icon_item_wing_illusionist.png" imgrect="0 0 256 256" CMM_Caption="일루저니스트의 날개"/>
+		<image name="icon_item_hairacc_illusionist" file="\icon\hairacc\icon_item_hairacc_illusionist.png" imgrect="0 0 256 256" CMM_Caption="일루저니스트의 가면"/>
+		<image name="icon_leticia_illusionist_unlockbox" file="\icon\payment\icon_leticia_illusionist_unlockbox.png" imgrect="0 0 256 256" CMM_Caption="일루저니스트 해금권 상자"/>
+		<image name="icon_item_Unlock_illusionist" file="\icon\payment\icon_item_Unlock_illusionist.png" imgrect="0 0 256 256" CMM_Caption="일루저니스트 해금권"/>
+		<image name="icon_item_Unlock_pontifex" file="\icon\payment\icon_item_Unlock_pontifex.png" imgrect="0 0 256 256" CMM_Caption="폰티펙스 해금권"/>
 	</imagelist>
 	<imagelist category="seal">
 		<image name="icon_seal_yellow_cc_A1" file="\icon\seal\seal_yellow_cc_A1.tga" imgrect="0 0 80 80"/>
