@@ -51,6 +51,7 @@
 		<image name="20231219_holiday_news" file="\event_banner\20231219_holiday_news.jpg" imgrect="0 0 480 180"/>
 		<image name="20231219_Pontifex_News" file="\event_banner\20231219_Pontifex_News.jpg" imgrect="0 0 480 180"/>
 		<image name="240102_TOS_news_banner" file="\event_banner\240102_TOS_news_banner.jpg" imgrect="0 0 480 180"/>
+		<image name="240110_ingame_news_480X180" file="\event_banner\240110_ingame_news_480X180.jpg" imgrect="0 0 480 180"/>
 		<!-- TP Banner -->
 		<image name="1031_Ingame_TP_Sop_banner" file="\event_banner\1031_Ingame_TP_Sop_banner.png" imgrect="0 0 520 250"/>
 		<image name="1107Costume_TPShop" file="\event_banner\1107Costume_TPShop.png" imgrect="0 0 520 250"/>

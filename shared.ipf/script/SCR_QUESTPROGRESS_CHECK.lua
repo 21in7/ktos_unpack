@@ -5002,3 +5002,103 @@ function SCR_EPISODE_CHECK(pc, episodeRewardClassName)
     
     return "Reward", clearCnt;
 end
+
+function SCR_EPISODE_ALL_CLEAR_CHECK(pc, episodeRewardClassName)
+    if pc == nil then
+        return "Error"
+    end
+    
+    local episodeRewardIES = GetClass('Episode_Reward', episodeRewardClassName)
+    if episodeRewardIES == nil then
+        return "Error"
+    end
+    
+    local episodeNumberStrProp = TryGetProp(episodeRewardIES, "ClassName")
+    if episodeNumberStrProp == nil then
+        return "Error"
+    end
+
+    local unLockGroup = TryGetProp(episodeRewardIES, "EpisodeUnLockGroup")
+    if unLockGroup == nil then
+        return "Error"
+    end
+   
+    local ScrollUnLockGroup = TryGetProp(episodeRewardIES, "ScrollUnLockGroup")
+    if ScrollUnLockGroup == nil then
+        return 0
+    end
+
+
+    local accountObj = nil;
+	if IsServerObj(pc) == 1 then
+		accountObj =  GetAccountObj(pc);
+	else
+		accountObj = GetMyAccountObj();
+    end
+
+    if accountObj == nil then
+        return "Error"
+    end
+
+    -- 0. New 검사
+    if unLockGroup ~= nil and unLockGroup == "New" then
+        local unLockGroupPropName = "Episode_Unlock_" .. unLockGroup ;
+        local unLockGroupProp = TryGetProp(accountObj, unLockGroupPropName)
+        if unLockGroupProp ~= 1 then
+            return "New"; 
+        end
+    end
+    
+    -- 0. Next 검사
+    if unLockGroup ~= nil and unLockGroup == "Next" then
+        local unLockGroupPropName = "Episode_Unlock_" .. unLockGroup ;
+        local unLockGroupProp = TryGetProp(accountObj, unLockGroupPropName)
+        if unLockGroupProp ~= 1 then
+            return "Next"; 
+        end
+    end
+
+    -- 1. Lock 검사
+    if unLockGroup ~= nil and unLockGroup ~= "None" then
+        local unLockGroupPropName = "Episode_Unlock_" .. unLockGroup ;
+        local unLockGroupProp = TryGetProp(accountObj, unLockGroupPropName)
+        if unLockGroupProp ~= 1 then
+            return "Locked"; 
+        end
+    end
+
+    local questCnt = 0
+    local list = GET_EPISODE_QUEST_LIST(episodeNumberStrProp)
+    if list == nil then
+        return "Error"
+    end
+    for _notUse , questID in pairs(list) do
+        questCnt = questCnt + 1
+    end
+        
+    local tgtProp = ScrollUnLockGroup.."_ScrollUnLock"
+    local isUnLock = TryGetProp(accountObj, tgtProp, 0)
+    if isUnLock > 0 then
+        return "Reward", questCnt;
+    end
+
+
+    local clearCnt = 0
+    for _notUse , questID in pairs(list) do
+        local questIES = GetClassByType('QuestProgressCheck', questID);
+        if questIES == nil then
+            return "Error"
+        end
+        local questName = TryGetProp(questIES, "ClassName")
+        if questName == nil then
+            return "Error"
+        end
+        local state = SCR_QUEST_CHECK(pc, questName )
+        if state ~= "COMPLETE" then
+            return "Progress", clearCnt;
+        end
+        clearCnt = clearCnt + 1
+    end
+    
+    return "Reward", clearCnt;
+end
