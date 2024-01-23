@@ -83,7 +83,6 @@ ClassID,GenType,Lv,Range,GenRange,RespawnTime,MaxPop,Minimap,Hide,UseAIOufOfPC,A
 5284,5284,1,40,1,1,1,2,0,0,1,0,0,"npc_MasterHwarang","[화랑 마스터]{nl}사라함","","","","","","","MASTER_HWARANG_NPC","","","NO","YES","NO","Neutral","","","",""
 5286,5286,1,40,1,60000,1,0,0,0,0,0,0,"npc_rangdagirl_02","소녀의 환영","","","","","","StartLine3_TUTO_NPC_ALPHA","EP14_MULIA_NPC_3","","","NO","YES","NO","Neutral","","","",""
 5288,5288,1,40,1,60000,1,1,0,0,0,0,0,"orsha_soldier_f_2","오르샤 입항 수속 담당자","","","","","","","EP14_F_CORAL_RAID_1_NPC_1","","","NO","YES","NO","Neutral","","","",""
-5289,5289,1,60,1,60000,1,1,0,0,0,0,0,"gacha_machine","여신의 축복","","","","","","","BLESSED_CUBE","","","NO","YES","NO","Neutral","","","",""
 5295,5295,1,40,1,60000,1,2,0,0,0,0,0,"npc_kupole_Bernice","[스킬 연성 도우미]{nl}큐폴","","","","","","","DUCTILITY_NPC","","","NO","YES","NO","Neutral","","","",""
 5500,5500,1,60,1,60000,1,2,0,0,0,0,0,"Tos_Event_Coin_NPC","TOS 주화 안내원","","","","","","","EVENT_TOS_WHOLE_NPC","","","NO","YES","NO","Neutral","","","",""
 5502,5502,1,40,1,60000,1,2,0,0,0,0,0,"master_Engineer_npc","[엔지니어 마스터]{nl}마가렛 이네자","","","","","","","MASTER_ENG_NPC","","","NO","YES","NO","Netural","","","",""

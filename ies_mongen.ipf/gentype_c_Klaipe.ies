@@ -84,7 +84,6 @@ ClassID,GenType,Lv,Range,GenRange,RespawnTime,MaxPop,Minimap,Hide,UseAIOufOfPC,A
 5288,10121,1,40,1,1,1,1,0,0,0,0,0,"HiddenTrigger6","","","","","","","TEST_SERVER3_SHOP_NPC_AI","","","","NO","YES","NO","Neutral","","","",""
 5289,10122,1,40,1,1,1,1,0,0,0,0,0,"HiddenTrigger6","","","","","","","TEST_SERVER4_SHOP_NPC_AI","","","","NO","YES","NO","Neutral","","","",""
 5290,10123,1,40,1,1,1,1,0,0,0,0,0,"HiddenTrigger6","","","","","","","TEST_SERVER2_SHOP_NPC_AI","","","","NO","YES","NO","Neutral","","","",""
-5292,10125,1,60,1,60000,1,2,0,0,0,0,0,"gacha_machine","여신의 축복","","","","","","","BLESSED_CUBE","","","NO","YES","NO","Neutral","","","",""
 5294,10126,1,40,1,60000,1,2,0,0,0,0,0,"npc_kupole_Bernice","[스킬 연성 도우미]{nl}큐폴","","","","","","","DUCTILITY_NPC","","","NO","YES","NO","Neutral","","","",""
 5295,10127,1,40,1,60000,1,2,0,0,0,0,0,"Tos_Coin_Shop_NPC","[오래된 여신의 증표 상점]{nl}큐폴","","","","","","","PREVIOUS_COIN_SHOP","","","NO","YES","NO","Neutral","","","",""
 5500,5500,1,60,1,60000,1,2,0,0,0,0,0,"Tos_Event_Coin_NPC","TOS 주화 안내원","","","","","","","EVENT_TOS_WHOLE_NPC","","","NO","YES","NO","Neutral","","","",""

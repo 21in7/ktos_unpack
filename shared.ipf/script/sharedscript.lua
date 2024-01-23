@@ -4597,6 +4597,24 @@ function CHECK_TOSW_EVENT_RESTRICT_TIME(indun_class_name)
     if indun_class_name ~= "Evnet2023_SnigoDungeon" and indun_class_name ~= "Evnet2024_NewYear" then
         return true;
     end
+    
+    local TimeCheckFunc = function(day, hour, min, EndDay, EndHour, EndMin)
+        if day > EndDay then
+            return false;
+        elseif day == EndDay then
+            if hour > EndHour then
+                return false;
+            elseif hour == EndHour then
+                if min >= EndMin then
+                    return false;
+                end
+                return true;
+            end
+            return true;
+        else
+            return true;
+        end
+    end
 
     if time ~= nil then
         local year = time.wYear;
@@ -4608,44 +4626,20 @@ function CHECK_TOSW_EVENT_RESTRICT_TIME(indun_class_name)
                 local min = time.wMin;
                 local nation = GetServerNation();
                 if nation == "GLOBAL" then
-                    if day >= 22 then
-                        if hour >= 6 then
-                            return false;
-                        end
-                        return true;
-                    end
+                    local TimeBoolean = TimeCheckFunc(day, hour, min, 22, 6, 0);
+                    return TimeBoolean;
                 elseif nation == "GLOBAL_JP" then
-                    if day >= 22 then
-                        if hour >= 6 then
-                            return false;
-                        end
-                        return true;
-                    end
+                    local TimeBoolean = TimeCheckFunc(day, hour, min, 22, 6, 0);
+                    return TimeBoolean;
                 elseif nation == "GLOBAL_KOR" then
-                    if day >= 22 then
-                        if hour >= 6 then
-                            return false;
-                        end
-                        return true;
-                    end
+                    local TimeBoolean = TimeCheckFunc(day, hour, min, 22, 6, 0);
+                    return TimeBoolean;
                 elseif nation =="PAPAYA" then
-                    if day >= 23 then
-                        if hour == 17 then
-                            if min >= 30 then
-                                return false;
-                            end
-                        elseif hour > 17 then
-                            return false;
-                        end
-                        return true;
-                    end
+                    local TimeBoolean = TimeCheckFunc(day, hour, min, 23, 17, 30);
+                    return TimeBoolean;
                 elseif nation == "TWN" then
-                    if day >= 29 then
-                        if hour >= 6 then
-                            return false;
-                        end
-                        return true;
-                    end
+                    local TimeBoolean = TimeCheckFunc(day, hour, min, 29, 6, 0);
+                    return TimeBoolean;
                 end
             end
         elseif indun_class_name == "Evnet2024_NewYear" then
@@ -4655,26 +4649,14 @@ function CHECK_TOSW_EVENT_RESTRICT_TIME(indun_class_name)
                 local min = time.wMin;
                 local nation = GetServerNation();
                 if nation == "GLOBAL" then
-                    if day >= 5 then
-                        if hour >= 6 then
-                            return false;
-                        end
-                        return true;
-                    end
+                    local TimeBoolean = TimeCheckFunc(day, hour, min, 5, 6, 0);
+                    return TimeBoolean;
                 elseif nation == "GLOBAL_JP" then
-                    if day >= 5 then
-                        if hour >= 6 then
-                            return false;
-                        end
-                        return true;
-                    end
+                    local TimeBoolean = TimeCheckFunc(day, hour, min, 5, 6, 0);
+                    return TimeBoolean;
                 elseif nation == "GLOBAL_KOR" then
-                    if day >= 5 then
-                        if hour >= 6 then
-                            return false;
-                        end
-                        return true;
-                    end
+                    local TimeBoolean = TimeCheckFunc(day, hour, min, 5, 6, 0);
+                    return TimeBoolean;
                 elseif nation =="PAPAYA" then
                     --[[ if day >= 23 then
                         if hour == 17 then
