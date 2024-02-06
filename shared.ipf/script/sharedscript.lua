@@ -3524,6 +3524,24 @@ function JOB_SHINOBI_PRE_CHECK(pc, jobCount)
     return 'NO'
 end
 
+function JOB_WingedHussars_PRE_CHECK(pc, jobCount)
+    local aObj = nil
+    if IsServerSection() == 0 then
+        aObj = GetMyAccountObj();
+    else
+        aObj = GetAccountObj(pc);
+    end
+    
+    if aObj ~= nil then
+        local value = TryGetProp(aObj, 'UnlockQuest_Char1_25', 0)
+        if value == 1 then
+            return 'YES'
+        end
+    end
+
+    return 'NO'
+end
+
 function GET_ACCOUNT_WAREHOUSE_EXTEND_PRICE(aObj, taxRate)
     local slotDiff = aObj.AccountWareHouseExtend;
     local price = ACCOUNT_WAREHOUSE_EXTEND_PRICE;

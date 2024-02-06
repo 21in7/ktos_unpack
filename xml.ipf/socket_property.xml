@@ -3167,4 +3167,32 @@
 		<Level Level="0" PropList_TopLeg="OptDesc/디다케: 면죄 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/디다케: 면죄 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
 		<Level Level="1" PropList_TopLeg="OptDesc/디다케: 면죄 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/디다케: 면죄 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None"/>
 	</Item>
+  <Item Name="GEM_WingedHussars_CircleWings">
+    <Level Level="0" PropList_TopLeg="OptDesc/서클 윙스 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/퍼니시 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None" />
+    <Level Level="1" PropList_TopLeg="OptDesc/서클 윙스 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/퍼니시 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None" />
+  </Item>
+  <Item Name="GEM_WingedHussars_RisingWings">
+    <Level Level="0" PropList_TopLeg="OptDesc/라이징 윙스 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/퍼니시 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None" />
+    <Level Level="1" PropList_TopLeg="OptDesc/라이징 윙스 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/퍼니시 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None" />
+  </Item>
+  <Item Name="GEM_WingedHussars_GiantWings">
+    <Level Level="0" PropList_TopLeg="OptDesc/자이언트 윙스 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/퍼니시 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None" />
+    <Level Level="1" PropList_TopLeg="OptDesc/자이언트 윙스 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/퍼니시 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None" />
+  </Item>
+  <Item Name="GEM_WingedHussars_WindPulse">
+    <Level Level="0" PropList_TopLeg="OptDesc/윈드 펄스 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/퍼니시 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None" />
+    <Level Level="1" PropList_TopLeg="OptDesc/윈드 펄스 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/퍼니시 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None" />
+  </Item>
+  <Item Name="GEM_WingedHussars_ImpulseSpears">
+    <Level Level="0" PropList_TopLeg="OptDesc/임펄스 스피어스 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/퍼니시 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None" />
+    <Level Level="1" PropList_TopLeg="OptDesc/임펄스 스피어스 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/퍼니시 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None" />
+  </Item>
+  <Item Name="GEM_WingedHussars_BattleSpirit">
+    <Level Level="0" PropList_TopLeg="OptDesc/배틀 스피릿 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/퍼니시 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None" />
+    <Level Level="1" PropList_TopLeg="OptDesc/배틀 스피릿 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/퍼니시 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None" />
+  </Item>
+  <Item Name="GEM_WingedHussars_ExplosionSpears">
+    <Level Level="0" PropList_TopLeg="OptDesc/익스플로전 스피어스 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/퍼니시 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None" />
+    <Level Level="1" PropList_TopLeg="OptDesc/익스플로전 스피어스 스킬 레벨 + 1" PropList_TopLeg_Penalty="None" PropList_MainOrSubWeapon="None" PropList_MainOrSubWeapon_Penalty="None" PropList_HandOrFoot="OptDesc/퍼니시 스킬 레벨 + 1" PropList_HandOrFoot_Penalty="None" />
+  </Item>
 </SocketProperty>

@@ -1,7 +1,7 @@
 -- shared_item_goddess_reinforce.lua, 가디스 장비 강화 관련 
 -- item_goddess_reinforce.xml
 
-local equip_end_lv = 500
+local equip_end_lv = 510
 
 local function replace(text, to_be_replaced, replace_with)
 	local retText = text
@@ -804,6 +804,10 @@ function setting_lv_material_acc(mat_list_by_lv, lv)
 		seasonCoin = "VakarineCertificate" -- 주화
 		medusaReinforceMisc = "misc_ribbonRoze_NoTrade" -- 레이드 재료
 		misc_BlessedStone = 'misc_BlessedStone'
+	elseif lv == 510 then
+		seasonCoin = "RadaCertificate" -- 주화
+		medusaReinforceMisc = "misc_merregina_blackpearl_NoTrade" -- 레이드 재료
+		misc_BlessedStone = 'misc_BlessedStone_1'
 	end
 
 	-- 여기서 레벨별 재료를 세팅한다.	
@@ -1031,6 +1035,8 @@ function setting_lv_misc_material(mat_list_by_lv, lv, group)
 	elseif lv >= 500 then
 		if lv == 500 then
 			misc1 = "misc_ore28" 
+		elseif lv == 510 then
+			misc1 = "misc_ore28" 
 		end
 
 		mat_list_by_lv[lv][group][1][misc1] = 26
@@ -1077,6 +1083,7 @@ function make_item_goddess_reinforce_material_list()
 	item_goddess_reinforce_material_list[480] = {}
 	item_goddess_reinforce_material_list[490] = {}
 	item_goddess_reinforce_material_list[500] = {}
+	item_goddess_reinforce_material_list[510] = {}
 	
 	local classtype_list = {}
 	local group_list = {}

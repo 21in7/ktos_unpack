@@ -7055,4 +7055,14 @@
 			<richtext name="itemprice" margin="150 40 0 0" rect="0 0 210 40" caption="ZZZZZZZZZZZ" textalign="right center" resizebytext="true" spacey="0" maxwidth="280" fontname="brown_16_b" fixwidth="false" updateparent="false" drawbackground="false" slideshow="false" layout_gravity="center top"/>
 		</controls>
 	</controlset>
+	<controlset name="leticia_probability_slot" hittest="true" width="610" height="100" hittestset="false" draw="true" skin="" stateskin="false">
+		<controls>
+			<groupbox name="maintab" rect="0 0 610 75" margin="0 0 0 0" layout_gravity="center center" draw="true" resizebyparent="false" resizebyresolution="true" scrollbar="false" skin="test_frame_low"/>
+				<richtext name="grade" parent="maintab" rect="0 0 50 75" margin="10 0 0 0" layout_gravity="left center" format="{@st43}{s24}%s" param1="value" param1_def="grade" drawbackground="false" fixwidth="false" 	fontname="white_18_ol" resizebytext="false" textalign="center center"/>
+				<slot name="pic" parent="maintab" margin="65 0 0 0" rect="0 0 50 50" hittest="true" skin="invenslot2" stretch="true" changecursor="false" layout_gravity="left center"/>
+				<richtext name="name" parent="maintab" rect="0 0 325 50" margin="125 0  0 0" layout_gravity="left center" format="{@st43}{s16}%s" param1="value" param1_def="Name" drawbackground="false" fixwidth="false" 	fontname="white_18_ol" resizebytext="false" textalign="left center" />
+				<richtext name="cnt" parent="maintab" rect="0 0 100 75" margin="435 0 0 0" layout_gravity="left center" format="{@st43}{s16}%s개" param1="value" param1_def="Cnt" drawbackground="false" fixwidth="false" 	fontname="white_18_ol" resizebytext="false" textalign="center center"/>
+				<richtext name="percente" parent="maintab" rect="0 0 100 75" margin="500 0 0 0" layout_gravity="left center" format="{@st43}{s16}%s%" param1="value" param1_def="percente" drawbackground="false" fixwidth="false" 	fontname="white_18_ol" resizebytext="false" textalign="center center"/>
+		</controls>
+	</controlset>
 </controlsetlist>

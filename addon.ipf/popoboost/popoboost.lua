@@ -680,15 +680,15 @@ function POPOBOOST_PREMIUM_APPLY_ITEM_CLEINT_SCRIPT(invItem)
         return;
     end
     if IS_POPOBOOST_END() == true then
+        local popo_server = GET_POPOBOOST_SERVER();
+        if popo_server == 1 then
+            return;
+        end    
         --기간이 지났을 경우 아이템 수령 로직.
         local itemIES = invItem:GetIESID();
         local itemobj = GetIES(invItem:GetObject());
         local className = itemobj.ClassName;
         pc.ReqExecuteTx_Item("POPOBOOST_PREMIUN_APPLY",itemIES, className);
-        return;
-    end
-    local popo_server = GET_POPOBOOST_SERVER();
-    if popo_server == 1 then
         return;
     end
     local itemIES = invItem:GetIESID();

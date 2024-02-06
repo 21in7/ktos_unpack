@@ -17395,4 +17395,158 @@
       </Trigger>
     </TriggerList>
   </SpcItem>
+  <SpcItem Name="GEM_WingedHussars_CircleWings">
+    <TriggerList Act="UnEquip">
+      <Trigger>
+        <ExecList>
+          <ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+            <Str Str="WingedHussars_CircleWings" />
+            <Num Num="-1" />
+          </ToolScp>
+        </ExecList>
+      </Trigger>
+    </TriggerList>
+    <TriggerList Act="Equip">
+      <Trigger>
+        <ExecList>
+          <ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+            <Str Str="WingedHussars_CircleWings" />
+            <Num Num="1" />
+          </ToolScp>
+        </ExecList>
+      </Trigger>
+    </TriggerList>
+  </SpcItem>
+  <SpcItem Name="GEM_WingedHussars_RisingWings">
+    <TriggerList Act="UnEquip">
+      <Trigger>
+        <ExecList>
+          <ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+            <Str Str="WingedHussars_RisingWings" />
+            <Num Num="-1" />
+          </ToolScp>
+        </ExecList>
+      </Trigger>
+    </TriggerList>
+    <TriggerList Act="Equip">
+      <Trigger>
+        <ExecList>
+          <ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+            <Str Str="WingedHussars_RisingWings" />
+            <Num Num="1" />
+          </ToolScp>
+        </ExecList>
+      </Trigger>
+    </TriggerList>
+  </SpcItem>
+  <SpcItem Name="GEM_WingedHussars_GiantWings">
+    <TriggerList Act="UnEquip">
+      <Trigger>
+        <ExecList>
+          <ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+            <Str Str="WingedHussars_GiantWings" />
+            <Num Num="-1" />
+          </ToolScp>
+        </ExecList>
+      </Trigger>
+    </TriggerList>
+    <TriggerList Act="Equip">
+      <Trigger>
+        <ExecList>
+          <ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+            <Str Str="WingedHussars_GiantWings" />
+            <Num Num="1" />
+          </ToolScp>
+        </ExecList>
+      </Trigger>
+    </TriggerList>
+  </SpcItem>
+  <SpcItem Name="GEM_WingedHussars_WindPulse">
+    <TriggerList Act="UnEquip">
+      <Trigger>
+        <ExecList>
+          <ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+            <Str Str="WingedHussars_WindPulse" />
+            <Num Num="-1" />
+          </ToolScp>
+        </ExecList>
+      </Trigger>
+    </TriggerList>
+    <TriggerList Act="Equip">
+      <Trigger>
+        <ExecList>
+          <ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+            <Str Str="WingedHussars_WindPulse" />
+            <Num Num="1" />
+          </ToolScp>
+        </ExecList>
+      </Trigger>
+    </TriggerList>
+  </SpcItem>
+  <SpcItem Name="GEM_WingedHussars_ImpulseSpears">
+    <TriggerList Act="UnEquip">
+      <Trigger>
+        <ExecList>
+          <ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+            <Str Str="WingedHussars_ImpulseSpears" />
+            <Num Num="-1" />
+          </ToolScp>
+        </ExecList>
+      </Trigger>
+    </TriggerList>
+    <TriggerList Act="Equip">
+      <Trigger>
+        <ExecList>
+          <ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+            <Str Str="WingedHussars_ImpulseSpears" />
+            <Num Num="1" />
+          </ToolScp>
+        </ExecList>
+      </Trigger>
+    </TriggerList>
+  </SpcItem>
+  <SpcItem Name="GEM_WingedHussars_BattleSpirit">
+    <TriggerList Act="UnEquip">
+      <Trigger>
+        <ExecList>
+          <ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+            <Str Str="WingedHussars_BattleSpirit" />
+            <Num Num="-1" />
+          </ToolScp>
+        </ExecList>
+      </Trigger>
+    </TriggerList>
+    <TriggerList Act="Equip">
+      <Trigger>
+        <ExecList>
+          <ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+            <Str Str="WingedHussars_BattleSpirit" />
+            <Num Num="1" />
+          </ToolScp>
+        </ExecList>
+      </Trigger>
+    </TriggerList>
+  </SpcItem>
+  <SpcItem Name="GEM_WingedHussars_ExplosionSpears">
+    <TriggerList Act="UnEquip">
+      <Trigger>
+        <ExecList>
+          <ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+            <Str Str="WingedHussars_ExplosionSpears" />
+            <Num Num="-1" />
+          </ToolScp>
+        </ExecList>
+      </Trigger>
+    </TriggerList>
+    <TriggerList Act="Equip">
+      <Trigger>
+        <ExecList>
+          <ToolScp Scp="SPCI_GEM_SKILLUP" Client="NO" UseSleep="NO">
+            <Str Str="WingedHussars_ExplosionSpears" />
+            <Num Num="1" />
+          </ToolScp>
+        </ExecList>
+      </Trigger>
+    </TriggerList>
+  </SpcItem>
 </SpcItemList>

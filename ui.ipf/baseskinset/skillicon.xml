@@ -875,6 +875,14 @@
 		<image name="icon_warrior_hierophany" file="\icon\skill\warrior\icon_warrior_hierophany.png" imgrect="0 0 128 128" CMM_Caption="현신"/>
 		<image name="icon_warrior_stancechange_f" file="\icon\skill\warrior\icon_warrior_stancechange_f.png" imgrect="0 0 128 128" CMM_Caption="태세전환-속"/>
 		<image name="icon_warrior_stancechange_s" file="\icon\skill\warrior\icon_warrior_stancechange_s.png" imgrect="0 0 128 128" CMM_Caption="태세전환-광"/>
+		<image name="icon_warri_battlespirit" file="\icon\skill\warrior\icon_warri_battlespirit.png" imgrect="0 0 128 128" CMM_Caption="배틀 스피릿"/>
+		<image name="icon_buff_spirit" file="\icon\skill\warrior\icon_buff_spirit.png" imgrect="0 0 128 128" CMM_Caption="전장의 기백"/>		
+		<image name="icon_warri_circlewings" file="\icon\skill\warrior\icon_warri_circlewings.png" imgrect="0 0 128 128" CMM_Caption="써클 윙스"/>
+		<image name="icon_warri_explosionspears" file="\icon\skill\warrior\icon_warri_explosionspears.png" imgrect="0 0 128 128" CMM_Caption="익스플로전 스피어스"/>
+		<image name="icon_warri_giantwings" file="\icon\skill\warrior\icon_warri_giantwings.png" imgrect="0 0 128 128" CMM_Caption="자이언트 윙스"/>
+		<image name="icon_warri_impulsespears" file="\icon\skill\warrior\icon_warri_impulsespears.png" imgrect="0 0 128 128" CMM_Caption="임펄스 스피어스"/>
+		<image name="icon_warri_risingwings" file="\icon\skill\warrior\icon_warri_risingwings.png" imgrect="0 0 128 128" CMM_Caption="라이징 윙스"/>
+		<image name="icon_warri_windpulse" file="\icon\skill\warrior\icon_warri_windpulse.png" imgrect="0 0 128 128" CMM_Caption="윈드펄스"/>	
 	</imagelist>
 	<imagelist category="scout_skillicon">
 		<image name="icon_scout_aggress" file="\icon\skill\scout\icon_scout_aggress.png" imgrect="0 0 128 128" CMM_Caption="인법뇌둔술"/>
@@ -1764,6 +1772,23 @@
 		<image name="ability_Warrior_SpearOfGod19" file="\icon\icon_ability_warrior10.tga" imgrect="895 899 128 128" CMM_Caption="경공: 관"/>
 		<image name="ability_Warrior_SpearOfGod20" file="\icon\icon_ability_warrior11.tga" imgrect="130 130 128 128" CMM_Caption="[아츠] 현신: 재림"/>
 		<image name="ability_Warrior_SpearOfGod21" file="\icon\icon_ability_warrior11.tga" imgrect="257 131 128 128" CMM_Caption="태세 전환: 맹룡"/>		
+		<image name="ability_Warrior_WingedHussar01" file="\icon\icon_ability_warrior11.tga" imgrect="384 128 128 128" CMM_Caption="[아츠] 배틀 스피릿: 전장의 포효"/>
+		<image name="ability_Warrior_WingedHussar02" file="\icon\icon_ability_warrior11.tga" imgrect="512 128 128 128" CMM_Caption="써클 윙스: 강화"/>
+		<image name="ability_Warrior_WingedHussar03" file="\icon\icon_ability_warrior11.tga" imgrect="640 128 128 128" CMM_Caption="[아츠] 써클 윙스: 상급 강화"/>
+		<image name="ability_Warrior_WingedHussar04" file="\icon\icon_ability_warrior11.tga" imgrect="768 128 128 128" CMM_Caption="자이언트 윙스: 강화"/>
+		<image name="ability_Warrior_WingedHussar05" file="\icon\icon_ability_warrior11.tga" imgrect="896 128 128 128" CMM_Caption="[아츠] 자이언트 윙스: 상급 강화"/>
+		<image name="ability_Warrior_WingedHussar06" file="\icon\icon_ability_warrior11.tga" imgrect="0 256 128 128" CMM_Caption="자이언트 윙스: 승천"/>
+		<image name="ability_Warrior_WingedHussar07" file="\icon\icon_ability_warrior11.tga" imgrect="128 256 128 128" CMM_Caption="윈드펄스: 강화"/>
+		<image name="ability_Warrior_WingedHussar08" file="\icon\icon_ability_warrior11.tga" imgrect="256 256 128 128" CMM_Caption="[아츠] 윈드펄스: 상급 강화"/>
+		<image name="ability_Warrior_WingedHussar09" file="\icon\icon_ability_warrior11.tga" imgrect="384 256 128 128" CMM_Caption="임펄스 스피어스: 강화"/>
+		<image name="ability_Warrior_WingedHussar10" file="\icon\icon_ability_warrior11.tga" imgrect="512 256 128 128" CMM_Caption="[아츠] 임펄스 스피어스: 상급 강화"/>
+		<image name="ability_Warrior_WingedHussar11" file="\icon\icon_ability_warrior11.tga" imgrect="640 256 128 128" CMM_Caption="라이징 윙스: 강화"/>
+		<image name="ability_Warrior_WingedHussar12" file="\icon\icon_ability_warrior11.tga" imgrect="768 256 128 128" CMM_Caption="[아츠] 라이징 윙스: 상급 강화"/>
+		<image name="ability_Warrior_WingedHussar13" file="\icon\icon_ability_warrior11.tga" imgrect="896 256 128 128" CMM_Caption="라이징 윙스: 결박"/>
+		<image name="ability_Warrior_WingedHussar14" file="\icon\icon_ability_warrior11.tga" imgrect="0 384 128 128" CMM_Caption="익스플로전 스피어스: 강화"/>
+		<image name="ability_Warrior_WingedHussar15" file="\icon\icon_ability_warrior11.tga" imgrect="128 384 128 128" CMM_Caption="[아츠] 익스플로전 스피어스: 상급 강화"/>
+		<image name="ability_Warrior_WingedHussar16" file="\icon\icon_ability_warrior11.tga" imgrect="256 384 128 128" CMM_Caption="[아츠] 익스플로전 스피어스: 인피니티 스피어스"/>	
+		<image name="ability_Warrior_WingedHussar17" file="\icon\icon_ability_warrior11.tga" imgrect="384 384 128 128" CMM_Caption=""/>	
 	</imagelist>
 	<imagelist category="abilityicon_wizard">
 		<image name="ability_Wizard_Wizard1" file="\icon\icon_ability_wizard01.tga" imgrect="0 0 128 128" CMM_Caption="슬리프-단잠"/>

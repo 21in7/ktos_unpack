@@ -50,6 +50,10 @@ local g_account_prop_shop_table =
     ['EVENT_2401_NEWYEAR'] =
     {
         ['coinName'] = "EVENT_2401_Newyear_Coin"
+    },
+    ['EVENT_2402_NEWYEAR'] =
+    {
+        ['coinName'] = "EVENT_2404_Old_Newyear_Coin"
     }
 }
 --------------------------------------------------------------------------------------------------------------------------
@@ -322,6 +326,17 @@ function EARTHTOWERSHOP_BUY_ITEM_RESULT(frame, msg, argStr, argNum)
         end
         propertyRemain:SetTextByKey('itemCount', GET_COMMAED_STRING(count))
     elseif shopType == "EVENT_2401_NEWYEAR" then
+        local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
+        local itemCls = GetClass('Item', coinName)
+
+        propertyRemain:SetTextByKey('itemName', itemCls.Name)
+        propertyRemain:SetTextByKey('icon', "")
+        local count = GetInvItemCount(GetMyPCObject(), coinName)
+        if count == 'None' then
+            count = '0'
+        end
+        propertyRemain:SetTextByKey('itemCount', GET_COMMAED_STRING(count))
+    elseif shopType == "EVENT_2402_NEWYEAR" then
         local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
         local itemCls = GetClass('Item', coinName)
 
@@ -650,6 +665,11 @@ end
 function REQ_COMMON_SKILL_ENCHANT_UI_OPEN()
     ui.OpenFrame('common_skill_enchant');
 end
+
+function REQ_COMMON_ACC_UPGRADE_UI_OPEN()
+    ui.OpenFrame('common_acc_upgrade');
+end
+
 
 function REQ_EVENT_SHOP_OPEN_COMMON(shopType)
     ui.CloseFrame('earthtowershop');
