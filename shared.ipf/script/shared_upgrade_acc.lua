@@ -6,13 +6,14 @@ function GET_EP16_NECK_02_POINT(item)
     local avg = (min + max) * 0.5
     
     local def = math.floor(avg * 10)
-    local crtdr = math.floor(avg * 0.3) -- 치저
+    local crtdr = math.floor(avg * 0.25) -- 치저
     local blk = math.floor(avg * 0.25)
+
     local heal = math.floor(avg * 0.7)
-    local atk = math.floor(avg * 1.3)
-    local crthr = math.floor(avg * 0.2) -- 치발감소
-    local add_dmg = math.floor(avg * 0.4)
-    local mspd = math.floor(avg * 0.0007)
+    local atk = math.floor(avg * 1.6)
+    local crthr = math.floor(avg * 0.28) -- 치발감소
+    local add_dmg = math.floor(avg * 0.65)
+    local mspd = math.floor(avg * 0.0008)
     if mspd < 1 then
         mspd = 1 
     end
@@ -25,13 +26,14 @@ function GET_EP16_BRC_02_POINT(item)
     local avg = (min + max) * 0.5
     
     local def = math.floor(avg * 5)
-    local crtdr = math.floor(avg * 0.15) -- 치저
+    local crtdr = math.floor(avg * 0.125) -- 치저
     local blk = math.floor(avg * 0.125)
+    
     local heal = math.floor(avg * 0.35)
-    local atk = math.floor(avg * 0.65)
-    local crthr = math.floor(avg * 0.1) -- 치발감소
-    local add_dmg = math.floor(avg * 0.2)
-    local mspd = math.floor(avg * 0.00035)
+    local atk = math.floor(avg * 0.8)
+    local crthr = math.floor(avg * 0.14) -- 치발감소
+    local add_dmg = math.floor(avg * 0.325)
+    local mspd = math.floor(avg * 0.0004)
     if mspd < 1 then
         mspd = 1 
     end
