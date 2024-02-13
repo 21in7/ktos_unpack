@@ -169,6 +169,7 @@ function POPOBOOST_SET_MAX_GEARSCORE(pc)
     local maxprop = GET_POPOBOOST_MAXPROP();
 	local maxGearScore = TryGetProp(etc,maxprop,0);
     local currentGearScore = POPOBOOST_GET_GEARSCORE(pc);
+
     if IsServerSection(pc) ~= 1 then
         return;
     end
@@ -233,16 +234,8 @@ function POPOBOOST_GET_MAX_GEARSCORE(pc)
 end
 
 function POPOBOOST_GET_GEARSCORE(pc)
-    -- local IsPAPAYA = GET_POPOBOOST_SERVER();
-
-    -- if IsPAPAYA ~= 1 then
-    --     local score = GET_PLAYER_POPOBOOST_GEAR_SCORE(pc);
-    --     return score;
-    -- else
-    -- end
-    local score = GET_PLAYER_GEAR_SCORE(pc);
+    local score = GET_PLAYER_POPOBOOST_GEAR_SCORE(pc);
     return score;
-    -- return 0;
 end
 
 function POPOBOOST_POPOBUFF_REMINE_TIME(pc)
