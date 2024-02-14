@@ -1,0 +1,15 @@
+name: Discord Notification on Push
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Send Discord Notification
+      uses: Ilshidur/action-discord@master
+      with:
+        args: "새로운 커밋이 있습니다: ${{ github.event.head_commit.message }}"
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
