@@ -12168,6 +12168,8 @@
         <Effect Name="E_archer_arrowturret_01#Point004"/>
         <Effect Name="F_archer_Arrow_Turret_glow"/>
         <Effect Name="SKL1_flame"/>
+        <Effect Name="F_light199_1"/>
+        <Effect Name="skl5_shot"/>
     </Category>
     <Category ID="19">
         <Effect Name="I_fallen_statue_atk002_mash"/>

@@ -1,4 +1,6 @@
 ClassID,Price,JobGrade,Itemdate,AccountLimitCount,BonusItemCnt,AccountLimitWeeklyCount,ClassName,Category,SubCategory,ItemClassName,Job,SellStartTime,SellEndTime,WarningMsg,BonusItemName,BonusOnlySeasonServer,MarkType,AccountLimitWeeklyCountProperty,buyOptionFunc,ItemSocial
+8,199,0,240212,3,0,0,"ClassName8","TP_Premium","TP_Package","202402_papaya_package01","","2024-02-12 17:30:00","2024-02-27 17:30:00","NO","","NO","Recommand","","",""
+9,199,0,240212,3,0,0,"ClassName9","TP_Premium","TP_Package","202402_papaya_package02","","2024-02-12 17:30:00","2024-02-27 17:30:00","NO","","NO","Recommand","","",""
 10,200,0,240206,3,0,0,"ClassName10","TP_Premium","TP_Package","202402_newyear_package01","","2024-02-06 17:30:00","2024-02-20 17:30:00","NO","","NO","Recommand","","",""
 11,220,0,240206,3,0,0,"ClassName11","TP_Premium","TP_Package","202402_newyear_package02","","2024-02-06 17:30:00","2024-02-20 17:30:00","NO","","NO","Recommand","","",""
 12,320,0,240206,3,0,0,"ClassName12","TP_Premium","TP_Package","202402_newyear_package03","","2024-02-06 17:30:00","2024-02-20 17:30:00","NO","","NO","Recommand","","",""

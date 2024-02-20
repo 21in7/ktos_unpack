@@ -250,12 +250,23 @@ function TARGETINFOTOBOSS_UPDATE_SHIELD(data)
 					shield_gauge:ShowWindow(0);		
 				end
 			else
+				-- HP 설정.
+				local stat = info.GetStat(session.GetTargetBossHandle());	
+				if stat ~= nil then
+					-- hp
+					local hp_gauge = GET_CHILD(frame, "hp", "ui::CGauge");
+					hp_gauge:SetPoint(stat.HP, stat.maxHP);
+					-- hp text
+					local str_hp_value = TARGETINFO_TRANS_HP_VALUE(session.GetTargetBossHandle(), stat.HP, frame:GetUserConfig("HPTEXT_STYLESHEET"));
+					local hp_text = frame:GetChild('hpText');
+					hp_text:SetText(str_hp_value);
+				end
+				-- 실드 설정.
 				frame:SetUserValue("boss_shield_update_from_server", 1);
 				local data_list = StringSplit(data, '/');
 				if #data_list > 0 then
 					local shield = data_list[1];
 					local mhp = tonumber(data_list[2]);
-					print(shield, mhp);
 					local shield_gauge = GET_CHILD_RECURSIVELY(frame, "shield", "ui::CGauge");
 					if shield_gauge ~= nil then
 						shield_gauge:ShowWindow(1);

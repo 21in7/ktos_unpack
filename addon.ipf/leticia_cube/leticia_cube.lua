@@ -195,7 +195,7 @@ function LETICIA_CUBE_ITEM_LIST_BUTTON()
         return
     end
 
-    if config.GetServiceNation() == 'GLOBAL_KOR' or config.GetServiceNation() == 'GLOBAL' then
+    if string.find(config.GetServiceNation(), 'GLOBAL') ~= nil then
         local ret = GET_LETICIA_PROBABILITY()        
         return ret;
     else
