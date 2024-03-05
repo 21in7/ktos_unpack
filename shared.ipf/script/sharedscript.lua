@@ -3542,6 +3542,26 @@ function JOB_WingedHussars_PRE_CHECK(pc, jobCount)
     return 'NO'
 end
 
+function JOB_BowMaster_PRE_CHECK(pc, jobCount)
+    local aObj = nil
+    if IsServerSection() == 0 then
+        aObj = GetMyAccountObj();
+    else
+        aObj = GetAccountObj(pc);
+    end
+    
+    if aObj ~= nil then
+        local value = TryGetProp(aObj, 'UnlockQuest_Char3_24', 0)
+        if value == 1 then
+            return 'YES'
+        end
+    end
+
+    return 'NO'
+end
+
+
+
 function GET_ACCOUNT_WAREHOUSE_EXTEND_PRICE(aObj, taxRate)
     local slotDiff = aObj.AccountWareHouseExtend;
     local price = ACCOUNT_WAREHOUSE_EXTEND_PRICE;
@@ -4342,7 +4362,7 @@ function DELETE_ITEM_OPEN_WARNINGBOX_MSG(itemCls)
 		return 1
 	end
 
-	if itemCls.MarketCategory == 'Card_CardLeg' then
+	if itemCls.MarketCategory == 'Card_CardLeg' or itemCls.MarketCategory == "Gem_High_Color" then
 		return 1
     end
     

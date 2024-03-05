@@ -449,6 +449,10 @@ item_goddess_craft.check_enable_inherit_item = function(item)
 				return false, 'NeedGoddessGrade'			
 			end
 			if grade == 6 and use_lv >= 460 then
+				if TryGetProp(item, 'StringArg', 'None') == 'Goddess_Vasilisa' then
+					return true, 'None'
+				end
+
 				if TryGetProp(item, 'Reinforce_2', 0) < 20 then				
 					return false, 'Require20Reinforce'
 				end
@@ -464,6 +468,10 @@ item_goddess_craft.check_enable_inherit_item = function(item)
 		end
 
 		if grade == 6 and use_lv >= 460 then
+			if TryGetProp(item, 'StringArg', 'None') == 'Goddess_Vasilisa' then
+				return true, 'None'
+			end
+
 			if TryGetProp(item, 'Reinforce_2', 0) < 20 then				
 				return false, 'Require20Reinforce'
 			end

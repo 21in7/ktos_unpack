@@ -15794,8 +15794,9 @@ function SCR_COMMON_COOLDOWN_DECREASE(pc, skill, basicCoolDown)
         basicCoolDown = 5000
     end
     
-    -- 재사용 대기시간이 없는 스킬은 제외
-    if IsExpertSkill(TryGetProp(skill, 'ClassName', 'None')) == 1 and basicCoolDown > 0 and basicCoolDown < 1000 then
+    -- 재사용 대기시간이 없는 스킬은 제외(스킬 쿨다운이 0초가 되는 이유는 쿨다운 custom funciton에서 ret = math.floor(ret) * 1000 로 floor 하기 때문임)
+    local class_name = TryGetProp(skill, 'ClassName', 'None')
+    if class_name ~= 'BowMaster_FocusFire' and IsExpertSkill(class_name) == 1 and basicCoolDown > 0 and basicCoolDown < 1000 then
         basicCoolDown = 1000
     end
 

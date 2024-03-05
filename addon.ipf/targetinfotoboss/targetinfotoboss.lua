@@ -24,12 +24,10 @@
  end
 
 function TARGETINFOTOBOSS_UPDATE_SDR(frame, msg, argStr, SDR)
-
 	local imagename = "dice_" .. SDR;
 	local animpic = GET_CHILD(frame, "spl", "ui::CAnimPicture");
 	animpic:SetFixImage(imagename);
 	animpic:PlayAnimation();
-
 end
 
 function TARGETINFOTOBOSS_BUFF_UPDATE(frame, msg, argStr, argNum)
@@ -123,6 +121,24 @@ function TARGETINFOTOBOSS_TARGET_SET(frame, msg, argStr, argNum)
 		shield_gauge:ShowWindow(0);		
 	end
 	end
+
+	-- faint
+	local cur_faint = targetinfo.cur_faint;
+	local max_faint = targetinfo.max_faint;
+	if cur_faint > 0 and max_faint > 0 then
+		local faint_gauge = GET_CHILD_RECURSIVELY(frame, "faint", "ui::CGauge");
+		if faint_gauge ~= nil then
+			local diff_faint = max_faint - cur_faint;
+			faint_gauge:ShowWindow(1);
+			faint_gauge:SetShieldPoint(diff_faint, max_faint);
+		end
+	else
+		local faint_gauge = GET_CHILD_RECURSIVELY(frame, "faint", "ui::CGauge");
+		if faint_gauge ~= nil then
+			faint_gauge:ShowWindow(0);
+		end
+	end
+
 	frame:ShowWindow(1);
 	frame:Invalidate();
 	frame:SetValue(argNum);	-- argNum 가 핸들임
@@ -166,6 +182,22 @@ function TARGETINFOTOBOSS_ON_MSG(frame, msg, argStr, argNum)
 				local shield_gauge = GET_CHILD_RECURSIVELY(frame, "shield", "ui::CGauge");
 				shield_gauge:ShowWindow(0);		
 			end
+			end
+			-- faint
+			local cur_faint = stat.cur_faint;
+			local max_faint = stat.max_faint;
+			if cur_faint > 0 and max_faint > 0 then
+				local faint_gauge = GET_CHILD_RECURSIVELY(frame, "faint", "ui::CGauge");
+				if faint_gauge ~= nil then
+					local diff_faint = max_faint - cur_faint;
+					faint_gauge:ShowWindow(1);
+					faint_gauge:SetShieldPoint(diff_faint, max_faint);
+				end
+			else
+				local faint_gauge = GET_CHILD_RECURSIVELY(frame, "faint", "ui::CGauge");
+				if faint_gauge ~= nil then
+					faint_gauge:ShowWindow(0);
+				end
 			end
 			if frame:IsVisible() == 0 then
 				frame:ShowWindow(1)
