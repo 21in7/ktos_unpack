@@ -7,7 +7,7 @@ function SCR_GET_SKL_COOLDOWN_FocusFire(skill)
     
     local active = GetExProp(pc, 'bowmaster_fast')        
     if active > 0 then
-        basicCoolDown = 1000
+        basicCoolDown = 800
     end
 
     local abilAddCoolDown = GetAbilityAddSpendValue(pc, skill.ClassName, "CoolDown");
@@ -242,22 +242,22 @@ function CHECK_BowMaster_ChargeArrow_Buff_C(actor, skl, buffName, over)
 end
 function get_bowmaster_casting_time(skill)
     local self = GetSkillOwner(skill)        
-    local value = 3
+    local value = 2.4
     if GetExProp(self, 'BowMaster14') == 1 then
-        value = 1.5
+        value = 1.2
     end    
     return value
 end
 function get_godarrow_casting_time(self, obj)
-    local value = 3
+    local value = 2.4
     local abil = session.GetAbilityByName('BowMaster14');
     if abil ~= nil then
         local abilObj = GetIES(abil:GetObject());
         if abilObj.ActiveState == 1 then
-            value = 1.5
+            value = 1.2
         end
     else
-        value = 3
+        value = 2.4
     end                    
     return value
 end

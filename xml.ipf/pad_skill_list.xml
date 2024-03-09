@@ -40388,7 +40388,7 @@ end"/>
     <PadSkill Name="wingedhussars_battle_spirit_pad1" CheckerType="0" Range="20" UpdateTerm="1000" ApplyFlyMon="1">
         <createEvent>
             <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
-                <Num Num="15000"/>
+                <Num Num="30500"/>
                 <Num Num="99999"/>
             </ToolScp>            
             <ToolScp Scp="C_PAD_EFFECT_POS_LOCAL" Client="YES" UseSleep="NO">
@@ -40412,7 +40412,7 @@ end"/>
     <PadSkill Name="wingedhussars_battle_spirit_pad2" CheckerType="0" Range="20" UpdateTerm="1000" ApplyFlyMon="1">
         <createEvent>
             <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
-                <Num Num="15000"/>
+                <Num Num="30500"/>
                 <Num Num="99999"/>
             </ToolScp>            
             <ToolScp Scp="C_PAD_EFFECT_POS_LOCAL" Client="YES" UseSleep="NO">
@@ -40436,7 +40436,7 @@ end"/>
     <PadSkill Name="wingedhussars_battle_spirit_pad3" CheckerType="0" Range="20" UpdateTerm="1000" ApplyFlyMon="1">
         <createEvent>
             <ToolScp Scp="PAD_ADD_LIFE" Client="NO" UseSleep="NO">
-                <Num Num="15000"/>
+                <Num Num="30500"/>
                 <Num Num="99999"/>
             </ToolScp>            
             <ToolScp Scp="C_PAD_EFFECT_POS_LOCAL" Client="YES" UseSleep="NO">
