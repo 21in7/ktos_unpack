@@ -67,6 +67,9 @@
 		<image name="Guardian_news" file="\event_banner\Guardian_news.jpg" imgrect="0 0 480 180"/>
 		<image name="tpmedal_news_480x180" file="\event_banner\tpmedal_news_480x180.jpg" imgrect="0 0 480 180"/>
 		<image name="LuckySpring_News_480x180" file="\event_banner\LuckySpring_News_480x180.jpg" imgrect="0 0 480 180"/>
+		<image name="Papaya_cube_News" file="\event_banner\Papaya_cube_News.jpg" imgrect="0 0 480 180"/>
+		<image name="Rainbow_News" file="\event_banner\Rainbow_News.jpg" imgrect="0 0 480 180"/>
+		<image name="Class_News" file="\event_banner\Class_News.jpg" imgrect="0 0 480 180"/>
 		<!-- TP Banner -->
 		<image name="1031_Ingame_TP_Sop_banner" file="\event_banner\1031_Ingame_TP_Sop_banner.png" imgrect="0 0 520 250"/>
 		<image name="1107Costume_TPShop" file="\event_banner\1107Costume_TPShop.png" imgrect="0 0 520 250"/>
@@ -81,6 +84,7 @@
 		<image name="0206_In_game_TP_Shop_banner" file="\event_banner\0206_In_game_TP_Shop_banner.png" imgrect="0 0 520 250"/>
 		<image name="0213_In_game_TP_shop_banner" file="\event_banner\0213_In_game_TP_shop_banner.png" imgrect="0 0 520 250"/>
 		<image name="tpmedal_tp_520x250" file="\event_banner\tpmedal_tp_520x250.png" imgrect="0 0 520 250"/>
+		<image name="papaya_cube_TP" file="\event_banner\papaya_cube_TP.png" imgrect="0 0 520 250"/>
 		<!-- 해외 JPN/STM 전용 이미지 고정 경로 터치 금지 끝 -->
 		<image name="event2403_leticia" file="\event_banner\event2403_leticia.png" imgrect="0 0 480 180"/>
 		<image name="event2402_leticia" file="\event_banner\event2402_leticia.png" imgrect="0 0 480 180"/>

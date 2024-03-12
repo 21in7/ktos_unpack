@@ -217,15 +217,8 @@ end
 
 
 function C_PAD_EFFECT_FORCE_UNITY_EFFECT_BOWMASTER(actor, obj, pad_guid, eft_name, eft_scale, fix_height)
-    if actor ~= nil then
-        local eft_rot_x, eft_rot_y, eft_rot_z;	
-        local dir = actor:GetDir()		
-        local angle = DirToAngle(dir.x, dir.y)
-        eft_rot_x = 90 - angle
-        eft_rot_y = 0
-        eft_rot_z = 90 - angle    		
-
-        effect.PlayPadForceUnityEffect(actor, eft_name, eft_scale, eft_rot_x, eft_rot_y, eft_rot_z, fix_height, pad_guid);
+    if actor ~= nil then        
+        effect.AddForceProjectileUnityEffect(actor, eft_name, eft_scale, fix_height, pad_guid);
     end
 end
 

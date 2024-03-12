@@ -1564,7 +1564,7 @@ ClassID,OverHeatResetTime,ClassName,IsOverHeat,ReducePlayOnly,ForceReset
 4309,14000,"WingedHussars_WindPulse","NO","FALSE","YES"
 4310,14000,"WingedHussars_ImpulseSpears","NO","FALSE","YES"
 4311,5000,"WingedHussars_BattleSpirit","NO","FALSE","YES"
-4312,10000,"WingedHussars_ExplosionSpears","NO","FALSE","YES"
+4312,7000,"WingedHussars_ExplosionSpears","NO","FALSE","YES"
 4313,5000,"BowMaster_FocusFire","NO","FALSE","YES"
 4314,10000,"BowMaster_DodgeFire","NO","FALSE","YES"
 4315,20000,"BowMaster_SkyBow","NO","FALSE","YES"
