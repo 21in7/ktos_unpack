@@ -2562,7 +2562,8 @@ function GET_COMMA_SEPARATED_STRING_FOR_HIGH_VALUE(num)
     local retStr = "";
     local numValue = num;
 
-	for i = 1, 1000 do	-- 무한루프 방지용 --
+    for i = 1, 1000 do
+        -- 무한루프 방지용 --
         local tempValue = numValue % 1000;
         if string.len(tempValue) < 3 then
             for j = 1, 3 - string.len(tempValue) do
@@ -2593,8 +2594,9 @@ end
 
 -- 이 함수는 이제 사용하지 말 것 --
 -- 그래도 혹시 어디서 참조할지 몰라서 남겨두긴 함 --
-function GET_COMMAED_STRING(num) -- unsigned long 범위내에서 가능하게 수정함
-    if num == nil then
+function GET_COMMAED_STRING(num)    
+    -- unsigned long 범위내에서 가능하게 수정함
+    if num == nil or num == 'None' then
         return "0";
     end
     local retStr = "";
