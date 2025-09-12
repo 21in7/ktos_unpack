@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by k (IMCGames Co., Ltd) -->
+<Prop>
+	<Model Path="Raid_CrystalGolem_blend_01.xac" RenderType="RT_MUD_BLEND" IsBloom="0" Type="" NoCol="1"/>
+	<Model Path="Raid_CrystalGolem_crystal_01.xac" RenderType="RT_PLANELIGHT" IsBloom="1" NoCol="0"/>
+	<Model Path="Raid_CrystalGolem_crystal_02.xac" RenderType="RT_PLANELIGHT" IsBloom="1" NoCol="0"/>
+	<Model Path="Raid_CrystalGolem_crystal_03.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="Raid_CrystalGolem_decal_01.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="Raid_CrystalGolem_grass_01.xac" RenderType="RT_MODEL" IsBloom="0" Type="" NoCol="1"/>
+	<Model Path="Raid_CrystalGolem_ground.xac" RenderType="RT_MUD" IsBloom="0" Type="GROUND" NoCol="0"/>
+	<Model Path="Raid_CrystalGolem_rock_01.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="Raid_CrystalGolem_rock_02.xac" RenderType="RT_MODEL" IsBloom="0" NoCol="0"/>
+	<Model Path="Raid_CrystalGolem_tree_01.xac" RenderType="RT_MODEL" IsBloom="0" Type="" NoCol="1"/>
+	<Model Path="Raid_CrystalGolem_water_01.xac" RenderType="RT_WATER" IsBloom="0" Type="" IsWater="1" WaterDiffDir="0 0" WaterSwaySpeed="0.6" WaterSwayRange="0.03 0" waterSwayPower="0.05" RefractionNormalSize="0.01" RefractionDir="-0.05 0.01" RefractionPower="0.05" WaterSprayNormalSize="0.01" WaterSprayDir="-0.1 -0.01" WaterSprayPower="0.01" WaterSprayRange="0.2" WaterSpraycolor="0.1 0.2 0.3" NoCol="1"/>
+</Prop>

@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="yes"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by k (IMCGames Co., Ltd) -->
+<!-- edited with XMLSpy v2006 U (http://www.altova.com) by Administrator (EMBRACE) -->
+<World>
+	<ModelDir IpfName="bg_hi2" Path="\raid\Raid_CrystalGolem\"/>
+	<TexDir IpfName="bg_texture" Path="\cmine\"/>
+	<SubTexDir IpfName="bg_texture" Path="\siauliai\"/>
+	<Water File="normal.png" Length="500 500" Size="1024 1024"/>
+	<LightMap File="Raid_CrystalGolem_lightmap.jpg" Length="1100.0 1100.0" Offset="17.384 21.35 55.764" Size="1024 1024"/>
+	<ShaTexDir IpfName="bg_hi2" Path="\raid\Raid_CrystalGolem\"/>
+	<Model File="Raid_CrystalGolem_ground.xac" Model="Raid_CrystalGolem_ground" ShadowMap="Raid_CrystalGolem" pos="-12.8663 54.5507 60.1852" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_CrystalGolem_grass_01.xac" Model="Raid_CrystalGolem_grass_01" ShadowMap="Raid_CrystalGolem" pos="-4.0713 60.5146 32.5209" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_CrystalGolem_crystal_01.xac" Model="Raid_CrystalGolem_crystal_01" ShadowMap="Raid_CrystalGolem" pos="-36.8282 237.7723 54.6368" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_CrystalGolem_decal_01.xac" Model="Raid_CrystalGolem_decal_01" ShadowMap="Raid_CrystalGolem" pos="-35.8543 54.1761 21.0438" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_CrystalGolem_rock_01.xac" Model="Raid_CrystalGolem_rock_01" ShadowMap="Raid_CrystalGolem" pos="-89.3870 186.6668 10.1756" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_CrystalGolem_rock_02.xac" Model="Raid_CrystalGolem_rock_02" ShadowMap="Raid_CrystalGolem" pos="26.0397 53.1369 52.8176" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_CrystalGolem_crystal_02.xac" Model="Raid_CrystalGolem_crystal_02" ShadowMap="Raid_CrystalGolem" pos="-98.1625 173.4597 50.0872" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_CrystalGolem_tree_01.xac" Model="Raid_CrystalGolem_tree_01" ShadowMap="Raid_CrystalGolem" pos="517.0692 185.0463 -185.0369" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_CrystalGolem_water_01.xac" Model="Raid_CrystalGolem_water_01" ShadowMap="Raid_CrystalGolem" pos="95.0328 54.5684 98.2615" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_CrystalGolem_blend_01.xac" Model="Raid_CrystalGolem_blend_01" ShadowMap="Raid_CrystalGolem" pos="-10.0436 54.8918 20.0650" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_CrystalGolem_crystal_03.xac" Model="Raid_CrystalGolem_crystal_03" ShadowMap="Raid_CrystalGolem" pos="17.4548 52.5835 20.0528" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+</World>

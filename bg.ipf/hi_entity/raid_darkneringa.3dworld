@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by k (IMCGames Co., Ltd) -->
+<World>
+	<ModelDir IpfName="bg_hi2" Path="\raid\Raid_DarkNeringa\"/>
+	<TexDir IpfName="bg_texture" Path="\fantasylibrary\"/>
+	<LightMap File="Raid_DarkNeringa.jpg" Length="700 700" Offset="-43.559 -35.55" Size="256 256"/>
+	<AnimationDir IpfName="bg_hi2" Path="\raid\Raid_DarkNeringa\"/>
+	<Water File="normal.png" Length="500 500" Size="1024 1024"/>
+	<ShaTexDir IpfName="bg_hi2" Path="\raid\Raid_DarkNeringa\"/>
+	<Model File="Raid_DarkNeringa_fog.xac" Model="Raid_DarkNeringa_fog" ShadowMap="Raid_DarkNeringa" pos="-348.1341 66.2136 165.3947" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_DarkNeringa_candle.xac" Model="Raid_DarkNeringa_candle" ShadowMap="Raid_DarkNeringa" pos="-141.1824 171.4931 67.7391" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_DarkNeringa_ground.xac" Model="Raid_DarkNeringa_ground" ShadowMap="Raid_DarkNeringa" pos="-28.4804 134.8696 -8.9676" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_DarkNeringa_b_model.xac" Model="Raid_DarkNeringa_b_model" ShadowMap="Raid_DarkNeringa" pos="-378.4485 -197.2486 248.7383" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_DarkNeringa_glass.xac" Model="Raid_DarkNeringa_glass" ShadowMap="Raid_DarkNeringa" pos="-43.4850 174.7066 -39.7742" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_DarkNeringa_gear.xac" Model="Raid_DarkNeringa_gear" ShadowMap="Raid_DarkNeringa" pos="-42.3020 139.0970 -19.2145" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+	<Model File="Raid_DarkNeringa_bookcase.xac" Model="Raid_DarkNeringa_bookcase" ShadowMap="Raid_DarkNeringa" pos="-384.1453 -22.3560 114.9429" rot="-0.0000 -0.0000 -0.0000 1.0000" scale="1.0000 1.0000 1.0000"/>
+</World>
