@@ -34,10 +34,15 @@ local g_account_prop_shop_table =
         ['coinName'] = 'dummy_JurateCertificate',
         ['propName'] = 'JurateCertificate',
     },
-    ['AustejaCertificate'] = 
+    ['AustejaCertificate'] =
     {
         ['coinName'] = 'dummy_AustejaCertificate',
         ['propName'] = 'AustejaCertificate',
+    },
+    ['SauleCertificate'] =
+    {
+        ['coinName'] = 'dummy_SauleCertificate',
+        ['propName'] = 'SauleCertificate',
     },
     ['TeamBattleLeagueShop'] = 
     {
@@ -94,6 +99,7 @@ table.insert(shop_list, 'VakarineCertificate')
 table.insert(shop_list, 'RadaCertificate')
 table.insert(shop_list, 'JurateCertificate')
 table.insert(shop_list, 'AustejaCertificate')
+table.insert(shop_list, 'SauleCertificate')
 local shop_data = {}
 local function _CLEAR_INFO(groupName, cls)
     shop_data = nil;
@@ -244,210 +250,56 @@ function EARTHTOWERSHOP_BUY_ITEM_RESULT(frame, msg, argStr, argNum)
 
     local coinName = g_account_prop_shop_table[shopType]["coinName"]
     local propName = g_account_prop_shop_table[shopType]["propName"]
+    local itemCls = GetClass('Item', coinName)
+    local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
+
     if shopType == "PVPMine" then
         ui.SysMsg(ScpArgMsg("RESULT_MISC_PVP_MINE2", "count1", GET_COMMAED_STRING(token[2]), "count2", GET_COMMAED_STRING(token[3])));
-
-        local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
-        local itemCls = GetClass('Item', coinName)
-
         propertyRemain:SetTextByKey('itemName', itemCls.Name)
         propertyRemain:SetTextByKey('icon', "")
-
         local aObj = GetMyAccountObj()
         local count = TryGetProp(aObj, propName, '0')
-        if count == 'None' then
-            count = '0'
-        end
-
+        if count == 'None' then count = '0' end
         propertyRemain:SetTextByKey('itemCount', GET_COMMAED_STRING(count))
-
     elseif shopType == "SilverGachaShop" then
         ui.SysMsg(ScpArgMsg("SilverGachaShopResult", "count1", GET_COMMAED_STRING(token[2]), "count2", GET_COMMAED_STRING(token[3])));
-
-        local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
-        local itemCls = GetClass('Item', coinName)
-
         propertyRemain:SetTextByKey('itemName', itemCls.Name)
         propertyRemain:SetTextByKey('icon', "")
         local aObj = GetMyAccountObj()
         local count = TryGetProp(aObj, propName, '0')
-        if count == 'None' then
-            count = '0'
-        end
-
+        if count == 'None' then count = '0' end
         propertyRemain:SetTextByKey('itemCount', GET_COMMAED_STRING(count))
     elseif string.find(shopType, "Certificate") ~= nil then
         ui.SysMsg(ScpArgMsg("Result_" .. shopType, "count1", GET_COMMAED_STRING(token[2]), "count2", GET_COMMAED_STRING(token[3])));
-
-        local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
-        local itemCls = GetClass('Item', coinName)
-
         propertyRemain:SetTextByKey('itemName', itemCls.Name)
         propertyRemain:SetTextByKey('icon', "")
         local aObj = GetMyAccountObj()
         local count = TryGetProp(aObj, propName, '0')
-        if count == 'None' then
-            count = '0'
-        end
-
+        if count == 'None' then count = '0' end
         propertyRemain:SetTextByKey('itemCount', GET_COMMAED_STRING(count))
     elseif shopType == "EVENT_TOS_WHOLE_SHOP" then
         ui.SysMsg(ScpArgMsg("Result_" .. shopType, "count1", GET_COMMAED_STRING(token[2]), "count2", GET_COMMAED_STRING(token[3])));
-
-        local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
-        local itemCls = GetClass('Item', coinName)
-
-        local clsmsg = ClMsg("REMAIN_COIN_EVENT_TOS_WHOLE_ICON")
-        
-        
         propertyRemain:SetTextByKey('itemName', itemCls.Name)
-        propertyRemain:SetTextByKey('icon', clsmsg)
-
+        propertyRemain:SetTextByKey('icon', ClMsg("REMAIN_COIN_EVENT_TOS_WHOLE_ICON"))
         local aObj = GetMyAccountObj()
         local count = TryGetProp(aObj, propName, '0')
-        if count == 'None' then
-            count = '0'
-        end
-
-        propertyRemain:SetTextByKey('itemCount', GET_COMMAED_STRING(count))   
-
-    elseif shopType == "EVENT_2304_ARBOR_DAY_SHOP" then
-        local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
-        local itemCls = GetClass('Item', coinName)
-
-        propertyRemain:SetTextByKey('itemName', itemCls.Name)
-        propertyRemain:SetTextByKey('icon', "")
-        local count = GetInvItemCount(GetMyPCObject(), coinName)
-        if count == 'None' then
-            count = '0'
-        end
+        if count == 'None' then count = '0' end
         propertyRemain:SetTextByKey('itemCount', GET_COMMAED_STRING(count))
-    elseif shopType == "EVENT_2310_KLAPEDA_GHOST_SHOP" then
-        local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
-        local itemCls = GetClass('Item', coinName)
-
-        propertyRemain:SetTextByKey('itemName', itemCls.Name)
-        propertyRemain:SetTextByKey('icon', "")
-        local count = GetInvItemCount(GetMyPCObject(), coinName)
-        if count == 'None' then
-            count = '0'
-        end
-        propertyRemain:SetTextByKey('itemCount', GET_COMMAED_STRING(count))
-    elseif shopType == "EVENT_2310_KLAPEDA_GHOST_SHOP_W" then
-        local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
-        local itemCls = GetClass('Item', coinName)
-
-        propertyRemain:SetTextByKey('itemName', itemCls.Name)
-        propertyRemain:SetTextByKey('icon', "")
-        local count = GetInvItemCount(GetMyPCObject(), coinName)
-        if count == 'None' then
-            count = '0'
-        end
-        propertyRemain:SetTextByKey('itemCount', GET_COMMAED_STRING(count))
-        
-    elseif shopType == "EVENT_2312_8TH_ANNIVERSARY" then
-        local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
-        local itemCls = GetClass('Item', coinName)
-
-        propertyRemain:SetTextByKey('itemName', itemCls.Name)
-        propertyRemain:SetTextByKey('icon', "")
-        local count = GetInvItemCount(GetMyPCObject(), coinName)
-        if count == 'None' then
-            count = '0'
-        end
-        propertyRemain:SetTextByKey('itemCount', GET_COMMAED_STRING(count))
-    elseif shopType == "EVENT_2401_NEWYEAR" then
-        local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
-        local itemCls = GetClass('Item', coinName)
-
-        propertyRemain:SetTextByKey('itemName', itemCls.Name)
-        propertyRemain:SetTextByKey('icon', "")
-        local count = GetInvItemCount(GetMyPCObject(), coinName)
-        if count == 'None' then
-            count = '0'
-        end
-        propertyRemain:SetTextByKey('itemCount', GET_COMMAED_STRING(count))
-    elseif shopType == "EVENT_2402_NEWYEAR" then
-        local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
-        local itemCls = GetClass('Item', coinName)
-
-        propertyRemain:SetTextByKey('itemName', itemCls.Name)
-        propertyRemain:SetTextByKey('icon', "")
-        local count = GetInvItemCount(GetMyPCObject(), coinName)
-        if count == 'None' then
-            count = '0'
-        end
-        propertyRemain:SetTextByKey('itemCount', GET_COMMAED_STRING(count))
-    elseif shopType == "EVENT_2404_W1TH" then
-        local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
-        local itemCls = GetClass('Item', coinName)
-
-        propertyRemain:SetTextByKey('itemName', itemCls.Name)
-        propertyRemain:SetTextByKey('icon', "")
-        local count = GetInvItemCount(GetMyPCObject(), coinName)
-        if count == 'None' then
-            count = '0'
-        end
-        propertyRemain:SetTextByKey('itemCount', GET_COMMAED_STRING(count))
-    elseif shopType == "EVENT_2407_KUPOLE" then
-        local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
-        local itemCls = GetClass('Item', coinName)
+    elseif shopType == "EVENT_2407_KUPOLE" or shopType == "EVENT_2410_MOONRISE" or shopType == "EVENT_2410_LEAVES" then
         if itemCls ~= nil then
             propertyRemain:SetTextByKey('icon', ClMsg("EVENT_COIN_MSG"));
             propertyRemain:SetTextByKey('itemName', "")
             local count = GetInvItemCount(GetMyPCObject(), coinName)
-            if count == 'None' then
-                count = '0'
-            end
+            if count == 'None' then count = '0' end
             propertyRemain:SetTextByKey('itemCount', GET_COMMAED_STRING(count))
         end
-    elseif shopType == "EVENT_2410_MOONRISE" then
-        local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
-        local itemCls = GetClass('Item', coinName)
-        if itemCls ~= nil then
-            propertyRemain:SetTextByKey('icon', ClMsg("EVENT_COIN_MSG"));
-            propertyRemain:SetTextByKey('itemName', "")
-            local count = GetInvItemCount(GetMyPCObject(), coinName)
-            if count == 'None' then
-                count = '0'
-            end
-            propertyRemain:SetTextByKey('itemCount', GET_COMMAED_STRING(count))
-        end 
-    elseif shopType == "EVENT_2410_LEAVES" then
-        local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
-        local itemCls = GetClass('Item', coinName)
-        if itemCls ~= nil then
-            propertyRemain:SetTextByKey('icon', ClMsg("EVENT_COIN_MSG"));
-            propertyRemain:SetTextByKey('itemName', "")
-            local count = GetInvItemCount(GetMyPCObject(), coinName)
-            if count == 'None' then
-                count = '0'
-            end
-            propertyRemain:SetTextByKey('itemCount', GET_COMMAED_STRING(count))
-        end 
-    elseif shopType == "EVENT_W_MOON_SHOP" then
-        local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
-        local itemCls = GetClass('Item', coinName)
-
-        propertyRemain:SetTextByKey('itemName', itemCls.Name)
+    else
+        -- common pattern for remaining event shops
+        propertyRemain:SetTextByKey('itemName', itemCls ~= nil and itemCls.Name or "")
         propertyRemain:SetTextByKey('icon', "")
         local count = GetInvItemCount(GetMyPCObject(), coinName)
-        if count == 'None' then
-            count = '0'
-        end
+        if count == 'None' then count = '0' end
         propertyRemain:SetTextByKey('itemCount', GET_COMMAED_STRING(count))
-    elseif shopType == "event_2501_newyear" then
-        local propertyRemain = GET_CHILD_RECURSIVELY(frame,"propertyRemain")
-        local itemCls = GetClass('Item', coinName)
-
-        propertyRemain:SetTextByKey('itemName', itemCls.Name)
-        propertyRemain:SetTextByKey('icon', "")
-        local count = GetInvItemCount(GetMyPCObject(), coinName)
-        if count == 'None' then
-            count = '0'
-        end
-        propertyRemain:SetTextByKey('itemCount', GET_COMMAED_STRING(count))
-
     end
 end
 
@@ -478,7 +330,6 @@ function EARTHTOWERSHOP_BUY_ITEM(frame, msg, itemName, itemCount)
 		end;
 		exchangeCountText:SetTextByKey("value", cntText);
 	end;
-	
 	if recipecls.AccountNeedProperty ~= 'None' then
 	    local aObj = GetMyAccountObj()
         local sCount = TryGetProp(aObj, recipecls.AccountNeedProperty); 
@@ -542,6 +393,8 @@ function EARTHTOWERSHOP_BUY_ITEM(frame, msg, itemName, itemCount)
         local coin5TH_count = GET_INV_ITEM_COUNT_BY_PROPERTY({{Name = "ClassName", Value = "Event_2011_5th_Coin"}}, false);
         coin5TH_text:SetTextByKey("value", coin5TH_count);
     end
+
+
 end
 
 function EARTHTOWERSHOP_REMAIN_TIME(frame, msg, argStr, remaintime)
@@ -669,6 +522,12 @@ end
 function REQ_AustejaCertificate_SHOP_OPEN()
     local frame = ui.GetFrame("earthtowershop");
     frame:SetUserValue("SHOP_TYPE", 'AustejaCertificate');
+    ui.OpenFrame('earthtowershop');
+end
+
+function REQ_SauleCertificate_SHOP_OPEN()
+    local frame = ui.GetFrame("earthtowershop");
+    frame:SetUserValue("SHOP_TYPE", 'SauleCertificate');
     ui.OpenFrame('earthtowershop');
 end
 
@@ -826,6 +685,7 @@ function EARTH_TOWER_SHOP_OPEN(frame)
     group:ShowWindow(1)
     imcSound.PlaySoundEvent('button_click_3');
 
+
     session.ResetItemList();
 end
 
@@ -837,7 +697,6 @@ function EARTH_TOWER_SHOP_OPTION(frame, ctrl)
 end
 
 function EARTH_TOWER_INIT(frame, shopType)    
-
     EXCHANGE_INIT_TAB_INFO();
 
     INVENTORY_SET_CUSTOM_RBTNDOWN("None");
@@ -848,13 +707,22 @@ function EARTH_TOWER_INIT(frame, shopType)
     local prevShopBtn = GET_CHILD_RECURSIVELY(frame,"prevShopBtn")
     local event_gb = GET_CHILD_RECURSIVELY(frame, "event_gb")
     local remain_time = GET_CHILD_RECURSIVELY(frame, "remain_time")
-    
+    local catuion = GET_CHILD_RECURSIVELY(frame, "catuion");
+    local urielCaution = GET_CHILD_RECURSIVELY(frame, "uriel_caution");
+
+    catuion:ShowWindow(0);
+    urielCaution:ShowWindow(0);
+    if shopType == "URIEL_MEMORY_SHOP" then
+        urielCaution:SetTextByKey("value", ScpArgMsg("URIEL_MEMORY_SHOP_CAUTION"));
+        urielCaution:ShowWindow(1);
+    end
     propertyRemain:ShowWindow(0)
     pointbuyBtn:ShowWindow(0)
     prevShopBtn:ShowWindow(0)
     
     remain_time:ShowWindow(0)
 
+    pointbuyBtn:SetTextByKey("name", ScpArgMsg("pointextract"))
     if shopType ~= "EVENT_2011_5TH_Normal_Shop" and string.find(shopType, "EVENT_2011_5TH_Special_Shop") == nil then
         event_gb:RemoveAllChild();
         event_gb:ShowWindow(0);
@@ -1028,10 +896,9 @@ function EARTH_TOWER_INIT(frame, shopType)
     elseif string.find(shopType, 'BOUNTY_NPC_TRADE_SHOP_') ~= nil then
         title:SetText('{@st43}'..ScpArgMsg('BountyNpcShop'));
         close:SetTextTooltip(ScpArgMsg('CloseUI{NAME}', 'NAME', ScpArgMsg("BountyNpcShop")));
-    elseif string.find(shopType, 'Archeology_') ~= nil then
+    elseif string.find(shopType, 'archeology') ~= nil then
         title:SetText('{@st43}'..ScpArgMsg(shopType));
         close:SetTextTooltip(ScpArgMsg('ui_close'));
-
         pointbuyBtn:ShowWindow(1)
     elseif shopType == "EVENT_2312_8TH_ANNIVERSARY" then
         if resetDatetime ~= nil then
@@ -1043,6 +910,12 @@ function EARTH_TOWER_INIT(frame, shopType)
             EARTH_TOWER_SET_PROPERTY_COUNT(propertyRemain, g_account_prop_shop_table[shopType]['coinName'], "Event")
         end
         close:SetTextTooltip(ScpArgMsg('CloseUI{NAME}', 'NAME', ScpArgMsg("EventShop")));
+    elseif shopType == "event_2512_ice_piece" then
+        title:SetText('{@st43}'..ScpArgMsg(shopType));
+        close:SetTextTooltip(ScpArgMsg('ui_close'));
+        pointbuyBtn:SetTextByKey("name", ScpArgMsg("costumeextract"))
+        pointbuyBtn:ShowWindow(1)
+        catuion:ShowWindow(1);    
     else
         title:SetText('{@st43}'..ScpArgMsg(shopType));
         if g_account_prop_shop_table[shopType]~=nil then
@@ -1091,9 +964,8 @@ function EARTH_TOWER_INIT(frame, shopType)
         end
         
         i = i + 1;
-        cls = GetClassByIndexFromList(clslist, i);
+        cls = GetClassByIndexFromList(clslist, i)
     end
-
     EXCHANGE_AUTO_DRAW(shopType)
 
 end
@@ -1137,7 +1009,6 @@ function EARTH_TOWER_SET_PROPERTY_COUNT(ctrl, itemName, propName)
     else
         ctrl:SetTextByKey('icon', "")  
     end
-
     ctrl:SetTextByKey('itemName', itemCls.Name)
     ctrl:SetTextByKey('itemCount', GET_COMMAED_STRING(count))
     ctrl:ShowWindow(1)
@@ -1325,6 +1196,11 @@ function EXCHANGE_CREATE_TREE_NODE_CTRL(ctrlset, cls, shopType)
         end
     end
     
+    local IsTeamBelongingRecipe = TryGetProp(recipecls, "TargetItemAppendProperty", "None") == "TeamBelonging"
+    if IsTeamBelongingRecipe then
+        itemIcon:SetTooltipStrArg('team_belonging') -- 팀 귀속용 str arg
+    end
+
     local itemCount = 0;
     for i = 1, 5 do
         if TryGetProp(recipecls, "Item_"..i.."_1", 'None') ~= "None" then
@@ -1444,7 +1320,7 @@ function EXCHANGE_CREATE_TREE_NODE_CTRL(ctrlset, cls, shopType)
     end;
     
     if recipecls.AccountNeedProperty ~= 'None' then
-		local sCount = TryGetProp(aObj, recipecls.AccountNeedProperty); 
+		local sCount = TryGetProp(aObj, recipecls.AccountNeedProperty, 0); 
 		local cntText
         if recipecls.ShopType == "PVPMine" 
         or string.find(recipecls.ShopType, "Certificate") ~= nil        
@@ -1546,7 +1422,6 @@ function EXCHANGE_MAKE_TAB_BTN(groupName)
 end
 
 function EXCHANGE_AUTO_DRAW(shopType)
-
     local frame = ui.GetFrame('earthtowershop');
     if frame == nil then
         return;
@@ -1689,7 +1564,6 @@ function DRAW_EXCHANGE_SHOP_IETMS(categoryName)
     tree:SetFitToChild(true,200)
     tree:SetFontName("brown_18_b");
     tree:SetTabWidth(5);
-
     local classList = _GET_INFO(categoryName);
     table.sort(classList, sort_by_sort_idex)
 
@@ -1708,6 +1582,57 @@ function DRAW_EXCHANGE_SHOP_IETMS(categoryName)
 
 end
 
+
+-- 구매 사전 체크: 상점 행(itemtradeshop.xml)의 BuyCheckScp 속성에 등록된 함수를 실행.
+-- 함수가 false를 반환하면 구매 차단 — 사유 메시지는 각 체크 함수 내부에서 처리
+function EARTH_TOWER_RUN_BUY_CHECK(recipecls)
+    if recipecls == nil then
+        return true
+    end
+
+    local scp_name = TryGetProp(recipecls, 'BuyCheckScp', 'None')
+    if scp_name == 'None' then
+        return true
+    end
+
+    local check_func = _G[scp_name]
+    if check_func == nil then
+        return true
+    end
+
+    return check_func(recipecls) ~= false
+end
+
+-- BuyCheckScp: 컬렉션 아이템(여신 권능 등) — 컬렉션은 아이템 개별 등록 방식이므로,
+-- 구매 대상 아이템이 해당 컬렉션에 "이미 등록"돼 있으면 구매 불가 (컬렉션 자체의 등록/완성 여부가 아님)
+function SHOP_BUY_CHECK_COLLECTION(recipecls)
+    local item_cls = GetClass('Item', TryGetProp(recipecls, 'TargetItem', 'None'))
+    if item_cls == nil then
+        return true
+    end
+
+    local collect_cls = GetClass('Collection', TryGetProp(item_cls, 'StringArg', 'None'))
+    if collect_cls == nil then
+        return true
+    end
+
+    local pc = session.GetMySession()
+    if pc == nil then
+        return true
+    end
+    local collection_list = pc:GetCollection()
+    if collection_list == nil then
+        return true
+    end
+
+    local coll = collection_list:Get(collect_cls.ClassID)
+    if coll ~= nil and coll:GetItemCountByType(item_cls.ClassID) > 0 then
+        ui.SysMsg(ClMsg('AlreadyHaveCollection'))
+        return false
+    end
+
+    return true
+end
 
 function EARTH_TOWER_SHOP_EXEC(parent, ctrl)
     local frame = parent:GetTopParentFrame();
@@ -1729,6 +1654,10 @@ function EARTH_TOWER_SHOP_EXEC(parent, ctrl)
     end
 
     local recipecls = GetClass('ItemTradeShop', parent:GetName());
+    if EARTH_TOWER_RUN_BUY_CHECK(recipecls) == false then
+        return
+    end
+
     if g_account_prop_shop_table[shopType] == nil then
         if recipecls ~= nil then
             local isExceptionFlag = false;
@@ -1916,15 +1845,14 @@ function EARTH_TOWER_SHOP_TRADE_ENTER()
     local recipeCls = GetClass("ItemTradeShop", parentcset:GetName())
     for index = 1, 5 do
         local clsName = "Item_"..index.."_1";
-        local itemName = recipeCls[clsName];
+        local itemName = TryGetProp(recipeCls, clsName, 'None');
         local recipeItemCnt, invItemCnt, dragRecipeItem, invItem, recipeItemLv, invItemlist = GET_RECIPE_MATERIAL_INFO(recipeCls, index, GetMyPCObject());
 
         local shopType = frame:GetUserValue("SHOP_TYPE");        
         recipeItemCnt = GET_CURRENT_OVERBUY_COUNT(shopType, recipeItemCnt, recipeCls, GetMyAccountObj()) -- 추가 회득
-
         if dragRecipeItem ~= nil then
             local itemCount = GET_TOTAL_ITEM_CNT(dragRecipeItem.ClassID);
-            if itemCount < recipeItemCnt then
+            if tonumber(itemCount) < tonumber(recipeItemCnt) then
                 ui.AddText("SystemMsgFrame", ScpArgMsg('NotEnoughRecipe'));
                 break;
             end
@@ -2374,19 +2302,23 @@ pre_season_coin_shop['VakarineCertificate'] = 'REQ_SEASON_COIN_SHOP_OPEN'
 pre_season_coin_shop['RadaCertificate'] = 'REQ_RadaCertificate_COIN_SHOP_OPEN'
 pre_season_coin_shop['JurateCertificate'] = 'REQ_JurateCertificate_COIN_SHOP_OPEN'
 pre_season_coin_shop['AustejaCertificate'] = 'REQ_AustejaCertificate_COIN_SHOP_OPEN'
+pre_season_coin_shop['SauleCertificate'] = 'REQ_SauleCertificate_COIN_SHOP_OPEN'
 
 function EARTHTOWERSHOP_POINT_BUY_OPEN()
     local frame = ui.GetFrame('earthtowershop')
     local shopType = frame:GetUserValue("SHOP_TYPE")
-    
+
     if shopType == "SilverGachaShop" then
         REQ_ITEM_POINT_EXTRACTOR_OPEN("Mileage_SilverGacha")
         ui.GetFrame('item_point_extractor'):SetMargin(575, 5, 0, 0)
     elseif string.find(shopType, 'Certificate') ~= nil then
         ui.CloseFrame('earthtowershop')
         control.CustomCommand(pre_season_coin_shop[shopType],0);    
-    elseif shopType == "Archeology_Lv470" or shopType =="Archeology_Lv530" then
+    elseif shopType == "Archeology_Lv470" or shopType =="Archeology_Lv530" or shopType == "archeology_season1" then
         REQ_ITEM_POINT_EXTRACTOR_OPEN("ARCHEOLOGY_COIN")
+        ui.GetFrame('item_point_extractor'):SetMargin(575, 5, 0, 0)
+    elseif shopType == "event_2512_ice_piece" then
+        REQ_ITEM_POINT_EXTRACTOR_OPEN("event_2512_ice_piece")
         ui.GetFrame('item_point_extractor'):SetMargin(575, 5, 0, 0)
     end
 end

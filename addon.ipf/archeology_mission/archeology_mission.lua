@@ -200,7 +200,10 @@ function OPEN_ARCHEOLOGY_SHOP()
 	end
 	
     -- frame:SetUserValue("SHOP_TYPE", 'Archeology_Lv470');
-    frame:SetUserValue("SHOP_TYPE", 'Archeology_Lv530');
+    -- frame:SetUserValue("SHOP_TYPE", 'Archeology_Lv530');
+    frame:SetUserValue("SHOP_TYPE", 'archeology_season1');
+
+	
     ui.OpenFrame('earthtowershop');
 end
 

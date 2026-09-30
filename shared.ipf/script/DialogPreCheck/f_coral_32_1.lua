@@ -47,3 +47,14 @@ end
 function SCR_CORAL_32_1_SQ_6_NPC_PRE_DIALOG(pc, dialog, handle)
     return 'NO'
 end
+
+function SCR_NPC_COMMODORE_DIALOG(self, pc)
+    local zone_name = GetZoneName(pc);
+    local map_cls = GetClass("Map", zone_name);
+    if map_cls ~= nil then
+        local bgm_play_list = TryGetProp(map_cls, "BgmPlayList", "None");
+        StopMusicQueueLocal(pc, bgm_play_list);
+    end
+    PlayMusicQueueLocal(pc, "master_Commodore", true)
+    ShowOkDlg(pc, "MASTER_COMMODORE_NPC_basic1")
+end

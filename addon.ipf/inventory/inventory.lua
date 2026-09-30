@@ -3442,11 +3442,11 @@ function INVENTORY_DELETE(itemIESID, itemType)
 
 		local yesScp = string.format("EXEC_DELETE_ITEMDROP");
         	local clmsg = ScpArgMsg('ReallyDestroy{ITEM}', 'ITEM', s_dropDeleteItemName);
-        	if item_grade >= 3 or warningMsgCostumeItem == true then
-			if isGrowthEquip ~= true then
-            			clmsg = ScpArgMsg('HighItemGradeReallyDestroy{msg}{ITEM}', 'msg', ClMsg('destory_now'), 'ITEM', s_dropDeleteItemName);
-        		end
-        	end
+			if item_grade >= 3 or warningMsgCostumeItem == true then			
+				if isGrowthEquip ~= true then
+					clmsg = ScpArgMsg('HighItemGradeReallyDestroy{msg}{msg2}{ITEM}', 'msg', ClMsg('destory_now'), 'msg2', ClMsg('destory_now2'), 'ITEM', s_dropDeleteItemName);
+				end
+			end
 		--ui.MsgBox(clmsg, yesScp, "None");
 		WARNINGMSGBOX_FRAME_OPEN_DELETE_ITEM(clmsg, yesScp, "None", itemIESID)
 	end
@@ -3518,9 +3518,9 @@ function CHECK_EXEC_DELETE_ITEMDROP(count, className)
 	local clmsg = ScpArgMsg('ReallyDestroy{ITEM}{COUNT}', 'ITEM', s_dropDeleteItemName, 'COUNT', s_dropDeleteItemCount);
 	if item_grade >= 3 or warningMsgCostumeItem == true then
 		if isGrowthEquip ~= true then
-                	clmsg = ScpArgMsg('HighItemGradeReallyDestroy{msg}{ITEM}{COUNT}', 'msg', ClMsg('destory_now'), 'ITEM', s_dropDeleteItemName, 'COUNT', s_dropDeleteItemCount);
-        	end
-    	end
+			clmsg = ScpArgMsg('HighItemGradeReallyDestroy{msg}{msg2}{ITEM}{COUNT}', 'msg', ClMsg('destory_now'),'msg2', ClMsg('destory_now2'),  'ITEM', s_dropDeleteItemName, 'COUNT', s_dropDeleteItemCount);
+		end
+    end
 
 	--ui.MsgBox(clmsg, yesScp, "None");
 	local inputstringframe = ui.GetFrame("inputstring");
@@ -5002,6 +5002,21 @@ function INVENTORY_TREE_OPENOPTION_CHANGE(parent, ctrl, strarg, numarg)
 	end
 end
 
+function BEFORE_USE_RIDE_PET_REGISTRATION(invItem)
+	if invItem == nil then
+		return;
+	end
+
+	local itemobj = GetIES(invItem:GetObject());
+	if itemobj == nil then
+		return;
+	end
+
+	local invFrame = ui.GetFrame("inventory");
+	invFrame:SetUserValue("REQ_USE_ITEM_GUID", invItem:GetIESID());
+	ui.MsgBox_NonNested(ScpArgMsg("isrealUseQuestClearScroll_Msg_1"), 1, itemobj.Name, "REQUEST_SUMMON_BOSS_TX", "None");
+end
+
 function BEFORE_USE_QUEST_CLEAR_SCROLL(invItem)	
 	if invItem == nil then
 		return;
@@ -5014,7 +5029,6 @@ function BEFORE_USE_QUEST_CLEAR_SCROLL(invItem)
 	end
 	invFrame:SetUserValue("REQ_USE_ITEM_GUID", invItem:GetIESID());
 	
-	local pc = GetMyPCObject();
 
 	local textmsg = string.format("{#ff0000}[ %s ]{/}{nl}%s", itemobj.Name, ScpArgMsg("isrealUseQuestClearScroll_Msg_1"));
 	ui.MsgBox_NonNested(textmsg, itemobj.Name, "REQUEST_USE_QUEST_CLEAR_SCROLL_TX", "None");
@@ -5033,7 +5047,6 @@ function BEFORE_USE_TEST_SCROLL(invItem)
 	end
 	invFrame:SetUserValue("REQ_USE_ITEM_GUID", invItem:GetIESID());
 	
-	local pc = GetMyPCObject();
 
 	local textmsg = string.format("{#ff0000}[ %s ]{/}{nl}%s", itemobj.Name, ScpArgMsg("isrealUseQuestClearScroll_Msg_1"));
 	ui.MsgBox_NonNested(textmsg, itemobj.Name, "BEFORE_USE_TEST_SCROLL_TX", "None");
@@ -5239,7 +5252,7 @@ function BEFORE_APPLIED_GESTURE_YESSCP_OPEN(invItem)
 	
 	local strLang = TryGetProp(itemobj , 'StringArg')
 	if strLang ~='None' then
-    	local textmsg = string.format("[ %s ]{nl}%s", itemobj.Name, ScpArgMsg("Gesture_"..strLang));
+    	local textmsg = string.format("[ %s ]{nl}%s", itemobj.Name, ScpArgMsg("Gesture_Msg"));
     	ui.MsgBox_NonNested(textmsg, itemobj.Name, 'REQUEST_SUMMON_BOSS_TX', "None");
     end
 	return;
@@ -5338,7 +5351,6 @@ local multiple_ability_item_id = '0'
 
 function CLIENT_USE_MULTIPLE_ABILITY_POINT(item_obj)
 	multiple_ability_item_id = '0'
-	local item = GetIES(item_obj:GetObject())	
 	
 	if GetCraftState() == 1 then
 		return;
@@ -5377,7 +5389,6 @@ end
 
 function RUN_CLIENT_USE_MULTIPLE_ABILITY_POINT(count)	
 	session.ResetItemList();
-    local pc = GetMyPCObject();
     session.AddItemID(multiple_ability_item_id, count)    
     local resultlist = session.GetItemIDList()
     item.DialogTransaction("MULTIPLE_USE_ABILITY", resultlist)
@@ -5392,7 +5403,6 @@ local multiple_xpCard_item_id = '0'
 
 function CLIENT_USE_MULTIPLE_XPCARD(item_obj)
 	multiple_xpCard_item_id = '0'
-	local item = GetIES(item_obj:GetObject())
 	
 	if GetCraftState() == 1 then
 		return;
@@ -5437,7 +5447,6 @@ end
 
 function RUN_CLIENT_USE_MULTIPLE_XPCARD(count)
 	session.ResetItemList();
-    local pc = GetMyPCObject();
     session.AddItemID(multiple_xpCard_item_id, count)    
 	local resultlist = session.GetItemIDList()
     item.DialogTransaction("MULTIPLE_USE_XPCARD", resultlist)
@@ -5496,7 +5505,6 @@ end
 
 function RUN_CLIENT_CONVERT_TO_HIDDEN_ABILITY(count)	
 	session.ResetItemList();
-    local pc = GetMyPCObject();
     session.AddItemID(convert_hidden_ability_item_id, count)    
     local resultlist = session.GetItemIDList()
     item.DialogTransaction("MULTIPLE_CONVERT_HIDDEN_ABILITY", resultlist)
@@ -5545,7 +5553,6 @@ local multiple_misc_pvp_mine2_item_id = '0'
 
 function CLIENT_USE_MULTIPLE_MISC_PVP_MINE2(item_obj)
 	multiple_misc_pvp_mine2_item_id = '0'
-	local item = GetIES(item_obj:GetObject())	
 	
 	if GetCraftState() == 1 then
 		return
@@ -5601,7 +5608,6 @@ function RUN_CLIENT_USE_MULTIPLE_MISC_PVP_MINE2(count)
     end
 
 	-- 현재 및 최대 증표 획득량을 구한다
-    local currentValue = TryGetProp(acc, 'WEEKLY_PVP_MINE_COUNT', 0)
     local maxValue = tonumber(MAX_WEEKLY_PVP_MINE_COUNT)
 	if IsBuffApplied(GetMyPCObject(), 'EVENT_REWARD_BOOST_VERTIGO_8') == "YES" then
         maxValue = maxValue + 100000
@@ -5652,7 +5658,6 @@ local multiple_contentsPoint_item_id = '0'
 
 function CLIENT_USE_MULTIPLE_CONTENTS_TOTAL_POINT(item_obj)
 	multiple_contentsPoint_item_id = '0'
-	local item = GetIES(item_obj:GetObject())	
 	
 	if GetCraftState() == 1 then
 		return;
@@ -5690,7 +5695,6 @@ end
 
 function RUN_CLIENT_USE_CONTENTS_TOTAL_POINT(count)	
 	session.ResetItemList();
-    local pc = GetMyPCObject();
     session.AddItemID(multiple_contentsPoint_item_id, count)    
     local resultlist = session.GetItemIDList()
     item.DialogTransaction("MULTIPLE_USE_CONTENTS_TOTAL", resultlist)
@@ -5701,7 +5705,6 @@ local multiple_string_give_item_numbersplit = '0'
 
 function CLIENT_USE_MULTIPLE_USE_STRING_GIVE_ITEM_NUMBER_SPLIT(item_obj)
 	multiple_string_give_item_numbersplit = '0'
-	local item = GetIES(item_obj:GetObject())	
 	
 	if GetCraftState() == 1 then
 		return
@@ -5726,7 +5729,6 @@ end
 
 function CLIENT_USE_MULTIPLE_USE_STRING_GIVE_ITEM_NUMBER_SPLIT_yesScp(item_obj)
 	multiple_string_give_item_numbersplit = '0'
-	local item = GetIES(item_obj:GetObject())	
 	
 	if GetCraftState() == 1 then
 		return
@@ -5804,12 +5806,44 @@ function RUN_CLIENT_USE_MULTIPLE_USE_STRING_GIVE_ITEM_NUMBER_SPLIT(count)
     local resultlist = session.GetItemIDList()
     item.DialogTransaction("MULTIPLE_USE_STRING_GIVE_ITEM_NUMBER_SPLIT", resultlist)
 end
+
+function CLIENT_USE_GIVE_ITEM_NUMBER_SPLIT(item_obj)
+	multiple_string_give_item_numbersplit = '0'
+	
+	if GetCraftState() == 1 then
+		return
+	end
+
+	if true == BEING_TRADING_STATE() then
+		return
+	end
+	
+	local invItem = session.GetInvItemByGuid(item_obj:GetIESID())	
+	if nil == invItem then
+		return
+	end
+	
+	if true == invItem.isLockState then
+		ui.SysMsg(ClMsg("MaterialItemIsLock"))
+		return
+	end
+
+	local count = 1
+	multiple_string_give_item_numbersplit = tostring(item_obj:GetIESID())
+
+	session.ResetItemList()
+	session.AddItemID(multiple_string_give_item_numbersplit, count)
+
+    local resultlist = session.GetItemIDList()
+    item.DialogTransaction("MULTIPLE_USE_STRING_GIVE_ITEM_NUMBER_SPLIT", resultlist)
+end
+
+
 -----------------------------------
 
 -----큐폴 여신의 은총 한단계 진화
 function CLIENT_CONSUME_MULTIPLE_ITEMS_TRANSFORM_NEW_ITEM(item_obj)
 	multiple_string_give_item_numbersplit = '0'
-	local item = GetIES(item_obj:GetObject())	
 	
 	if GetCraftState() == 1 then
 		return
@@ -5868,7 +5902,6 @@ end
 local multiple_hidden_ability_fragment_item_id = '0'
 function CLIENT_USE_MULTIPLE_HIDDEN_ABILITY_FRAGMENT(item_obj)
 	multiple_hidden_ability_fragment_item_id = '0'
-	local item = GetIES(item_obj:GetObject())	
 	
 	if GetCraftState() == 1 then
 		return;
@@ -5907,7 +5940,6 @@ end
 
 function RUN_CLIENT_USE_MULTIPLE_HIDDEN_ABILITY_FRAGMENT(count)	
 	session.ResetItemList();
-    local pc = GetMyPCObject();
 	session.AddItemID(multiple_hidden_ability_fragment_item_id, count)   	
     local resultlist = session.GetItemIDList()
 	item.DialogTransaction("MULTIPLE_USE_HIDDEN_ABILITY_FRAGMENT", resultlist)	
@@ -5917,7 +5949,6 @@ end
 local multiple_arts_ability_item_id = '0'
 function CLIENT_USE_MULTIPLE_ARTS_ABILITY(item_obj)
 	multiple_arts_ability_item_id = '0'
-	local item = GetIES(item_obj:GetObject())	
 	
 	if GetCraftState() == 1 then
 		return;

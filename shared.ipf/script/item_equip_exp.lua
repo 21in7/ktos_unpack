@@ -203,6 +203,7 @@ function GET_MORE_EVENT_EXP(pc)
 	end
 
 	sumExp = sumExp + IsBuffAppliedEXP(pc, 'ExpUpGuildEvent'); 	
+	sumExp = sumExp + IsBuffAppliedEXP(pc, 'RIDE_PET_RIDEPET_11_2'); -- 백호 탈 것
 
 	return sumExp; 
 end

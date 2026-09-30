@@ -81,6 +81,10 @@ function MAP_OPEN(frame)
 
 	local use_map_info = frame:GetUserIValue("USE_MAP_INFO")
 	MAP_INFO_VISIBLE(frame, use_map_info)
+
+	if MINIMAP_REGION_INFO_ON_MAP_OPEN ~= nil then
+		MINIMAP_REGION_INFO_ON_MAP_OPEN()
+	end
 end
 
 -- 해상도 변경되면 실행시켜줘야됨.
@@ -117,6 +121,9 @@ function INIT_MAPUI_PTR(frame)
 end
 
 function MAP_CLOSE(frame)
+	if MINIMAP_REGION_INFO_ON_MAP_CLOSE ~= nil then
+		ReserveScript('MINIMAP_REGION_INFO_ON_MAP_CLOSE()', 0.01)
+	end
 end
 
 function MAKE_MAP_AREA_INFO(frame, mapClassName, font, mapWidth, mapHeight, offsetX, offsetY)

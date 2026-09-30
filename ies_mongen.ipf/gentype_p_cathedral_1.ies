@@ -6,3 +6,4 @@ ClassID,GenType,Lv,Range,GenRange,RespawnTime,MaxPop,Minimap,Hide,UseAIOufOfPC,A
 5,5,1,40,1,60000,1,1,0,0,1,0,0,"npc_MIKO_master","[무녀 마스터]{nl}히토미코","","","","","","","MIKO_MASTER","","","NO","YES","NO","Neutral","","","",""
 6,6,1,40,1,60000,1,0,0,1,1,0,0,"noshadow_npc_8","신령","","","","MON_DUMMY","","","MIKO_SOUL_SPIRIT","","","NO","YES","NO","Neutral","AttachEffect/F_bg_light003_blue/0.8/TOP","AttachEffect/I_smoke053_mint_loop/4.0/TOP","",""
 7,7,1,40,1,60000,1,2,0,0,0,0,0,"npc_illusionist","[일루저니스트 마스터]{nl}코델리어","","","","MON_DUMMY","","","NPC_ILLUSIONIST","","","NO","YES","NO","Neutral","","","",""
+8,8,1,40,1,60000,1,1,0,0,0,0,0,"npc_executor","[엑시큐터 마스터]{nl}모르트","","","","","","","NPC_EXECUTOR","","","NO","YES","NO","Neutral","","","",""
